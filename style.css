@@ -181,3 +181,31 @@ header strong{font-family:Georgia,serif;font-size:16px;color:#c29a68}
 .academy-home .home-bottom{background:#2b2b2b;border:1px solid #474747;box-shadow:none}
 .academy-home .coffee-art{filter:none}
 nav{background:#242424;border-top:1px solid #444;box-shadow:none}
+
+/* v13: smooth restrained controls, no elevated / beveled buttons */
+.academy-home .quick-grid button,
+.academy-home .continue-tile{
+  background:#eee6dd;
+  border:1px solid #d3c6b9;
+  box-shadow:none!important;
+  filter:none;
+  border-radius:11px;
+}
+.academy-home .quick-grid button:before,
+.academy-home .continue-tile:after{display:none!important}
+.academy-home .quick-grid .qa-icon{
+  background:#dfd0bc;
+  border:0;
+  box-shadow:none!important;
+  filter:none;
+  border-radius:9px;
+}
+.academy-home .art-emblem{
+  background:#b58b55;
+  box-shadow:none!important;
+  border:1px solid #c29a68;
+}
+.academy-home .home-metrics{box-shadow:none!important}
+.academy-home .progress-ring{box-shadow:none!important;filter:none}
+.academy-home .quick-grid button:active,
+.academy-home .continue-tile:active{transform:none;background:#e8ded3}
