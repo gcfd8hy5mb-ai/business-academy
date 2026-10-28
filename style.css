@@ -286,3 +286,37 @@ nav{background:#171717;border-top:1px solid #625038;box-shadow:none}
 nav button{font-size:10px}
 nav button.on{color:#c29a68}
 @media(max-width:370px){.academy-home .home-intro h2{font-size:25px}.academy-home .home-content .section-head h3{font-size:20px}.academy-home .continue-detail b{font-size:17px}.academy-home .quick-grid button>span:last-child{font-size:13px}.academy-home .coffee-art{width:65px;flex-basis:65px}}
+
+/* v16: Courses and Lessons — approved obsidian / stone / beige / gold */
+.academy-subpage{padding:3px 0 18px}
+.academy-subpage .overline{font-size:9px;letter-spacing:1.6px;font-weight:650;color:#c29a68}
+.subpage-title{padding:9px 5px 18px}
+.subpage-title h1{font:normal 31px Georgia,serif;color:#f1e7dc;margin:8px 0}
+.subpage-title p{font-size:13px;color:#c5bdb4;margin:0;line-height:1.5}
+.subpage-feature{display:grid;grid-template-columns:39% 1fr;overflow:hidden;align-items:center;border:1px solid #99774f;background:linear-gradient(130deg,#303030,#1b1b1b);border-radius:13px;min-height:144px;margin-bottom:20px}
+.subpage-feature-art{height:100%;min-height:144px;background:#272727 url('./assets/academy-columns.svg') center/cover no-repeat}
+.subpage-feature>div:last-child{padding:14px}
+.subpage-feature h2{font:normal 19px Georgia,serif;color:#eee3d4;margin:9px 0}
+.subpage-feature p{font-size:11px;line-height:1.45;color:#c7bdb1}
+.course-list .section-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;margin-bottom:10px}
+.course-list .section-head h3{font:22px Georgia,serif;margin:0;color:#eee4da}
+.course-list .section-head span{font-size:9px;letter-spacing:.8px;color:#c29a68}
+.course-row{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:1px solid #cabbac;border-radius:11px;background:#e6ded6;color:#24211d;padding:13px 10px;margin-bottom:8px;box-shadow:0 2px 6px #0002}
+.course-row.locked{background:#302e2d;color:#d1c8be;border-color:#4e4842;box-shadow:none}
+.course-number{font:20px Georgia,serif;color:#a47e50;min-width:29px}
+.course-copy{display:flex;flex-direction:column;gap:4px;flex:1}
+.course-copy b{font-size:13px;font-weight:600}
+.course-copy small{font-size:10px;color:#756b62}
+.course-row.locked small{color:#a69d92}
+.course-arrow{font-size:21px;color:#b58b55}
+.lesson-track{margin-top:15px;height:5px;background:#54504b}
+.lesson-panel{border:1px solid #c9b39b;border-radius:13px;background:#e6ded6;color:#28231e;padding:18px;margin:0 0 14px}
+.lesson-panel .overline,.quiz-panel .overline{color:#9b744a}
+.lesson-panel .lesson{margin-top:15px;font-size:15px;line-height:1.7}
+.quiz-panel{border:1px solid #96734b;border-radius:13px;background:#252525;padding:16px}
+.quiz-panel h2{font:normal 21px Georgia,serif;color:#f3e8dd;line-height:1.35;margin:14px 0}
+.answer-choice{width:100%;display:flex;gap:11px;align-items:center;text-align:left;padding:11px;margin:8px 0;border-radius:10px;border:1px solid #60554a;background:#32302e;color:#f1e7db;font-size:13px}
+.answer-choice.active{border-color:#b58b55;background:#443a30}
+.answer-letter{display:grid;place-items:center;flex:0 0 26px;height:26px;border:1px solid #a47e50;border-radius:50%;font:14px Georgia,serif;color:#c29a68}
+.quiz-feedback{padding:12px;color:#eee3d8;border:1px solid #8d714f;border-radius:9px;font-size:12px;line-height:1.5}
+.lesson-submit{margin-top:12px;background:linear-gradient(135deg,#c29a68,#b58b55);box-shadow:none;border:1px solid #a98250}
