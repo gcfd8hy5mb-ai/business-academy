@@ -324,3 +324,20 @@ nav button.on{color:#c29a68}
 /* v17 lesson navigation */
 .lesson-back{display:inline-flex;align-items:center;gap:9px;margin:3px 0 9px;padding:9px 12px;background:#292929;border:1px solid #856944;border-radius:9px;color:#c29a68;font-size:13px;font-weight:600}
 .lesson-back:active{background:#363230}
+
+/* University library — uses existing approved obsidian, beige and gold palette */
+.university-entry,.university-notice,.university-card,.university-empty{background:#303030;border:1px solid #55504b;border-radius:16px;padding:18px;margin:17px 0;color:#eee6dd}
+.university-entry h2,.university-card h2,.university-empty h3{font:23px Georgia,serif;margin:8px 0;color:#eee6dd}
+.university-entry p,.university-card p,.university-notice p,.university-empty p{color:#c3bbb4;line-height:1.55;font-size:14px}
+.university-notice{background:#e4d9cd;color:#252321;border-color:#e4d9cd}
+.university-notice b{font:18px Georgia,serif}.university-notice p{color:#514b45;margin-bottom:0}
+.university-filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px;scrollbar-width:none}
+.university-filters button,.university-empty button{flex:none;background:#303030;color:#e4d9cd;border:1px solid #76654f;border-radius:20px;padding:10px 15px;font-size:13px}
+.university-filters button.selected{background:#b58b55;color:#201c18;border-color:#b58b55;font-weight:700}
+.university-meta{display:flex;justify-content:space-between;color:#c29a68;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.university-card>small{color:#b9ada1}
+.university-topics{font-size:12px;color:#c29a68;border-top:1px solid #504941;padding:12px 0}
+.university-work{display:flex;flex-direction:column;gap:5px;border-top:1px solid #504941;padding:11px 0;font-size:13px}
+.university-work b{color:#eee6dd}.university-work span{color:#c3bbb4;line-height:1.4}
+.university-open{display:block;text-align:center;text-decoration:none;background:linear-gradient(160deg,#c2a078,#977347);color:#211b13;border-radius:11px;padding:13px 9px;font-weight:700;margin-top:11px}
+.university-footer{font-size:12px;line-height:1.5;color:#b5aaa0;margin:24px 4px}
