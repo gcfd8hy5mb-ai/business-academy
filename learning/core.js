@@ -1,0 +1,16 @@
+/* Shared, dependency-free learning model. Legacy application storage is never changed here. */
+(function(root){
+'use strict';
+const KEY='business-academy-learning-v1';
+const empty=()=>({schema:1,courses:{}});
+function load(storage){try{const s=JSON.parse(storage.getItem(KEY));return s&&s.schema===1&&s.courses&&typeof s.courses==='object'&&!Array.isArray(s.courses)?s:empty()}catch{return empty()}}
+function state(store,id){return store.courses[id] ||= {lessons:[],answers:{practice:{},exam:{}},attempts:[],drafts:{},reviews:{}}}
+function score(questions,answers){return questions.length?Math.round(100*questions.filter(q=>Number.isInteger(answers[q.id])&&answers[q.id]===q.correct).length/questions.length):0}
+function grade(store,course,kind){const s=state(store,course.id),questions=course[kind]?.questions||[];if(!questions.length||questions.some(q=>!Number.isInteger(s.answers[kind][q.id])))return false;const attempt={kind,score:score(questions,s.answers[kind]),answers:{...s.answers[kind]},at:new Date().toISOString()};(s.feedback ||= {})[kind]=true;s.attempts.push(attempt);s.attempts=s.attempts.slice(-100);return attempt}
+function latest(s,kind){return s.attempts.filter(a=>a.kind===kind).at(-1)}
+function reviewed(s,key,criteria){return Boolean((s.drafts[key]||'').trim())&&criteria.length>0&&criteria.every((_,i)=>Number(s.reviews[key]?.[i])>=3&&Number(s.reviews[key]?.[i])<=4)}
+function mastery(store,course){const s=state(store,course.id),lessons=course.modules.flatMap(m=>m.lessons),done=lessons.filter(l=>s.lessons.includes(l.id)).length,p=latest(s,'practice'),e=latest(s,'exam');const portfolio=course.portfolio&&reviewed(s,'portfolio',course.portfolio.rubric),written=course.exam&&reviewed(s,'exam',course.exam.rubric);const available=lessons.length>0;return {done,total:lessons.length,practice:p?.score??null,exam:e?.score??null,portfolio:Boolean(portfolio),written:Boolean(written),mastered:Boolean(available&&done===lessons.length&&p?.score>=80&&e?.score>=80&&portfolio&&written)}}
+function catalog(titles,plans,content){return titles.map((title,i)=>({id:'course-'+String(i+1).padStart(2,'0'),index:i,title,level:i<6?1:i<13?2:i<20?3:i<25?4:5,plannedHours:plans[i].hours,status:'planned',prerequisites:i?[ 'course-'+String(i).padStart(2,'0') ]:[],modules:[],readings:[],...content['course-'+String(i+1).padStart(2,'0')]}))}
+function workload(c){const minutes=c.modules.reduce((sum,m)=>sum+m.lessons.reduce((a,l)=>a+l.minutes,0),0)+(c.practice?.minutes||0)+(c.exam?.minutes||0)+(c.portfolio?.minutes||0)+c.readings.reduce((a,r)=>a+r.minutes,0);return {minutes,hours:Math.round(minutes/60*10)/10}}
+const api={KEY,empty,load,state,score,grade,latest,reviewed,mastery,catalog,workload};root.BALearning=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window!=='undefined'?window:globalThis);
