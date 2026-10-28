@@ -191,3 +191,20 @@ header strong .ui-icon{color:#c29a68}
 nav{border-top:1px solid #665138;background:linear-gradient(180deg,#292929,#1e1e1e);box-shadow:0 -6px 18px #0005}
 nav button.on{color:#c29a68}
 nav button.on .ui-icon{filter:drop-shadow(0 0 3px #b58b5550)}
+
+/* v11: dimensional lighting and polished surfaces, preserving approved palette */
+.academy-home .home-welcome{position:relative;isolation:isolate;box-shadow:0 2px 2px #0003,0 13px 26px #0005,0 28px 47px #0003,inset 0 1px 0 #fff9;border:1px solid #c9ad8d}
+.academy-home .home-welcome:before{content:"";position:absolute;inset:0 0 auto 0;height:42%;pointer-events:none;z-index:-1;background:linear-gradient(165deg,#fff5 0%,transparent 60%)}
+.academy-home .home-intro{box-shadow:inset 0 2px 0 #fff9,inset 0 -2px 7px #bca99020}
+.academy-home .home-metrics{border-radius:10px;box-shadow:0 4px 9px #38281d1a,inset 0 2px 1px #fff9,inset 0 -1px 2px #a48c7429}
+.academy-home .progress-ring{box-shadow:0 3px 7px #6f5b4b33,inset 0 2px 3px #fff8}
+.academy-home .continue-tile{position:relative;box-shadow:0 3px 5px #0002,0 10px 18px #66513c30,inset 0 2px 0 #fffbf5;border:1px solid #b3916a}
+.academy-home .continue-tile:after{content:"";position:absolute;inset:0 0 auto 128px;height:18px;background:linear-gradient(#fff7,transparent);pointer-events:none}
+.academy-home .lesson-art{filter:contrast(1.1);box-shadow:inset -14px 0 18px #0006}
+.academy-home .quick-grid button{position:relative;overflow:hidden;box-shadow:0 2px 2px #0002,0 9px 16px #59443030,inset 0 2px 0 #fff9,inset 0 -2px 3px #ad947c2d;border:1px solid #ba9d7c}
+.academy-home .quick-grid button:before{content:"";position:absolute;top:0;left:0;right:0;height:20px;background:linear-gradient(#fff8,transparent);pointer-events:none}
+.academy-home .quick-grid .qa-icon{position:relative;box-shadow:0 2px 2px #4e38243d,0 5px 9px #5d442f38,inset 0 2px 2px #fffae8aa,inset 0 -3px 3px #78553233}
+.academy-home .home-bottom{box-shadow:0 3px 4px #0005,0 17px 30px #0007,inset 0 2px 1px #ffffff15,inset 0 -2px 8px #0003;border:1px solid #78644d}
+.academy-home .coffee-art{filter:drop-shadow(0 3px 3px #0006)}
+header{box-shadow:0 4px 14px #0004,inset 0 1px 1px #fff1}
+nav{box-shadow:0 -5px 12px #0005,0 -12px 25px #0004}
