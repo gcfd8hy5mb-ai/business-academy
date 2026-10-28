@@ -64,3 +64,30 @@ header strong{font-size:15px;letter-spacing:.35px}
 .home-bottom{box-shadow:inset 0 1px rgba(255,255,255,.035)}
 nav{box-shadow:0 -8px 24px rgba(0,0,0,.12)}
 @media (max-width:360px){.home-welcome{padding:12px}.quick-grid button{gap:6px;font-size:11px}.home-metrics b{font-size:15px}}
+
+/* Reference fidelity pass: restrained stone material, unchanged approved palette */
+.ui-icon{width:21px;height:21px;display:inline-block;vertical-align:middle;flex-shrink:0}
+header{padding:9px 2px 13px;margin-bottom:4px;border-bottom:0}
+header strong{display:flex;align-items:center;gap:7px;font-size:15px;letter-spacing:.7px}
+header strong .ui-icon{width:19px;height:19px}
+.head-bell .ui-icon{width:18px;height:18px}
+.home-welcome{background:linear-gradient(150deg,#e8e0d8 0%,#e5dcd3 65%,#dfd5cb 100%);border:1px solid #eee7df;box-shadow:0 8px 22px rgba(0,0,0,.17);border-radius:13px}
+.home-welcome h2{font-size:19px}
+.home-welcome h3{font-size:14px;letter-spacing:-.1px}
+.home-metrics{padding:11px 0;margin:12px 0}
+.home-metrics b{font-size:15px}
+.home-metrics small{font-size:9px}
+.progress-ring{width:68px;height:68px}
+.progress-ring strong{font-size:16px}
+.continue-tile{padding:9px;border-color:#d5c9be;background:linear-gradient(145deg,#f2ebe5,#ede4dc);grid-template-columns:40px minmax(0,1fr) 12px}
+.tile-icon{width:40px;height:40px;border-radius:8px}
+.tile-icon .ui-icon{width:23px;height:23px;fill:currentColor;stroke-width:1}
+.quick-grid button{min-height:49px;font-size:11px;background:linear-gradient(145deg,#f1e9e2,#e9e0d8)}
+.quick-grid .qa-icon{width:31px;height:31px;background:linear-gradient(145deg,#dfd1bf,#eadfd1)}
+.quick-grid .qa-icon .ui-icon{width:19px;height:19px;stroke-width:1.85}
+.home-bottom{background:linear-gradient(145deg,#323232,#2c2c2c);padding:14px;border-color:#484848;box-shadow:0 7px 18px rgba(0,0,0,.13);border-radius:12px}
+nav{background:#242424}
+nav button{display:flex;align-items:center;flex-direction:column;gap:4px;min-width:50px}
+nav .ui-icon{width:20px;height:20px;stroke-width:1.7}
+nav button.on .ui-icon{stroke-width:2}
+#app{background-image:radial-gradient(ellipse at 5% 0%,rgba(255,255,255,.016),transparent 52%)}
