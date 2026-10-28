@@ -320,3 +320,7 @@ nav button.on{color:#c29a68}
 .answer-letter{display:grid;place-items:center;flex:0 0 26px;height:26px;border:1px solid #a47e50;border-radius:50%;font:14px Georgia,serif;color:#c29a68}
 .quiz-feedback{padding:12px;color:#eee3d8;border:1px solid #8d714f;border-radius:9px;font-size:12px;line-height:1.5}
 .lesson-submit{margin-top:12px;background:linear-gradient(135deg,#c29a68,#b58b55);box-shadow:none;border:1px solid #a98250}
+
+/* v17 lesson navigation */
+.lesson-back{display:inline-flex;align-items:center;gap:9px;margin:3px 0 9px;padding:9px 12px;background:#292929;border:1px solid #856944;border-radius:9px;color:#c29a68;font-size:13px;font-weight:600}
+.lesson-back:active{background:#363230}
