@@ -10,7 +10,7 @@ This release provides a reusable learning workspace for the existing 26-course, 
 | 2 | Financial Accounting; Managerial Accounting | 6 / 6 | 12 | 10 | 2 | 2 | 18.00 |
 | 3 | Corporate Finance & Valuation pilot | 3 / 3 | 6 | 5 | 1 | 1 | 8.75 |
 | 4 | Infrastructure and original plans only | 0 | 0 | 0 | 0 | 0 | 0 |
-| 5 | Infrastructure and original plan only | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 5 | Infrastructure and original plan only | 0 | 0 | 0 | 0 | 0 | 0 |
 | **Total** | **9 authored sequences; 17 planned workspaces** | **27 / 27** | **54** | **45** | **9** | **9** | **76.75** |
 
 Hours are design estimates for the specified reading, handwritten calculations, transfer tasks, written examination and research/project work, not measured seat time. Each lesson allocates 30 minutes, each problem set 45, each objective-plus-written exam 90 and each portfolio 180. Assigned source work allocates 90–150 minutes per course. Reading speed and prior knowledge change actual time. No hours are earned automatically by clicking a lesson checkbox. Earlier starter lessons and introductory finance/cash-flow units are preserved and excluded from these new counts.
@@ -56,3 +56,11 @@ Existing MIT, Yale, Harvard, Oxford, Wharton and Stanford resource links are ret
 4. Author all Level 4 coursework and the Level 5 integrated executive capstone using the same model.
 5. Obtain subject-matter review, test item difficulty/discrimination, alternative exam forms and independent essay/project assessment before claiming graduate-level rigor or full-course completion.
 6. Add richer numeric/free-response grading where defensible, optional instructor workflows, source-specific problem-set mapping and backup restore. No claim of full institutional or MBA equivalence is supported by this release.
+
+## Verification recorded for this release
+
+- `node --test tests/*.test.cjs`: **20 passing tests** covering model behavior, nine authored content structures, independent financial calculations, and application event/render integration across all 26 courses and all six workspace sections. Includes persisted/escaped drafts, retry evidence, planned-course labeling and storage-quota failure.
+- Syntax checks pass for the active v26 entry point, shared model and workspace.
+- GitHub Pages build and deployment succeeded for commit `5a3e36c1ef41dca712eb4bc2499608af921e4649` (Actions run `40778251499`).
+- Live desktop-browser checks confirmed the 26-course catalog, 76.75-hour delivered-content summary, Level 1 exam/written case and disabled incomplete submission, Level 2 accounting workspace, Level 3 valuation teaching content, source links and preserved luxury palette. No application-origin errors were observed; browser-extension metadata errors were unrelated to the app.
+- **Not passed / not claimed:** the local 390px Playwright smoke test could not launch because Chromium was absent and its download failed. It remains available in `tests/browser.cjs`. Real iPhone Safari, keyboard behavior and Home Screen operation need device verification. Existing viewport/PWA settings are retained; new fields use 16px input text and course controls use 44px minimum touch targets.
