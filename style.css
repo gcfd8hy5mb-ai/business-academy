@@ -233,3 +233,56 @@ nav{background:#242424;border-top:1px solid #444;box-shadow:none}
 }
 .academy-home .home-metrics{box-shadow:none!important}
 .academy-home .progress-ring{box-shadow:none!important}
+
+/* v15 APPROVED: precision luxury watch inspired, neutral stone/cream/gold */
+body{background:#191919;background-image:radial-gradient(ellipse at 90% -10%,#303030,#191919 65%)}
+#app{padding-left:12px;padding-right:12px}
+header{background:#171717;border-bottom:1px solid #604b34;padding:14px 6px 15px;margin-bottom:12px;box-shadow:none}
+header strong{font-family:Georgia,serif;color:#c29a68;font-size:16px;letter-spacing:1.5px;font-weight:400}
+header .head-bell{color:#c29a68}
+.academy-home{display:flex;flex-direction:column;gap:12px}
+.academy-home .home-welcome{margin:0;padding:0;background:linear-gradient(145deg,#f1e9e1,#e6ded6 80%,#ded2c5);border:1px solid #c7a77d;border-radius:16px;box-shadow:0 7px 18px #0005;overflow:hidden}
+.academy-home .home-intro{padding:20px 16px 16px;background:transparent;border:0}
+.academy-home .home-intro h2{font:normal 29px Georgia,serif;line-height:1.12;letter-spacing:-.7px;color:#211e1b}
+.academy-home .home-intro p{font-size:12px;line-height:1.5;color:#45403b}
+.academy-home .progress-ring{width:78px;height:78px;min-width:78px;background:conic-gradient(#b58b55 var(--percent),#c8b9a9 0);border:1px solid #aa957b;box-shadow:0 2px 5px #0002!important}
+.academy-home .progress-ring:before{background:#eee5db;inset:6px}
+.academy-home .progress-ring strong{font:21px Georgia,serif}
+.academy-home .progress-ring span{font-size:8px}
+.academy-home .home-metrics{margin:0 15px 16px;background:none;border:0;border-top:1px solid #bfae9d;border-radius:0;padding:15px 0 0;box-shadow:none}
+.academy-home .home-metrics div{border-right:1px solid #c4b3a2}
+.academy-home .home-metrics b{font:22px Georgia,serif;color:#25211d}
+.academy-home .home-metrics small{font-size:10px;color:#4c4742}
+.academy-home .home-content{padding:1px 0 3px}
+.academy-home .home-content .section-head{display:flex;align-items:center;justify-content:space-between;margin:7px 0 9px;padding:0 2px;gap:8px}
+.academy-home .home-content .section-head h3{font:23px Georgia,serif;color:#eee2d3;margin:0}
+.academy-home .home-content .section-head>span{font-size:9px;letter-spacing:1.4px;font-weight:500;color:#c29a68}
+.academy-home .continue-tile{margin:0 0 17px;width:100%;height:124px;min-height:124px;grid-template-columns:42% minmax(0,1fr) 14px;gap:0;background:linear-gradient(125deg,#eee5da,#d9cec1);border:1px solid #b58b55;border-radius:14px;box-shadow:0 4px 12px #0005!important;overflow:hidden}
+.academy-home .lesson-art{height:124px;width:100%;background:#232323 url('./assets/academy-columns.svg') center/cover no-repeat;box-shadow:none!important;border-radius:0}
+.academy-home .art-emblem{background:#1e1e1e;color:#c29a68;border:1px solid #c29a68;width:49px;height:49px;border-radius:50%;box-shadow:0 2px 6px #0005!important}
+.academy-home .art-emblem svg{fill:#c29a68}
+.academy-home .continue-detail{padding:12px 8px 12px 14px;gap:6px}
+.academy-home .continue-detail .eyebrow{font:12px Georgia,serif;color:#544637}
+.academy-home .continue-detail b{font:21px Georgia,serif;color:#26201c}
+.academy-home .continue-detail small{font:13px Georgia,serif;color:#4f463d}
+.academy-home .continue-detail .track{height:5px;background:#b8a99b;border:1px solid #a69584}
+.academy-home .continue-detail .track span{background:#b58b55}
+.academy-home .continue-chevron{color:#28231d;margin:0 9px 0 0}
+.academy-home .quick-grid{padding:0;gap:11px}
+.academy-home .quick-grid button{height:70px;min-height:70px;border-radius:13px;background:linear-gradient(135deg,#292929,#191919);border:1px solid #a98250;box-shadow:0 3px 9px #0005!important;padding:10px;gap:10px}
+.academy-home .quick-grid button>span:last-child{color:#f3e8dc;font:16px Georgia,serif;font-weight:400;line-height:1.08}
+.academy-home .quick-grid .qa-icon{background:#202020;border:1px solid #b58b55;border-radius:9px;flex:0 0 40px;width:40px;height:40px;box-shadow:none!important}
+.academy-home .quick-grid .qa-icon svg{width:23px;height:23px;color:#c29a68}
+.academy-home .home-bottom{margin:0;background:linear-gradient(145deg,#2b2b2b,#171717);border:1px solid #ae8b5b;border-radius:14px;padding:0;box-shadow:0 5px 15px #0005}
+.academy-home .home-bottom>.row{padding:13px 15px 0}
+.academy-home .home-bottom h3{font:22px Georgia,serif;color:#f0e4d4}
+.academy-home .home-bottom button{font-size:12px;color:#c29a68}
+.academy-home .company-preview{padding:10px 14px 14px;gap:12px}
+.academy-home .coffee-art{width:80px;height:83px;flex:0 0 80px;border-radius:10px;border:1px solid #766046;background:#292929 url('./assets/coffee-luxury.svg') center/cover no-repeat;filter:none}
+.academy-home .company-preview b{font:16px Georgia,serif;color:#f2e5d7}
+.academy-home .company-preview small{font-size:11px}
+.academy-home .company-preview>strong{padding:12px 8px;border:1px solid #816747;border-radius:9px;color:#c29a68;font:20px Georgia,serif}
+nav{background:#171717;border-top:1px solid #625038;box-shadow:none}
+nav button{font-size:10px}
+nav button.on{color:#c29a68}
+@media(max-width:370px){.academy-home .home-intro h2{font-size:25px}.academy-home .home-content .section-head h3{font-size:20px}.academy-home .continue-detail b{font-size:17px}.academy-home .quick-grid button>span:last-child{font-size:13px}.academy-home .coffee-art{width:65px;flex-basis:65px}}
