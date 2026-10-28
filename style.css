@@ -209,3 +209,27 @@ nav{background:#242424;border-top:1px solid #444;box-shadow:none}
 .academy-home .progress-ring{box-shadow:none!important;filter:none}
 .academy-home .quick-grid button:active,
 .academy-home .continue-tile:active{transform:none;background:#e8ded3}
+
+/* v14: balanced premium depth — elevated panels, smooth flat controls */
+.academy-home .home-welcome{
+  box-shadow:0 3px 8px rgba(0,0,0,.11),0 15px 30px rgba(0,0,0,.15);
+  border-color:#d1c1b1;
+}
+.academy-home .continue-tile{
+  box-shadow:0 3px 9px rgba(44,34,24,.13)!important;
+  border-color:#d0c0b0;
+}
+.academy-home .quick-grid button{
+  box-shadow:0 2px 5px rgba(39,31,24,.09)!important;
+  border-color:#d1c3b6;
+  background:#eee6dd;
+}
+.academy-home .quick-grid .qa-icon{
+  box-shadow:none!important;
+  background:#dfd0bc;
+}
+.academy-home .home-bottom{
+  box-shadow:0 7px 19px rgba(0,0,0,.22);
+}
+.academy-home .home-metrics{box-shadow:none!important}
+.academy-home .progress-ring{box-shadow:none!important}
