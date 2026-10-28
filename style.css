@@ -132,3 +132,32 @@ nav button.on .ui-icon{stroke-width:2}
 .academy-home .company-preview small{font-size:10px;color:#c5c1bc}
 .academy-home .company-preview>strong{font-size:13px;color:#f1e8df}
 @media(min-width:450px){.academy-home .home-welcome{padding:19px}.academy-home .continue-tile{min-height:85px}}
+
+/* v9: Visually distinct, artwork-led approved Business Academy identity */
+header{min-height:58px;margin-bottom:8px;background:linear-gradient(180deg,#292929,#202020);border-bottom:1px solid #444; padding:12px 10px}
+header strong{font-family:Georgia,serif;font-size:16px;letter-spacing:.85px}
+header strong .ui-icon{width:23px;height:23px}
+.academy-home .home-welcome{padding:0 0 15px;overflow:hidden;background:#e6ded6;border:1px solid #d6c9bd;box-shadow:0 16px 36px #0004}
+.academy-home .home-intro{background:linear-gradient(125deg,#e9e1da,#e3d8cd);padding:18px 15px 13px}
+.academy-home .home-intro h2{font-size:21px}
+.academy-home .home-metrics{margin:0 14px 12px;border-radius:0 0 9px 9px;border-color:#d6c9be; background:#ede5dd}
+.academy-home .home-welcome .section-head{display:flex;align-items:baseline;justify-content:space-between;padding:0 14px;gap:8px}
+.academy-home .section-head h3{margin:7px 0;font-size:15px}
+.academy-home .section-head>span{font-size:8px;letter-spacing:1px;color:#8a7663}
+.academy-home .continue-tile{margin:0 14px 12px;width:calc(100% - 28px);padding:0;min-height:107px;grid-template-columns:128px minmax(0,1fr) 13px;background:#efe7df;overflow:hidden;border-color:#ccbeb0;box-shadow:0 3px 9px #201b1718}
+.academy-home .lesson-art{height:108px;width:128px;border-radius:0;background:#242424 url('./assets/academy-art.svg') center/cover no-repeat}
+.academy-home .art-emblem{background:linear-gradient(145deg,#e0bc84,#a47c48);width:37px;height:37px;box-shadow:0 3px 15px #0008}
+.academy-home .continue-detail{padding:8px 0;gap:6px}
+.academy-home .continue-detail .eyebrow{font-size:9px;letter-spacing:.3px}
+.academy-home .continue-detail b{font-size:13px}
+.academy-home .continue-detail small{font-size:10px}
+.academy-home .continue-chevron{margin-right:10px}
+.academy-home .quick-grid{padding:0 14px;gap:8px}
+.academy-home .quick-grid button{min-height:65px;background:linear-gradient(155deg,#f1e9e2,#e7ddd3);border-color:#d0c1b1;box-shadow:0 2px 6px #231b1417;padding:9px}
+.academy-home .quick-grid button>span:last-child{color:#272422;font-size:11px;font-weight:600}
+.academy-home .quick-grid .qa-icon{width:37px;height:37px;flex-basis:37px;border:1px solid #c9b49d;background:linear-gradient(140deg,#e0c9a9,#c7a87e)}
+.academy-home .quick-grid .qa-icon svg{color:#5c4630;width:21px;height:21px}
+.academy-home .home-bottom{border:1px solid #4a4745;background:linear-gradient(155deg,#333333,#252525);padding:16px}
+.academy-home .company-preview .coffee-art{width:55px;height:55px;flex-basis:55px;font-size:29px}
+.academy-home .home-bottom h3{font-family:Georgia,serif;font-size:17px;font-weight:400}
+@media(max-width:355px){.academy-home .continue-tile{grid-template-columns:95px minmax(0,1fr) 9px}.academy-home .lesson-art{width:95px}.academy-home .quick-grid button{gap:5px}.academy-home .quick-grid .qa-icon{width:30px;flex-basis:30px}}
