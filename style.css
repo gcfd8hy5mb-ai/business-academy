@@ -162,49 +162,22 @@ header strong .ui-icon{width:23px;height:23px}
 .academy-home .home-bottom h3{font-family:Georgia,serif;font-size:17px;font-weight:400}
 @media(max-width:355px){.academy-home .continue-tile{grid-template-columns:95px minmax(0,1fr) 9px}.academy-home .lesson-art{width:95px}.academy-home .quick-grid button{gap:5px}.academy-home .quick-grid .qa-icon{width:30px;flex-basis:30px}}
 
-/* v10 Premium finishing pass; approved hues retained, no olive tint */
-:root{--premium-metal:linear-gradient(112deg,#8f673e 0%,#c29a68 25%,#e4c79a 48%,#b58b55 70%,#88623c 100%)}
-body{background:radial-gradient(ellipse at top right,#292929 0%,#202020 58%,#1b1b1b 100%);background-attachment:fixed}
-header{background:linear-gradient(180deg,#292929,#202020);border-bottom:1px solid #68533c;box-shadow:0 5px 18px #0003}
-header strong{background:var(--premium-metal);color:transparent;background-clip:text;-webkit-background-clip:text;font-size:17px;text-shadow:none}
-header strong .ui-icon{color:#c29a68}
-.head-bell{color:#c29a68}
-.academy-home .home-welcome{border:1px solid #c6ad8e;box-shadow:0 18px 40px #0005,0 0 0 1px #ffffff19,inset 0 1px #fff9}
-.academy-home .home-intro{background:linear-gradient(135deg,#f0e8e1 0%,#e6ded6 57%,#ded3c9 100%);border-bottom:1px solid #d0bca6}
-.academy-home .home-intro h2{font-size:22px;letter-spacing:-.7px}
-.academy-home .home-metrics{background:linear-gradient(160deg,#f1e9e2,#e5d9ce);border:1px solid #d7c4ae;box-shadow:inset 0 1px #fff8}
-.academy-home .home-metrics b{font-size:16px}
-.academy-home .progress-ring{filter:drop-shadow(0 2px 4px #0002);background:conic-gradient(#b58b55 var(--percent),#cec1b4 0)}
-.academy-home .section-head h3{font-size:16px;letter-spacing:-.2px}
-.academy-home .section-head>span{color:#8b6b49;font-weight:700}
-.academy-home .continue-tile{border:1px solid #b89b77;box-shadow:0 5px 15px #0002,inset 0 1px #fff8;background:linear-gradient(135deg,#f4ece4,#e7dbce)}
-.academy-home .lesson-art{background-color:#242424;box-shadow:inset -10px 0 16px #0003}
-.academy-home .art-emblem{background:var(--premium-metal);border:1px solid #e4c79a;box-shadow:0 3px 12px #000a,0 0 0 3px #c29a6830}
-.academy-home .quick-grid button{background:linear-gradient(145deg,#f5ede5,#e7dbce);border:1px solid #cbb396;box-shadow:0 4px 10px #0002,inset 0 1px #fff9;transition:transform .15s,box-shadow .15s}
-.academy-home .quick-grid button:active{transform:scale(.97);box-shadow:0 1px 4px #0003}
-.academy-home .quick-grid .qa-icon{background:var(--premium-metal);border:1px solid #ae8857;box-shadow:inset 0 1px #fff6,0 2px 5px #0002}
-.academy-home .quick-grid .qa-icon svg{color:#392e23}
-.academy-home .home-bottom{border:1px solid #756047;box-shadow:0 12px 28px #0005;background:linear-gradient(140deg,#353535,#242424)}
-.academy-home .home-bottom h3{color:#f2e9de;font-size:19px}
-.academy-home .home-bottom button{color:#c29a68;font-weight:600}
-.academy-home .company-preview .coffee-art{border-color:#846b4d;box-shadow:0 2px 10px #0005}
-nav{border-top:1px solid #665138;background:linear-gradient(180deg,#292929,#1e1e1e);box-shadow:0 -6px 18px #0005}
-nav button.on{color:#c29a68}
-nav button.on .ui-icon{filter:drop-shadow(0 0 3px #b58b5550)}
 
-/* v11: dimensional lighting and polished surfaces, preserving approved palette */
-.academy-home .home-welcome{position:relative;isolation:isolate;box-shadow:0 2px 2px #0003,0 13px 26px #0005,0 28px 47px #0003,inset 0 1px 0 #fff9;border:1px solid #c9ad8d}
-.academy-home .home-welcome:before{content:"";position:absolute;inset:0 0 auto 0;height:42%;pointer-events:none;z-index:-1;background:linear-gradient(165deg,#fff5 0%,transparent 60%)}
-.academy-home .home-intro{box-shadow:inset 0 2px 0 #fff9,inset 0 -2px 7px #bca99020}
-.academy-home .home-metrics{border-radius:10px;box-shadow:0 4px 9px #38281d1a,inset 0 2px 1px #fff9,inset 0 -1px 2px #a48c7429}
-.academy-home .progress-ring{box-shadow:0 3px 7px #6f5b4b33,inset 0 2px 3px #fff8}
-.academy-home .continue-tile{position:relative;box-shadow:0 3px 5px #0002,0 10px 18px #66513c30,inset 0 2px 0 #fffbf5;border:1px solid #b3916a}
-.academy-home .continue-tile:after{content:"";position:absolute;inset:0 0 auto 128px;height:18px;background:linear-gradient(#fff7,transparent);pointer-events:none}
-.academy-home .lesson-art{filter:contrast(1.1);box-shadow:inset -14px 0 18px #0006}
-.academy-home .quick-grid button{position:relative;overflow:hidden;box-shadow:0 2px 2px #0002,0 9px 16px #59443030,inset 0 2px 0 #fff9,inset 0 -2px 3px #ad947c2d;border:1px solid #ba9d7c}
-.academy-home .quick-grid button:before{content:"";position:absolute;top:0;left:0;right:0;height:20px;background:linear-gradient(#fff8,transparent);pointer-events:none}
-.academy-home .quick-grid .qa-icon{position:relative;box-shadow:0 2px 2px #4e38243d,0 5px 9px #5d442f38,inset 0 2px 2px #fffae8aa,inset 0 -3px 3px #78553233}
-.academy-home .home-bottom{box-shadow:0 3px 4px #0005,0 17px 30px #0007,inset 0 2px 1px #ffffff15,inset 0 -2px 8px #0003;border:1px solid #78644d}
-.academy-home .coffee-art{filter:drop-shadow(0 3px 3px #0006)}
-header{box-shadow:0 4px 14px #0004,inset 0 1px 1px #fff1}
-nav{box-shadow:0 -5px 12px #0005,0 -12px 25px #0004}
+/* Premium restraint: approved stone, beige and gold; no bevels or fake metallic embossing */
+body{background:#202020}
+header{background:#262626;border-bottom:1px solid #444;box-shadow:none}
+header strong{font-family:Georgia,serif;font-size:16px;color:#c29a68}
+.academy-home .home-welcome{border:1px solid #d6c9bd;box-shadow:0 8px 24px rgba(0,0,0,.20);background:#e6ded6}
+.academy-home .home-intro{background:#e6ded6;box-shadow:none}
+.academy-home .home-metrics{background:#eee6de;border:1px solid #d8cec5;box-shadow:none}
+.academy-home .progress-ring{box-shadow:none;filter:none}
+.academy-home .continue-tile{background:#eee6dd;border:1px solid #d8cbbf;box-shadow:0 2px 7px rgba(0,0,0,.10)}
+.academy-home .continue-tile:after{display:none}
+.academy-home .art-emblem{background:#b58b55;border:1px solid #c29a68;box-shadow:none}
+.academy-home .quick-grid button{background:#eee6dd;border:1px solid #d7cbc0;box-shadow:none}
+.academy-home .quick-grid button:before{display:none}
+.academy-home .quick-grid .qa-icon{background:#dfd0bc;border:0;box-shadow:none}
+.academy-home .quick-grid .qa-icon svg{color:#785e42}
+.academy-home .home-bottom{background:#2b2b2b;border:1px solid #474747;box-shadow:none}
+.academy-home .coffee-art{filter:none}
+nav{background:#242424;border-top:1px solid #444;box-shadow:none}
