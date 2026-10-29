@@ -1,0 +1,24 @@
+/* node tests/level1-milestone-smoke.js — no browser or external credential implied */
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const ctx={window:{},module:{exports:{}},console};vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('learning/core.js','utf8'),ctx);
+const L=ctx.window.BALearning;
+const exam={id:'l1-final-v39',rubric:['Calculation','Decision'],questions:[{id:'q1',correct:0},{id:'q2',correct:1}]};
+const course={id:'course-06',modules:[{lessons:[{id:'lesson'}]}],practice:{questions:exam.questions},exam:{questions:exam.questions,rubric:exam.rubric},portfolio:{rubric:exam.rubric},sectionExams:[exam],portfolioSections:[{id:'l1-final-v39-board',rubric:exam.rubric}]};
+const store=L.empty(),s=L.state(store,course.id),key='sectionExam-l1-final-v39';
+s.answers[key]={q1:0,q2:0};assert.equal(L.grade(store,course,key).score,50);
+s.answers[key]={q1:0,q2:1};assert.equal(L.grade(store,course,key).score,100);
+assert.equal(L.latest(s,key).score,100);assert.equal(s.attempts.length,2);
+assert.equal(L.reviewed(s,key,exam.rubric),false);
+s.drafts[key]='Independent analytical evidence';s.reviews[key]={0:3,1:4};
+assert.equal(L.reviewed(s,key,exam.rubric),true);
+s.drafts[key]='';assert.equal(L.reviewed(s,key,exam.rubric),false);
+s.drafts[key]='Restored draft';
+const persisted=JSON.stringify(store);const memory={getItem:k=>k===L.KEY?persisted:null};
+const restored=L.load(memory);assert.equal(L.latest(L.state(restored,course.id),key).score,100);
+assert.equal(L.reviewed(L.state(restored,course.id),key,exam.rubric),true);
+const capKey='portfolioSection-l1-final-v39-board';
+assert.equal(L.reviewed(s,capKey,exam.rubric),false);
+s.drafts[capKey]='Independent board report';s.reviews[capKey]={0:3,1:3};
+assert.equal(L.reviewed(s,capKey,exam.rubric),true);
+console.log('PASS: grading, resubmission, writing review, persisted reload, capstone gating (9 checks)');
