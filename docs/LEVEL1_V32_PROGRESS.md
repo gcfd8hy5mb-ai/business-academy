@@ -13,3 +13,11 @@ Fresh IDs are used for the two lessons, applications, exam and portfolio. The sh
 ## Remaining academic and quality work
 
 All six subjects still fall short of their planned full workloads. Business Mathematics needs more algebra, statistics, probability, modeling, data interpretation and cumulative timed exams. Other Level 1 subjects need more instruction and independently validated assessment. The current written rubrics are self-review, not instructor grading or secure proctoring. Real iPhone Safari and Home Screen keyboard behavior still require device testing. No university credit or academic equivalence is claimed.
+
+## Batch 2 — Financial Literacy: cash quality and credit stress
+
+Two further focused lessons (90 minutes) teach the indirect CFO bridge, capex-aware cash measurement and contract-defined covenant tests. Two 60-minute written problems require reconciliation of an acquisition-related receivable movement and a combined earnings/debt/rate shock. A new 120-minute examination contains five objective calculations with explanations, lesson-linked remediation and an 800–1,000 word liquidity memo. A 120-minute portfolio dossier requires a real public-company annual report, debt note and maturity map, with a separately labeled fictional stress. The case data are fictional; the portfolio must cite actual disclosures and identify missing definitions rather than fabricate them.
+
+This is **7.50 more assigned hours**. Financial Literacy rises from 18.50 to 26.00 hours; the cumulative two-batch Level 1 total is **126.50 / 365.00 hours**, leaving **238.50 hours**. The program total is **153.25 hours**. The [HBS Online financial statement analysis guide](https://online.hbs.edu/blog/post/financial-statement-analysis) is a public supplemental scope reference, not an HBS course or copied assignment.
+
+Batch 2 has distinct lesson, written-problem, exam and portfolio IDs. Existing financial-literacy submissions and the earlier advanced case remain available in the Version 31 lesson flow. The new exam and portfolio are required for the expanded self-assessed sequence; no automated judgment of the written quality is claimed.
