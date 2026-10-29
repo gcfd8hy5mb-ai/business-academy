@@ -1,10 +1,10 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const L=require('../learning/core.js');
-function content(){const x={window:{BAContent:{}}};vm.createContext(x);for(const f of ['level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);return x.window.BAContent}
+function content(){const x={window:{BAContent:{}}};vm.createContext(x);for(const f of ['level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level1-studios-e.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);return x.window.BAContent}
 test('Version 31 course identities, previous content and 111.5 baseline remain intact',()=>{
  const all=content(),level=Object.entries(all).filter(([id])=>Number(id.slice(-2))<=6);
- assert.equal(level.length,6);assert.equal(level.reduce((n,[,c])=>n+L.workload(c).minutes,0),8490);
- assert.equal(level.filter(([,c])=>c.sectionExams?.length).length,4);
+ assert.equal(level.length,6);assert.equal(level.reduce((n,[,c])=>n+L.workload(c).minutes,0),8940);
+ assert.equal(level.filter(([,c])=>c.sectionExams?.length).length,5);
  assert.equal(Object.keys(all).length,9);
  assert.equal(all['course-02'].modules.slice(0,6).map(m=>m.id).join(','),['course-02-m1','course-02-m2','course-02-m3','course-02-m4','course-02-m5','course-02-m6'].join(','));
 });
@@ -81,4 +81,20 @@ test('contract cohort studio reconciles recurring profit and cash under joint do
  for(const q of exam.questions)(s.answers[kind] ||= {})[q.id]=q.correct;
  assert.equal(L.grade(db,c,kind).score,100);assert.equal(L.mastery(db,c).sections,false);
  assert.equal(s.drafts.portfolioExtension,'Old dossier');
+});
+test('corporate venture financing studio reconciles primary, secondary and downside runway',()=>{
+ const c=content()['course-04'],exam=c.sectionExams[0],ids=c.modules.flatMap(m=>m.lessons.map(l=>l.id));
+ assert.equal(c.modules.length,7);assert.equal(ids.length,8);assert.equal(new Set(ids).size,8);
+ assert.equal(c.applications.length,4);assert.equal(exam.questions.length,5);assert.equal(L.workload(c).minutes,1560);
+ assert.ok(exam.questions.every(q=>ids.includes(q.lessonId)&&q.explanation.length>70&&q.remediation.length>50));
+ assert.equal(15*4,60);assert.ok(Math.abs(8/15-.5333333)<1e-6);
+ assert.equal((8-5)+2+5,10);assert.equal(20+12-6,26);
+ assert.equal(12*.1/12,.10000000000000002);
+ assert.equal(18/1.6,11.25);assert.ok(Math.abs(18/2.1-8.57142857)<1e-6);
+ assert.equal((20-6-8)/1.5,4);
+ const db=L.empty(),s=L.state(db,c.id),kind='sectionExam-'+exam.id;
+ s.drafts.portfolioExtension='Earlier venture evidence';
+ for(const q of exam.questions)(s.answers[kind] ||= {})[q.id]=q.correct;
+ assert.equal(L.grade(db,c,kind).score,100);assert.equal(L.mastery(db,c).sections,false);
+ assert.equal(s.drafts.portfolioExtension,'Earlier venture evidence');
 });
