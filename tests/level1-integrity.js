@@ -2,7 +2,7 @@
    Integrity and workload checks; NOT a certification of academic rigor. */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const files=['learning/content.js','learning/level1.js','learning/level1-expansion-a.js','learning/level1-expansion-b.js',
-'learning/level1-studios-a.js','learning/level1-studios-b.js','learning/level1-studios-c.js','learning/level1-studios-d.js','learning/level1-studios-e.js','learning/level1-studios-f.js','learning/level1-analytics-v34.js','learning/level1-economics-v35.js','learning/level1-synthesis-v36.js','learning/level1-studios-v37.js','learning/level1-cumulative-v38.js'];
+'learning/level1-studios-a.js','learning/level1-studios-b.js','learning/level1-studios-c.js','learning/level1-studios-d.js','learning/level1-studios-e.js','learning/level1-studios-f.js','learning/level1-analytics-v34.js','learning/level1-economics-v35.js','learning/level1-synthesis-v36.js','learning/level1-studios-v37.js','learning/level1-cumulative-v38.js','learning/level1-final-v39.js'];
 const ctx={window:{},console};vm.createContext(ctx);
 for(const file of files){assert(fs.existsSync(file),'Missing '+file);vm.runInContext(fs.readFileSync(file,'utf8'),ctx,{filename:file,timeout:5000})}
 const courses=ctx.window.BAContent;
