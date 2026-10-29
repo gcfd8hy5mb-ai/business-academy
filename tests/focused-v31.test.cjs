@@ -4,7 +4,7 @@ function boot(storage=new Map()){
  const document={getElementById:id=>elements[id],addEventListener:(type,fn)=>(listeners[type]||=[]).push(fn)};
  const x={window:{scrollTo(){},scrollY:0},document,localStorage,Intl,Blob,URL,setTimeout,alert(){}};
  vm.createContext(x);
- for(const f of ['core.js','content.js','level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level1-studios-e.js','level1-studios-f.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);
+ for(const f of ['core.js','content.js','level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level1-studios-e.js','level1-studios-f.js','level1-analytics-v34.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);
  x.BALearning=x.window.BALearning;
  vm.runInContext(fs.readFileSync('app-v28.js','utf8'),x);
  vm.runInContext(fs.readFileSync('learning/workspace-v31.js','utf8'),x);

@@ -1,19 +1,19 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const L=require('../learning/core.js');
-function content(){const x={window:{BAContent:{}}};vm.createContext(x);for(const f of ['level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level1-studios-e.js','level1-studios-f.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);return x.window.BAContent}
+function content(){const x={window:{BAContent:{}}};vm.createContext(x);for(const f of ['level1.js','level1-expansion-a.js','level1-expansion-b.js','level1-studios-a.js','level1-studios-b.js','level1-studios-c.js','level1-studios-d.js','level1-studios-e.js','level1-studios-f.js','level1-analytics-v34.js','level2.js','level3.js'])vm.runInContext(fs.readFileSync('learning/'+f,'utf8'),x);return x.window.BAContent}
 test('Version 31 course identities, previous content and 111.5 baseline remain intact',()=>{
  const all=content(),level=Object.entries(all).filter(([id])=>Number(id.slice(-2))<=6);
- assert.equal(level.length,6);assert.equal(level.reduce((n,[,c])=>n+L.workload(c).minutes,0),9390);
+ assert.equal(level.length,6);assert.equal(level.reduce((n,[,c])=>n+L.workload(c).minutes,0),10290);
  assert.equal(level.filter(([,c])=>c.sectionExams?.length).length,6);
  assert.equal(Object.keys(all).length,9);
  assert.equal(all['course-02'].modules.slice(0,6).map(m=>m.id).join(','),['course-02-m1','course-02-m2','course-02-m3','course-02-m4','course-02-m5','course-02-m6'].join(','));
 });
 test('capital-budget studio has traceable, distinct and coherent evidence',()=>{
  const c=content()['course-02'],exam=c.sectionExams[0],portfolio=c.portfolioSections[0],ids=c.modules.flatMap(m=>m.lessons.map(l=>l.id));
- assert.equal(c.modules.length,7);assert.equal(ids.length,8);assert.equal(new Set(ids).size,8);
- assert.equal(c.applications.length,4);assert.equal(exam.questions.length,5);assert.equal(new Set(exam.questions.map(q=>q.id)).size,5);
+ assert.equal(c.modules.length,9);assert.equal(ids.length,12);assert.equal(new Set(ids).size,12);
+ assert.equal(c.applications.length,8);assert.equal(exam.questions.length,5);assert.equal(new Set(exam.questions.map(q=>q.id)).size,5);
  assert.ok(exam.questions.every(q=>ids.includes(q.lessonId)&&q.explanation.length>70&&q.remediation.length>50));
- assert.equal(portfolio.requirements.length,4);assert.equal(L.workload(c).minutes,1560);
+ assert.equal(portfolio.requirements.length,4);assert.equal(L.workload(c).minutes,2460);
  for(const lesson of c.modules[6].lessons){assert.equal(lesson.tutor.steps.length,4);assert.ok(lesson.body.every(p=>p.length>200))}
 });
 test('independent cash-flow, scenario, threshold and information-value calculations',()=>{
@@ -31,7 +31,7 @@ test('new section cannot inherit old mastery, but old answers and drafts persist
  assert.equal(L.grade(db,c,kind).score,100);
  assert.equal(L.mastery(db,c).sections,false);
  s.drafts[kind]='Independent dated model';s.reviews[kind]={0:3,1:3,2:3,3:3};
- assert.equal(L.mastery(db,c).sections,true);assert.equal(L.mastery(db,c).sectionPortfolios,false);
+ assert.equal(L.reviewed(s,kind,exam.rubric),true);assert.equal(L.mastery(db,c).sections,false);assert.equal(L.mastery(db,c).sectionPortfolios,false);
  assert.equal(s.drafts.portfolioExtension,'Prior executive pack');assert.equal(s.attempts.length,1);
 });
 test('financial literacy cash bridge and joint covenant downside reconcile independently',()=>{
