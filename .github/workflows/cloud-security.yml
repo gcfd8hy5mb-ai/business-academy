@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'firebase/business-law-firestore.rules'
+      - 'firebase.json'
       - 'tests/cloud-firestore-rules.test.cjs'
       - '.github/workflows/cloud-security.yml'
   push:
@@ -25,4 +26,4 @@ jobs:
           distribution: temurin
           java-version: '21'
       - run: npm install --no-save --no-audit --no-fund @firebase/rules-unit-testing@4.0.1 firebase@11.10.0 firebase-tools@14.0.0
-      - run: npx firebase-tools emulators:exec --project business-law-rules-test --only firestore 'node --test tests/cloud-firestore-rules.test.cjs'
+      - run: ./node_modules/.bin/firebase emulators:exec --project business-law-rules-test --only firestore 'node --test tests/cloud-firestore-rules.test.cjs'
