@@ -37,22 +37,26 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   }
   async function upload(){
     if(!currentUser || busy)return;busy=true;
+    if(autoEnabled){stopAuto();status('Cloud save: Paused for manual upload');}
     try {
       let count=0;
       for(const key of keys){
         const raw=localStorage.getItem(key);if(raw===null)continue;
-        const existing=await getDoc(ref(key));
-        if(existing.exists()){
-          const remote=existing.data().raw;
-          if(remote!==raw){notice('Cloud record for '+key+' differs. Keeping both versions unchanged. Resolve the conflict before uploading.');continue;}
-        }
-        await setDoc(ref(key),{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy},{merge:false});baseline.set(key,raw);count++;
+        // Transaction prevents another device writing between inspection and upload.
+        await runTransaction(db,async tx=>{
+          const docRef=ref(key),existing=await tx.get(docRef);
+          if(existing.exists() && existing.data().raw!==raw)
+            throw Error('Cloud record differs for '+key+'. Nothing was overwritten.');
+          tx.set(docRef,{raw,schemaVersion:1,updatedAt:serverTimestamp(),academy});
+        });
+        baseline.set(key,raw);count++;
       }
       notice('Uploaded '+count+' progress record(s).');
     }finally{busy=false}
   }
   async function download(){
     if(!currentUser||busy)return;busy=true;
+    if(autoEnabled){stopAuto();status('Cloud save: Paused for restore');}
     try{
       await backUp();
       let count=0;
@@ -83,6 +87,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
         }
         initial.set(key,{local,remote});
       }
+      let restored=0;
       for(const [key,{local,remote}] of initial){
         if(remote===null && local!==null){
           // Creating a missing record cannot overwrite one created concurrently.
@@ -93,8 +98,15 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
           });
         }else if(local===null && remote!==null){
           localStorage.setItem(key,remote);
+          restored++;
         }
         baseline.set(key,local??remote);
+      }
+      if(restored){
+        status('Cloud save: Restored; reload required');
+        notice('Cloud progress downloaded. The academy must reload before autosave can begin.');
+        location.reload();
+        return;
       }
       autoEnabled=true;
       if(syncTimer)clearInterval(syncTimer);
