@@ -1,0 +1,10 @@
+{
+  "firestore": {
+    "rules": "firebase/business-law-firestore.rules"
+  },
+  "emulators": {
+    "firestore": {
+      "port": 8080
+    }
+  }
+}
