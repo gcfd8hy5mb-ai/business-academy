@@ -18,7 +18,7 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   const status=(message)=>{statusMessage=message;accountStatus.textContent=message;};
   function stopAuto(){autoEnabled=false;baseline.clear();if(syncTimer)clearInterval(syncTimer);syncTimer=null;}
   const theme=academy==='business'
-    ? {bg:'#222529',paper:'#f4f0e9',accent:'#b99350',ink:'#25282a',muted:'#756b5c'}
+    ? {bg:'#17191b',paper:'#242627',accent:'#d6ad61',ink:'#f1e6d3',muted:'#c1b9a9'}
     : {bg:'#182627',paper:'#f5f0e5',accent:'#ad8b50',ink:'#192a29',muted:'#6f756e'};
   const styles=document.createElement('style');
   styles.textContent=`
@@ -40,6 +40,16 @@ if (cfg?.apiKey && cfg?.projectId && cfg?.authDomain && ['business','law','ethic
   #academy-welcome .academy-footnote{font-size:11px;line-height:1.6;margin-top:23px;color:${theme.muted};text-align:center}
   @media(max-height:680px){#academy-welcome{align-items:flex-start}#academy-welcome .academy-welcome-inner{padding:14px 0}#academy-welcome .academy-seal{margin-bottom:12px}#academy-welcome .academy-benefits{margin-bottom:15px}}
   #academy-account-menu{position:fixed;top:calc(env(safe-area-inset-top) + 62px);right:14px;width:min(320px,calc(100vw - 28px));z-index:9999;background:${theme.paper};color:${theme.ink};border:1px solid ${theme.accent};border-radius:16px;box-shadow:0 14px 40px #0003;padding:18px;box-sizing:border-box;font:14px system-ui,sans-serif}
+  #academy-welcome{background:radial-gradient(circle at 80% 12%,#b9904526,transparent 44%),linear-gradient(160deg,#17191b,#292b2b 65%,#17191b)}
+  #academy-welcome .academy-welcome-inner{padding:30px 23px;border:1px solid #b9976075;border-radius:20px;background:#ffffff06;box-shadow:0 18px 45px #0004}
+  #academy-welcome h1{color:#e4bd77;letter-spacing:.015em;text-transform:uppercase;font-size:clamp(32px,8.2vw,43px)}
+  #academy-welcome .academy-kicker{color:#d6ad61}
+  #academy-welcome .academy-primary{background:linear-gradient(100deg,#bf944e,#f0d28d,#bf944e);color:#1b1c1d;border-color:#e4bf78}
+  #academy-welcome .academy-secondary{background:#ffffff07}
+  #academy-auth-dialog section[role="dialog"]{background:#242627!important;color:#f1e6d3!important;border-color:#d6ad61!important}
+  #academy-auth-dialog input{background:#17191b!important;color:#f1e6d3!important;border-color:#ad9060!important}
+  #academy-auth-dialog button[type="submit"]{background:#d6ad61!important;color:#1b1c1d!important}
+  #academy-auth-dialog button:not([type="submit"]){color:#f1e6d3!important;border-color:#ad9060!important}
   #academy-account-menu[hidden]{display:none}
   #academy-account-menu button{display:block;width:100%;margin-top:10px;text-align:left;padding:12px;border:1px solid ${theme.accent};border-radius:9px;background:transparent;color:inherit;font:600 13px system-ui;cursor:pointer}
   `;
