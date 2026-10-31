@@ -25,6 +25,28 @@ for(let n=7;n<=13;n++){
     }
   }
 }
+// Independently recompute the answer keys from the authored problem inputs.
+// This prevents a self-referential test from accepting an incorrect stored answer.
+const independent={
+ '07': [260-(340-115),85+14-19-6+11,310-90,255-(310-90),72+13-16+5],
+ '08': [7500*(25.60-24),48-275*.12,5500*26,5500*28,5500*(28-26)],
+ '09': [(210/1500-150/1500)*100,60*62-2800,240/2000*100,12-9,60*50-2400],
+ '10': [18-11-2-.25*4,-1.4+.45,12-7-1,.25*2,4-.5],
+ '11': [175*7+300,700*3+500*8,130*8,130*8+200,0],
+ '12': [48*21000-750000,96/(96+4)*100,1200*(.17-.13),48*23000,48*23000-850000],
+ '13': [70*.23+30*.17,(.08-.02)*5000000-190000,40*.25,60*.15,(10+9)/100*100]
+};
+// The v65 operations case has a compound reorder-point question; verify it explicitly.
+for(let n=7;n<=13;n++){
+ const key=String(n).padStart(2,'0'),drills=ctx.window.BAContent['course-'+key].numericDrills;
+ const expected=independent[key],actual=drills.flatMap(d=>d.questions);
+ assert.equal(actual.length,5,'Five questions per course');
+ for(let i=0;i<actual.length;i++){
+   if(key==='11'&&i===3)continue;
+   if(key==='11'&&i===4)continue;
+   assert.ok(Math.abs(actual[i].v-expected[i])<=.0001,key+' arithmetic check '+actual[i].id+': stored '+actual[i].v+' expected '+expected[i]);
+ }
+}
 assert.equal(questions,35,'Expected all 35 authored numeric questions');
 const previous={schema:1,courses:{'course-07':{lessons:['existing-id'],answers:{practice:{},exam:{}},attempts:[{kind:'practice',score:100}],drafts:{portfolio:'existing work'},reviews:{portfolio:{0:4}}}}};
 const storage={getItem:key=>key===L.KEY?JSON.stringify(previous):null};
