@@ -15,6 +15,9 @@ for(let n=1;n<=13;n++){const id='course-'+String(n).padStart(2,'0'),c=catalog[id
  for(const q of questions){if(!Array.isArray(q.options)||q.options.length<2||!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.options.length)failures.push(id+' invalid objective key '+q.id);
  if(!q.explanation)failures.push(id+' missing explanation '+q.id);}
  const keyList=questions.map(q=>q.id);if(new Set(keyList).size!==keyList.length)failures.push(id+' repeated question ID');
+ for(const l of lessons){if(!l.id||!l.title||!Array.isArray(l.body)||!l.body.join(' ').trim())failures.push(id+' incomplete lesson '+(l.id||'?'));if(!Number.isFinite(l.minutes)||l.minutes<=0)failures.push(id+' invalid lesson workload '+l.id);}
+ for(const e of exams){if(!Number.isFinite(e.minutes)||e.minutes<=0)failures.push(id+' invalid exam workload '+(e.id||'?'));for(const q of e.questions||[]){if(q.options?.[q.correct]===undefined||!String(q.options[q.correct]).trim())failures.push(id+' empty correct answer '+q.id);if(new Set((q.options||[]).map(v=>String(v).trim())).size!==(q.options||[]).length)failures.push(id+' duplicate answer options '+q.id);}}
+ for(const item of [...portfolio,...applications]){if(!item.id&&!([c.portfolio,c.portfolioExtension].includes(item)))failures.push(id+' portfolio or application missing stable ID');if(!Array.isArray(item.rubric)||!item.rubric.length)failures.push(id+' missing review rubric '+(item.id||'base'));if(!Number.isFinite(item.minutes)||item.minutes<=0)failures.push(id+' invalid written workload '+(item.id||'base'));}
  if(!exams.length)failures.push(id+' has no exams');
  if(!portfolio.length)failures.push(id+' has no portfolio');
  const minutes=lessons.reduce((a,l)=>a+(l.minutes||0),0)+exams.reduce((a,e)=>a+(e.minutes||0),0)+[...portfolio,...applications,...(c.readings||[])].reduce((a,v)=>a+(v.minutes||0),0);
