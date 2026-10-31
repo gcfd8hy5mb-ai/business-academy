@@ -23,3 +23,5 @@ jobs:
         run: node tests/level1-milestone-smoke.js
       - name: Combined Level 1 and Level 2 validation
         run: node tests/level1-level2-completion-audit.js
+      - name: Level 2 numerical grading and progress compatibility
+        run: node tests/level2-numeric-and-persistence.js
