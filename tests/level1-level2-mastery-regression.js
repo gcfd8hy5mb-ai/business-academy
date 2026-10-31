@@ -27,6 +27,10 @@ for(const id of ['course-06','course-13']){
  assert.equal(L.mastery(store,c).mastered,true,id+' passes with scores and review evidence');
  s.reviews['portfolioSection-'+id+'-cap'][1]=2;
  assert.equal(L.mastery(store,c).mastered,false,id+' must reject partial portfolio review');
+ s.reviews['portfolioSection-'+id+'-cap'][1]=3.5;
+ assert.equal(L.mastery(store,c).mastered,false,'Fractional review scores are invalid');
+ s.reviews['portfolioSection-'+id+'-cap'][1]='4';
+ assert.equal(L.mastery(store,c).mastered,false,'String review scores are invalid');
  s.reviews['portfolioSection-'+id+'-cap'][1]=3;
  assert.equal(L.mastery(store,c).mastered,true);
  s.answers.exam[id+'-e1']=1;s.answers.exam[id+'-e2']=0;const failed=L.grade(store,c,'exam');
