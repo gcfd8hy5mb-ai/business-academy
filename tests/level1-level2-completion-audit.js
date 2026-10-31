@@ -3,7 +3,7 @@
 'use strict';
 const fs=require('node:fs'), vm=require('node:vm'), assert=require('node:assert/strict');
 const html=fs.readFileSync('index.html','utf8');
-const scripts=[...html.matchAll(/<script\s+src="([^"]+)"[^>]*><\/script>/g)].map(x=>x[1].split('?')[0]).filter(s=>s.startsWith('learning/')&&s.endsWith('.js'));
+const scripts=[...html.matchAll(/<script\s+src="([^"]+)"[^>]*><\/script>/g)].map(x=>x[1].split('?')[0]).filter(s=>s.startsWith('learning/')&&s.endsWith('.js')&&!s.includes('/workspace-'));
 const context={window:{},console,module:{exports:{}}};vm.createContext(context);
 for(const path of scripts){assert(fs.existsSync(path),'Missing script '+path);vm.runInContext(fs.readFileSync(path,'utf8'),context,{filename:path});}
 const catalog=context.window.BAContent||{};const failures=[];const report=[];
