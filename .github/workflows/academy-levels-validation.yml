@@ -23,6 +23,8 @@ jobs:
         run: node tests/level1-milestone-smoke.js
       - name: Combined Level 1 and Level 2 validation
         run: node tests/level1-level2-completion-audit.js
+      - name: Level 1 and Level 2 dashboard milestone contracts
+        run: node tests/level1-level2-ui-milestones.js
       - name: Level 2 real final mastery
         run: node tests/level2-final-retake-regression.js
       - name: Level 1 comprehensive final retakes and written gates
