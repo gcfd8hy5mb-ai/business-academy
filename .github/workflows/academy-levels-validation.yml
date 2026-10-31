@@ -1,0 +1,25 @@
+name: Academy Levels 1–2 integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'learning/**'
+      - 'tests/**'
+      - '.github/workflows/academy-levels-validation.yml'
+      - 'index.html'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Level 1 curriculum integrity
+        run: node tests/level1-integrity.js
+      - name: Level 1 milestone
+        run: node tests/level1-milestone-smoke.js
+      - name: Combined Level 1 and Level 2 validation
+        run: node tests/level1-level2-completion-audit.js
