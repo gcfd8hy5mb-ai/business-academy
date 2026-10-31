@@ -1,0 +1,32 @@
+/* node tests/level1-final-retake-regression.js
+ * Real Level 1 final assessment: objective grading, failed retake, and written gates. */
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const ctx={window:{BAContent:{'course-06':{id:'course-06',modules:[],sectionExams:[],portfolioSections:[],practice:{questions:[{id:'p1',correct:0}]}}}},module:{exports:{}},console};
+vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('learning/core.js','utf8'),ctx);
+vm.runInContext(fs.readFileSync('learning/level1-final-v39.js','utf8'),ctx);
+const L=ctx.window.BALearning,c=ctx.window.BAContent['course-06'],exam=c.sectionExams.find(e=>e.id==='l1-final-v39');
+const kind='sectionExam-'+exam.id,store=L.empty(),s=L.state(store,c.id);
+s.lessons=c.modules.flatMap(m=>m.lessons.map(l=>l.id));
+s.answers.practice={p1:0};L.grade(store,c,'practice');
+s.answers[kind]=Object.fromEntries(exam.questions.map(q=>[q.id,(q.correct+1)%q.options.length]));
+assert.equal(L.grade(store,c,kind).score,0,'Incorrect responses must not pass');
+assert.equal(L.mastery(store,c).mastered,false,'Failed cumulative exam cannot grant mastery');
+s.answers[kind]=Object.fromEntries(exam.questions.map(q=>[q.id,q.correct]));
+assert.equal(L.grade(store,c,kind).score,100,'Correct final answer key must score 100');
+assert.equal(L.mastery(store,c).mastered,false,'Perfect objective scores do not waive written exam');
+s.drafts[kind]='Original analysis with calculations';
+s.reviews[kind]=Object.fromEntries(exam.rubric.map((_,i)=>[i,3]));
+assert.equal(L.mastery(store,c).mastered,false,'Board portfolio still required');
+const cap=c.portfolioSections.find(p=>p.id==='l1-final-v39-board');assert(cap);
+s.drafts['portfolioSection-'+cap.id]='Original board recommendation and evidence register';
+s.reviews['portfolioSection-'+cap.id]=Object.fromEntries(cap.rubric.map((_,i)=>[i,3]));
+assert.equal(L.mastery(store,c).mastered,true,'Final requirements should now pass for isolated course');
+s.answers[kind][exam.questions[0].id]=(exam.questions[0].correct+1)%4;
+assert.equal(L.grade(store,c,kind).score,92,'Single wrong item in a 12-question final rounds to 92');
+assert.equal(L.mastery(store,c).mastered,true,'Passing retake should retain mastery');
+s.answers[kind]=Object.fromEntries(exam.questions.map(q=>[q.id,(q.correct+1)%4]));
+L.grade(store,c,kind);
+assert.equal(L.mastery(store,c).mastered,false,'Most recent failed retake revokes mastery');
+console.log('PASS: Level 1 final grades, written evidence, and latest-retake behavior');
