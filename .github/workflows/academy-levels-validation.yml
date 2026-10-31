@@ -23,6 +23,8 @@ jobs:
         run: node tests/level1-milestone-smoke.js
       - name: Combined Level 1 and Level 2 validation
         run: node tests/level1-level2-completion-audit.js
+      - name: Independent corporate mathematics checks
+        run: node tests/level1-level2-final-math.js
       - name: Both levels mastery and retake regression
         run: node tests/level1-level2-mastery-regression.js
       - name: Level 2 numerical grading and progress compatibility
