@@ -1,0 +1,34 @@
+/* node tests/level2-final-retake-regression.js
+ * Exercise the actual Level 2 cumulative exam and capstone data. */
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const ctx={window:{BAContent:{'course-13':{id:'course-13',modules:[],sectionExams:[],portfolioSections:[],practice:{questions:[{id:'p1',correct:0}]}}}},module:{exports:{}},console};
+vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('learning/core.js','utf8'),ctx);
+vm.runInContext(fs.readFileSync('learning/level2-capstone-v55.js','utf8'),ctx);
+const L=ctx.window.BALearning,c=ctx.window.BAContent['course-13'];
+const exam=c.sectionExams.find(e=>e.id==='l2-final-v55-exam'),cap=c.portfolioSections.find(p=>p.id==='l2-final-v55-capstone');
+assert(exam&&cap,'Both Level 2 final milestones must exist');
+const k='sectionExam-'+exam.id,pk='portfolioSection-'+cap.id;
+const store=L.empty(),st=L.state(store,c.id);
+st.lessons=c.modules.flatMap(m=>m.lessons.map(l=>l.id));
+st.answers.practice={p1:0};assert.equal(L.grade(store,c,'practice').score,100);
+st.answers[k]=Object.fromEntries(exam.questions.map(q=>[q.id,(q.correct+1)%q.options.length]));
+assert.equal(L.grade(store,c,k).score,0);
+assert.equal(L.mastery(store,c).mastered,false);
+st.answers[k]=Object.fromEntries(exam.questions.map(q=>[q.id,q.correct]));
+assert.equal(L.grade(store,c,k).score,100);
+assert.equal(L.mastery(store,c).mastered,false,'Written final must not be skipped');
+st.drafts[k]='Independent analysis';
+st.reviews[k]=Object.fromEntries(exam.rubric.map((_,i)=>[i,3]));
+assert.equal(L.mastery(store,c).mastered,false,'Capstone must not be skipped');
+st.drafts[pk]='Independent board case';
+st.reviews[pk]=Object.fromEntries(cap.rubric.map((_,i)=>[i,3]));
+assert.equal(L.mastery(store,c).mastered,true,'Isolated course with all required evidence should be mastered');
+st.reviews[pk][0]=2;
+assert.equal(L.mastery(store,c).mastered,false,'Capstone low rubric score must block mastery');
+st.reviews[pk][0]=3;
+st.answers[k]=Object.fromEntries(exam.questions.map(q=>[q.id,(q.correct+1)%q.options.length]));
+assert.equal(L.grade(store,c,k).score,0);
+assert.equal(L.mastery(store,c).mastered,false,'Latest failed attempt must revoke mastery');
+console.log('PASS: Level 2 real cumulative final gates and retakes');
