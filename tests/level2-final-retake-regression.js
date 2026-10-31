@@ -2,7 +2,8 @@
  * Exercise the actual Level 2 cumulative exam and capstone data. */
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const ctx={window:{BAContent:{'course-13':{id:'course-13',modules:[],sectionExams:[],portfolioSections:[],practice:{questions:[{id:'p1',correct:0}]}}}},module:{exports:{}},console};
+const courses=Object.fromEntries(Array.from({length:7},(_,i)=>{const id='course-'+String(i+7).padStart(2,'0');return [id,{id,modules:[],sectionExams:[],portfolioSections:[],applications:[],practice:{questions:[{id:'p1',correct:0}]}}]}));
+const ctx={window:{BAContent:courses},module:{exports:{}},console};
 vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('learning/core.js','utf8'),ctx);
 vm.runInContext(fs.readFileSync('learning/level2-capstone-v55.js','utf8'),ctx);
