@@ -17,6 +17,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Capture validation environment
+        run: |
+          node --version
+          git rev-parse --short HEAD
+          test -f index.html
+      - name: Enumerate all academy validation tests
+        run: |
+          for test_file in tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js; do
+            test -s "$test_file" || { echo "Missing test: $test_file"; exit 1; }
+          done
       - name: Level 1 curriculum integrity
         run: node tests/level1-integrity.js
       - name: Level 1 milestone
@@ -41,3 +51,9 @@ jobs:
         run: node tests/level1-level2-mastery-regression.js
       - name: Level 2 numerical grading and progress compatibility
         run: node tests/level2-numeric-and-persistence.js
+      - name: Publish test run summary
+        if: always()
+        run: |
+          echo "## Levels 1–2 validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "Commit: \`$GITHUB_SHA\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "See each test step above for its actual pass/fail result. A passing CI job is not external academic accreditation or device testing." >> "$GITHUB_STEP_SUMMARY"
