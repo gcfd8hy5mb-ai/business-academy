@@ -23,6 +23,8 @@ jobs:
         run: node tests/level1-milestone-smoke.js
       - name: Combined Level 1 and Level 2 validation
         run: node tests/level1-level2-completion-audit.js
+      - name: Level 1 comprehensive final answer key
+        run: node tests/level1-final-answer-key.js
       - name: Level 2 comprehensive final answer key
         run: node tests/level2-final-answer-key.js
       - name: Level 1 and 2 final capstone contracts
