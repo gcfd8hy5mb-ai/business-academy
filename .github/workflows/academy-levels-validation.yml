@@ -27,6 +27,8 @@ jobs:
           for test_file in tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js; do
             test -s "$test_file" || { echo "Missing test: $test_file"; exit 1; }
           done
+      - name: Latest Level 1 and Level 2 seminar integration
+        run: node tests/levels-v72-integration.js
       - name: Level 1 curriculum integrity
         run: node tests/level1-integrity.js
       - name: Level 1 milestone
