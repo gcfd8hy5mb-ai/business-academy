@@ -28,8 +28,8 @@ const expected=['80','52.5','47.5','7.5','500k','≈+.413','4.5m','3.3m','≈632
 for(let i=0;i<formulas.length;i++){
  const q=exam.questions[i];assert.equal(q.options[q.correct],expected[i],'Mismatch in final answer option '+(i+1));
  const actual=formulas[i]();
- const numeric=i===4?500000:i===5?.413:i===6?4.5:i===7?3.3:i===8?632:i===9?40:i===10?300000:i===11?2.5:i===13?-1:actual;
- const calculated=i===6?actual/1e6:i===10?actual:i===13?actual/1e6:actual;
+ const numeric=i===4?500000:i===5?.413:i===6?4500000:i===7?3.3:i===8?632:i===9?40:i===10?300000:i===11?2.5:i===13?-1000000:actual;
+ const calculated=actual;
  assert.ok(Math.abs(calculated-numeric)<(i===8?1:i===5?0.02:1e-7),'Final formula mismatch at question '+(i+1));
 }
 console.log('PASS: All 14 Level 2 final answer keys independently cross-checked');
