@@ -24,3 +24,10 @@ Do not reset `business-academy-learning-v1` or `business-academy-v1`, rename sav
 
 ## Completion rule
 A level may be labeled **content authored** based on verified coverage; it must not be labeled **fully validated** until release blockers 1–4 pass with evidence. Neither level is an accredited degree or externally assessed mastery credential.
+
+## Acceptance update — 2026-10-31
+- User-supplied GitHub Actions screenshot confirms **Academy Levels 1–2 integrity #36** passed on commit `6d33a1b`. This verifies the configured CI suite for that commit, not future edits or external academic rigor.
+- User confirmed on their iPhone: Level 1 lesson progress persists after reopening; quiz scores persist; written responses and rubric scores persist; the Level 1 comprehensive final submits and displays a score.
+- **Unverified on physical device:** Level 1 executive capstone persistence and graduation milestone, and equivalent Level 2 exam, capstone and persistence flows.
+- The coursework is available for independent study. Level 1 and Level 2 should **not** be labeled independently accredited or fully externally academically reviewed.
+- Do not retroactively change any student's assessment results or saved keys to mark the courses complete. Student mastery must be earned through actual requirements.
