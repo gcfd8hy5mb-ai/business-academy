@@ -32,7 +32,7 @@ const independent={
  '08': [7500*(25.60-24),48-275*.12,5500*26,5500*28,5500*(28-26)],
  '09': [(210/1500-150/1500)*100,60*62-2800,240/2000*100,12-9,60*50-2400],
  '10': [18-11-2-.25*4,-1.4+.45,12-7-1,.25*2,4-.5],
- '11': [175*7+300,700*3+500*8,130*8,130*8+200,0],
+ '11': [175*7+300,700*3+500*8,130*8,130*8+280,650*4+350*7],
  '12': [48*21000-750000,96/(96+4)*100,1200*(.17-.13),48*23000,48*23000-850000],
  '13': [70*.23+30*.17,(.08-.02)*5000000-190000,40*.25,60*.15,(10+9)/100*100]
 };
@@ -42,8 +42,6 @@ for(let n=7;n<=13;n++){
  const expected=independent[key],actual=drills.flatMap(d=>d.questions);
  assert.equal(actual.length,5,'Five questions per course');
  for(let i=0;i<actual.length;i++){
-   if(key==='11'&&i===3)continue;
-   if(key==='11'&&i===4)continue;
    assert.ok(Math.abs(actual[i].v-expected[i])<=.0001,key+' arithmetic check '+actual[i].id+': stored '+actual[i].v+' expected '+expected[i]);
  }
 }
