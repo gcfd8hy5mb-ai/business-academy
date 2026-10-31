@@ -1,0 +1,23 @@
+/* Desktop Academy foundation — additive, mobile layout unchanged. */
+@media (min-width: 900px) {
+  #app {max-width: 1440px; padding: 24px clamp(28px, 4vw, 72px) 110px; margin-inline:auto;}
+  #app > header {padding:20px 0; margin-bottom:20px;}
+  #app > header strong {font-size:22px;}
+  #app > nav, nav {width:min(100%,1440px); justify-content:center; gap:36px; padding:14px 32px; border:1px solid #51493f; border-radius:16px 16px 0 0;}
+  nav button {min-width:100px;font-size:13px;}
+  .home-welcome,.hero {min-height:210px;}
+  .home-welcome {padding:28px;}
+  .home-welcome h2 {font-size:30px;}
+  .home-welcome p,.card p {font-size:15px;}
+  .card {padding:24px; margin:16px 0;}
+  .quick-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+  .stats {gap:16px;}
+  .learning-workspace {max-width:1100px;margin-inline:auto;}
+  .learning-workspace .learning-tabs {overflow:visible;flex-wrap:wrap!important;}
+  .learning-workspace textarea {min-height:190px;}
+  .academy-subpage {max-width:1120px;margin-inline:auto;}
+}
+@media (min-width: 1200px) {
+  .home-metrics {gap:18px;}
+  .home-metrics b {font-size:23px;}
+}
