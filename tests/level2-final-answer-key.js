@@ -3,7 +3,9 @@
  * answers. This is not an audit of every question in the academy. */
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
-const ctx={window:{BAContent:{'course-13':{modules:[],sectionExams:[],portfolioSections:[]}}},console};vm.createContext(ctx);
+const courses=Object.fromEntries(Array.from({length:7},(_,i)=>{const id='course-'+String(i+7).padStart(2,'0');return [id,{id,modules:[],sectionExams:[],portfolioSections:[],applications:[]}] }));
+const ctx={window:{BAContent:courses},console};
+vm.createContext(ctx);
 vm.runInContext(fs.readFileSync('learning/level2-capstone-v55.js','utf8'),ctx,{filename:'learning/level2-capstone-v55.js'});
 const exam=ctx.window.BAContent['course-13'].sectionExams.find(e=>e.id==='l2-final-v55-exam');assert(exam,'Final exam missing');
 const formulas=[
