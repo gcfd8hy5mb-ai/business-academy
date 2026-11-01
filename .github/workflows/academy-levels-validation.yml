@@ -55,6 +55,8 @@ jobs:
         run: node tests/level2-numeric-and-persistence.js
       - name: Level 3 assessment integrity
         run: node tests/level3-assessment-smoke.js
+      - name: Level 3 mastery and persistence
+        run: node tests/level3-mastery-regression.js
       - name: Publish test run summary
         if: always()
         run: |
