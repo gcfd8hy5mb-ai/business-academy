@@ -65,6 +65,8 @@ jobs:
         run: node tests/level3-curriculum-integrity.js
       - name: Level 3 final milestone UI
         run: node tests/level3-ui-milestone.js
+      - name: Level 3 Version 81 independently verified case models
+        run: node tests/level3-v81-answer-key.js
       - name: Publish test run summary
         if: always()
         run: |
