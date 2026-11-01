@@ -24,4 +24,15 @@ for(let n=14;n<=20;n++){
  for(const bad of incorrect)s.answers[kind][bad.id]=bad.correct;doQuiz(kind,last.questions);assert.equal(core.mastery(store,c).mastered,true,'Passing retake should restore mastery '+n);
 }
 const persisted=JSON.stringify(store);const mockStorage={getItem:key=>key===core.KEY?persisted:null};const restored=core.load(mockStorage);assert.equal(Object.keys(restored.courses).length,7);assert.equal(restored.courses['course-20'].attempts.length>0,true);
+for(let n=14;n<=20;n++){
+ const id='course-'+n,course=ctx.window.BAContent[id];
+ const before=core.mastery(store,course),after=core.mastery(restored,course);
+ assert.equal(before.mastered,true,'Pre-save course mastery missing '+n);
+ assert.equal(after.mastered,true,'Saved Level 3 mastery not restored '+n);
+ const stateBefore=core.state(store,id),stateAfter=core.state(restored,id);
+ assert.equal(stateAfter.lessons.length,stateBefore.lessons.length,'Lesson completion changed during restore '+n);
+ const v81='sectionExam-c'+n+'-v81-exam';
+ assert.ok(stateAfter.answers[v81],'Version 81 answer state was lost on restore '+n);
+ assert.equal(stateAfter.reviews[v81].length,stateBefore.reviews[v81].length,'Version 81 written rubric lost on restore '+n);
+}
 console.log('Level 3 mastery and persistence regression passed: seven courses, written gates, failure and retakes');
