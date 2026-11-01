@@ -24,7 +24,7 @@ jobs:
           test -f index.html
       - name: Enumerate all academy validation tests
         run: |
-          for test_file in tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js tests/level3-assessment-smoke.js tests/level3-mastery-regression.js tests/level3-final-answer-key.js tests/level3-final-math.js tests/level3-curriculum-integrity.js tests/level3-ui-milestone.js tests/level3-v81-answer-key.js; do
+          for test_file in tests/levels-v72-integration.js tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js tests/level3-assessment-smoke.js tests/level3-mastery-regression.js tests/level3-final-answer-key.js tests/level3-final-math.js tests/level3-curriculum-integrity.js tests/level3-ui-milestone.js tests/level3-v81-answer-key.js; do
             test -s "$test_file" || { echo "Missing test: $test_file"; exit 1; }
           done
       - name: Latest Level 1 and Level 2 seminar integration
