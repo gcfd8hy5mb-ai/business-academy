@@ -1,6 +1,6 @@
 /* Level 3 full authored-content and graduation contract audit. */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const paths=['level3.js','level3-advanced-v73.js','level3-corporate-depth-v74.js','level3-integrated-v75.js','level3-board-decisions-v76.js','level3-cumulative-v77.js','level3-mastery-v78.js','level3-final-depth-v79.js'];
+const paths=['level3.js','level3-advanced-v73.js','level3-corporate-depth-v74.js','level3-integrated-v75.js','level3-board-decisions-v76.js','level3-cumulative-v77.js','level3-mastery-v78.js','level3-final-depth-v79.js','level3-executive-labs-v80.js'];
 const ctx={window:{BAContent:{}}};vm.createContext(ctx);
 for(const p of paths)vm.runInContext(fs.readFileSync('learning/'+p,'utf8'),ctx,{filename:p});
 let lessons=0,questions=0,work=0;
@@ -23,6 +23,6 @@ for(let n=14;n<=20;n++){
 }
 assert.equal(all.size,7);
 const final=ctx.window.BAContent['course-20'];assert.equal(final.sectionExams.find(x=>x.id==='l3-final-v77-exam').questions.length,16);
-assert.ok(final.portfolioSections.some(x=>x.id==='l3-final-v77-capstone'));
-assert.ok(lessons>=95&&questions>=100&&work>=40);
+assert.ok(final.portfolioSections.some(x=>x.id==='l3-final-v77-capstone'));for(let n=14;n<=20;n++){const c=ctx.window.BAContent['course-'+n];const e=c.sectionExams.find(x=>x.id==='c'+n+'-v80-exam');assert.equal(e.questions.length,3);assert.ok(c.modules.some(m=>m.id==='c'+n+'-v80-module'));assert.ok(c.applications.some(a=>a.id==='c'+n+'-v80-app'));}
+assert.ok(lessons>=109&&questions>=149&&work>=71);
 console.log('Level 3 audited:',all.size,'courses,',lessons,'lessons,',questions,'questions,',work,'written work items.');
