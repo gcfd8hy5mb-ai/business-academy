@@ -59,6 +59,8 @@ jobs:
         run: node tests/level3-mastery-regression.js
       - name: Level 3 comprehensive final answer key
         run: node tests/level3-final-answer-key.js
+      - name: Independent Level 3 final mathematics
+        run: node tests/level3-final-math.js
       - name: Publish test run summary
         if: always()
         run: |
