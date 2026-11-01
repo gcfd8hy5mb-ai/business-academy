@@ -69,3 +69,18 @@ interpretations.forEach((expected,i)=>{
 assert.ok(Math.abs(expected[0].base-(16*((1-1.10**-4)/.10)-50))<1e-9);
 assert.ok(Math.abs(14*((1-1.12**-5)/.12)-50-.466685)<.002,'Beta valuation is inconsistent');
 console.log('Level 3 v81 teaching narrative and independently recomputed decisions match');
+
+/* Student-facing remediation and evidence requirements for all seven new labs. */
+for(let n=14;n<=20;n++){
+ const c=ctx.window.BAContent['course-'+n],tag='c'+n+'-v81';
+ const e=c.sectionExams.find(x=>x.id===tag+'-exam');
+ assert.ok(e.written?.includes('independent quantitative model'),'Missing independent written assessment '+n);
+ assert.ok(e.rubric?.some(x=>x.includes('risk')||x.includes('downside')),'Risk analysis rubric missing '+n);
+ const q=e.questions[0];
+ assert.ok(q.remediation?.length>=50,'Missing numerical remediation '+n);
+ assert.ok(q.explanation?.includes('=')||q.explanation?.includes('×'),'Worked quantitative explanation missing '+n);
+ const app=c.applications.find(x=>x.id===tag+'-app');
+ assert.ok(app.requirements.some(x=>x.includes('assumptions')),'Unstated assumptions in written brief '+n);
+ assert.ok(app.requirements.some(x=>x.includes('stop triggers')),'Missing decision monitoring '+n);
+}
+console.log('Level 3 v81 learning checks: seven written assessments, remediation notes, and governance rubrics present');
