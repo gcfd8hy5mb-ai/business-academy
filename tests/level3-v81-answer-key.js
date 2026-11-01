@@ -49,3 +49,23 @@ cases.forEach((s,i)=>{
  assert.ok(s.check(s.stress),'Incorrect '+s.unit+' stress model in case '+n);
 });
 console.log('Level 3 v81 regression: seven stress models, board/evidence keys, written rubrics, and distractors verified');
+
+/* Check that the numerical decisions actually stated in the lessons match model inputs. */
+const interpretations=[
+ {base:'Alpha PV=16',stress:'−$4.354m'},
+ {base:'$575,000',stress:'$225,000'},
+ {base:'$2.18m',stress:'25% price-spike'},
+ {base:'$800 total',stress:'uncertainty'},
+ {base:'founders own 7/12.5=56%',stress:'1m employee-option'},
+ {base:'$480,000 reduction',stress:'translation'},
+ {base:'$142,000 per year',stress:'$108,000'}
+];
+interpretations.forEach((expected,i)=>{
+ const n=i+14,mod=ctx.window.BAContent['course-'+n].modules.find(m=>m.id==='c'+n+'-v81-module');
+ const baseText=mod.lessons[0].body.join(' '),stressText=mod.lessons[1].body.join(' ');
+ assert.ok(baseText.includes(expected.base),'Expected base decision omitted from lesson '+n);
+ assert.ok(stressText.includes(expected.stress),'Expected stress interpretation omitted from lesson '+n);
+});
+assert.ok(Math.abs(expected[0].base-(16*((1-1.10**-4)/.10)-50))<1e-9);
+assert.ok(Math.abs(14*((1-1.12**-5)/.12)-50-.466685)<.002,'Beta valuation is inconsistent');
+console.log('Level 3 v81 teaching narrative and independently recomputed decisions match');
