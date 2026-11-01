@@ -42,4 +42,21 @@ for(let n=14;n<=20;n++){
  assert.ok(stateAfter.answers[v81],'Version 81 answer state was lost on restore '+n);
  assert.equal(stateAfter.reviews[v81].length,stateBefore.reviews[v81].length,'Version 81 written rubric lost on restore '+n);
 }
+
+/* Failed attempts must remain failed after reload; no stale prior pass may master. */
+const failedStore=JSON.parse(JSON.stringify(store));
+const failingCourse=ctx.window.BAContent['course-20'],failingKind='sectionExam-c20-v81-exam';
+const failureState=core.state(failedStore,'course-20');
+const failedQuestion=failingCourse.sectionExams.find(e=>e.id==='c20-v81-exam').questions[0];
+failureState.answers[failingKind][failedQuestion.id]=(failedQuestion.correct+1)%failedQuestion.options.length;
+assert.equal(core.grade(failedStore,failingCourse,failingKind).score,67,'Expected failed case review');
+assert.equal(core.mastery(failedStore,failingCourse).mastered,false,'Failed case exam must revoke mastery');
+const failedSerialized=JSON.stringify(failedStore);
+const failedRestored=core.load({getItem:key=>key===core.KEY?failedSerialized:null});
+assert.equal(core.mastery(failedRestored,failingCourse).mastered,false,'Reload must not revive mastery after failed attempt');
+const failedStateAfter=core.state(failedRestored,'course-20');
+assert.equal(core.latest(failedStateAfter,failingKind).score,67,'Last failed attempt lost on reload');
+failedStateAfter.answers[failingKind][failedQuestion.id]=failedQuestion.correct;
+assert.equal(core.grade(failedRestored,failingCourse,failingKind).score,100,'Correct retake after reload should pass');
+assert.equal(core.mastery(failedRestored,failingCourse).mastered,true,'Correct retake after reload should restore mastery');
 console.log('Level 3 mastery and persistence regression passed: seven courses, written gates, failure and retakes');
