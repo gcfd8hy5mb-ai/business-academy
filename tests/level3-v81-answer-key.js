@@ -24,7 +24,7 @@ const cases=[
  {stress:50000*(.25*52+.75*38),check:v=>v===2075000,unit:'USD'},
  {stress:(238/2000-228/2000)*2000*80,check:v=>Math.abs(v-800)<1e-8,unit:'USD'},
  {stress:7/(7+3+2.5+1)*100,check:v=>v<56&&v>50,unit:'percent'},
- {stress:80000*(150-90)*(.15),check:v=>Math.abs(v-720000)<1e-8,unit:'USD'},
+ {stress:80000*(150-90)*(.10),check:v=>Math.abs(v-480000)<1e-8,unit:'USD'},
  {stress:120000*5-(260000+120000*.2*9+90000),check:v=>v===34000,unit:'USD'}
 ];
 cases.forEach((s,i)=>{
