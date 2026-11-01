@@ -23,6 +23,6 @@ for(let n=14;n<=20;n++){
 }
 assert.equal(all.size,7);
 const final=ctx.window.BAContent['course-20'];assert.equal(final.sectionExams.find(x=>x.id==='l3-final-v77-exam').questions.length,16);
-assert.ok(final.portfolioSections.some(x=>x.id==='l3-final-v77-capstone'));for(let n=14;n<=20;n++){const c=ctx.window.BAContent['course-'+n];const e=c.sectionExams.find(x=>x.id==='c'+n+'-v80-exam');assert.equal(e.questions.length,3);assert.ok(c.modules.some(m=>m.id==='c'+n+'-v80-module'));assert.ok(c.applications.some(a=>a.id==='c'+n+'-v80-app'));}
+assert.ok(final.portfolioSections.some(x=>x.id==='l3-final-v77-capstone'));for(let n=14;n<=20;n++){const c=ctx.window.BAContent['course-'+n];const e=c.sectionExams.find(x=>x.id==='c'+n+'-v80-exam');assert.equal(e.questions.length,3);assert.ok(c.modules.some(m=>m.id==='c'+n+'-v80-module'));const v81=c.sectionExams.find(x=>x.id==='c'+n+'-v81-exam');assert.equal(v81.questions.length,3);assert.ok(v81.questions[0].prompt.length>25);assert.equal(v81.questions[0].options.length,4);assert.ok(v81.questions[0].options.every(x=>x.length>3));assert.ok(c.applications.some(a=>a.id==='c'+n+'-v80-app'));}
 assert.ok(lessons>=123&&questions>=170&&work>=78);
 console.log('Level 3 audited:',all.size,'courses,',lessons,'lessons,',questions,'questions,',work,'written work items.');
