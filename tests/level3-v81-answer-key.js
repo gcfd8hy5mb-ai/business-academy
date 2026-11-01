@@ -16,3 +16,36 @@ const numeric=[.717847137,575000,2180000,800,56,3040000,142000];const tol=[.002,
 expected.forEach((x,i)=>{const n=i+14,c=ctx.window.BAContent['course-'+n],exam=c.sectionExams.find(e=>e.id==='c'+n+'-v81-exam'),q=exam?.questions?.[0],mod=c.modules.find(m=>m.id==='c'+n+'-v81-module');assert.ok(exam&&mod,'Missing V81 data '+n);assert.ok(mod.title.includes(x.title),'Wrong course content '+n);assert.equal(q.options[q.correct],x.answer,'Incorrect answer key '+n);assert.ok(q.explanation.length>30,'Missing worked solution '+n);assert.ok(Math.abs(x.base-numeric[i])<=tol[i]+1e-6,'Incorrect independently recomputed model '+n);assert.ok(mod.lessons.every(l=>l.body.every(b=>typeof b==='string'&&b.length>20)),'Missing lesson paragraphs '+n);});
 assert.ok(expected[0].base>expected[0].compare,'Capital allocation ranking changes unexpectedly');
 console.log('Level 3 Version 81 independently verified seven numeric keys and case associations');
+
+/* Additional independent scenario, governance, and assessment regression checks. */
+const cases=[
+ {stress:14.4*((1-1.1**-4)/.1)-50,check:v=>v<0,unit:'million USD'},
+ {stress:40000*50-25000*35-900000,check:v=>v===225000,unit:'USD'},
+ {stress:50000*(.25*52+.75*38),check:v=>v===2075000,unit:'USD'},
+ {stress:(238/2000-228/2000)*2000*80,check:v=>Math.abs(v-800)<1e-8,unit:'USD'},
+ {stress:7/(7+3+2.5+1)*100,check:v=>v<56&&v>50,unit:'percent'},
+ {stress:80000*(150-90)*(.15),check:v=>Math.abs(v-720000)<1e-8,unit:'USD'},
+ {stress:120000*5-(260000+120000*.2*9+90000),check:v=>v===34000,unit:'USD'}
+];
+cases.forEach((s,i)=>{
+ const n=i+14,tag='c'+n+'-v81',c=ctx.window.BAContent['course-'+n];
+ const exam=c.sectionExams.find(e=>e.id===tag+'-exam');
+ const application=c.applications.find(a=>a.id===tag+'-app');
+ assert.equal(exam.questions.length,3,'Incomplete three-question case exam '+n);
+ assert.equal(exam.questions[1].correct,0,'Wrong board decision key '+n);
+ assert.equal(exam.questions[2].correct,1,'Wrong fictional-case evidence key '+n);
+ for(const q of exam.questions){
+  assert.equal(q.options.length,4,'Case assessment requires four choices '+q.id);
+  assert.equal(new Set(q.options).size,4,'Repeated distractor '+q.id);
+  assert.ok(q.options.every(t=>typeof t==='string'&&t.trim()),'Blank answer '+q.id);
+  assert.ok(q.options[q.correct]?.trim(),'Unresolvable answer '+q.id);
+ }
+ assert.ok(application,'Missing independent written decision '+n);
+ assert.ok(application.requirements.some(t=>t.includes('1,200')),'Missing long-form written requirement '+n);
+ assert.ok(application.rubric.length===4,'Incomplete applied-work rubric '+n);
+ const module=c.modules.find(m=>m.id===tag+'-module');
+ assert.equal(module.lessons.length,2,'Missing base or downside case '+n);
+ assert.ok(module.lessons[1].transfer?.length>40,'Missing stress-case instructions '+n);
+ assert.ok(s.check(s.stress),'Incorrect '+s.unit+' stress model in case '+n);
+});
+console.log('Level 3 v81 regression: seven stress models, board/evidence keys, written rubrics, and distractors verified');
