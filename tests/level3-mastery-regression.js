@@ -17,7 +17,7 @@ for(let n=14;n<=20;n++){
  if(c.portfolio){s.drafts.portfolio='DCF and investment recommendation';s.reviews.portfolio=c.portfolio.rubric.map(()=>4);}
  if(c.exam){doQuiz('exam',c.exam.questions);s.drafts.exam='Written work';s.reviews.exam=c.exam.rubric.map(()=>4);}
  assert.equal(core.mastery(store,c).mastered,true,'Complete course should master '+n);
- const last=c.sectionExams.at(-1),kind='sectionExam-'+last.id;if(n===20)assert.equal(last.questions.length,16,'Expanded final must be included in retake test');
+ const last=n===20?c.sectionExams.find(e=>e.id==='l3-final-v77-exam'):c.sectionExams.at(-1);assert.ok(last,'Missing target retake exam '+n);const kind='sectionExam-'+last.id;if(n===20)assert.equal(last.questions.length,16,'Expanded final must be included in retake test');
  s.reviews[kind][0]=2;assert.equal(core.mastery(store,c).mastered,false,'Failed written rubric should block mastery '+n);s.reviews[kind][0]=4;
  const wrongCount=Math.floor(last.questions.length*.2)+1;const incorrect=last.questions.slice(0,wrongCount);for(const bad of incorrect)s.answers[kind][bad.id]=(bad.correct+1)%bad.options.length;const grade=core.grade(store,c,kind);assert.ok(grade.score<80,'Retake must genuinely fall below 80% '+n);assert.equal(core.mastery(store,c).mastered,false,'Failing latest attempt should revoke mastery '+n);
  for(const bad of incorrect)s.answers[kind][bad.id]=bad.correct;doQuiz(kind,last.questions);assert.equal(core.mastery(store,c).mastered,true,'Passing retake should restore mastery '+n);
