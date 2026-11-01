@@ -84,3 +84,14 @@ for(let n=14;n<=20;n++){
  assert.ok(app.requirements.some(x=>x.includes('stop triggers')),'Missing decision monitoring '+n);
 }
 console.log('Level 3 v81 learning checks: seven written assessments, remediation notes, and governance rubrics present');
+
+/* Retained-conversion inference must not confuse a positive sample lift with proof. */
+const retainedTreatment=238/2000,retainedControl=228/2000;
+const observedLift=retainedTreatment-retainedControl;
+const standardError=Math.sqrt((retainedTreatment*(1-retainedTreatment)+retainedControl*(1-retainedControl))/2000);
+const lower95=observedLift-1.96*standardError,upper95=observedLift+1.96*standardError;
+assert.ok(lower95<0&&upper95>0,'Experiment uncertainty should include no-effect');
+assert.ok(Math.abs(observedLift-.005)<1e-10,'Incorrect retained conversion lift');
+const causalLesson=ctx.window.BAContent['course-17'].modules.find(m=>m.id==='c17-v81-module').lessons[1];
+assert.ok(causalLesson.body.join(' ').includes('do not claim statistical significance'),'Lesson must warn against false positive inference');
+console.log('Level 3 v81 marketing case: 95% uncertainty interval includes zero');
