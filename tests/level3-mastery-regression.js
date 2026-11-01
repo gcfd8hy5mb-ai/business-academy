@@ -19,6 +19,12 @@ for(let n=14;n<=20;n++){
  assert.equal(core.mastery(store,c).mastered,true,'Complete course should master '+n);
  const latestKind='sectionExam-'+latest.id;
  s.reviews[latestKind][0]=2; assert.equal(core.mastery(store,c).mastered,false,'Version 81 written failure must block mastery '+n); s.reviews[latestKind][0]=4;
+ const originalAttempts=s.attempts.length;
+ const removedId=latest.questions[0].id,previousAnswer=s.answers[latestKind][removedId];
+ delete s.answers[latestKind][removedId];
+ assert.equal(core.grade(store,c,latestKind),false,'Incomplete Version 81 exam must not be graded '+n);
+ assert.equal(s.attempts.length,originalAttempts,'Incomplete Version 81 exam created an attempt '+n);
+ s.answers[latestKind][removedId]=previousAnswer;
  const first=latest.questions[0];s.answers[latestKind][first.id]=(first.correct+1)%first.options.length;
  const failedV81=core.grade(store,c,latestKind);assert.equal(failedV81.score,67,'A single wrong answer must fail the three-question Version 81 exam '+n);
  assert.equal(core.mastery(store,c).mastered,false,'Failed Version 81 case exam must revoke mastery '+n);
