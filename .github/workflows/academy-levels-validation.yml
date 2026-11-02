@@ -103,6 +103,8 @@ jobs:
         run: node tests/level4-v101-depth.js
       - name: Level 4 v102 assessment verification
         run: node tests/level4-v102-assessment-bank.js
+      - name: Level 4 primary-source reading validation
+        run: node tests/level4-v103-readings.js
       - name: Publish test run summary
         if: always()
         run: |
