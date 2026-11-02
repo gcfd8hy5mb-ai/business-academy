@@ -137,6 +137,8 @@ jobs:
         run: node tests/level5-v124-final-academic-audit.js
       - name: Cross-level grading persistence and retakes
         run: node tests/academy-v126-cross-level-grading.js
+      - name: Cross-level grading edge-case regression
+        run: node tests/academy-v127-grading-edge-cases.js
       - name: Publish test run summary
         if: always()
         run: |
