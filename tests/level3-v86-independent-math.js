@@ -27,6 +27,8 @@ const math=[
  ['Economics procurement blend',.7*(900+.01*2000)+.3*(700+.12*2000),926],
  ['Economics two-part tariff contribution delta',1100*((120-80)*12+900)-1000*((200-80)*12),78000],
  ['Economics outsource opportunity saving',28+6+9-40,3],
+ ['Economics constant-elasticity demand at $110',50000*(110/100)**(-1.5),43339.2086021],
+ ['Economics constant-elasticity annual contribution',50000*(110/100)**(-1.5)*(110-45),2817048.55913],
  ['Analytics forecast MAE',(10+20+10)/3,13.3333333333],
  ['Analytics forecast MAPE',(10/100+20/120+10/80)/3,.1305555556],
  ['Analytics Bayes alert posterior',(.8*.1)/(.8*.1+.2*.9),.3076923077],
@@ -64,6 +66,7 @@ const math=[
 for(const [label,actual,expected] of math)near(label,actual,expected);
 const financeSource=fs.readFileSync('learning/level3-advanced-v73.js','utf8');
 assert.ok(financeSource.includes('Present value at year zero is terminal value/(1.09^5)≈$819.91m.'),'Level 3 worked terminal value must match independently discounted result');checks++;
+assert.ok(financeSource.includes('demand≈43,339 units'),'Level 3 elasticity lesson display must match the stated constant-elasticity function');checks++;
 let optimum={value:-Infinity,a:-1,b:-1};for(let a=0;a<=10;a++)for(let b=0;b<=16;b++)if(3*a+2*b<=44){const v=85*a+55*b;if(v>optimum.value)optimum={value:v,a,b};}
 near('Integer optimal contribution',optimum.value,1235,0);assert.deepEqual([optimum.a,optimum.b],[10,7]);checks++;
 const keyLabels=['About +$0.28m','−$102,000','10 A and 7 B; $1,235','−$3,500','About 59.26%','$4.56m','16%'];
