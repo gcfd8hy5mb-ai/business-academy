@@ -4,5 +4,5 @@ for(const n of ['level4-initial-v82.js','level4-executive-studios-v95.js','level
 const cases=[['21',0,205],['21',1,24],['21',2,5*(1-1.1**-4)/.1-12],['22',0,14*(1-1.1**-3)/.1-35],['22',2,-3+.5*16],['24',1,100*(90/1500-60/1500)],['24',2,180/15],['25',1,.6*50+.4*10-25]];
 for(const [n,i,value] of cases){const e=x.window.BAContent['course-'+n].sectionExams.find(z=>z.id==='c'+n+'-v102-exam'),q=e.questions[i];assert.ok(q.explanation.length>65,'Insufficient worked steps in '+q.id);assert.ok(Number.isFinite(value));assert.ok(q.options[q.correct]&&q.explanation,'Missing keyed explanation: '+q.id);}
 assert.ok(Math.abs(cases[2][2]-3.849325)<.01);assert.ok(Math.abs(cases[3][2]+.18396)<.01);
-assert.equal(cases[0][2],205);assert.equal(cases[1][2],24);assert.equal(cases[4][2],5);assert.equal(cases[5][2],2);assert.equal(cases[6][2],12);assert.equal(cases[7][2],9);
+assert.equal(cases[0][2],205);assert.equal(cases[1][2],24);assert.equal(cases[4][2],5);assert.ok(Math.abs(cases[5][2]-2)<1e-10,'Defect rate percentage-point difference');assert.equal(cases[6][2],12);assert.equal(cases[7][2],9);
 console.log('Level 4 v115: eight quantitative solutions audited against independent calculations.');
