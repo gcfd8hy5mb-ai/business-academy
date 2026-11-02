@@ -139,6 +139,8 @@ jobs:
         run: node tests/academy-v126-cross-level-grading.js
       - name: Cross-level grading edge-case regression
         run: node tests/academy-v127-grading-edge-cases.js
+      - name: Level 5 long-form evidence restart and rubric invalidation
+        run: node tests/academy-v128-long-draft-restart.js
       - name: Publish test run summary
         if: always()
         run: |
