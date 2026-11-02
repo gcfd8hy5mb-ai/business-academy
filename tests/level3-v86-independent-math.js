@@ -11,6 +11,7 @@ const math=[
  ['FCFF introductory example',100*.75+20-35-10,50],
  ['Corporate WACC',.6*.11+.4*.06*(1-.25),.084],
  ['Terminal value in year five',80*1.025/(.09-.025),1261.5384615],
+ ['Year-five terminal value discounted to present',80*1.025/(.09-.025)/1.09**5,819.91344118],
  ['Adjusted present value',90-100+14-5,-1],
  ['Enterprise common equity bridge',8*24-54-4,134],
  ['Working capital investment',(260-200)*.18,10.8],
@@ -61,6 +62,8 @@ const math=[
  ['New v83 AI referral break-even',(150000*4-285000-75000)/(150000*10)*100,16],
 ];
 for(const [label,actual,expected] of math)near(label,actual,expected);
+const financeSource=fs.readFileSync('learning/level3-advanced-v73.js','utf8');
+assert.ok(financeSource.includes('Present value at year zero is terminal value/(1.09^5)≈$819.91m.'),'Level 3 worked terminal value must match independently discounted result');checks++;
 let optimum={value:-Infinity,a:-1,b:-1};for(let a=0;a<=10;a++)for(let b=0;b<=16;b++)if(3*a+2*b<=44){const v=85*a+55*b;if(v>optimum.value)optimum={value:v,a,b};}
 near('Integer optimal contribution',optimum.value,1235,0);assert.deepEqual([optimum.a,optimum.b],[10,7]);checks++;
 const keyLabels=['About +$0.28m','−$102,000','10 A and 7 B; $1,235','−$3,500','About 59.26%','$4.56m','16%'];
