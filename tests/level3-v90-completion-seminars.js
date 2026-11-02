@@ -10,7 +10,7 @@ const checks=[
  {n:17,label:'0 percentage points',v:(180-30)/1000-(160-10)/1000,expected:0},
  {n:18,label:'46.15%',v:100*6/(6+4+2.5+.5),expected:46.153846},
  {n:19,label:'$5.8m',v:(20-12)*1.1-3,expected:5.8},
- {n:20,label:'$50,000',v:80000*6-80000*.15*10-220000-90000,expected:50000}
+ {n:20,label:'$50k',v:80000*6-80000*.15*10-220000-90000,expected:50000}
 ];
 let total=0;
 for(const x of checks){const c=ctx.window.BAContent['course-'+x.n],prefix='c'+x.n+'-v90';assert.ok(Math.abs(x.v-x.expected)<.015,'Independent number '+x.n);total++;
