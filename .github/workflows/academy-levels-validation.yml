@@ -127,6 +127,8 @@ jobs:
         run: node tests/level4-v115-worked-explanations.js
       - name: Level 5 initial integrated capstone
         run: node tests/level5-v117-initial.js
+      - name: Level 5 cumulative curriculum validation
+        run: node tests/level5-v119-cumulative.js
       - name: Publish test run summary
         if: always()
         run: |
