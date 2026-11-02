@@ -7,5 +7,7 @@ assert.ok(s.includes("level1Milestone()"),'Level 1 graduation route lost');
 for(const id of ['l1-final-v39','l2-final-v55-exam','l3-final-v77-exam'])assert.ok(s.includes("'"+id+"'"),'Missing exam focus '+id);
 for(const id of ['l1-final-v39-board','l2-final-v55-capstone','l3-final-v77-capstone'])assert.ok(s.includes("'"+id+"'"),'Missing portfolio focus '+id);
 assert.ok(s.includes(".includes(b.id))-Number("),'Final sections must be sorted to top');
+assert.ok(s.includes("'l3-v87-integrated-exam'"),'Second final is missing from examination navigation');
+assert.ok(s.includes('Version 87 second integrated executive sitting'),'Milestone must explain how to find the second final');
 new vm.Script(s,{filename:'workspace-v40.js'});
 console.log('Level 3 final dashboard and legacy graduation routes verified');
