@@ -1,22 +1,17 @@
-# Business Academy — cloud progress integration (staged, not live)
+# Business Academy — shared academy authentication discovery (2026-11-02)
 
-## Confirmed existing implementation
-The academy currently stores learning progress at `business-academy-learning-v1` and simulator progress at `business-academy-v1` in browser localStorage. The current static application contains no integrated sign-in or cloud saving code. **Cloud synchronization is not currently active.**
+## Verified from GitHub
+- Ethical Hacking Academy already uses **Firebase Authentication**, project `academy-cloud-4132c` (`firebase-config.js`, `auth.js`). Its login screen explicitly says to use the same Firebase student account as Business Academy and Law Academy.
+- The Ethical Hacking login screen also explicitly states: “Coursework currently saves on this device; cloud progress sync is not yet enabled here.”
+- Current Business Academy `index.html` has no authentication script; `learning/workspace-v40.js` stores coursework in localStorage.
+- The checked Law Academy `index.html` also has no login script. The existing projects could be hosted behind Cloudflare, but hosting is not evidence of cloud data synchronization.
+- No Cloudflare Worker endpoint or D1/KV binding for *academy progress* has been located in the checked repository files. Do not assume its URL or reuse Tablewise/Kroger infrastructure.
 
-The connected Supabase account showed only PRISM and CostRig projects, not an identifiable Business Academy project. Do not deploy the academy schema to another product's database without explicit confirmation.
+## Corrected integration strategy
+1. **Do not activate the previously staged Supabase transport** (`learning/cloud-transport-v150.js`) or schema (`docs/business-academy-cloud-schema.sql`). They are unreferenced preparatory files, not the verified academy backend.
+2. Confirm whether Cloudflare is hosting only, or whether an existing shared Cloudflare Worker/D1/KV stores account progress. If it does, find its actual endpoint and authorization rules; use it rather than creating a second student account system.
+3. Reuse the academy's **existing Firebase account identity**, verified by `getIdToken()`, if a Cloudflare Worker backs data storage; verify Firebase ID tokens on the Worker server, including signature, issuer, audience, expiry, and user identifier.
+4. Keep existing localStorage records (`business-academy-learning-v1` and `business-academy-v1`) intact until backed up and safely merged with account data. Never overwrite newer device work or silently move progress between student accounts.
+5. Implement verified, authenticated and conflict-safe cloud writes, sign-in/out, offline sync queue and a “saved locally / synced” indicator, then validate real two-device restoration.
 
-## Prepared for a correct backend
-- `docs/business-academy-cloud-schema.sql` provides a dedicated user-owned table with RLS policies for SELECT, INSERT and UPDATE.
-- `learning/cloud-transport-v150.js` provides authenticated REST reads, first-time uploads and compare-and-set writes using a server revision.
-- No service-role key is needed or allowed in the browser.
-- No scripts are activated in index.html before an appropriate project and real sign-in session are identified.
-
-## Required activation steps
-1. Identify the actual **Business Academy authentication provider and cloud project**, or explicitly choose to create one.
-2. Provision the schema in that project. Verify RLS with two independent test accounts; confirm cross-user reads and writes fail.
-3. Connect the application's real login/logout session to the transport using the project's public publishable key and an access-token callback.
-4. Build a safe initial-import prompt on the iPhone that creates a local downloadable backup and lets the user review cloud-versus-device differences before first upload. Do **not** replace local drafts with an older cloud snapshot.
-5. Add per-course or per-field revision/conflict resolution, offline write queue, account-switch handling and error/status UI. The staged transport currently rejects stale writes instead of silently overwriting them.
-6. Run authenticated two-device tests before claiming cross-device sync, including long portfolios, exam attempts, offline saves and restoration.
-
-**Do not tell students “Saved to cloud” until the server confirms the write. Do not silently upload local progress to a newly signed-in account or copy it between accounts.**
+**Current status:** Account sign-in works in Ethical Hacking; this does not prove cloud progress saving works in any academy. Business Academy progress sync is not yet enabled.
