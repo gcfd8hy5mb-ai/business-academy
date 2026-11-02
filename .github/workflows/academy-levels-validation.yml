@@ -67,7 +67,9 @@ jobs:
         run: node tests/level3-ui-milestone.js
       - name: Level 3 Version 81 independently verified case models
         run: node tests/level3-v81-answer-key.js
-      - name: Level 4 initial coursework and financial model smoke\n        run: node tests/level4-v82-smoke.js\n      - name: Publish test run summary
+      - name: Level 4 initial coursework and financial model smoke
+        run: node tests/level4-v82-smoke.js
+      - name: Publish test run summary
         if: always()
         run: |
           echo "## Levels 1–3 validation" >> "$GITHUB_STEP_SUMMARY"
