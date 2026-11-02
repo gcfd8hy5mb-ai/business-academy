@@ -4,7 +4,7 @@ const L=window.BALearning,store=L.load(localStorage),esc=htmlEscape;
 let current='course-01',tab='lessons',message='',activeTutor=null,lessonIndex=0;
 const courses=()=>L.catalog(catalog,coursePlans,window.BAContent);
 const get=()=>courses().find(c=>c.id===current);
-function persist(){try{localStorage.setItem(L.KEY,JSON.stringify(store));message='Saved on this device.';return true}catch{message='Could not save. Keep this page open and export a backup.';return false}}
+function persist(){try{localStorage.setItem(L.KEY,JSON.stringify(store));window.dispatchEvent(new Event('ba-progress-saved'));message='Saved on this device.';return true}catch{message='Could not save. Keep this page open and export a backup.';return false}}
 const panel=(title,body)=>'<section class="unit-panel"><h2>'+esc(title)+'</h2>'+body+'</section>';
 const p=t=>'<p>'+esc(t)+'</p>';
 const list=items=>'<ul>'+(Array.isArray(items)?items:[]).map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>';
