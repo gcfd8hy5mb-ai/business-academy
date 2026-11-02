@@ -11,5 +11,5 @@ for(let n=14;n<=20;n++){const c=ctx.window.BAContent['course-'+n],id='c'+n+'-v85
  assert.equal(app.rubric.length,4);assert.equal(p.rubric.length,4);
  assert.ok(p.prompt.includes('ex-ante memo')&&p.prompt.includes('post-event outcome audit'));
 }
-assert.ok(fs.readFileSync('index.html','utf8').includes('learning/level3-historical-evidence-v85.js?v=85'));
+assert.ok(fs.readFileSync('index.html','utf8').includes('learning/level3-historical-evidence-v85.js?v=143'));
 console.log('Level 3 v85: seven primary-source historical evidence laboratories registered');
