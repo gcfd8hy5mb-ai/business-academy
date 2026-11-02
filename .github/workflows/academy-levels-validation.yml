@@ -131,6 +131,10 @@ jobs:
         run: node tests/level5-v119-cumulative.js
       - name: Level 5 final milestone and course structure
         run: node tests/level5-v121-milestone.js
+      - name: Level 5 full student completion and retake journey
+        run: node tests/level5-v123-end-to-end-mastery.js
+      - name: Level 5 all-content academic and numeric audit
+        run: node tests/level5-v124-final-academic-audit.js
       - name: Publish test run summary
         if: always()
         run: |
