@@ -1,4 +1,4 @@
-name: Academy Levels 1–4 integrity
+name: Academy Levels 1–5 integrity
 on:
   push:
     branches: [main]
@@ -125,9 +125,11 @@ jobs:
         run: node tests/level4-v113-assessment-contract.js
       - name: Level 4 independent worked explanation audit
         run: node tests/level4-v115-worked-explanations.js
+      - name: Level 5 initial integrated capstone
+        run: node tests/level5-v117-initial.js
       - name: Publish test run summary
         if: always()
         run: |
-          echo "## Levels 1–4 validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Levels 1–5 validation" >> "$GITHUB_STEP_SUMMARY"
           echo "Commit: \`$GITHUB_SHA\`" >> "$GITHUB_STEP_SUMMARY"
           echo "See each test step above for its actual pass/fail result. A passing CI job is not external academic accreditation or device testing." >> "$GITHUB_STEP_SUMMARY"
