@@ -107,6 +107,8 @@ jobs:
         run: node tests/level4-v103-readings.js
       - name: Level 4 short-exam reinforcement
         run: node tests/level4-v104-exams.js
+      - name: Level 4 student journey restart acceptance
+        run: node tests/level4-v105-student-restart.js
       - name: Publish test run summary
         if: always()
         run: |
