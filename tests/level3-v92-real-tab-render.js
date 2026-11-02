@@ -29,4 +29,5 @@ for(let n=14;n<=20;n++){
  }
 }
 assert.ok(fs.readFileSync('learning/workspace-v40.js','utf8').includes('(Array.isArray(items)?items:[])'),'Safe missing-requirements fallback absent');
+assert.ok(fs.readFileSync('learning/workspace-v40.js','utf8').includes('Array.isArray(a.solution)&&a.solution.length'),'Open-ended written assignments require safe solution rendering');
 console.log('Level 3 v92: '+tested+' real course/tab renders passed with missing-requirements compatibility.');
