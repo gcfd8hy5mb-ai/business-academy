@@ -1,4 +1,4 @@
-name: Academy Levels 1–3 integrity
+name: Academy Levels 1–4 integrity
 on:
   push:
     branches: [main]
@@ -24,7 +24,7 @@ jobs:
           test -f index.html
       - name: Enumerate all academy validation tests
         run: |
-          for test_file in tests/levels-v72-integration.js tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js tests/level3-assessment-smoke.js tests/level3-mastery-regression.js tests/level3-final-answer-key.js tests/level3-final-math.js tests/level3-curriculum-integrity.js tests/level3-ui-milestone.js tests/level3-v81-answer-key.js tests/level3-v83-transfer-audit.js tests/level3-v84-historical-cases.js tests/level3-v85-evidence-contract.js tests/level3-v86-independent-math.js tests/level3-external-review-documents.js tests/level3-v87-integrated-final.js tests/level3-v88-full-learning-flow.js tests/level3-v89-workspace-events.js tests/level3-v90-completion-seminars.js tests/level3-v91-render-compatibility.js tests/level3-v92-real-tab-render.js tests/level3-v93-restart-acceptance.js tests/level3-v94-storage-failure.js tests/level4-v82-smoke.js tests/level4-v95-studios.js; do
+          for test_file in tests/levels-v72-integration.js tests/level1-integrity.js tests/level1-milestone-smoke.js tests/level1-level2-completion-audit.js tests/level1-level2-ui-milestones.js tests/level2-final-retake-regression.js tests/level1-final-retake-regression.js tests/level1-final-answer-key.js tests/level2-final-answer-key.js tests/levels-final-capstone-contract.js tests/level1-level2-final-math.js tests/level1-level2-mastery-regression.js tests/level2-numeric-and-persistence.js tests/level3-assessment-smoke.js tests/level3-mastery-regression.js tests/level3-final-answer-key.js tests/level3-final-math.js tests/level3-curriculum-integrity.js tests/level3-ui-milestone.js tests/level3-v81-answer-key.js tests/level3-v83-transfer-audit.js tests/level3-v84-historical-cases.js tests/level3-v85-evidence-contract.js tests/level3-v86-independent-math.js tests/level3-external-review-documents.js tests/level3-v87-integrated-final.js tests/level3-v88-full-learning-flow.js tests/level3-v89-workspace-events.js tests/level3-v90-completion-seminars.js tests/level3-v91-render-compatibility.js tests/level3-v92-real-tab-render.js tests/level3-v93-restart-acceptance.js tests/level3-v94-storage-failure.js tests/level4-v82-smoke.js tests/level4-v95-studios.js tests/level4-v96-advanced-seminars.js tests/level4-v97-dilemmas.js tests/level4-v98-integrated-board.js tests/level4-v99-answer-audit.js tests/level4-v100-depth.js tests/level4-v101-depth.js tests/level4-v102-assessment-bank.js tests/level4-v103-readings.js tests/level4-v104-exams.js tests/level4-v105-student-restart.js; do
             test -s "$test_file" || { echo "Missing test: $test_file"; exit 1; }
           done
       - name: Latest Level 1 and Level 2 seminar integration
@@ -112,6 +112,6 @@ jobs:
       - name: Publish test run summary
         if: always()
         run: |
-          echo "## Levels 1–3 validation" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Levels 1–4 validation" >> "$GITHUB_STEP_SUMMARY"
           echo "Commit: \`$GITHUB_SHA\`" >> "$GITHUB_STEP_SUMMARY"
           echo "See each test step above for its actual pass/fail result. A passing CI job is not external academic accreditation or device testing." >> "$GITHUB_STEP_SUMMARY"
