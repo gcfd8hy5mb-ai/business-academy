@@ -1,0 +1,17 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const win={};vm.createContext(win);vm.runInContext(fs.readFileSync('learning/core.js','utf8'),win);const L=win.BALearning;
+const disk={};const storage={getItem:k=>disk[k]??null,setItem:(k,v)=>{disk[k]=v}};
+const s=L.load(storage);assert.equal(s.schema,1);
+const c={id:'course-06',modules:[{lessons:[{id:'a'},{id:'b'}]}],practice:{questions:[{id:'p1',correct:1},{id:'p2',correct:2}]},sectionExams:[{id:'x',questions:[{id:'x1',correct:0}],rubric:['Evidence']}],portfolioSections:[{id:'y',rubric:['Risk']}]};
+const q=L.state(s,c.id),other=L.state(s,'course-26');assert.notEqual(q,other);
+q.lessons=['a','b'];q.answers.practice={p1:1,p2:2};q.answers['sectionExam-x']={x1:0};
+assert.equal(L.grade(s,c,'practice').score,100);assert.equal(L.grade(s,c,'sectionExam-x').score,100);
+q.drafts['sectionExam-x']='Reasoning';q.reviews['sectionExam-x']=[4];q.drafts['portfolioSection-y']='Dossier';q.reviews['portfolioSection-y']=[3];assert.equal(L.mastery(s,c).mastered,true);
+const stale={...q.answers.practice};q.answers.practice={p1:0,p2:2};assert.equal(L.grade(s,c,'practice').score,50);assert.equal(L.latest(q,'practice').score,50);assert.equal(L.mastery(s,c).mastered,false);assert.equal(q.attempts[0].answers.p1,stale.p1,'Historic answers immutable');
+storage.setItem(L.KEY,JSON.stringify(s));const restored=L.load(storage);assert.equal(L.state(restored,c.id).attempts.length,3);assert.equal(L.state(restored,'course-26').attempts.length,0);
+assert.equal(L.grade(restored,c,'sectionExam-x').score,100);assert.equal(L.latest(L.state(restored,c.id),'practice').score,50);
+assert.equal(L.score([{id:'q',correct:0}],{q:'0'}),0,'String answer cannot impersonate numeric option');
+assert.equal(L.grade(restored,c,'missing'),false,'Unknown exam cannot record phantom attempt');
+assert.equal(L.reviewed(L.state(restored,c.id),'portfolioSection-y',['Risk']),true);
+assert.equal(L.load({getItem:()=>'{bad json'}).schema,1);
+console.log('Cross-level v126 isolated state, immutable attempts, persistence, scoring, and latest retake gates passed.');
