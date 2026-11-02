@@ -10,6 +10,7 @@ function launch(){const handlers={};const window={BAContent:{},scrollY:0,scrollT
  return {window,handlers,click:dataset=>handlers.click({target:{closest:()=>({dataset})}}),input:(dataset,value)=>handlers.input({target:{dataset,value}}),change:(dataset,value,checked)=>handlers.change({target:{dataset,value,checked}})};
 }
 let app=launch();app.click({learnCourse:'course-20'});
+// Regression: direct answer selection must initialize an unseen exam's answer map.
 const course=app.window.BAContent['course-20'],firstLesson=course.modules[0].lessons[0].id;
 app.change({learnLesson:firstLesson},'on',true);
 const draft='portfolioSection-l3-v87-integrated-portfolio',content='Executive evidence and sensitivity. '.repeat(1000);
