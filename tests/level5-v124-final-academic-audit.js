@@ -13,6 +13,6 @@ assert.ok(Math.abs(pv(9,.1,4)/1.1-16-9.9353)<.02,'Delayed turnaround NPV');
 assert.ok(Math.abs(8*720/365-15.7808)<.02,'Receivables impact');
 assert.equal(60000*.75*65-60000*40,525000,'Cohort contribution');
 assert.equal(500*.16*.75+20-28-10,42,'FCFF');
-assert.equal((.12-.05)*10-.25,.45,'Expected loss avoided');
+assert.ok(Math.abs(((.12-.05)*10-.25)-.45)<1e-10,'Expected loss avoided');
 assert.equal(.6*55+.4*15-30,9,'Expected investment NPV');
 console.log('Level 5 v124: full ID/assessment audit and 8 independent numerical crosschecks passed.');
