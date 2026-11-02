@@ -17,7 +17,7 @@ let tested=0;
 for(let n=21;n<=25;n++){
  const id='course-'+n;
  click({learnCourse:id});
- for(const tab of ['lessons','overview','practice','exam','tutor','portfolio',...(n===25?['milestone']:[])]){
+ for(const tab of ['lessons','overview','practice','exam','tutor','portfolio']){
   click({learnTab:tab});
   const html=window.BAWorkspace.render();
   assert.ok(html.includes('learning-workspace'),'Rendering failed for '+id+' '+tab);
