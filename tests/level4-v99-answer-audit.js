@@ -9,7 +9,7 @@ const expected=['No: only $80m is deployable','About +$8.36m','Project A alone, 
 expected.forEach((v,i)=>assert.equal(q[i].options[q[i].correct],v));
 assert.equal(120-40,80);
 assert.ok(Math.abs(78+8*(1-1.1**-4)/.1-10-85-8.36)<.02);
-assert.equal((.14-.05)*6000000-200000,340000);
+assert.ok(Math.abs(((.14-.05)*6000000-200000)-340000)<1e-6);
 assert.equal(50000*12/60*35*.6-90000,120000);
 assert.equal(.65*55+.35*15-30,11);
 assert.ok(c.portfolioSections.some(x=>x.id==='l4-final-v99-capstone'));
