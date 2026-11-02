@@ -99,6 +99,8 @@ jobs:
         run: node tests/level4-v95-studios.js
       - name: Level 4 comprehensive final answer audit
         run: node tests/level4-v99-answer-audit.js
+      - name: Level 4 v101 depth validation
+        run: node tests/level4-v101-depth.js
       - name: Publish test run summary
         if: always()
         run: |
