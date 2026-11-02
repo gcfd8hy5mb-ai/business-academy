@@ -135,6 +135,8 @@ jobs:
         run: node tests/level5-v123-end-to-end-mastery.js
       - name: Level 5 all-content academic and numeric audit
         run: node tests/level5-v124-final-academic-audit.js
+      - name: Cross-level grading persistence and retakes
+        run: node tests/academy-v126-cross-level-grading.js
       - name: Publish test run summary
         if: always()
         run: |
