@@ -13,7 +13,7 @@ for(const x of course.applications){state.drafts['application-'+x.id]='Written c
 assert.equal(L.mastery(store,course).mastered,true,'All author-defined coursework should be completable');
 ctx.localStorage.setItem(L.KEY,JSON.stringify(store));ctx=boot();L=ctx.window.BALearning;tab('milestone');assert.match(ctx.window.BAWorkspace.render(),/All local Level 5 self-assessed requirements are recorded/);
 store=L.load(ctx.localStorage);course=L.catalog(ctx.catalog,ctx.coursePlans,ctx.window.BAContent)[25];state=L.state(store,course.id);
-state.attempts.push({kind:'sectionExam-l5-v119-final-exam',score:75});ctx.localStorage.setItem(L.KEY,JSON.stringify(store));assert.equal(L.mastery(store,course).mastered,false,'Failed final retake blocks mastery');assert.match(ctx.window.BAWorkspace.render(),/milestone is incomplete/);
+state.attempts.push({kind:'sectionExam-l5-v119-final-exam',score:75});ctx.localStorage.setItem(L.KEY,JSON.stringify(store));assert.equal(L.mastery(store,course).mastered,false,'Failed final retake blocks mastery');ctx=boot();tab('milestone');assert.match(ctx.window.BAWorkspace.render(),/milestone is incomplete/);
 state.attempts.push({kind:'sectionExam-l5-v119-final-exam',score:88});assert.equal(L.mastery(store,course).mastered,true,'Passed retake restores mastery');
 delete state.reviews['portfolioSection-l5-v119-final-capstone'];assert.equal(L.mastery(store,course).mastered,false,'Missing capstone rubric review blocks mastery');
 console.log('Level 5 v123: incomplete, complete, persisted restart, failed retake, recovered retake and missing capstone gates passed.');
