@@ -17,12 +17,12 @@ Courses 14–20. Curriculum baseline: Version 85 historical evidence laboratorie
 
 | Course | Independent task | Essential checks |
 |---|---|---|
-| 14 Finance | Traceable five-year FCFF/DCF valuation and alternative acquisition case | Discount rates, financial statements, terminal bridge, leverage and error sensitivity |
-| 15 Strategy | Dated competitive position and strategic alternatives memo | Rivals, economics, causal assumptions, implementation and law |
-| 16 Economics | Empirically estimated pricing and constrained production portfolio | Demand data, opportunity costs, feasible integer solution, welfare |
-| 17 Analytics | Reproducible experiment/forecast decision | Sampling, intervals, attrition, calibration and baseline |
-| 18 Venture | Multi-round financing waterfall and runway | Cap table, conversion terms, dilution and liquidity |
-| 19 International | Multinational investment and FX treasury case | Currency consistency, repatriation, jurisdictions and source evidence |
+| 14 Corporate Finance | Traceable five-year FCFF/DCF valuation and alternative acquisition case | Discount rates, financial statements, terminal bridge, leverage and error sensitivity |
+| 15 Competitive Strategy | Dated competitive position and strategic alternatives memo | Rivals, economics, causal assumptions, implementation and law |
+| 16 Managerial Economics | Empirically estimated pricing and constrained production portfolio | Demand data, opportunity costs, feasible integer solution, welfare |
+| 17 Business Analytics | Reproducible experiment/forecast decision | Sampling, intervals, attrition, calibration and baseline |
+| 18 Entrepreneurship | Multi-round financing waterfall and runway | Cap table, conversion terms, dilution and liquidity |
+| 19 International Business | Multinational investment and FX treasury case | Currency consistency, repatriation, jurisdictions and source evidence |
 | 20 Technology/AI | AI deployment value and model-risk governance proposal | Subgroup errors, review costs, incidents, security, human appeal |
 
 ## Required review sequence
