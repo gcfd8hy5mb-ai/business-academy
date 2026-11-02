@@ -17,7 +17,7 @@ let tested=0;
 for(let n=21;n<=25;n++){
  const id='course-'+n;
  click({learnCourse:id});
- for(const tab of ['lessons','overview','practice','exam','tutor','portfolio']){
+ for(const tab of ['lessons','overview','practice','exam','tutor','portfolio',...(n===25?['milestone']:[])]){
   click({learnTab:tab});
   const html=window.BAWorkspace.render();
   assert.ok(html.includes('learning-workspace'),'Rendering failed for '+id+' '+tab);
@@ -25,6 +25,7 @@ for(let n=21;n<=25;n++){
   if(tab==='portfolio')assert.ok(html.includes('portfolioSection-')||html.includes('Board-ready portfolio submission'),'No portfolio forms '+id);
   if(tab==='tutor')assert.ok(html.includes('learning-tutor'),'No tutor guidance '+id);
   if(n===25&&tab==='exam')assert.ok(html.includes('comprehensive executive examination'),'Level 4 final absent');
+  if(n===25&&tab==='milestone'){assert.ok(html.includes('Level 4 comprehensive executive milestone'));assert.ok(html.includes('milestone remains incomplete'));}
   tested++;
  }
 }
