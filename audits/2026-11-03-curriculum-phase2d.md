@@ -31,3 +31,9 @@
 5. Live-test a new Level 4 exam, retry, reopen, and Firebase synchronization on iPhone and desktop.
 
 **Status:** New Level 4 assessment content published, legacy duplicates and backward-compatibility of mastery remain open.
+
+## Compatibility correction deployed (same-day follow-up)
+- Marked all five v105 section exams `optional:true` to prevent newly added enrichment material from retroactively removing a previous course mastery status.
+- Created `learning/core-v110.js` (loaded by `index.html`) so optional assessments are excluded from **required** section-exam mastery checks while remaining available to take and grade.
+- A code-level simulated completed course with an optional added assessment retained `mastered:true`; script syntax and deployed loader references passed checks.
+- **Live browser / Firebase cross-device checks are still outstanding.** This is a compatibility safeguard, not a final acceptance test.
