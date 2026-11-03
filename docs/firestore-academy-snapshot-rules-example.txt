@@ -1,34 +1,58 @@
-// Example Firestore rules SECTION for academy snapshots.
-// MERGE inside the existing match /databases/{database}/documents block.
-// Do not replace unrelated rules or publish without checking current rules first.
-// This does not use a hardcoded user ID (avoid lowercase-l / uppercase-I mistakes).
-match /users/{userId}/academies/{academyId}/snapshots/{snapshotId} {
-  function isOwner() {
-    return request.auth != null
-      && request.auth.uid == userId;
-  }
-  function supportedAcademy() {
-    return academyId in ['business', 'law', 'ethical-hacking'];
-  }
-  function validSnapshot() {
-    return request.resource.data.keys().hasOnly([
-        'academy', 'schemaVersion', 'revision', 'raw', 'updatedAt'
-      ])
-      && request.resource.data.academy == academyId
-      && request.resource.data.schemaVersion == 1
-      && request.resource.data.revision is int
-      && request.resource.data.revision >= 1
-      && request.resource.data.raw is string
-      && request.resource.data.raw.size() <= 900000
-      && request.resource.data.updatedAt is timestamp;
-  }
-  allow get: if isOwner() && supportedAcademy();
-  allow list, delete: if false;
-  allow create: if isOwner() && supportedAcademy()
-    && validSnapshot() && request.resource.data.revision == 1;
-  allow update: if isOwner() && supportedAcademy()
-    && validSnapshot()
-    && request.resource.data.revision == resource.data.revision + 1;
-}
-// Ensure no broader allow rules elsewhere grant unexpected access.
-// Firestore ORs matching allow conditions, so broad sibling recursive rules matter.
+// Firestore Rules PATCH GUIDE, based on the Nov 2 Firebase screen recording.
+// Preserve the existing isAuthorizedOwner() function and its login/verification requirements.
+// Keep the outer rules_version/service/match wrappers and unrelated rules intact.
+//
+// In the existing match /users/{userId}/academies/{academyId}/snapshots/{snapshotId}:
+// (1) Change validAcademy() to:
+//     return academyId in ['business', 'law', 'ethical-hacking'];
+//
+// (2) Both of the existing keys().hasOnly() and keys().hasAll() lists must become:
+//     ['raw', 'schemaVersion', 'updatedAt', 'academy', 'revision']
+//
+// (3) Add these conditions to the existing allow create, update predicate:
+//     && request.resource.data.revision is int
+//     && request.resource.data.revision >= 1
+//     && (
+//          !exists(/databases/$(database)/documents/users/$(userId)/academies/$(academyId)/snapshots/$(snapshotId))
+//          || request.resource.data.revision == resource.data.revision + 1
+//        )
+//
+// WARNING: The above #3 is only a conceptual illustration; do NOT paste it into
+// rules. For actual changes, REPLACE the single 'allow create, update' with
+// SEPARATE create and update rules, keeping all the original field checks.
+// Firestore rules cannot refer to resource.data for a nonexistent document.
+//
+// Recommended complete drop-in replacement for the existing snapshot MATCH body,
+// keeping the user's current isAuthorizedOwner() in the enclosing block:
+//
+// match /users/{userId}/academies/{academyId}/snapshots/{snapshotId} {
+//   function validAcademy() {
+//     return academyId in ['business', 'law', 'ethical-hacking'];
+//   }
+//   function validData() {
+//     return request.resource.data.keys().hasOnly(['raw','schemaVersion','updatedAt','academy','revision'])
+//       && request.resource.data.keys().hasAll(['raw','schemaVersion','updatedAt','academy','revision'])
+//       && request.resource.data.raw is string
+//       && request.resource.data.raw.size() <= 800000
+//       && request.resource.data.schemaVersion == 1
+//       && request.resource.data.academy == academyId
+//       && request.resource.data.updatedAt == request.time
+//       && request.resource.data.revision is int
+//       && request.resource.data.revision >= 1;
+//   }
+//   allow get, list: if isAuthorizedOwner()
+//     && userId == request.auth.uid && validAcademy();
+//   allow create: if isAuthorizedOwner()
+//     && userId == request.auth.uid && validAcademy()
+//     && validData() && request.resource.data.revision == 1;
+//   allow update: if isAuthorizedOwner()
+//     && userId == request.auth.uid && validAcademy()
+//     && validData() && request.resource.data.revision == resource.data.revision + 1;
+//   allow delete: if false;
+// }
+//
+// CAUTION: This update allows new revisioned snapshots. Existing snapshots without
+// revision must be migrated separately; do not overwrite them automatically.
+// The explicit isAuthorizedOwner() UID shown in the user's rules remains unchanged.
+// Verify rules in the Firebase Rules Playground with authorized and unauthorized accounts
+// before publishing. A broader allow rule elsewhere could override denial.
