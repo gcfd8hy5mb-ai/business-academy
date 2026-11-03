@@ -6,7 +6,7 @@ const cfg=window.ACADEMY_FIREBASE_CONFIG;
 const app=getApps().find(a=>a.name==='business-academy')||initializeApp(cfg,'business-academy');
 const auth=getAuth(app),db=getFirestore(app);
 const keys=['business-academy-learning-v1','business-academy-v1'];
-let user=null,reference=null,revision=null,linked=false,busy=false,timer=null;
+let user=null,reference=null,revision=null,linked=false,busy=false,timer=null,saving=false,queued=false,sessionGeneration=0,lastSynced=null;
 const box=document.createElement('aside');box.id='ba-cloud-panel';box.setAttribute('aria-live','polite');
 box.style.cssText='position:fixed;right:10px;bottom:12px;z-index:9999;width:min(345px,calc(100vw - 20px));max-height:48vh;overflow:auto;padding:12px;border:1px solid #a58b55;border-radius:12px;background:#22252a;color:#f5e9d5;box-shadow:0 12px 30px #0008;font:13px system-ui';
 document.body.append(box);
@@ -38,6 +38,25 @@ function render(){
  box.append(button('Hide',()=>{box.style.display='none';showCloudButton.style.display='block'}));
 }
 function readLocal(){const o={};for(const k of keys)o[k]=localStorage.getItem(k);return o}
+function snapshot(){return JSON.stringify(readLocal())}
+function linkKey(uid){return 'ba-cloud-link-'+uid}
+function cloudPayload(docData){try{const p=JSON.parse(docData.raw||'null');return validPayload(p)?p:null}catch{return null}}
+async function resumeLink(account,generation){
+ if(!account.emailVerified||!localStorage.getItem(linkKey(account.uid)))return;
+ try{
+  const ref=doc(db,'users',account.uid,'academies','business','snapshots','progress-v1');
+  const saved=await getDoc(ref);
+  if(generation!==sessionGeneration||auth.currentUser?.uid!==account.uid)return;
+  if(!saved.exists()){status('No cloud copy found. Your device progress is safe. Use Enable cloud saves to reconnect.');return}
+  const data=saved.data(),remote=cloudPayload(data),current=snapshot();
+  if(!remote){status('Existing cloud copy is unreadable. No device data changed.');return}
+  if(JSON.stringify(remote)!==current){status('Cloud and device progress differ. Automatic upload paused to protect both versions. Use Enable cloud saves to review.');return}
+  const remoteRevision=Number(data.revision);
+  if(!Number.isSafeInteger(remoteRevision)||remoteRevision<1){status('Cloud record needs a safe migration. No data changed.');return}
+  reference=ref;revision=remoteRevision;lastSynced=current;linked=true;render();status('Cloud connected · progress matches this device');
+ }catch(e){if(generation===sessionGeneration)status('Cloud reconnect failed: '+(e.code||e.message)+'. Local work remains available.')}
+}
+
 function backup(){const blob=new Blob([JSON.stringify({savedAt:new Date().toISOString(),records:readLocal()},null,2)],{type:'application/json'}),a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download='business-academy-device-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000)}
 function validPayload(v){return v&&typeof v==='object'&&keys.every(k=>v[k]===null||typeof v[k]==='string')}
 function location(){return doc(db,'users',user.uid,'academies','business','snapshots','progress-v1')}
@@ -62,7 +81,7 @@ async function connect(){
      if(!ok){status('Not connected. iPhone data is unchanged.');return}
      revision=0;
    }
-   linked=true;
+   linked=true;lastSynced=null;
    const saved=await sync();
    if(!saved){linked=false;revision=null;render();status('Cloud upload failed. Your progress remains on this iPhone. Check Firestore security rules; then retry.');return}
    localStorage.setItem('ba-cloud-link-'+user.uid,String(revision));
@@ -73,23 +92,37 @@ async function connect(){
 function locationReload(){window.location.reload()}
 async function sync(){
  if(!user?.emailVerified||!linked||!reference)return false;
- const owner=user.uid,payload=readLocal(),expect=revision;
+ if(saving){queued=true;return false}
+ saving=true;
+ const owner=user.uid,ref=reference,copy=snapshot(),expect=revision;
  try{
    status('Saving to cloud…');
    const next=await runTransaction(db,async tx=>{
-      const snap=await tx.get(reference),latest=snap.exists()?Number(snap.data().revision)||0:0;
+      const snap=await tx.get(ref),latest=snap.exists()?Number(snap.data().revision)||0:0;
       if(latest!==expect)throw Error('Cloud changed on another device. Automatic overwrite stopped.');
       if(auth.currentUser?.uid!==owner)throw Error('Account changed');
-      tx.set(reference,{academy:'business',schemaVersion:1,revision:latest+1,raw:JSON.stringify(payload),updatedAt:serverTimestamp()});
+      tx.set(ref,{academy:'business',schemaVersion:1,revision:latest+1,raw:copy,updatedAt:serverTimestamp()});
       return latest+1;
    });
-   if(auth.currentUser?.uid!==owner)throw Error('Account changed after save');
-   revision=next;localStorage.setItem('ba-cloud-link-'+owner,String(next));status('Saved to Firebase cloud');return true;
+   if(auth.currentUser?.uid!==owner)return false;
+   revision=next;lastSynced=copy;localStorage.setItem(linkKey(owner),String(next));status('Saved to Firebase cloud');return true;
  }catch(e){status('Saved on this device only. '+(e.message||e.code));return false}
+ finally{
+   saving=false;
+   if(queued&&linked&&auth.currentUser?.uid===owner){
+     queued=false;
+     if(snapshot()!==lastSynced){clearTimeout(timer);timer=setTimeout(sync,1200)}
+   }else queued=false;
+ }
 }
 window.addEventListener('ba-progress-saved',()=>{if(linked){clearTimeout(timer);timer=setTimeout(sync,1200)}});
 window.addEventListener('online',()=>{if(linked)sync()});
 onAuthStateChanged(auth,async next=>{
- clearTimeout(timer);user=next;linked=false;reference=null;revision=null;
- render();if(user?.emailVerified){status('Signed in. Inspect or enable cloud saving before uploading progress.')}
+ clearTimeout(timer);sessionGeneration++;const generation=sessionGeneration;
+ user=next;linked=false;reference=null;revision=null;lastSynced=null;queued=false;
+ render();if(user?.emailVerified){
+   status('Checking saved cloud connection…');
+   await resumeLink(user,generation);
+   if(generation===sessionGeneration&&!linked&&!box.querySelector('[data-status]')?.textContent?.includes('differ')&&!localStorage.getItem(linkKey(user.uid)))status('Signed in. Inspect or enable cloud saving before uploading progress.');
+ }
 });
