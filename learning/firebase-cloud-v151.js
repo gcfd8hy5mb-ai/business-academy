@@ -8,8 +8,9 @@ const auth=getAuth(app),db=getFirestore(app);
 const keys=['business-academy-learning-v1','business-academy-v1'];
 let user=null,reference=null,revision=null,linked=false,busy=false,timer=null;
 const box=document.createElement('aside');box.id='ba-cloud-panel';box.setAttribute('aria-live','polite');
-box.style.cssText='position:fixed;right:10px;bottom:12px;z-index:9999;width:min(345px,calc(100vw - 20px));max-height:60vh;overflow:auto;padding:12px;border:1px solid #a58b55;border-radius:12px;background:#22252a;color:#f5e9d5;box-shadow:0 12px 30px #0008;font:13px system-ui';
+box.style.cssText='position:fixed;right:10px;bottom:12px;z-index:9999;width:min(345px,calc(100vw - 20px));max-height:48vh;overflow:auto;padding:12px;border:1px solid #a58b55;border-radius:12px;background:#22252a;color:#f5e9d5;box-shadow:0 12px 30px #0008;font:13px system-ui';
 document.body.append(box);
+const showCloudButton=document.createElement('button');showCloudButton.textContent='☁ Cloud Sync';showCloudButton.style.cssText='position:fixed;right:12px;bottom:76px;z-index:9998;padding:9px 12px;border:1px solid #a58b55;border-radius:30px;background:#22252a;color:#f5e9d5;display:none';showCloudButton.onclick=()=>{box.style.display='block';showCloudButton.style.display='none'};document.body.append(showCloudButton);
 function status(text){const el=box.querySelector('[data-status]');if(el)el.textContent=text;}
 function button(label,fn){const b=document.createElement('button');b.type='button';b.textContent=label;b.style.cssText='margin:4px;padding:8px 11px;background:#d5b86e;color:#242424;border:0;border-radius:7px;font-weight:650';b.onclick=fn;return b;}
 function heading(s){const h=document.createElement('strong');h.textContent=s;box.append(h);}
@@ -34,6 +35,7 @@ function render(){
    box.append(button('Download backup',backup));
  }
  box.append(button('Sign out',()=>signOut(auth)));
+ box.append(button('Hide',()=>{box.style.display='none';showCloudButton.style.display='block'}));
 }
 function readLocal(){const o={};for(const k of keys)o[k]=localStorage.getItem(k);return o}
 function backup(){const blob=new Blob([JSON.stringify({savedAt:new Date().toISOString(),records:readLocal()},null,2)],{type:'application/json'}),a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download='business-academy-device-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),10000)}
@@ -60,14 +62,17 @@ async function connect(){
      if(!ok){status('Not connected. iPhone data is unchanged.');return}
      revision=0;
    }
-   linked=true;localStorage.setItem('ba-cloud-link-'+user.uid,String(revision));
-   await sync();render();
+   linked=true;
+   const saved=await sync();
+   if(!saved){linked=false;revision=null;render();status('Cloud upload failed. Your progress remains on this iPhone. Check Firestore security rules; then retry.');return}
+   localStorage.setItem('ba-cloud-link-'+user.uid,String(revision));
+   render();status('Saved to Firebase cloud');
  }catch(e){linked=false;status('Cloud connection failed: '+(e.code||e.message))}
  finally{busy=false}
 }
 function locationReload(){window.location.reload()}
 async function sync(){
- if(!user?.emailVerified||!linked||!reference)return;
+ if(!user?.emailVerified||!linked||!reference)return false;
  const owner=user.uid,payload=readLocal(),expect=revision;
  try{
    status('Saving to cloud…');
@@ -79,8 +84,8 @@ async function sync(){
       return latest+1;
    });
    if(auth.currentUser?.uid!==owner)throw Error('Account changed after save');
-   revision=next;localStorage.setItem('ba-cloud-link-'+owner,String(next));status('Saved to Firebase cloud');
- }catch(e){status('Saved on this device only. '+(e.message||e.code))}
+   revision=next;localStorage.setItem('ba-cloud-link-'+owner,String(next));status('Saved to Firebase cloud');return true;
+ }catch(e){status('Saved on this device only. '+(e.message||e.code));return false}
 }
 window.addEventListener('ba-progress-saved',()=>{if(linked){clearTimeout(timer);timer=setTimeout(sync,1200)}});
 window.addEventListener('online',()=>{if(linked)sync()});
