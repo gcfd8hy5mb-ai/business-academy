@@ -1,0 +1,34 @@
+// Example Firestore rules SECTION for academy snapshots.
+// MERGE inside the existing match /databases/{database}/documents block.
+// Do not replace unrelated rules or publish without checking current rules first.
+// This does not use a hardcoded user ID (avoid lowercase-l / uppercase-I mistakes).
+match /users/{userId}/academies/{academyId}/snapshots/{snapshotId} {
+  function isOwner() {
+    return request.auth != null
+      && request.auth.uid == userId;
+  }
+  function supportedAcademy() {
+    return academyId in ['business', 'law', 'ethical-hacking'];
+  }
+  function validSnapshot() {
+    return request.resource.data.keys().hasOnly([
+        'academy', 'schemaVersion', 'revision', 'raw', 'updatedAt'
+      ])
+      && request.resource.data.academy == academyId
+      && request.resource.data.schemaVersion == 1
+      && request.resource.data.revision is int
+      && request.resource.data.revision >= 1
+      && request.resource.data.raw is string
+      && request.resource.data.raw.size() <= 900000
+      && request.resource.data.updatedAt is timestamp;
+  }
+  allow get: if isOwner() && supportedAcademy();
+  allow list, delete: if false;
+  allow create: if isOwner() && supportedAcademy()
+    && validSnapshot() && request.resource.data.revision == 1;
+  allow update: if isOwner() && supportedAcademy()
+    && validSnapshot()
+    && request.resource.data.revision == resource.data.revision + 1;
+}
+// Ensure no broader allow rules elsewhere grant unexpected access.
+// Firestore ORs matching allow conditions, so broad sibling recursive rules matter.
