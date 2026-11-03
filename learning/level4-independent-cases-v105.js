@@ -16,7 +16,7 @@ for(const entry of bank){
  const c=window.BAContent['course-'+entry.n];if(!c)throw Error('Missing Level 4 course '+entry.n);
  const id='c'+entry.n+'-v105-independent';
  if(c.sectionExams.some(x=>x.id===id))continue;
- c.sectionExams.push({id,title:entry.title,minutes:110,instructions:'Independent transfer exam. Use the numerical assumptions in each scenario; derive each solution before selecting. This exam is self-graded and not proctored.',questions:entry.questions.map((q,i)=>({id:id+'-q'+(i+1),prompt:q[0],options:q[1],correct:q[2],explanation:q[3],remediation:'Rebuild the calculation or decision logic, test a downside assumption, and justify why the other options fail.'})),written:'Submit a 700–1,000 word evidence-led executive memorandum connecting the calculations to a defensible recommendation, an alternative and board controls.',rubric});
+ c.sectionExams.push({id,title:entry.title,optional:true,minutes:110,instructions:'Independent transfer exam. Use the numerical assumptions in each scenario; derive each solution before selecting. This exam is self-graded and not proctored.',questions:entry.questions.map((q,i)=>({id:id+'-q'+(i+1),prompt:q[0],options:q[1],correct:q[2],explanation:q[3],remediation:'Rebuild the calculation or decision logic, test a downside assumption, and justify why the other options fail.'})),written:'Submit a 700–1,000 word evidence-led executive memorandum connecting the calculations to a defensible recommendation, an alternative and board controls.',rubric});
 }
 window.BAL4V105={courses:5,newSectionExams:5,newQuestions:20,legacyV104Unchanged:true};
 })();
