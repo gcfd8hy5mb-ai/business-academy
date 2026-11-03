@@ -1,1 +1,14 @@
-const CACHE="ba-starter-v17";const FILES=["./","./index.html","./style.css","./app.js","./manifest.webmanifest","./icon.svg","./assets/academy-art.svg","./assets/academy-columns.svg","./assets/coffee-luxury.svg"];self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)));self.skipWaiting()});self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))));self.clients.claim()});self.addEventListener("fetch",e=>{if(e.request.method!=="GET")return;e.respondWith(fetch(e.request).then(r=>{if(r.ok&&new URL(e.request.url).origin===location.origin){let copy=r.clone();caches.open(CACHE).then(c=>c.put(e.request,copy))}return r}).catch(()=>caches.match(e.request)))})
+/* Business Academy service worker v159: favor fresh HTML; never alter learning storage. */
+const CACHE='ba-shell-v159';
+const ASSETS=['./style.css?v=23','./manifest.webmanifest','./icon.svg'];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).catch(()=>{}));self.skipWaiting()});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('ba-starter-')||key.startsWith('ba-shell-')).filter(key=>key!==CACHE).map(key=>caches.delete(key)))));self.clients.claim()});
+self.addEventListener('fetch',event=>{
+ if(event.request.method!=='GET')return;
+ const url=new URL(event.request.url);if(url.origin!==self.location.origin)return;
+ if(event.request.mode==='navigate'||url.pathname.endsWith('/index.html')){
+  event.respondWith(fetch(new Request(event.request,{cache:'no-store'})).catch(()=>caches.match(event.request)));
+  return;
+ }
+ event.respondWith(fetch(event.request).catch(()=>caches.match(event.request)));
+});
