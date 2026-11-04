@@ -23,7 +23,11 @@ const failures=[],verify=(questions,expected,name)=>{
  });
 };
 verify(l2,bank.l2,'level2 v63');verify(l4,bank.l4,'level4 v102');
-const before=w.BAContent['course-21'].sectionExams.map(e=>e.questions.length);
+// Reproduce five legacy two-question section exams, which are the only eligible v104 targets.
+for(let n=21;n<=25;n++){w.BAContent['course-'+n].sectionExams.push({id:'c'+n+'-legacy-fixture',minutes:45,questions:[
+{id:'c'+n+'-fixture-a',prompt:'Original fixture A',options:['A','B'],correct:0},
+{id:'c'+n+'-fixture-b',prompt:'Original fixture B',options:['A','B'],correct:0}
+]})}
 load('level4-short-exam-reinforcement-v104.js');
 const v104=Object.values(w.BAContent).flatMap(c=>c.sectionExams).flatMap(e=>e.questions).filter(q=>q.id.includes('-v104-q'));
 const unique=new Map();for(const q of v104)if(!unique.has(q.prompt))unique.set(q.prompt,q);
