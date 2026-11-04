@@ -1,0 +1,1898 @@
+{
+  "schema": "business-academy.required-exam-candidates.v148",
+  "date": "2026-11-04",
+  "status": "NOT ACTIVE",
+  "policy": "Candidate assessment definitions, held outside BAContent.sectionExams until independent equivalence approval and grandfathering policy is tested. Existing required examinations remain active.",
+  "courses": [
+    {
+      "courseId": "course-10",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c10-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c10-v148-q1",
+              "title": "Contract economics",
+              "prompt": "Revenue 18 million, delivery 11 million, onboarding 2 million. Incremental contribution before expected penalties?",
+              "inputs": [
+                18,
+                11,
+                2
+              ],
+              "model": "a-b-c",
+              "correctValue": 5,
+              "unit": "context-defined",
+              "explanation": "Calculate 18-11-2 = 5. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c10-v148-q2",
+              "title": "Penalty EV",
+              "prompt": "Annual incident chance 20% and contract penalty 3 million, monitoring program 0.15 million. Total expected risk cost in millions?",
+              "inputs": [
+                20,
+                3,
+                0.15
+              ],
+              "model": "a*b/100+c",
+              "correctValue": 0.75,
+              "unit": "context-defined",
+              "explanation": "Calculate 20*3/100+0.15 = 0.75. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c10-v148-q3",
+              "title": "Concession value",
+              "prompt": "Customer demands 1.5 million discount, supplier allows 0.6 million lower cost. Net change in contribution?",
+              "inputs": [
+                1.5,
+                0.6,
+                0
+              ],
+              "model": "b-a",
+              "correctValue": -0.9,
+              "unit": "context-defined",
+              "explanation": "Calculate 0.6-1.5 = -0.9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-11",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c11-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c11-v148-q1",
+              "title": "Inventory reorder",
+              "prompt": "Demand 165 units/day, lead time 7 days, reserve stock 280 units. Reorder level?",
+              "inputs": [
+                165,
+                7,
+                280
+              ],
+              "model": "a*b+c",
+              "correctValue": 1435,
+              "unit": "context-defined",
+              "explanation": "Calculate 165*7+280 = 1435. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c11-v148-q2",
+              "title": "Network routing",
+              "prompt": "Primary warehouse moves 750 units at 3 dollars/unit; secondary handles 450 units at 7 dollars/unit. Total freight expense?",
+              "inputs": [
+                750,
+                3,
+                450
+              ],
+              "model": "a*b+c*7",
+              "correctValue": 5400,
+              "unit": "context-defined",
+              "explanation": "Calculate 750*3+450*7 = 5400. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c11-v148-q3",
+              "title": "Inventory cash",
+              "prompt": "Credit sales 730 million annually, DSO rise 12 days, 365-day year. Added receivables cash?",
+              "inputs": [
+                730,
+                12,
+                0
+              ],
+              "model": "a*b/365",
+              "correctValue": 24,
+              "unit": "context-defined",
+              "explanation": "Calculate 730*12/365 = 24. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-12",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c12-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c12-v148-q1",
+              "title": "Retention gain",
+              "prompt": "Prevented departures 45; replacement cost 22000 dollars each; program expense 720000 dollars. Annual net benefit?",
+              "inputs": [
+                45,
+                22000,
+                720000
+              ],
+              "model": "a*b-c",
+              "correctValue": 270000,
+              "unit": "context-defined",
+              "explanation": "Calculate 45*22000-720000 = 270000. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c12-v148-q2",
+              "title": "Founders' dilution",
+              "prompt": "Existing stock 85 million shares and 15 million new shares. Existing owners retain what percent?",
+              "inputs": [
+                85,
+                15,
+                0
+              ],
+              "model": "100*a/(a+b)",
+              "correctValue": 85,
+              "unit": "context-defined",
+              "explanation": "Calculate 100*85/(85+15) = 85. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c12-v148-q3",
+              "title": "Avoided exits",
+              "prompt": "Employees 1500, attrition reduced from 17% to 13%. How many departures avoided?",
+              "inputs": [
+                1500,
+                17,
+                13
+              ],
+              "model": "a*(b-c)/100",
+              "correctValue": 60,
+              "unit": "context-defined",
+              "explanation": "Calculate 1500*(17-13)/100 = 60. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-13",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c13-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c13-v148-q1",
+              "title": "Tax pooling",
+              "prompt": "Taxable profit 75 million at 24% and 25 million at 18%. Hypothetical total current tax?",
+              "inputs": [
+                75,
+                24,
+                25
+              ],
+              "model": "a*b/100+c*.18",
+              "correctValue": 22.5,
+              "unit": "context-defined",
+              "explanation": "Calculate 75*24/100+25*.18 = 22.5. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c13-v148-q2",
+              "title": "Loss mitigation",
+              "prompt": "Incident risk declines 6 percentage points for severity 7 million, controls cost 0.22 million. Net expected annual benefit?",
+              "inputs": [
+                6,
+                7,
+                0.22
+              ],
+              "model": "a*b/100-c",
+              "correctValue": 0.2,
+              "unit": "context-defined",
+              "explanation": "Calculate 6*7/100-0.22 = 0.2. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c13-v148-q3",
+              "title": "Tax blend",
+              "prompt": "Taxable profit 75 million at 24% and 25 million at 18%. Weighted current tax percentage?",
+              "inputs": [
+                75,
+                24,
+                25
+              ],
+              "model": "100*(a*b/100+c*.18)/(a+c)",
+              "correctValue": 22.5,
+              "unit": "context-defined",
+              "explanation": "Calculate 100*(75*24/100+25*.18)/(75+25) = 22.5. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-07",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c07-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c07-v148-q1",
+              "title": "Goodwill",
+              "prompt": "Acquisition price 255 million; identifiable assets 325 million and liabilities 105 million. Calculate goodwill.",
+              "inputs": [
+                255,
+                325,
+                105
+              ],
+              "model": "a-b+c",
+              "correctValue": 35,
+              "unit": "context-defined",
+              "explanation": "Calculate 255-325+105 = 35. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c07-v148-q2",
+              "title": "Cash conversion",
+              "prompt": "Profit 92 million plus depreciation 18 million less receivables increase 25 million. Simplified CFO?",
+              "inputs": [
+                92,
+                18,
+                25
+              ],
+              "model": "a+b-c",
+              "correctValue": 85,
+              "unit": "context-defined",
+              "explanation": "Calculate 92+18-25 = 85. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c07-v148-q3",
+              "title": "Consolidation",
+              "prompt": "Controlled subsidiary earns 50 million; outside investors hold 20% equity. Profit attributable to minority?",
+              "inputs": [
+                50,
+                20,
+                0
+              ],
+              "model": "a*b/100",
+              "correctValue": 10,
+              "unit": "context-defined",
+              "explanation": "Calculate 50*20/100 = 10. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-08",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c08-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c08-v148-q1",
+              "title": "Variable-cost variance",
+              "prompt": "Units produced 6500; actual variable cost 26 per unit versus budget 24. Unfavorable total cost variance?",
+              "inputs": [
+                6500,
+                26,
+                24
+              ],
+              "model": "a*(b-c)",
+              "correctValue": 13000,
+              "unit": "context-defined",
+              "explanation": "Calculate 6500*(26-24) = 13000. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c08-v148-q2",
+              "title": "Residual profit",
+              "prompt": "NOPAT 72 million, capital employed 580 million and cost of capital 10%. Economic profit?",
+              "inputs": [
+                72,
+                580,
+                10
+              ],
+              "model": "a-b*c/100",
+              "correctValue": 14,
+              "unit": "context-defined",
+              "explanation": "Calculate 72-580*10/100 = 14. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c08-v148-q3",
+              "title": "Bottleneck value",
+              "prompt": "Contribution 126 per unit and 3 scarce machine hours per unit. Contribution per constrained hour?",
+              "inputs": [
+                126,
+                3,
+                0
+              ],
+              "model": "a/b",
+              "correctValue": 42,
+              "unit": "context-defined",
+              "explanation": "Calculate 126/3 = 42. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-09",
+      "level": 2,
+      "groups": [
+        {
+          "id": "c09-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c09-v148-q1",
+              "title": "Experimental uplift",
+              "prompt": "Treatment 220 conversions; control 160, both from 2000 assignments. Absolute uplift in percentage points?",
+              "inputs": [
+                220,
+                160,
+                2000
+              ],
+              "model": "(a-b)/c*100",
+              "correctValue": 3,
+              "unit": "context-defined",
+              "explanation": "Calculate (220-160)/2000*100 = 3. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c09-v148-q2",
+              "title": "Campaign payback",
+              "prompt": "An additional 68 retained customers contribute 58 dollars each; avoidable campaign expense 2750 dollars. Net contribution?",
+              "inputs": [
+                68,
+                58,
+                2750
+              ],
+              "model": "a*b-c",
+              "correctValue": 1194,
+              "unit": "context-defined",
+              "explanation": "Calculate 68*58-2750 = 1194. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c09-v148-q3",
+              "title": "Required conversion",
+              "prompt": "Campaign spending 3300 dollars and unit contribution 55 dollars. Minimum break-even customer count?",
+              "inputs": [
+                3300,
+                55,
+                0
+              ],
+              "model": "a/b",
+              "correctValue": 60,
+              "unit": "context-defined",
+              "explanation": "Calculate 3300/55 = 60. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-21",
+      "level": 4,
+      "groups": [
+        {
+          "id": "c21-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c21-v148-q1",
+              "title": "Equity value",
+              "prompt": "Enterprise value 420 million, debt 110 million and unrestricted cash 25 million. Equity consideration?",
+              "inputs": [
+                420,
+                110,
+                25
+              ],
+              "model": "a-b+c",
+              "correctValue": 335,
+              "unit": "context-defined",
+              "explanation": "Calculate 420-110+25 = 335. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q2",
+              "title": "Acquisition premium",
+              "prompt": "Offer 320 million versus independent stand-alone value 295 million. Purchase premium?",
+              "inputs": [
+                320,
+                295,
+                0
+              ],
+              "model": "a-b",
+              "correctValue": 25,
+              "unit": "context-defined",
+              "explanation": "Calculate 320-295 = 25. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q3",
+              "title": "Operating adjustment",
+              "prompt": "Reported EBITDA 52 million includes nonrecurring gain 7 million and excludes expense 4 million. Corrected sustainable EBITDA?",
+              "inputs": [
+                52,
+                7,
+                4
+              ],
+              "model": "a-b-c",
+              "correctValue": 41,
+              "unit": "context-defined",
+              "explanation": "Calculate 52-7-4 = 41. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q4",
+              "title": "Integration cash",
+              "prompt": "Five annual synergy payments of 11 million with immediate integration cost 28 million. Undiscounted net incremental value?",
+              "inputs": [
+                11,
+                28,
+                0
+              ],
+              "model": "5*a-b",
+              "correctValue": 27,
+              "unit": "context-defined",
+              "explanation": "Calculate 5*11-28 = 27. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c21-v148-candidate-2",
+          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c21-v148-q5",
+              "title": "Treasury capacity",
+              "prompt": "Cash 280 million, protected reserve 65 million, acquisition closing spend 190 million. Residual headroom?",
+              "inputs": [
+                280,
+                65,
+                190
+              ],
+              "model": "a-b-c",
+              "correctValue": 25,
+              "unit": "context-defined",
+              "explanation": "Calculate 280-65-190 = 25. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q6",
+              "title": "Equity value",
+              "prompt": "Enterprise value 423 million, debt 111 million and unrestricted cash 27 million. Equity consideration?",
+              "inputs": [
+                423,
+                111,
+                27
+              ],
+              "model": "a-b+c",
+              "correctValue": 339,
+              "unit": "context-defined",
+              "explanation": "Calculate 423-111+27 = 339. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q7",
+              "title": "Acquisition premium",
+              "prompt": "Offer 323 million versus independent stand-alone value 296 million. Purchase premium?",
+              "inputs": [
+                323,
+                296,
+                2
+              ],
+              "model": "a-b",
+              "correctValue": 27,
+              "unit": "context-defined",
+              "explanation": "Calculate 323-296 = 27. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q8",
+              "title": "Operating adjustment",
+              "prompt": "Reported EBITDA 55 million includes nonrecurring gain 8 million and excludes expense 6 million. Corrected sustainable EBITDA?",
+              "inputs": [
+                55,
+                8,
+                6
+              ],
+              "model": "a-b-c",
+              "correctValue": 41,
+              "unit": "context-defined",
+              "explanation": "Calculate 55-8-6 = 41. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c21-v148-candidate-3",
+          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c21-v148-q9",
+              "title": "Integration cash",
+              "prompt": "Five annual synergy payments of 14 million with immediate integration cost 29 million. Undiscounted net incremental value?",
+              "inputs": [
+                14,
+                29,
+                2
+              ],
+              "model": "5*a-b",
+              "correctValue": 41,
+              "unit": "context-defined",
+              "explanation": "Calculate 5*14-29 = 41. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q10",
+              "title": "Treasury capacity",
+              "prompt": "Cash 283 million, protected reserve 66 million, acquisition closing spend 192 million. Residual headroom?",
+              "inputs": [
+                283,
+                66,
+                192
+              ],
+              "model": "a-b-c",
+              "correctValue": 25,
+              "unit": "context-defined",
+              "explanation": "Calculate 283-66-192 = 25. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q11",
+              "title": "Equity value",
+              "prompt": "Enterprise value 426 million, debt 112 million and unrestricted cash 29 million. Equity consideration?",
+              "inputs": [
+                426,
+                112,
+                29
+              ],
+              "model": "a-b+c",
+              "correctValue": 343,
+              "unit": "context-defined",
+              "explanation": "Calculate 426-112+29 = 343. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q12",
+              "title": "Acquisition premium",
+              "prompt": "Offer 326 million versus independent stand-alone value 297 million. Purchase premium?",
+              "inputs": [
+                326,
+                297,
+                4
+              ],
+              "model": "a-b",
+              "correctValue": 29,
+              "unit": "context-defined",
+              "explanation": "Calculate 326-297 = 29. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c21-v148-candidate-4",
+          "title": "Versioned required-exam candidate 4: Board defense",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c21-v148-q13",
+              "title": "Operating adjustment",
+              "prompt": "Reported EBITDA 58 million includes nonrecurring gain 9 million and excludes expense 8 million. Corrected sustainable EBITDA?",
+              "inputs": [
+                58,
+                9,
+                8
+              ],
+              "model": "a-b-c",
+              "correctValue": 41,
+              "unit": "context-defined",
+              "explanation": "Calculate 58-9-8 = 41. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q14",
+              "title": "Integration cash",
+              "prompt": "Five annual synergy payments of 17 million with immediate integration cost 30 million. Undiscounted net incremental value?",
+              "inputs": [
+                17,
+                30,
+                4
+              ],
+              "model": "5*a-b",
+              "correctValue": 55,
+              "unit": "context-defined",
+              "explanation": "Calculate 5*17-30 = 55. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c21-v148-q15",
+              "title": "Treasury capacity",
+              "prompt": "Cash 286 million, protected reserve 67 million, acquisition closing spend 194 million. Residual headroom?",
+              "inputs": [
+                286,
+                67,
+                194
+              ],
+              "model": "a-b-c",
+              "correctValue": 25,
+              "unit": "context-defined",
+              "explanation": "Calculate 286-67-194 = 25. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-22",
+      "level": 4,
+      "groups": [
+        {
+          "id": "c22-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c22-v148-q1",
+              "title": "Capital cost",
+              "prompt": "Project A requires 31 million now and B 28 million; available spending cap 65 million. How much funding remains if both are executed?",
+              "inputs": [
+                31,
+                28,
+                65
+              ],
+              "model": "c-a-b",
+              "correctValue": 6,
+              "unit": "context-defined",
+              "explanation": "Calculate 65-31-28 = 6. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q2",
+              "title": "Annuity payback",
+              "prompt": "Investment 72 million earns 18 million per year without discount. Simple payback years?",
+              "inputs": [
+                72,
+                18,
+                0
+              ],
+              "model": "a/b",
+              "correctValue": 4,
+              "unit": "context-defined",
+              "explanation": "Calculate 72/18 = 4. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q3",
+              "title": "Economic investment",
+              "prompt": "Project PV 105 million, implementation cost 77 million and remediation 8 million, all costs immediately paid. NPV?",
+              "inputs": [
+                105,
+                77,
+                8
+              ],
+              "model": "a-b-c",
+              "correctValue": 20,
+              "unit": "context-defined",
+              "explanation": "Calculate 105-77-8 = 20. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q4",
+              "title": "Contingency",
+              "prompt": "Project estimate 45 million, contingency 7 million and finance fees 3 million. Total cash outlay?",
+              "inputs": [
+                45,
+                7,
+                3
+              ],
+              "model": "a+b+c",
+              "correctValue": 55,
+              "unit": "context-defined",
+              "explanation": "Calculate 45+7+3 = 55. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c22-v148-candidate-2",
+          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c22-v148-q5",
+              "title": "Opportunity value",
+              "prompt": "Project A NPV 22 million, project B NPV 16 million. Difference favoring A?",
+              "inputs": [
+                22,
+                16,
+                0
+              ],
+              "model": "a-b",
+              "correctValue": 6,
+              "unit": "context-defined",
+              "explanation": "Calculate 22-16 = 6. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q6",
+              "title": "Capital cost",
+              "prompt": "Project A requires 34 million now and B 29 million; available spending cap 67 million. How much funding remains if both are executed?",
+              "inputs": [
+                34,
+                29,
+                67
+              ],
+              "model": "c-a-b",
+              "correctValue": 4,
+              "unit": "context-defined",
+              "explanation": "Calculate 67-34-29 = 4. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q7",
+              "title": "Annuity payback",
+              "prompt": "Investment 75 million earns 19 million per year without discount. Simple payback years?",
+              "inputs": [
+                75,
+                19,
+                2
+              ],
+              "model": "a/b",
+              "correctValue": 3.9474,
+              "unit": "context-defined",
+              "explanation": "Calculate 75/19 = 3.9474. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q8",
+              "title": "Economic investment",
+              "prompt": "Project PV 108 million, implementation cost 78 million and remediation 10 million, all costs immediately paid. NPV?",
+              "inputs": [
+                108,
+                78,
+                10
+              ],
+              "model": "a-b-c",
+              "correctValue": 20,
+              "unit": "context-defined",
+              "explanation": "Calculate 108-78-10 = 20. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c22-v148-candidate-3",
+          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c22-v148-q9",
+              "title": "Contingency",
+              "prompt": "Project estimate 48 million, contingency 8 million and finance fees 5 million. Total cash outlay?",
+              "inputs": [
+                48,
+                8,
+                5
+              ],
+              "model": "a+b+c",
+              "correctValue": 61,
+              "unit": "context-defined",
+              "explanation": "Calculate 48+8+5 = 61. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q10",
+              "title": "Opportunity value",
+              "prompt": "Project A NPV 25 million, project B NPV 17 million. Difference favoring A?",
+              "inputs": [
+                25,
+                17,
+                2
+              ],
+              "model": "a-b",
+              "correctValue": 8,
+              "unit": "context-defined",
+              "explanation": "Calculate 25-17 = 8. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q11",
+              "title": "Capital cost",
+              "prompt": "Project A requires 37 million now and B 30 million; available spending cap 69 million. How much funding remains if both are executed?",
+              "inputs": [
+                37,
+                30,
+                69
+              ],
+              "model": "c-a-b",
+              "correctValue": 2,
+              "unit": "context-defined",
+              "explanation": "Calculate 69-37-30 = 2. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q12",
+              "title": "Annuity payback",
+              "prompt": "Investment 78 million earns 20 million per year without discount. Simple payback years?",
+              "inputs": [
+                78,
+                20,
+                4
+              ],
+              "model": "a/b",
+              "correctValue": 3.9,
+              "unit": "context-defined",
+              "explanation": "Calculate 78/20 = 3.9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c22-v148-candidate-4",
+          "title": "Versioned required-exam candidate 4: Board defense",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c22-v148-q13",
+              "title": "Economic investment",
+              "prompt": "Project PV 111 million, implementation cost 79 million and remediation 12 million, all costs immediately paid. NPV?",
+              "inputs": [
+                111,
+                79,
+                12
+              ],
+              "model": "a-b-c",
+              "correctValue": 20,
+              "unit": "context-defined",
+              "explanation": "Calculate 111-79-12 = 20. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q14",
+              "title": "Contingency",
+              "prompt": "Project estimate 51 million, contingency 9 million and finance fees 7 million. Total cash outlay?",
+              "inputs": [
+                51,
+                9,
+                7
+              ],
+              "model": "a+b+c",
+              "correctValue": 67,
+              "unit": "context-defined",
+              "explanation": "Calculate 51+9+7 = 67. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c22-v148-q15",
+              "title": "Opportunity value",
+              "prompt": "Project A NPV 28 million, project B NPV 18 million. Difference favoring A?",
+              "inputs": [
+                28,
+                18,
+                4
+              ],
+              "model": "a-b",
+              "correctValue": 10,
+              "unit": "context-defined",
+              "explanation": "Calculate 28-18 = 10. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-23",
+      "level": 4,
+      "groups": [
+        {
+          "id": "c23-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c23-v148-q1",
+              "title": "Loss exposure",
+              "prompt": "Annual incident chance 8%, direct loss 15 million. Expected annual loss in million?",
+              "inputs": [
+                8,
+                15,
+                0
+              ],
+              "model": "a*b/100",
+              "correctValue": 1.2,
+              "unit": "context-defined",
+              "explanation": "Calculate 8*15/100 = 1.2. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q2",
+              "title": "Control benefit",
+              "prompt": "Risk reduction 6 percentage points, severity 12 million, annual control 0.25 million. Annual net expected benefit?",
+              "inputs": [
+                6,
+                12,
+                0.25
+              ],
+              "model": "a*b/100-c",
+              "correctValue": 0.47,
+              "unit": "context-defined",
+              "explanation": "Calculate 6*12/100-0.25 = 0.47. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q3",
+              "title": "Protected treasury",
+              "prompt": "Cash 140 million, reserve 50 million, emergency payment 62 million. Headroom?",
+              "inputs": [
+                140,
+                50,
+                62
+              ],
+              "model": "a-b-c",
+              "correctValue": 28,
+              "unit": "context-defined",
+              "explanation": "Calculate 140-50-62 = 28. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q4",
+              "title": "Recovery gap",
+              "prompt": "Expected incident disbursement 35 million, immediately available insurance cash 14 million, committed facility 9 million. Unfunded shock?",
+              "inputs": [
+                35,
+                14,
+                9
+              ],
+              "model": "a-b-c",
+              "correctValue": 12,
+              "unit": "context-defined",
+              "explanation": "Calculate 35-14-9 = 12. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c23-v148-candidate-2",
+          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c23-v148-q5",
+              "title": "Vendor risk",
+              "prompt": "Vendor loss chance decreases from 14% to 5% on loss severity 10 million. Annual expected loss avoided?",
+              "inputs": [
+                14,
+                5,
+                10
+              ],
+              "model": "(a-b)*c/100",
+              "correctValue": 0.9,
+              "unit": "context-defined",
+              "explanation": "Calculate (14-5)*10/100 = 0.9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q6",
+              "title": "Loss exposure",
+              "prompt": "Annual incident chance 11%, direct loss 16 million. Expected annual loss in million?",
+              "inputs": [
+                11,
+                16,
+                2
+              ],
+              "model": "a*b/100",
+              "correctValue": 1.76,
+              "unit": "context-defined",
+              "explanation": "Calculate 11*16/100 = 1.76. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q7",
+              "title": "Control benefit",
+              "prompt": "Risk reduction 9 percentage points, severity 13 million, annual control 2.25 million. Annual net expected benefit?",
+              "inputs": [
+                9,
+                13,
+                2.25
+              ],
+              "model": "a*b/100-c",
+              "correctValue": -1.08,
+              "unit": "context-defined",
+              "explanation": "Calculate 9*13/100-2.25 = -1.08. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q8",
+              "title": "Protected treasury",
+              "prompt": "Cash 143 million, reserve 51 million, emergency payment 64 million. Headroom?",
+              "inputs": [
+                143,
+                51,
+                64
+              ],
+              "model": "a-b-c",
+              "correctValue": 28,
+              "unit": "context-defined",
+              "explanation": "Calculate 143-51-64 = 28. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c23-v148-candidate-3",
+          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c23-v148-q9",
+              "title": "Recovery gap",
+              "prompt": "Expected incident disbursement 38 million, immediately available insurance cash 15 million, committed facility 11 million. Unfunded shock?",
+              "inputs": [
+                38,
+                15,
+                11
+              ],
+              "model": "a-b-c",
+              "correctValue": 12,
+              "unit": "context-defined",
+              "explanation": "Calculate 38-15-11 = 12. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q10",
+              "title": "Vendor risk",
+              "prompt": "Vendor loss chance decreases from 17% to 6% on loss severity 12 million. Annual expected loss avoided?",
+              "inputs": [
+                17,
+                6,
+                12
+              ],
+              "model": "(a-b)*c/100",
+              "correctValue": 1.32,
+              "unit": "context-defined",
+              "explanation": "Calculate (17-6)*12/100 = 1.32. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q11",
+              "title": "Loss exposure",
+              "prompt": "Annual incident chance 14%, direct loss 17 million. Expected annual loss in million?",
+              "inputs": [
+                14,
+                17,
+                4
+              ],
+              "model": "a*b/100",
+              "correctValue": 2.38,
+              "unit": "context-defined",
+              "explanation": "Calculate 14*17/100 = 2.38. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q12",
+              "title": "Control benefit",
+              "prompt": "Risk reduction 12 percentage points, severity 14 million, annual control 4.25 million. Annual net expected benefit?",
+              "inputs": [
+                12,
+                14,
+                4.25
+              ],
+              "model": "a*b/100-c",
+              "correctValue": -2.57,
+              "unit": "context-defined",
+              "explanation": "Calculate 12*14/100-4.25 = -2.57. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c23-v148-candidate-4",
+          "title": "Versioned required-exam candidate 4: Board defense",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c23-v148-q13",
+              "title": "Protected treasury",
+              "prompt": "Cash 146 million, reserve 52 million, emergency payment 66 million. Headroom?",
+              "inputs": [
+                146,
+                52,
+                66
+              ],
+              "model": "a-b-c",
+              "correctValue": 28,
+              "unit": "context-defined",
+              "explanation": "Calculate 146-52-66 = 28. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q14",
+              "title": "Recovery gap",
+              "prompt": "Expected incident disbursement 41 million, immediately available insurance cash 16 million, committed facility 13 million. Unfunded shock?",
+              "inputs": [
+                41,
+                16,
+                13
+              ],
+              "model": "a-b-c",
+              "correctValue": 12,
+              "unit": "context-defined",
+              "explanation": "Calculate 41-16-13 = 12. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c23-v148-q15",
+              "title": "Vendor risk",
+              "prompt": "Vendor loss chance decreases from 20% to 7% on loss severity 14 million. Annual expected loss avoided?",
+              "inputs": [
+                20,
+                7,
+                14
+              ],
+              "model": "(a-b)*c/100",
+              "correctValue": 1.82,
+              "unit": "context-defined",
+              "explanation": "Calculate (20-7)*14/100 = 1.82. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-24",
+      "level": 4,
+      "groups": [
+        {
+          "id": "c24-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c24-v148-q1",
+              "title": "Freed hours",
+              "prompt": "Tasks 48000, savings 10 minutes each. Total hours released?",
+              "inputs": [
+                48000,
+                10,
+                0
+              ],
+              "model": "a*b/60",
+              "correctValue": 8000,
+              "unit": "context-defined",
+              "explanation": "Calculate 48000*10/60 = 8000. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q2",
+              "title": "Cash realization",
+              "prompt": "Theoretical saving 450 thousand, realization 60%, support 95 thousand. Net verified cash saving in thousands?",
+              "inputs": [
+                450,
+                60,
+                95
+              ],
+              "model": "a*b/100-c",
+              "correctValue": 175,
+              "unit": "context-defined",
+              "explanation": "Calculate 450*60/100-95 = 175. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q3",
+              "title": "Defect quality",
+              "prompt": "Baseline 65 failures per 1000, pilot 38 per 1000. Percentage-point defect-rate reduction?",
+              "inputs": [
+                65,
+                38,
+                0
+              ],
+              "model": "(a-b)/10",
+              "correctValue": 2.7,
+              "unit": "context-defined",
+              "explanation": "Calculate (65-38)/10 = 2.7. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q4",
+              "title": "Repair expense",
+              "prompt": "Cases 25000, error rate 4%, remedy 30 dollars per error. Expected cash rework cost?",
+              "inputs": [
+                25000,
+                4,
+                30
+              ],
+              "model": "a*b*c/100",
+              "correctValue": 30000,
+              "unit": "context-defined",
+              "explanation": "Calculate 25000*4*30/100 = 30000. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c24-v148-candidate-2",
+          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c24-v148-q5",
+              "title": "Payback",
+              "prompt": "Up-front automation spend 360 thousand, monthly net savings 30 thousand. Simple payback months?",
+              "inputs": [
+                360,
+                30,
+                0
+              ],
+              "model": "a/b",
+              "correctValue": 12,
+              "unit": "context-defined",
+              "explanation": "Calculate 360/30 = 12. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q6",
+              "title": "Freed hours",
+              "prompt": "Tasks 48003, savings 11 minutes each. Total hours released?",
+              "inputs": [
+                48003,
+                11,
+                2
+              ],
+              "model": "a*b/60",
+              "correctValue": 8800.55,
+              "unit": "context-defined",
+              "explanation": "Calculate 48003*11/60 = 8800.55. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q7",
+              "title": "Cash realization",
+              "prompt": "Theoretical saving 453 thousand, realization 61%, support 97 thousand. Net verified cash saving in thousands?",
+              "inputs": [
+                453,
+                61,
+                97
+              ],
+              "model": "a*b/100-c",
+              "correctValue": 179.33,
+              "unit": "context-defined",
+              "explanation": "Calculate 453*61/100-97 = 179.33. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q8",
+              "title": "Defect quality",
+              "prompt": "Baseline 68 failures per 1000, pilot 39 per 1000. Percentage-point defect-rate reduction?",
+              "inputs": [
+                68,
+                39,
+                2
+              ],
+              "model": "(a-b)/10",
+              "correctValue": 2.9,
+              "unit": "context-defined",
+              "explanation": "Calculate (68-39)/10 = 2.9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c24-v148-candidate-3",
+          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c24-v148-q9",
+              "title": "Repair expense",
+              "prompt": "Cases 25003, error rate 5%, remedy 32 dollars per error. Expected cash rework cost?",
+              "inputs": [
+                25003,
+                5,
+                32
+              ],
+              "model": "a*b*c/100",
+              "correctValue": 40004.8,
+              "unit": "context-defined",
+              "explanation": "Calculate 25003*5*32/100 = 40004.8. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q10",
+              "title": "Payback",
+              "prompt": "Up-front automation spend 363 thousand, monthly net savings 31 thousand. Simple payback months?",
+              "inputs": [
+                363,
+                31,
+                2
+              ],
+              "model": "a/b",
+              "correctValue": 11.7097,
+              "unit": "context-defined",
+              "explanation": "Calculate 363/31 = 11.7097. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q11",
+              "title": "Freed hours",
+              "prompt": "Tasks 48006, savings 12 minutes each. Total hours released?",
+              "inputs": [
+                48006,
+                12,
+                4
+              ],
+              "model": "a*b/60",
+              "correctValue": 9601.2,
+              "unit": "context-defined",
+              "explanation": "Calculate 48006*12/60 = 9601.2. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q12",
+              "title": "Cash realization",
+              "prompt": "Theoretical saving 456 thousand, realization 62%, support 99 thousand. Net verified cash saving in thousands?",
+              "inputs": [
+                456,
+                62,
+                99
+              ],
+              "model": "a*b/100-c",
+              "correctValue": 183.72,
+              "unit": "context-defined",
+              "explanation": "Calculate 456*62/100-99 = 183.72. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c24-v148-candidate-4",
+          "title": "Versioned required-exam candidate 4: Board defense",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c24-v148-q13",
+              "title": "Defect quality",
+              "prompt": "Baseline 71 failures per 1000, pilot 40 per 1000. Percentage-point defect-rate reduction?",
+              "inputs": [
+                71,
+                40,
+                4
+              ],
+              "model": "(a-b)/10",
+              "correctValue": 3.1,
+              "unit": "context-defined",
+              "explanation": "Calculate (71-40)/10 = 3.1. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q14",
+              "title": "Repair expense",
+              "prompt": "Cases 25006, error rate 6%, remedy 34 dollars per error. Expected cash rework cost?",
+              "inputs": [
+                25006,
+                6,
+                34
+              ],
+              "model": "a*b*c/100",
+              "correctValue": 51012.24,
+              "unit": "context-defined",
+              "explanation": "Calculate 25006*6*34/100 = 51012.24. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c24-v148-q15",
+              "title": "Payback",
+              "prompt": "Up-front automation spend 366 thousand, monthly net savings 32 thousand. Simple payback months?",
+              "inputs": [
+                366,
+                32,
+                4
+              ],
+              "model": "a/b",
+              "correctValue": 11.4375,
+              "unit": "context-defined",
+              "explanation": "Calculate 366/32 = 11.4375. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseId": "course-25",
+      "level": 4,
+      "groups": [
+        {
+          "id": "c25-v148-candidate-1",
+          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c25-v148-q1",
+              "title": "Deployable capital",
+              "prompt": "Cash 165 million and protected reserve 55 million. Maximum immediately spendable cash?",
+              "inputs": [
+                165,
+                55,
+                0
+              ],
+              "model": "a-b",
+              "correctValue": 110,
+              "unit": "context-defined",
+              "explanation": "Calculate 165-55 = 110. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q2",
+              "title": "Funding gap",
+              "prompt": "Acquisition needs 125 million, firm has 155 million cash and protects 55 million. External funding required?",
+              "inputs": [
+                125,
+                155,
+                55
+              ],
+              "model": "a-b+c",
+              "correctValue": 25,
+              "unit": "context-defined",
+              "explanation": "Calculate 125-155+55 = 25. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q3",
+              "title": "Portfolio NPV",
+              "prompt": "Approved independent projects have NPVs 17 and 12 million. Total incremental project NPV if both can be funded?",
+              "inputs": [
+                17,
+                12,
+                0
+              ],
+              "model": "a+b",
+              "correctValue": 29,
+              "unit": "context-defined",
+              "explanation": "Calculate 17+12 = 29. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q4",
+              "title": "Unfunded shock",
+              "prompt": "Cash 185 million less acquisition outlay 95 and incident cash 40 million. Ending treasury cash?",
+              "inputs": [
+                185,
+                95,
+                40
+              ],
+              "model": "a-b-c",
+              "correctValue": 50,
+              "unit": "context-defined",
+              "explanation": "Calculate 185-95-40 = 50. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c25-v148-candidate-2",
+          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c25-v148-q5",
+              "title": "Executive approval",
+              "prompt": "Discounted future benefit 83 million less project cost 62 million and remediation 12 million. Net opportunity value?",
+              "inputs": [
+                83,
+                62,
+                12
+              ],
+              "model": "a-b-c",
+              "correctValue": 9,
+              "unit": "context-defined",
+              "explanation": "Calculate 83-62-12 = 9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q6",
+              "title": "Deployable capital",
+              "prompt": "Cash 168 million and protected reserve 56 million. Maximum immediately spendable cash?",
+              "inputs": [
+                168,
+                56,
+                2
+              ],
+              "model": "a-b",
+              "correctValue": 112,
+              "unit": "context-defined",
+              "explanation": "Calculate 168-56 = 112. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q7",
+              "title": "Funding gap",
+              "prompt": "Acquisition needs 128 million, firm has 156 million cash and protects 57 million. External funding required?",
+              "inputs": [
+                128,
+                156,
+                57
+              ],
+              "model": "a-b+c",
+              "correctValue": 29,
+              "unit": "context-defined",
+              "explanation": "Calculate 128-156+57 = 29. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q8",
+              "title": "Portfolio NPV",
+              "prompt": "Approved independent projects have NPVs 20 and 13 million. Total incremental project NPV if both can be funded?",
+              "inputs": [
+                20,
+                13,
+                2
+              ],
+              "model": "a+b",
+              "correctValue": 33,
+              "unit": "context-defined",
+              "explanation": "Calculate 20+13 = 33. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c25-v148-candidate-3",
+          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c25-v148-q9",
+              "title": "Unfunded shock",
+              "prompt": "Cash 188 million less acquisition outlay 96 and incident cash 42 million. Ending treasury cash?",
+              "inputs": [
+                188,
+                96,
+                42
+              ],
+              "model": "a-b-c",
+              "correctValue": 50,
+              "unit": "context-defined",
+              "explanation": "Calculate 188-96-42 = 50. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q10",
+              "title": "Executive approval",
+              "prompt": "Discounted future benefit 86 million less project cost 63 million and remediation 14 million. Net opportunity value?",
+              "inputs": [
+                86,
+                63,
+                14
+              ],
+              "model": "a-b-c",
+              "correctValue": 9,
+              "unit": "context-defined",
+              "explanation": "Calculate 86-63-14 = 9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q11",
+              "title": "Deployable capital",
+              "prompt": "Cash 171 million and protected reserve 57 million. Maximum immediately spendable cash?",
+              "inputs": [
+                171,
+                57,
+                4
+              ],
+              "model": "a-b",
+              "correctValue": 114,
+              "unit": "context-defined",
+              "explanation": "Calculate 171-57 = 114. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q12",
+              "title": "Funding gap",
+              "prompt": "Acquisition needs 131 million, firm has 157 million cash and protects 59 million. External funding required?",
+              "inputs": [
+                131,
+                157,
+                59
+              ],
+              "model": "a-b+c",
+              "correctValue": 33,
+              "unit": "context-defined",
+              "explanation": "Calculate 131-157+59 = 33. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        },
+        {
+          "id": "c25-v148-candidate-4",
+          "title": "Versioned required-exam candidate 4: Board defense",
+          "minutes": 100,
+          "written": "Independently reconstruct all calculations; create a downside and a feasible competing alternative. Cite dated source material for any real-world claim and submit an executive board memorandum.",
+          "rubric": [
+            "Model accuracy and unit integrity",
+            "Independent transfer and adverse sensitivities",
+            "Feasible alternative and controls",
+            "Evidence register and accountable board action"
+          ],
+          "questions": [
+            {
+              "id": "c25-v148-q13",
+              "title": "Portfolio NPV",
+              "prompt": "Approved independent projects have NPVs 23 and 14 million. Total incremental project NPV if both can be funded?",
+              "inputs": [
+                23,
+                14,
+                4
+              ],
+              "model": "a+b",
+              "correctValue": 37,
+              "unit": "context-defined",
+              "explanation": "Calculate 23+14 = 37. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q14",
+              "title": "Unfunded shock",
+              "prompt": "Cash 191 million less acquisition outlay 97 and incident cash 44 million. Ending treasury cash?",
+              "inputs": [
+                191,
+                97,
+                44
+              ],
+              "model": "a-b-c",
+              "correctValue": 50,
+              "unit": "context-defined",
+              "explanation": "Calculate 191-97-44 = 50. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            },
+            {
+              "id": "c25-v148-q15",
+              "title": "Executive approval",
+              "prompt": "Discounted future benefit 89 million less project cost 64 million and remediation 16 million. Net opportunity value?",
+              "inputs": [
+                89,
+                64,
+                16
+              ],
+              "model": "a-b-c",
+              "correctValue": 9,
+              "unit": "context-defined",
+              "explanation": "Calculate 89-64-16 = 9. Check dates, units and economic assumptions.",
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
