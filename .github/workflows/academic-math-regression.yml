@@ -3,16 +3,26 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'learning/level1-final-v39.js'
+      - 'learning/level2-independent-exams-v63.js'
+      - 'learning/level4-assessment-bank-v102.js'
+      - 'learning/level4-short-exam-reinforcement-v104.js'
       - 'learning/level3-completion-seminars-v91.js'
       - 'learning/level3-final-depth-v79.js'
       - 'learning/level3-integrated-final-v87.js'
       - 'learning/level5-numeric-v125.js'
+      - 'audits/scripts/level1-final-regression-v142.cjs'
+      - 'audits/scripts/level2-level4-math-regression-v141.cjs'
       - 'audits/scripts/level3-math-regression-v138.cjs'
       - 'audits/scripts/level3-final-math-regression-v139.cjs'
       - 'audits/scripts/level5-numeric-regression-v140.cjs'
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'learning/level1-final-v39.js'
+      - 'learning/level2-independent-exams-v63.js'
+      - 'learning/level4-assessment-bank-v102.js'
+      - 'learning/level4-short-exam-reinforcement-v104.js'
       - 'learning/level3-completion-seminars-v91.js'
       - 'learning/level3-final-depth-v79.js'
       - 'learning/level3-integrated-final-v87.js'
@@ -33,6 +43,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify 12 Level 1 integrated final answers
+        run: node audits/scripts/level1-final-regression-v142.cjs
+      - name: Verify Level 2 and 4 quantitative assessments
+        run: node audits/scripts/level2-level4-math-regression-v141.cjs
       - name: Independently verify 21 Level 3 course-seminar calculations
         run: node audits/scripts/level3-math-regression-v138.cjs
       - name: Verify 19 advanced and integrated Level 3 final-exam answers
