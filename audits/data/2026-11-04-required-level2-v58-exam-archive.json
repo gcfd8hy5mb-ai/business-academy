@@ -1,0 +1,419 @@
+{
+  "schema": "business-academy.legacy-required-exams.v1",
+  "snapshotDate": "2026-11-04",
+  "source": {
+    "path": "learning/level2-specialist-v58.js",
+    "blobSha": "31a27cc88d927145cca5890edb3027b9b1910486"
+  },
+  "policy": "Immutable historical assessment definition. Do not substitute into active course or overwrite prior graded attempts. Any future prospective replacement must use new exam IDs.",
+  "examCount": 7,
+  "questions": 21,
+  "exams": [
+    {
+      "courseId": "course-07",
+      "definition": {
+        "id": "c07-v58-exam",
+        "title": "Consolidation and deferred tax decisions quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c07-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "Intercompany profit=3M; unrealized profit=1.2M; consolidated inventory reduction=1.2M.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "Intercompany profit=3M; unrealized profit=1.2M; consolidated inventory reduction=1.2M.",
+            "lessonId": "c07-v58-l0"
+          },
+          {
+            "id": "c07-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "Potential DTA=8×.25=2M, subject to applicable recognition tests.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Potential DTA=8×.25=2M, subject to applicable recognition tests.",
+            "lessonId": "c07-v58-l1"
+          },
+          {
+            "id": "c07-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c07-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "Intercompany profit=3M; unrealized profit=1.2M; consolidated inventory reduction=1.2M. Potential DTA=8×.25=2M, subject to applicable recognition tests.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-08",
+      "definition": {
+        "id": "c08-v58-exam",
+        "title": "Transfer prices and enterprise resource decisions quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c08-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "Idle capacity minimum 45; binding external demand minimum 45+(80−45)=80.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "Idle capacity minimum 45; binding external demand minimum 45+(80−45)=80.",
+            "lessonId": "c08-v58-l0"
+          },
+          {
+            "id": "c08-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "Required return charge=21.6M; residual income=8.4M.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Required return charge=21.6M; residual income=8.4M.",
+            "lessonId": "c08-v58-l1"
+          },
+          {
+            "id": "c08-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c08-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "Idle capacity minimum 45; binding external demand minimum 45+(80−45)=80. Required return charge=21.6M; residual income=8.4M.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-09",
+      "definition": {
+        "id": "c09-v58-exam",
+        "title": "Longitudinal marketing and statistical inference quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c09-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "Retention=1520/2000=76%; churn=24%, conditional on cohort definition.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "Retention=1520/2000=76%; churn=24%, conditional on cohort definition.",
+            "lessonId": "c09-v58-l0"
+          },
+          {
+            "id": "c09-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "Incremental conversions 30; net contribution 1050−1200=−150, not proof of negative true treatment effect.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Incremental conversions 30; net contribution 1050−1200=−150, not proof of negative true treatment effect.",
+            "lessonId": "c09-v58-l1"
+          },
+          {
+            "id": "c09-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c09-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "Retention=1520/2000=76%; churn=24%, conditional on cohort definition. Incremental conversions 30; net contribution 1050−1200=−150, not proof of negative true treatment effect.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-10",
+      "definition": {
+        "id": "c10-v58-exam",
+        "title": "Complex negotiation and contract risk quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c10-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "Annual expected contribution 3.7M; undiscounted five-year value 18.5M.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "Annual expected contribution 3.7M; undiscounted five-year value 18.5M.",
+            "lessonId": "c10-v58-l0"
+          },
+          {
+            "id": "c10-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "Revised contribution 7.2M; BATNA gap +0.1M.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Revised contribution 7.2M; BATNA gap +0.1M.",
+            "lessonId": "c10-v58-l1"
+          },
+          {
+            "id": "c10-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c10-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "Annual expected contribution 3.7M; undiscounted five-year value 18.5M. Revised contribution 7.2M; BATNA gap +0.1M.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-11",
+      "definition": {
+        "id": "c11-v58-exam",
+        "title": "Network optimization and inventory decisions quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c11-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "600×4+300×7=4500; capacities and demand reconcile.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "600×4+300×7=4500; capacities and demand reconcile.",
+            "lessonId": "c11-v58-l0"
+          },
+          {
+            "id": "c11-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "EOQ=sqrt(800000)=894.43 units.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "EOQ=sqrt(800000)=894.43 units.",
+            "lessonId": "c11-v58-l1"
+          },
+          {
+            "id": "c11-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c11-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "600×4+300×7=4500; capacities and demand reconcile. EOQ=sqrt(800000)=894.43 units.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-12",
+      "definition": {
+        "id": "c12-v58-exam",
+        "title": "Leadership field diagnosis and incentives quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c12-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "32 avoided exits; 32×24000−900000=−132000.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "32 avoided exits; 32×24000−900000=−132000.",
+            "lessonId": "c12-v58-l0"
+          },
+          {
+            "id": "c12-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "Bonus .6M; incremental GP 1.6M; bonus/GP 37.5%.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Bonus .6M; incremental GP 1.6M; bonus/GP 37.5%.",
+            "lessonId": "c12-v58-l1"
+          },
+          {
+            "id": "c12-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c12-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "32 avoided exits; 32×24000−900000=−132000. Bonus .6M; incremental GP 1.6M; bonus/GP 37.5%.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-13",
+      "definition": {
+        "id": "c13-v58-exam",
+        "title": "Regulatory and tax sensitivity quantitative examination",
+        "minutes": 100,
+        "instructions": "Complete independently. Answer keys are disclosed only after submission; written evidence is self-reviewed.",
+        "questions": [
+          {
+            "id": "c13-v58-q1",
+            "prompt": "Which conclusion follows from the first worked numerical example?",
+            "options": [
+              "The result is unaffected by input changes",
+              "Tax=40×.25+20×.15=13M; illustrative rate=13/60=21.67%.",
+              "Only revenue matters",
+              "The cost is always zero"
+            ],
+            "correct": 1,
+            "explanation": "Tax=40×.25+20×.15=13M; illustrative rate=13/60=21.67%.",
+            "lessonId": "c13-v58-l0"
+          },
+          {
+            "id": "c13-v58-q2",
+            "prompt": "Which result follows from the second worked example?",
+            "options": [
+              "(.10−.03)×5M−.3M=.05M net expected benefit.",
+              "There are no uncertainty limits",
+              "Observed correlations prove the proposed policy",
+              "The result cannot be calculated from the supplied assumptions"
+            ],
+            "correct": 0,
+            "explanation": "(.10−.03)×5M−.3M=.05M net expected benefit.",
+            "lessonId": "c13-v58-l1"
+          },
+          {
+            "id": "c13-v58-q3",
+            "prompt": "For a decision involving correlated downside risk, what additional work is required?",
+            "options": [
+              "Use only the favorable scenario",
+              "Ignore working capital",
+              "Model joint shocks and test a feasible alternative",
+              "Count unrealized revenue as cash"
+            ],
+            "correct": 2,
+            "explanation": "Correlated shocks and constraints can change optimal action.",
+            "lessonId": "c13-v58-l1"
+          }
+        ],
+        "written": "Write an independently argued 1,000-word board memorandum incorporating both numerical decisions, an alternative and sensitivity evidence.",
+        "model": "Tax=40×.25+20×.15=13M; illustrative rate=13/60=21.67%. (.10−.03)×5M−.3M=.05M net expected benefit.",
+        "rubric": [
+          "Document all inputs, calculations, periods, currencies and accounting conventions.",
+          "Construct a quantified downside scenario and an alternative approach with tradeoffs.",
+          "Distinguish inference from causality, fictional assumptions from disclosures, and legal obligations from expected-value analysis.",
+          "Make a defensible executive recommendation with evidence, decision rights and review triggers."
+        ]
+      }
+    }
+  ]
+}
