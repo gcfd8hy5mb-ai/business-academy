@@ -5,6 +5,8 @@ on:
     paths:
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
+      - 'learning/level2-numeric-v64.js'
+      - 'learning/level2-multistep-v65.js'
       - 'learning/level4-assessment-bank-v102.js'
       - 'learning/level4-short-exam-reinforcement-v104.js'
       - 'learning/level3-completion-seminars-v91.js'
@@ -13,6 +15,8 @@ on:
       - 'learning/level5-numeric-v125.js'
       - 'audits/scripts/level1-final-regression-v142.cjs'
       - 'audits/scripts/level2-level4-math-regression-v141.cjs'
+      - 'audits/scripts/level4-executive-final-regression-v143.cjs'
+      - 'audits/scripts/level2-numeric-multistep-regression-v144.cjs'
       - 'audits/scripts/level3-math-regression-v138.cjs'
       - 'audits/scripts/level3-final-math-regression-v139.cjs'
       - 'audits/scripts/level5-numeric-regression-v140.cjs'
@@ -21,6 +25,8 @@ on:
     paths:
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
+      - 'learning/level2-numeric-v64.js'
+      - 'learning/level2-multistep-v65.js'
       - 'learning/level4-assessment-bank-v102.js'
       - 'learning/level4-short-exam-reinforcement-v104.js'
       - 'learning/level3-completion-seminars-v91.js'
@@ -47,6 +53,10 @@ jobs:
         run: node audits/scripts/level1-final-regression-v142.cjs
       - name: Verify Level 2 and 4 quantitative assessments
         run: node audits/scripts/level2-level4-math-regression-v141.cjs
+      - name: Verify 45 original Level 4 executive and final questions
+        run: node audits/scripts/level4-executive-final-regression-v143.cjs
+      - name: Verify 35 Level 2 multistep and optional numeric drills
+        run: node audits/scripts/level2-numeric-multistep-regression-v144.cjs
       - name: Independently verify 21 Level 3 course-seminar calculations
         run: node audits/scripts/level3-math-regression-v138.cjs
       - name: Verify 19 advanced and integrated Level 3 final-exam answers
