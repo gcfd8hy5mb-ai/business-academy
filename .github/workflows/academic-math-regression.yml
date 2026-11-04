@@ -3,6 +3,14 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'audits/scripts/legacy-required-exam-archive-regression-v146.cjs'
+      - 'audits/data/2026-11-04-required-level4-v104-exam-archive.json'
+      - 'audits/data/2026-11-04-required-level2-v58-exam-archive.json'
+      - 'learning/level4-primary-source-readings-v103.js'
+      - 'learning/level4-mastery-depth-v101.js'
+      - 'learning/level4-depth-v100.js'
+      - 'learning/level4-initial-v82.js'
+      - 'learning/level2-specialist-v58.js'
       - 'learning/core-v110.js'
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
@@ -30,6 +38,13 @@ on:
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'audits/data/2026-11-04-required-level4-v104-exam-archive.json'
+      - 'audits/data/2026-11-04-required-level2-v58-exam-archive.json'
+      - 'learning/level4-primary-source-readings-v103.js'
+      - 'learning/level4-mastery-depth-v101.js'
+      - 'learning/level4-depth-v100.js'
+      - 'learning/level4-initial-v82.js'
+      - 'learning/level2-specialist-v58.js'
       - 'learning/core-v110.js'
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
@@ -62,6 +77,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify immutable legacy required-exam archive definitions
+        run: node audits/scripts/legacy-required-exam-archive-regression-v146.cjs
       - name: Verify historical grades and new assessment fingerprints
         run: node audits/scripts/assessment-history-regression-v145.cjs
       - name: Verify 12 Level 1 integrated final answers
