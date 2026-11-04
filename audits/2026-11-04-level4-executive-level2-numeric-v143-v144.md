@@ -23,7 +23,7 @@ Extended `.github/workflows/academic-math-regression.yml` from five to **seven**
 - Level 2 numeric v64 and multistep v65.
 - All previously configured Level 1–5 numerical regression sources and their tests.
 
-**Limitation:** Some old Level 4 source paths (v95–v99) are not individually included as direct workflow filters yet; future pushes changing only those files need explicit path-filter expansion. The tests run when the workflow is otherwise triggered. GitHub-hosted green CI has not been observed through an authoritative Actions workflow result in this batch. Source tests were executed in a restricted JavaScript environment emulating Node built-ins, not in the GitHub runner itself.
+The five original Level 4 executive source paths (v95–v99) were subsequently added to both push and pull-request workflow filters. GitHub-hosted results are still unconfirmed. GitHub-hosted green CI has not been observed through an authoritative Actions workflow result in this batch. Source tests were executed in a restricted JavaScript environment emulating Node built-ins, not in the GitHub runner itself.
 
 ## Current cumulative targeted coverage
 Prior batches had **126** independently reconstructed numerical results. This batch adds **51**, giving **177 independently reconstructed calculations** in the focused regression suites. Multiple-choice metadata, answer-option selection and non-math governance questions are additional checks and should not be added to the numerical count.
@@ -32,7 +32,6 @@ Prior batches had **126** independently reconstructed numerical results. This ba
 
 ## Priority outstanding work
 - Expand the regression bank to remaining required exams and independently judge substantive meaning of the calculations and choices.
-- Add all v95–v99 Level 4 source files to the workflow's trigger filters.
 - Confirm real GitHub-hosted Actions results; investigate failures if any.
 - Test production iPhone Safari/PWA and desktop numeric entry with ordinary and malformed values, persistence of submitted answers and signed-in Firebase state across devices.
 - Develop compatibility-safe retirement of reused historical questions without reinterpreting previously scored attempts.
