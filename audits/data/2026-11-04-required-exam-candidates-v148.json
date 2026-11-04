@@ -33,7 +33,15 @@
               "correctValue": 5,
               "unit": "context-defined",
               "explanation": "Calculate 18-11-2 = 5. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "5.65",
+                "4.35",
+                "6.3",
+                "5"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c10-v148-q2",
@@ -48,7 +56,15 @@
               "correctValue": 0.75,
               "unit": "context-defined",
               "explanation": "Calculate 20*3/100+0.15 = 0.75. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "0.75",
+                "1.25",
+                "0.25",
+                "1.75"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c10-v148-q3",
@@ -63,7 +79,15 @@
               "correctValue": -0.9,
               "unit": "context-defined",
               "explanation": "Calculate 0.6-1.5 = -0.9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "0.1",
+                "-0.9",
+                "-0.4",
+                "-1.4"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -98,7 +122,15 @@
               "correctValue": 1435,
               "unit": "context-defined",
               "explanation": "Calculate 165*7+280 = 1435. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "1248.45",
+                "1808.1",
+                "1435",
+                "1621.55"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c11-v148-q2",
@@ -113,7 +145,15 @@
               "correctValue": 5400,
               "unit": "context-defined",
               "explanation": "Calculate 750*3+450*7 = 5400. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "6102",
+                "4698",
+                "6804",
+                "5400"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c11-v148-q3",
@@ -128,7 +168,15 @@
               "correctValue": 24,
               "unit": "context-defined",
               "explanation": "Calculate 730*12/365 = 24. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "24",
+                "27.12",
+                "20.88",
+                "30.24"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -163,7 +211,15 @@
               "correctValue": 270000,
               "unit": "context-defined",
               "explanation": "Calculate 45*22000-720000 = 270000. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "340200",
+                "270000",
+                "305100",
+                "234900"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c12-v148-q2",
@@ -178,7 +234,15 @@
               "correctValue": 85,
               "unit": "context-defined",
               "explanation": "Calculate 100*85/(85+15) = 85. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "73.95",
+                "107.1",
+                "85",
+                "96.05"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c12-v148-q3",
@@ -193,7 +257,15 @@
               "correctValue": 60,
               "unit": "context-defined",
               "explanation": "Calculate 1500*(17-13)/100 = 60. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "67.8",
+                "52.2",
+                "75.6",
+                "60"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -228,7 +300,15 @@
               "correctValue": 22.5,
               "unit": "context-defined",
               "explanation": "Calculate 75*24/100+25*.18 = 22.5. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "22.5",
+                "25.425",
+                "19.575",
+                "28.35"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c13-v148-q2",
@@ -243,7 +323,15 @@
               "correctValue": 0.2,
               "unit": "context-defined",
               "explanation": "Calculate 6*7/100-0.22 = 0.2. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "1.2",
+                "0.2",
+                "0.7",
+                "-0.3"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c13-v148-q3",
@@ -258,7 +346,15 @@
               "correctValue": 22.5,
               "unit": "context-defined",
               "explanation": "Calculate 100*(75*24/100+25*.18)/(75+25) = 22.5. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "19.575",
+                "28.35",
+                "22.5",
+                "25.425"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -293,7 +389,15 @@
               "correctValue": 35,
               "unit": "context-defined",
               "explanation": "Calculate 255-325+105 = 35. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "39.55",
+                "30.45",
+                "44.1",
+                "35"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c07-v148-q2",
@@ -308,7 +412,15 @@
               "correctValue": 85,
               "unit": "context-defined",
               "explanation": "Calculate 92+18-25 = 85. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "85",
+                "96.05",
+                "73.95",
+                "107.1"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c07-v148-q3",
@@ -323,7 +435,15 @@
               "correctValue": 10,
               "unit": "context-defined",
               "explanation": "Calculate 50*20/100 = 10. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "12.6",
+                "10",
+                "11.3",
+                "8.7"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -358,7 +478,15 @@
               "correctValue": 13000,
               "unit": "context-defined",
               "explanation": "Calculate 6500*(26-24) = 13000. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "11310",
+                "16380",
+                "13000",
+                "14690"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c08-v148-q2",
@@ -373,7 +501,15 @@
               "correctValue": 14,
               "unit": "context-defined",
               "explanation": "Calculate 72-580*10/100 = 14. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "15.82",
+                "12.18",
+                "17.64",
+                "14"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c08-v148-q3",
@@ -388,7 +524,15 @@
               "correctValue": 42,
               "unit": "context-defined",
               "explanation": "Calculate 126/3 = 42. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "42",
+                "47.46",
+                "36.54",
+                "52.92"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -423,7 +567,15 @@
               "correctValue": 3,
               "unit": "context-defined",
               "explanation": "Calculate (220-160)/2000*100 = 3. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "4",
+                "3",
+                "3.5",
+                "2.5"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c09-v148-q2",
@@ -438,7 +590,15 @@
               "correctValue": 1194,
               "unit": "context-defined",
               "explanation": "Calculate 68*58-2750 = 1194. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "1038.78",
+                "1504.44",
+                "1194",
+                "1349.22"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c09-v148-q3",
@@ -453,7 +613,15 @@
               "correctValue": 60,
               "unit": "context-defined",
               "explanation": "Calculate 3300/55 = 60. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "67.8",
+                "52.2",
+                "75.6",
+                "60"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -488,7 +656,15 @@
               "correctValue": 335,
               "unit": "context-defined",
               "explanation": "Calculate 420-110+25 = 335. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "335",
+                "378.55",
+                "291.45",
+                "422.1"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q2",
@@ -503,7 +679,15 @@
               "correctValue": 25,
               "unit": "context-defined",
               "explanation": "Calculate 320-295 = 25. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "31.5",
+                "25",
+                "28.25",
+                "21.75"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q3",
@@ -518,7 +702,15 @@
               "correctValue": 41,
               "unit": "context-defined",
               "explanation": "Calculate 52-7-4 = 41. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "35.67",
+                "51.66",
+                "41",
+                "46.33"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q4",
@@ -533,7 +725,15 @@
               "correctValue": 27,
               "unit": "context-defined",
               "explanation": "Calculate 5*11-28 = 27. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "30.51",
+                "23.49",
+                "34.02",
+                "27"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -562,7 +762,15 @@
               "correctValue": 25,
               "unit": "context-defined",
               "explanation": "Calculate 280-65-190 = 25. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "25",
+                "28.25",
+                "21.75",
+                "31.5"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q6",
@@ -577,7 +785,15 @@
               "correctValue": 339,
               "unit": "context-defined",
               "explanation": "Calculate 423-111+27 = 339. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "427.14",
+                "339",
+                "383.07",
+                "294.93"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q7",
@@ -592,7 +808,15 @@
               "correctValue": 27,
               "unit": "context-defined",
               "explanation": "Calculate 323-296 = 27. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "23.49",
+                "34.02",
+                "27",
+                "30.51"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q8",
@@ -607,7 +831,15 @@
               "correctValue": 41,
               "unit": "context-defined",
               "explanation": "Calculate 55-8-6 = 41. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "46.33",
+                "35.67",
+                "51.66",
+                "41"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -636,7 +868,15 @@
               "correctValue": 41,
               "unit": "context-defined",
               "explanation": "Calculate 5*14-29 = 41. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "41",
+                "46.33",
+                "35.67",
+                "51.66"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q10",
@@ -651,7 +891,15 @@
               "correctValue": 25,
               "unit": "context-defined",
               "explanation": "Calculate 283-66-192 = 25. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "31.5",
+                "25",
+                "28.25",
+                "21.75"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q11",
@@ -666,7 +914,15 @@
               "correctValue": 343,
               "unit": "context-defined",
               "explanation": "Calculate 426-112+29 = 343. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "298.41",
+                "432.18",
+                "343",
+                "387.59"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q12",
@@ -681,7 +937,15 @@
               "correctValue": 29,
               "unit": "context-defined",
               "explanation": "Calculate 326-297 = 29. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "32.77",
+                "25.23",
+                "36.54",
+                "29"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -710,7 +974,15 @@
               "correctValue": 41,
               "unit": "context-defined",
               "explanation": "Calculate 58-9-8 = 41. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "41",
+                "46.33",
+                "35.67",
+                "51.66"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q14",
@@ -725,7 +997,15 @@
               "correctValue": 55,
               "unit": "context-defined",
               "explanation": "Calculate 5*17-30 = 55. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "69.3",
+                "55",
+                "62.15",
+                "47.85"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c21-v148-q15",
@@ -740,7 +1020,15 @@
               "correctValue": 25,
               "unit": "context-defined",
               "explanation": "Calculate 286-67-194 = 25. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "21.75",
+                "31.5",
+                "25",
+                "28.25"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -775,7 +1063,15 @@
               "correctValue": 6,
               "unit": "context-defined",
               "explanation": "Calculate 65-31-28 = 6. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "6.78",
+                "5.22",
+                "7.56",
+                "6"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q2",
@@ -790,7 +1086,15 @@
               "correctValue": 4,
               "unit": "context-defined",
               "explanation": "Calculate 72/18 = 4. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "4",
+                "4.52",
+                "3.48",
+                "5.04"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q3",
@@ -805,7 +1109,15 @@
               "correctValue": 20,
               "unit": "context-defined",
               "explanation": "Calculate 105-77-8 = 20. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "25.2",
+                "20",
+                "22.6",
+                "17.4"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q4",
@@ -820,7 +1132,15 @@
               "correctValue": 55,
               "unit": "context-defined",
               "explanation": "Calculate 45+7+3 = 55. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "47.85",
+                "69.3",
+                "55",
+                "62.15"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -849,7 +1169,15 @@
               "correctValue": 6,
               "unit": "context-defined",
               "explanation": "Calculate 22-16 = 6. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "6.78",
+                "5.22",
+                "7.56",
+                "6"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q6",
@@ -864,7 +1192,15 @@
               "correctValue": 4,
               "unit": "context-defined",
               "explanation": "Calculate 67-34-29 = 4. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "4",
+                "4.52",
+                "3.48",
+                "5.04"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q7",
@@ -879,7 +1215,15 @@
               "correctValue": 3.9474,
               "unit": "context-defined",
               "explanation": "Calculate 75/19 = 3.9474. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "4.9738",
+                "3.9474",
+                "4.4606",
+                "3.4342"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q8",
@@ -894,7 +1238,15 @@
               "correctValue": 20,
               "unit": "context-defined",
               "explanation": "Calculate 108-78-10 = 20. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "17.4",
+                "25.2",
+                "20",
+                "22.6"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -923,7 +1275,15 @@
               "correctValue": 61,
               "unit": "context-defined",
               "explanation": "Calculate 48+8+5 = 61. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "68.93",
+                "53.07",
+                "76.86",
+                "61"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q10",
@@ -938,7 +1298,15 @@
               "correctValue": 8,
               "unit": "context-defined",
               "explanation": "Calculate 25-17 = 8. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "8",
+                "9.04",
+                "6.96",
+                "10.08"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q11",
@@ -953,7 +1321,15 @@
               "correctValue": 2,
               "unit": "context-defined",
               "explanation": "Calculate 69-37-30 = 2. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "3",
+                "2",
+                "2.5",
+                "1.5"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q12",
@@ -968,7 +1344,15 @@
               "correctValue": 3.9,
               "unit": "context-defined",
               "explanation": "Calculate 78/20 = 3.9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "3.393",
+                "4.914",
+                "3.9",
+                "4.407"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -997,7 +1381,15 @@
               "correctValue": 20,
               "unit": "context-defined",
               "explanation": "Calculate 111-79-12 = 20. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "22.6",
+                "17.4",
+                "25.2",
+                "20"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q14",
@@ -1012,7 +1404,15 @@
               "correctValue": 67,
               "unit": "context-defined",
               "explanation": "Calculate 51+9+7 = 67. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "67",
+                "75.71",
+                "58.29",
+                "84.42"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c22-v148-q15",
@@ -1027,7 +1427,15 @@
               "correctValue": 10,
               "unit": "context-defined",
               "explanation": "Calculate 28-18 = 10. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "12.6",
+                "10",
+                "11.3",
+                "8.7"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -1062,7 +1470,15 @@
               "correctValue": 1.2,
               "unit": "context-defined",
               "explanation": "Calculate 8*15/100 = 1.2. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "0.7",
+                "2.2",
+                "1.2",
+                "1.7"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q2",
@@ -1077,7 +1493,15 @@
               "correctValue": 0.47,
               "unit": "context-defined",
               "explanation": "Calculate 6*12/100-0.25 = 0.47. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "0.97",
+                "-0.03",
+                "1.47",
+                "0.47"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q3",
@@ -1092,7 +1516,15 @@
               "correctValue": 28,
               "unit": "context-defined",
               "explanation": "Calculate 140-50-62 = 28. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "28",
+                "31.64",
+                "24.36",
+                "35.28"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q4",
@@ -1107,7 +1539,15 @@
               "correctValue": 12,
               "unit": "context-defined",
               "explanation": "Calculate 35-14-9 = 12. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "15.12",
+                "12",
+                "13.56",
+                "10.44"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1136,7 +1576,15 @@
               "correctValue": 0.9,
               "unit": "context-defined",
               "explanation": "Calculate (14-5)*10/100 = 0.9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "0.4",
+                "1.9",
+                "0.9",
+                "1.4"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q6",
@@ -1151,7 +1599,15 @@
               "correctValue": 1.76,
               "unit": "context-defined",
               "explanation": "Calculate 11*16/100 = 1.76. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "2.26",
+                "1.26",
+                "2.76",
+                "1.76"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q7",
@@ -1166,7 +1622,15 @@
               "correctValue": -1.08,
               "unit": "context-defined",
               "explanation": "Calculate 9*13/100-2.25 = -1.08. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "-1.08",
+                "-0.58",
+                "-1.58",
+                "-0.08"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q8",
@@ -1181,7 +1645,15 @@
               "correctValue": 28,
               "unit": "context-defined",
               "explanation": "Calculate 143-51-64 = 28. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "35.28",
+                "28",
+                "31.64",
+                "24.36"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1210,7 +1682,15 @@
               "correctValue": 12,
               "unit": "context-defined",
               "explanation": "Calculate 38-15-11 = 12. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "10.44",
+                "15.12",
+                "12",
+                "13.56"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q10",
@@ -1225,7 +1705,15 @@
               "correctValue": 1.32,
               "unit": "context-defined",
               "explanation": "Calculate (17-6)*12/100 = 1.32. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "1.82",
+                "0.82",
+                "2.32",
+                "1.32"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q11",
@@ -1240,7 +1728,15 @@
               "correctValue": 2.38,
               "unit": "context-defined",
               "explanation": "Calculate 14*17/100 = 2.38. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "2.38",
+                "2.88",
+                "1.88",
+                "3.38"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q12",
@@ -1255,7 +1751,15 @@
               "correctValue": -2.57,
               "unit": "context-defined",
               "explanation": "Calculate 12*14/100-4.25 = -2.57. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "-1.57",
+                "-2.57",
+                "-2.07",
+                "-3.07"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1284,7 +1788,15 @@
               "correctValue": 28,
               "unit": "context-defined",
               "explanation": "Calculate 146-52-66 = 28. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "24.36",
+                "35.28",
+                "28",
+                "31.64"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q14",
@@ -1299,7 +1811,15 @@
               "correctValue": 12,
               "unit": "context-defined",
               "explanation": "Calculate 41-16-13 = 12. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "13.56",
+                "10.44",
+                "15.12",
+                "12"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c23-v148-q15",
@@ -1314,7 +1834,15 @@
               "correctValue": 1.82,
               "unit": "context-defined",
               "explanation": "Calculate (20-7)*14/100 = 1.82. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "1.82",
+                "2.32",
+                "1.32",
+                "2.82"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -1349,7 +1877,15 @@
               "correctValue": 8000,
               "unit": "context-defined",
               "explanation": "Calculate 48000*10/60 = 8000. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "10080",
+                "8000",
+                "9040",
+                "6960"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q2",
@@ -1364,7 +1900,15 @@
               "correctValue": 175,
               "unit": "context-defined",
               "explanation": "Calculate 450*60/100-95 = 175. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "152.25",
+                "220.5",
+                "175",
+                "197.75"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q3",
@@ -1379,7 +1923,15 @@
               "correctValue": 2.7,
               "unit": "context-defined",
               "explanation": "Calculate (65-38)/10 = 2.7. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "3.2",
+                "2.2",
+                "3.7",
+                "2.7"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q4",
@@ -1394,7 +1946,15 @@
               "correctValue": 30000,
               "unit": "context-defined",
               "explanation": "Calculate 25000*4*30/100 = 30000. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "30000",
+                "33900",
+                "26100",
+                "37800"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1423,7 +1983,15 @@
               "correctValue": 12,
               "unit": "context-defined",
               "explanation": "Calculate 360/30 = 12. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "15.12",
+                "12",
+                "13.56",
+                "10.44"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q6",
@@ -1438,7 +2006,15 @@
               "correctValue": 8800.55,
               "unit": "context-defined",
               "explanation": "Calculate 48003*11/60 = 8800.55. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "7656.4785",
+                "11088.693",
+                "8800.55",
+                "9944.6215"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q7",
@@ -1453,7 +2029,15 @@
               "correctValue": 179.33,
               "unit": "context-defined",
               "explanation": "Calculate 453*61/100-97 = 179.33. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "202.6429",
+                "156.0171",
+                "225.9558",
+                "179.33"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q8",
@@ -1468,7 +2052,15 @@
               "correctValue": 2.9,
               "unit": "context-defined",
               "explanation": "Calculate (68-39)/10 = 2.9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "2.9",
+                "3.4",
+                "2.4",
+                "3.9"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1497,7 +2089,15 @@
               "correctValue": 40004.8,
               "unit": "context-defined",
               "explanation": "Calculate 25003*5*32/100 = 40004.8. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "50406.048",
+                "40004.8",
+                "45205.424",
+                "34804.176"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q10",
@@ -1512,7 +2112,15 @@
               "correctValue": 11.7097,
               "unit": "context-defined",
               "explanation": "Calculate 363/31 = 11.7097. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "10.1874",
+                "14.7543",
+                "11.7097",
+                "13.232"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q11",
@@ -1527,7 +2135,15 @@
               "correctValue": 9601.2,
               "unit": "context-defined",
               "explanation": "Calculate 48006*12/60 = 9601.2. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "10849.356",
+                "8353.044",
+                "12097.512",
+                "9601.2"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q12",
@@ -1542,7 +2158,15 @@
               "correctValue": 183.72,
               "unit": "context-defined",
               "explanation": "Calculate 456*62/100-99 = 183.72. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "183.72",
+                "207.6036",
+                "159.8364",
+                "231.4872"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1571,7 +2195,15 @@
               "correctValue": 3.1,
               "unit": "context-defined",
               "explanation": "Calculate (71-40)/10 = 3.1. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "4.1",
+                "3.1",
+                "3.6",
+                "2.6"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q14",
@@ -1586,7 +2218,15 @@
               "correctValue": 51012.24,
               "unit": "context-defined",
               "explanation": "Calculate 25006*6*34/100 = 51012.24. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "44380.6488",
+                "64275.4224",
+                "51012.24",
+                "57643.8312"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c24-v148-q15",
@@ -1601,7 +2241,15 @@
               "correctValue": 11.4375,
               "unit": "context-defined",
               "explanation": "Calculate 366/32 = 11.4375. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "12.9244",
+                "9.9506",
+                "14.4113",
+                "11.4375"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
@@ -1636,7 +2284,15 @@
               "correctValue": 110,
               "unit": "context-defined",
               "explanation": "Calculate 165-55 = 110. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "110",
+                "124.3",
+                "95.7",
+                "138.6"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q2",
@@ -1651,7 +2307,15 @@
               "correctValue": 25,
               "unit": "context-defined",
               "explanation": "Calculate 125-155+55 = 25. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "31.5",
+                "25",
+                "28.25",
+                "21.75"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q3",
@@ -1666,7 +2330,15 @@
               "correctValue": 29,
               "unit": "context-defined",
               "explanation": "Calculate 17+12 = 29. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "25.23",
+                "36.54",
+                "29",
+                "32.77"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q4",
@@ -1681,7 +2353,15 @@
               "correctValue": 50,
               "unit": "context-defined",
               "explanation": "Calculate 185-95-40 = 50. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "56.5",
+                "43.5",
+                "63",
+                "50"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1710,7 +2390,15 @@
               "correctValue": 9,
               "unit": "context-defined",
               "explanation": "Calculate 83-62-12 = 9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "9",
+                "10.17",
+                "7.83",
+                "11.34"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q6",
@@ -1725,7 +2413,15 @@
               "correctValue": 112,
               "unit": "context-defined",
               "explanation": "Calculate 168-56 = 112. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "141.12",
+                "112",
+                "126.56",
+                "97.44"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q7",
@@ -1740,7 +2436,15 @@
               "correctValue": 29,
               "unit": "context-defined",
               "explanation": "Calculate 128-156+57 = 29. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "25.23",
+                "36.54",
+                "29",
+                "32.77"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q8",
@@ -1755,7 +2459,15 @@
               "correctValue": 33,
               "unit": "context-defined",
               "explanation": "Calculate 20+13 = 33. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "37.29",
+                "28.71",
+                "41.58",
+                "33"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1784,7 +2496,15 @@
               "correctValue": 50,
               "unit": "context-defined",
               "explanation": "Calculate 188-96-42 = 50. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "50",
+                "56.5",
+                "43.5",
+                "63"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q10",
@@ -1799,7 +2519,15 @@
               "correctValue": 9,
               "unit": "context-defined",
               "explanation": "Calculate 86-63-14 = 9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "11.34",
+                "9",
+                "10.17",
+                "7.83"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q11",
@@ -1814,7 +2542,15 @@
               "correctValue": 114,
               "unit": "context-defined",
               "explanation": "Calculate 171-57 = 114. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "99.18",
+                "143.64",
+                "114",
+                "128.82"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q12",
@@ -1829,7 +2565,15 @@
               "correctValue": 33,
               "unit": "context-defined",
               "explanation": "Calculate 131-157+59 = 33. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "37.29",
+                "28.71",
+                "41.58",
+                "33"
+              ],
+              "correct": 3,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         },
@@ -1858,7 +2602,15 @@
               "correctValue": 37,
               "unit": "context-defined",
               "explanation": "Calculate 23+14 = 37. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "37",
+                "41.81",
+                "32.19",
+                "46.62"
+              ],
+              "correct": 0,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q14",
@@ -1873,7 +2625,15 @@
               "correctValue": 50,
               "unit": "context-defined",
               "explanation": "Calculate 191-97-44 = 50. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "63",
+                "50",
+                "56.5",
+                "43.5"
+              ],
+              "correct": 1,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             },
             {
               "id": "c25-v148-q15",
@@ -1888,7 +2648,15 @@
               "correctValue": 9,
               "unit": "context-defined",
               "explanation": "Calculate 89-64-16 = 9. Check dates, units and economic assumptions.",
-              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes."
+              "independentTransfer": "Change the first input by 10%, recompute without checking the model, and explain whether the decision changes.",
+              "options": [
+                "7.83",
+                "11.34",
+                "9",
+                "10.17"
+              ],
+              "correct": 2,
+              "responseFormat": "Numeric values in the units specified by the scenario"
             }
           ]
         }
