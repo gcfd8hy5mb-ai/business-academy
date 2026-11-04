@@ -23,7 +23,7 @@ const failures=[],verify=(questions,expected,name)=>{
   if(!Number.isFinite(actual))failures.push('Non-finite '+q.id);
   // Parse numeric distractor text independently of the authored answer key, with unit-sensitive scale.
   const label=t.label.replace(/[−–]/g,'-');
-  const m=label.match(/(-?)\\$?([0-9][0-9,]*(?:\\.[0-9]+)?)/);
+  const m=label.match(/(-?)\$?([0-9][0-9,]*(?:\.[0-9]+)?)/);
   if(!m)failures.push('Cannot parse numeric expected result '+q.id);
   else{
     const raw=Number(m[2].replace(/,/g,''))*(m[1]==='-'?-1:1);
