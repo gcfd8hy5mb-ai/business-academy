@@ -1,0 +1,41 @@
+name: Academic mathematics regression
+
+on:
+  push:
+    paths:
+      - 'learning/level3-completion-seminars-v91.js'
+      - 'learning/level3-final-depth-v79.js'
+      - 'learning/level3-integrated-final-v87.js'
+      - 'learning/level5-numeric-v125.js'
+      - 'audits/scripts/level3-math-regression-v138.cjs'
+      - 'audits/scripts/level3-final-math-regression-v139.cjs'
+      - 'audits/scripts/level5-numeric-regression-v140.cjs'
+      - '.github/workflows/academic-math-regression.yml'
+  pull_request:
+    paths:
+      - 'learning/level3-completion-seminars-v91.js'
+      - 'learning/level3-final-depth-v79.js'
+      - 'learning/level3-integrated-final-v87.js'
+      - 'learning/level5-numeric-v125.js'
+      - 'audits/scripts/**'
+      - '.github/workflows/academic-math-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-mathematics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify 21 Level 3 course-seminar calculations
+        run: node audits/scripts/level3-math-regression-v138.cjs
+      - name: Verify 19 advanced and integrated Level 3 final-exam answers
+        run: node audits/scripts/level3-final-math-regression-v139.cjs
+      - name: Independently verify 30 Level 5 numeric transfer answers
+        run: node audits/scripts/level5-numeric-regression-v140.cjs
