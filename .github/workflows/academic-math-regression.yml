@@ -3,6 +3,9 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'audits/scripts/assessment-transition-preflight-v147.cjs'
+      - 'learning/level4-level5-independent-exams-v129.js'
+      - 'learning/level2-independent-exams-v128.js'
       - 'audits/scripts/legacy-required-exam-archive-regression-v146.cjs'
       - 'audits/data/2026-11-04-required-level4-v104-exam-archive.json'
       - 'audits/data/2026-11-04-required-level2-v58-exam-archive.json'
@@ -38,6 +41,9 @@ on:
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'audits/scripts/assessment-transition-preflight-v147.cjs'
+      - 'learning/level4-level5-independent-exams-v129.js'
+      - 'learning/level2-independent-exams-v128.js'
       - 'audits/data/2026-11-04-required-level4-v104-exam-archive.json'
       - 'audits/data/2026-11-04-required-level2-v58-exam-archive.json'
       - 'learning/level4-primary-source-readings-v103.js'
@@ -77,6 +83,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Block unsafe optional-to-required exam transitions
+        run: node audits/scripts/assessment-transition-preflight-v147.cjs
       - name: Verify immutable legacy required-exam archive definitions
         run: node audits/scripts/legacy-required-exam-archive-regression-v146.cjs
       - name: Verify historical grades and new assessment fingerprints
