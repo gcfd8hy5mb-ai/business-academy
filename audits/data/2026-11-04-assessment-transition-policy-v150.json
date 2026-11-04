@@ -1,0 +1,39 @@
+{
+  "schema": "business-academy.assessment-transition-policy.draft.v150",
+  "date": "2026-11-04",
+  "status": "PROPOSED_NOT_APPLIED",
+  "default": "Existing required exams remain authoritative until independent quality review, complete shadow-bank acceptance, approved mapping and live cross-device acceptance.",
+  "grandfathering": {
+    "passedPriorExam": "Retain the stored score, original attempt date and historical required-exam evidence. Do not recalculate old results from a newer answer key.",
+    "currentlyInProgress": "Continue the originally required exam version by default. Future opt-in transfer requires a dated consent step and unambiguous mapping.",
+    "newStudent": "Follow existing required exams until a separate authorized activation changes the curriculum requirements.",
+    "optionalBanks": "V128/V129 optional assessments do not fulfill old required mastery; completion never automatically satisfies required exams.",
+    "persistedAnswers": "Do not remap question-answer indices, overwrite attempts or delete archived question IDs. Preserve submitted evidence and support rollback."
+  },
+  "candidateReview": {
+    "academic": "Independent verification of numerical answers, grading rubrics, difficulty, case relevance, distinctness, business assumptions and option ambiguity.",
+    "scope": "Review each new candidate exam unit separately, not only total number of questions. Complete 4 distinct required Level 4 sections per course.",
+    "sourceIntegrity": "Preserve immutable v58/v104 archives and checksum new submissions. Store reviewed final candidate version and reviewer sign-off.",
+    "acceptance": "Test current and grandfathered mastery, reattempt rules, offline/online synchronization, iPhone PWA/Desktop, restore from account data, and opt-in transition.",
+    "activationGate": "No new bank is inserted into BAContent.sectionExams or counted as a required exam before all conditions pass.",
+    "rollback": "Maintain archived old bank in code and leave old grades valid; any future opt-in switch must be reversible without discarding history."
+  },
+  "candidate": {
+    "path": "audits/data/2026-11-04-required-exam-candidates-v148.json",
+    "courses": 12,
+    "examUnits": 27,
+    "questionCount": 96,
+    "activated": false
+  },
+  "requirements": {
+    "newStudentUsesCandidate": false,
+    "oldStudentForcedMigration": false,
+    "oldGradesRescored": false
+  },
+  "signoff": {
+    "academic": false,
+    "grading": false,
+    "cloudDevice": false,
+    "productApproval": false
+  }
+}
