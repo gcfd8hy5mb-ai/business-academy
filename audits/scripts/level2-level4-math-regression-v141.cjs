@@ -18,7 +18,23 @@ const failures=[],verify=(questions,expected,name)=>{
  if(questions.length!==expected.length)failures.push(name+' count '+questions.length+' != '+expected.length);
  questions.forEach((q,i)=>{const t=expected[i];if(!t)return;
  if(q.options[q.correct]!==t.label)failures.push(name+' answer mismatch '+q.id+' '+q.options[q.correct]+' != '+t.label);
- if(t.expression){const actual=vm.runInNewContext('('+t.expression+')()',{Math},{timeout:1000});if(!Number.isFinite(actual))failures.push('Non-finite '+q.id)}
+ if(t.expression){
+  const actual=vm.runInNewContext('('+t.expression+')()',{Math},{timeout:1000});
+  if(!Number.isFinite(actual))failures.push('Non-finite '+q.id);
+  // Parse numeric distractor text independently of the authored answer key, with unit-sensitive scale.
+  const label=t.label.replace(/[−–]/g,'-');
+  const m=label.match(/(-?)\\$?([0-9][0-9,]*(?:\\.[0-9]+)?)/);
+  if(!m)failures.push('Cannot parse numeric expected result '+q.id);
+  else{
+    const raw=Number(m[2].replace(/,/g,''))*(m[1]==='-'?-1:1);
+    let displayed=raw;
+    const after=label.slice((m.index||0)+m[0].length).toLowerCase();
+    if(after.startsWith('k')||after.includes('k '))displayed=raw*1000;
+    else if(after.startsWith('m'))displayed=raw*(Math.abs(actual)>=10000?1000000:1);
+    const tolerance=Math.max(0.0005,Math.abs(displayed)*0.000025,label.includes('About')?0.025:0);
+    if(Math.abs(actual-displayed)>tolerance)failures.push('Arithmetic versus selected choice mismatch '+q.id+': '+actual+' vs '+displayed);
+  }
+ }
  if(!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.options.length||!q.explanation)failures.push('Invalid question '+q.id);
  });
 };
