@@ -8,8 +8,12 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const draft=read('audits/data/2026-11-04-required-exam-candidates-v148.json');
 const l2=read('audits/data/2026-11-04-required-level2-v58-exam-archive.json');
 const l4=read('audits/data/2026-11-04-required-level4-v104-exam-archive.json');
+const policy=read('audits/data/2026-11-04-assessment-transition-policy-v150.json');
 const errors=[],assert=(valid,msg)=>{if(!valid)errors.push(msg)};
 assert(draft.status==='NOT ACTIVE','Exam candidates must remain explicitly inactive');
+assert(policy.status==='PROPOSED_NOT_APPLIED'&&policy.candidate.activated===false,'Transition policy cannot authorize activation');
+assert(policy.requirements.newStudentUsesCandidate===false&&policy.requirements.oldStudentForcedMigration===false&&policy.requirements.oldGradesRescored===false,'Draft policy must protect historical learner evidence');
+assert(Object.values(policy.signoff).every(v=>v===false),'Unreviewed candidate incorrectly signed off');
 assert(draft.courses.length===12,'Expected twelve course candidate groups');
 const all=new Set(),perCourse={};let exams=0,questions=0;
 for(const course of draft.courses){
