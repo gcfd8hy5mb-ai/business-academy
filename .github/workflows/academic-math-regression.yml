@@ -3,6 +3,7 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'audits/data/2026-11-04-assessment-transition-policy-v150.json'
       - 'audits/scripts/required-exam-candidates-regression-v149.cjs'
       - 'audits/data/2026-11-04-required-exam-candidates-v148.json'
       - 'audits/scripts/assessment-transition-preflight-v147.cjs'
@@ -43,6 +44,7 @@ on:
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'audits/data/2026-11-04-assessment-transition-policy-v150.json'
       - 'audits/data/2026-11-04-required-exam-candidates-v148.json'
       - 'audits/scripts/assessment-transition-preflight-v147.cjs'
       - 'learning/level4-level5-independent-exams-v129.js'
