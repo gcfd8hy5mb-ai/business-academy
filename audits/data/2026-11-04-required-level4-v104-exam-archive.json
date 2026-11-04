@@ -1,0 +1,1398 @@
+{
+  "schema": "business-academy.legacy-v104-exam-extensions.v1",
+  "snapshotDate": "2026-11-04",
+  "sourceFiles": [
+    {
+      "path": "learning/level4-initial-v82.js",
+      "blobSha": "aa26b3dbd5ac649d6fd62adcf10222959252bf57"
+    },
+    {
+      "path": "learning/level4-executive-studios-v95.js",
+      "blobSha": "9fb22487165d3c84e84ef1570cde1a38b2da497b"
+    },
+    {
+      "path": "learning/level4-advanced-seminars-v96.js",
+      "blobSha": "e48adcfcf356c29ce143de54739d6c5cd8952e88"
+    },
+    {
+      "path": "learning/level4-executive-dilemmas-v97.js",
+      "blobSha": "d994215aba8220d7c610ea0cbbbcaa061b6abef8"
+    },
+    {
+      "path": "learning/level4-integrated-board-v98.js",
+      "blobSha": "a0b17537e4359fa55b8f0e49958574f2db63e53b"
+    },
+    {
+      "path": "learning/level4-comprehensive-final-v99.js",
+      "blobSha": "62b0e77d4761406ba0a2e55d90d07194959e703c"
+    },
+    {
+      "path": "learning/level4-depth-v100.js",
+      "blobSha": "d7e8a87cfbda9e9c17e7f608f723f888e64af0e9"
+    },
+    {
+      "path": "learning/level4-mastery-depth-v101.js",
+      "blobSha": "234f82a3473948d351f75abdc8321f85bdcf7eab"
+    },
+    {
+      "path": "learning/level4-assessment-bank-v102.js",
+      "blobSha": "8209e48ab131cdd4534c2d0b36967e1702c9d3aa"
+    },
+    {
+      "path": "learning/level4-primary-source-readings-v103.js",
+      "blobSha": "b1adb3a2eb68548ac38e5d747d398f074aac1016"
+    },
+    {
+      "path": "learning/level4-short-exam-reinforcement-v104.js",
+      "blobSha": "f7e5bc8a438c030713976242d3f4148f01702a4f"
+    }
+  ],
+  "policy": "Archive of full final definitions for the original short required exams extended by v104, not a new bank. Preserve existing graded data. Reuse only for historical review.",
+  "affectedExams": [
+    {
+      "courseId": "course-21",
+      "examId": "c21-v95-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 75,
+      "afterDefinition": {
+        "id": "c21-v95-exam",
+        "title": "Level 4 executive studio assessment: Merger integration: expected value and cash constraints",
+        "minutes": 100,
+        "questions": [
+          {
+            "id": "c21-v95-q1",
+            "prompt": "A fictional buyer expects annual synergy cash flows of $14m for five years at 10%. Implementation costs $32m immediately. What is the incremental synergy NPV? Which modeled result follows?",
+            "options": [
+              "About $21.07m",
+              "No economic effect",
+              "Every proposed initiative must be accepted",
+              "The model proves the decision is risk-free"
+            ],
+            "correct": 0,
+            "explanation": "14*((1-1.10**-5)/.10)-32 = About $21.07m. Assess counterparty approvals, retention, integration probability and financing. A synergy NPV does not establish deal-level value."
+          },
+          {
+            "id": "c21-v95-q2",
+            "prompt": "Which action is most defensible before recommending implementation?",
+            "options": [
+              "Treat all scenario inputs as observed facts",
+              "Verify assumptions, constraints and adverse outcomes with accountable oversight",
+              "Use only a headline valuation multiple",
+              "Ignore compliance and affected stakeholders"
+            ],
+            "correct": 1,
+            "explanation": "Board recommendations require independent calculations and risk-aware evidence."
+          },
+          {
+            "id": "c21-v95-exam-v104-q1",
+            "prompt": "A target has EV $210m, debt $40m and cash $12m. What equity price follows?",
+            "options": [
+              "$182m",
+              "$262m",
+              "$170m",
+              "$210m"
+            ],
+            "correct": 0,
+            "explanation": "210−40+12=182.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c21-v95-exam-v104-q2",
+            "prompt": "A promised synergy appears in both operations and IT forecasts. What should the investment committee do?",
+            "options": [
+              "Add both",
+              "Count once after reconciling owners and cash flows",
+              "Ignore all synergies",
+              "Increase revenue to offset duplication"
+            ],
+            "correct": 1,
+            "explanation": "Consolidated benefits should be recognized once.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare an independent decision memo and sensitivity model before accepting management claims.",
+        "rubric": [
+          "Reproduce numerical conclusions and dimensional units independently.",
+          "Compare a feasible alternative and a specified adverse scenario.",
+          "Separate hypothetical case assumptions from verifiable corporate evidence.",
+          "Assign governance owners and quantitative reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-21",
+      "examId": "c21-v96-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 105,
+      "afterDefinition": {
+        "id": "c21-v96-exam",
+        "title": "Advanced Level 4 executive seminar examination",
+        "minutes": 130,
+        "questions": [
+          {
+            "id": "c21-v96-q1",
+            "prompt": "Which executive practice is justified by this seminar?",
+            "options": [
+              "Present modeled scenarios as audited realized results",
+              "Verify causal assumptions, governance constraints and adverse sensitivities",
+              "Assume higher revenue guarantees superior NPV",
+              "Ignore liquidity when NPV is positive"
+            ],
+            "correct": 1,
+            "explanation": "Decision-making must distinguish hypothetical models from verified facts and respect funding constraints."
+          },
+          {
+            "id": "c21-v96-q2",
+            "prompt": "When comparing alternative investments, which is appropriate?",
+            "options": [
+              "Use nominal revenue alone",
+              "Ignore competing capital uses",
+              "Use incremental value, feasible funding and stress-tested alternatives",
+              "Treat a projected benefit as guaranteed"
+            ],
+            "correct": 2,
+            "explanation": "A constrained, incremental, risk-aware comparison is essential."
+          },
+          {
+            "id": "c21-v96-exam-v104-q1",
+            "prompt": "A target has EV $210m, debt $40m and cash $12m. What equity price follows?",
+            "options": [
+              "$182m",
+              "$262m",
+              "$170m",
+              "$210m"
+            ],
+            "correct": 0,
+            "explanation": "210−40+12=182.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c21-v96-exam-v104-q2",
+            "prompt": "A promised synergy appears in both operations and IT forecasts. What should the investment committee do?",
+            "options": [
+              "Add both",
+              "Count once after reconciling owners and cash flows",
+              "Ignore all synergies",
+              "Increase revenue to offset duplication"
+            ],
+            "correct": 1,
+            "explanation": "Consolidated benefits should be recognized once.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Independently reproduce both numerical or governance cases with citations for all external facts; propose two options, downside, governance and a board recommendation.",
+        "rubric": [
+          "Validate all formulas and distinguish observed data from fictional assumptions.",
+          "Compare strategic alternatives under cash, risk, and legal constraints.",
+          "Quantify downside, sensitivity and opportunity cost.",
+          "Supply accountable executive decision owners and measurable stop conditions."
+        ]
+      }
+    },
+    {
+      "courseId": "course-21",
+      "examId": "c21-v97-exam",
+      "beforeQuestions": 1,
+      "beforeMinutes": 65,
+      "afterDefinition": {
+        "id": "c21-v97-exam",
+        "title": "Executive challenge: Acquisition integration",
+        "minutes": 90,
+        "questions": [
+          {
+            "id": "c21-v97-q",
+            "prompt": "Five after-tax synergy payments of $12m discounted at 10%, less $25m closing integration costs. What result follows?",
+            "options": [
+              "20.49",
+              "0",
+              "Not estimable",
+              "Guaranteed value regardless of assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Reconstruct the value 20.49 and identify why the result is conditional."
+          },
+          {
+            "id": "c21-v97-exam-v104-q1",
+            "prompt": "A target has EV $210m, debt $40m and cash $12m. What equity price follows?",
+            "options": [
+              "$182m",
+              "$262m",
+              "$170m",
+              "$210m"
+            ],
+            "correct": 0,
+            "explanation": "210−40+12=182.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c21-v97-exam-v104-q2",
+            "prompt": "A promised synergy appears in both operations and IT forecasts. What should the investment committee do?",
+            "options": [
+              "Add both",
+              "Count once after reconciling owners and cash flows",
+              "Ignore all synergies",
+              "Increase revenue to offset duplication"
+            ],
+            "correct": 1,
+            "explanation": "Consolidated benefits should be recognized once.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare a board recommendation and adverse-scenario calculation.",
+        "rubric": [
+          "Compute correct assumptions and units.",
+          "Compare feasible alternatives.",
+          "Label invented facts.",
+          "Set accountable risk triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-21",
+      "examId": "c21-v98-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 110,
+      "afterDefinition": {
+        "id": "c21-v98-exam",
+        "title": "Aster Global integrated decision assessment: Acquisition pricing and integration",
+        "minutes": 135,
+        "questions": [
+          {
+            "id": "c21-v98-q1",
+            "prompt": "What is the most important cross-functional safeguard in this case?",
+            "options": [
+              "Treat every synergy projection as realized cash",
+              "Avoid double counting, verify financing headroom and test sensitivities",
+              "Ignore reserve requirements if the headline acquisition seems attractive",
+              "Treat expected loss as the worst possible outcome"
+            ],
+            "correct": 1,
+            "explanation": "Cash feasibility, independent validation and risk constraints must be reconciled across divisions."
+          },
+          {
+            "id": "c21-v98-q2",
+            "prompt": "How should a board communicate the numerical case?",
+            "options": [
+              "As hypothetical inputs requiring independent evidence",
+              "As audited corporate historical performance",
+              "As guaranteed investor returns",
+              "As an accredited degree assessment"
+            ],
+            "correct": 0,
+            "explanation": "These are invented teaching numbers; a source and model register supports independent decision quality."
+          },
+          {
+            "id": "c21-v98-exam-v104-q1",
+            "prompt": "A target has EV $210m, debt $40m and cash $12m. What equity price follows?",
+            "options": [
+              "$182m",
+              "$262m",
+              "$170m",
+              "$210m"
+            ],
+            "correct": 0,
+            "explanation": "210−40+12=182.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c21-v98-exam-v104-q2",
+            "prompt": "A promised synergy appears in both operations and IT forecasts. What should the investment committee do?",
+            "options": [
+              "Add both",
+              "Count once after reconciling owners and cash flows",
+              "Ignore all synergies",
+              "Increase revenue to offset duplication"
+            ],
+            "correct": 1,
+            "explanation": "Consolidated benefits should be recognized once.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Produce original calculations, a downside assessment, and a reconciled Aster Global board recommendation.",
+        "rubric": [
+          "Reproduce all incremental cash flows and capacity assumptions.",
+          "Compare feasible constrained alternatives and a downside scenario.",
+          "Document evidence quality and avoid confusing fictional values with observed facts.",
+          "Assign oversight, stakeholders and measurable reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-22",
+      "examId": "c22-v95-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 75,
+      "afterDefinition": {
+        "id": "c22-v95-exam",
+        "title": "Level 4 executive studio assessment: Capital rationing under an enterprise cash ceiling",
+        "minutes": 100,
+        "questions": [
+          {
+            "id": "c22-v95-q1",
+            "prompt": "Fictional Project A costs $35m and has PV of future cash inflows $47m; Project B costs $25m with PV $34m; Project C costs $20m with PV $26m. The cash budget is $60m; select the feasible combination with greatest NPV. Which modeled result follows?",
+            "options": [
+              "Projects A and B: $21m",
+              "No economic effect",
+              "Every proposed initiative must be accepted",
+              "The model proves the decision is risk-free"
+            ],
+            "correct": 0,
+            "explanation": "(47-35)+(34-25) = Projects A and B: $21m. Compare all feasible combinations and the unused budget; include project interdependencies in a real investment policy."
+          },
+          {
+            "id": "c22-v95-q2",
+            "prompt": "Which action is most defensible before recommending implementation?",
+            "options": [
+              "Treat all scenario inputs as observed facts",
+              "Verify assumptions, constraints and adverse outcomes with accountable oversight",
+              "Use only a headline valuation multiple",
+              "Ignore compliance and affected stakeholders"
+            ],
+            "correct": 1,
+            "explanation": "Board recommendations require independent calculations and risk-aware evidence."
+          },
+          {
+            "id": "c22-v95-exam-v104-q1",
+            "prompt": "An investment requires $30m now and yields discounted cash inflows of $39m. NPV?",
+            "options": [
+              "$69m",
+              "−$9m",
+              "+$9m",
+              "$39m"
+            ],
+            "correct": 2,
+            "explanation": "39−30=9.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c22-v95-exam-v104-q2",
+            "prompt": "A sunk feasibility study was completed last year. Should it enter new project NPV?",
+            "options": [
+              "Always",
+              "Only when the CFO prefers",
+              "As an added recurring charge",
+              "No, unless it changes future cash flows"
+            ],
+            "correct": 3,
+            "explanation": "Already-incurred sunk expenditures do not vary with the current choice.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare an independent decision memo and sensitivity model before accepting management claims.",
+        "rubric": [
+          "Reproduce numerical conclusions and dimensional units independently.",
+          "Compare a feasible alternative and a specified adverse scenario.",
+          "Separate hypothetical case assumptions from verifiable corporate evidence.",
+          "Assign governance owners and quantitative reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-22",
+      "examId": "c22-v96-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 105,
+      "afterDefinition": {
+        "id": "c22-v96-exam",
+        "title": "Advanced Level 4 executive seminar examination",
+        "minutes": 130,
+        "questions": [
+          {
+            "id": "c22-v96-q1",
+            "prompt": "Which executive practice is justified by this seminar?",
+            "options": [
+              "Present modeled scenarios as audited realized results",
+              "Verify causal assumptions, governance constraints and adverse sensitivities",
+              "Assume higher revenue guarantees superior NPV",
+              "Ignore liquidity when NPV is positive"
+            ],
+            "correct": 1,
+            "explanation": "Decision-making must distinguish hypothetical models from verified facts and respect funding constraints."
+          },
+          {
+            "id": "c22-v96-q2",
+            "prompt": "When comparing alternative investments, which is appropriate?",
+            "options": [
+              "Use nominal revenue alone",
+              "Ignore competing capital uses",
+              "Use incremental value, feasible funding and stress-tested alternatives",
+              "Treat a projected benefit as guaranteed"
+            ],
+            "correct": 2,
+            "explanation": "A constrained, incremental, risk-aware comparison is essential."
+          },
+          {
+            "id": "c22-v96-exam-v104-q1",
+            "prompt": "An investment requires $30m now and yields discounted cash inflows of $39m. NPV?",
+            "options": [
+              "$69m",
+              "−$9m",
+              "+$9m",
+              "$39m"
+            ],
+            "correct": 2,
+            "explanation": "39−30=9.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c22-v96-exam-v104-q2",
+            "prompt": "A sunk feasibility study was completed last year. Should it enter new project NPV?",
+            "options": [
+              "Always",
+              "Only when the CFO prefers",
+              "As an added recurring charge",
+              "No, unless it changes future cash flows"
+            ],
+            "correct": 3,
+            "explanation": "Already-incurred sunk expenditures do not vary with the current choice.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Independently reproduce both numerical or governance cases with citations for all external facts; propose two options, downside, governance and a board recommendation.",
+        "rubric": [
+          "Validate all formulas and distinguish observed data from fictional assumptions.",
+          "Compare strategic alternatives under cash, risk, and legal constraints.",
+          "Quantify downside, sensitivity and opportunity cost.",
+          "Supply accountable executive decision owners and measurable stop conditions."
+        ]
+      }
+    },
+    {
+      "courseId": "course-22",
+      "examId": "c22-v97-exam",
+      "beforeQuestions": 1,
+      "beforeMinutes": 65,
+      "afterDefinition": {
+        "id": "c22-v97-exam",
+        "title": "Executive challenge: Capital rationing",
+        "minutes": 90,
+        "questions": [
+          {
+            "id": "c22-v97-q",
+            "prompt": "A $60m budget permits B+C costing $55m with NPVs of $10m and $8m, rather than A costing $45m with $14m NPV. What result follows?",
+            "options": [
+              "18",
+              "0",
+              "Not estimable",
+              "Guaranteed value regardless of assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Reconstruct the value 18 and identify why the result is conditional."
+          },
+          {
+            "id": "c22-v97-exam-v104-q1",
+            "prompt": "An investment requires $30m now and yields discounted cash inflows of $39m. NPV?",
+            "options": [
+              "$69m",
+              "−$9m",
+              "+$9m",
+              "$39m"
+            ],
+            "correct": 2,
+            "explanation": "39−30=9.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c22-v97-exam-v104-q2",
+            "prompt": "A sunk feasibility study was completed last year. Should it enter new project NPV?",
+            "options": [
+              "Always",
+              "Only when the CFO prefers",
+              "As an added recurring charge",
+              "No, unless it changes future cash flows"
+            ],
+            "correct": 3,
+            "explanation": "Already-incurred sunk expenditures do not vary with the current choice.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare a board recommendation and adverse-scenario calculation.",
+        "rubric": [
+          "Compute correct assumptions and units.",
+          "Compare feasible alternatives.",
+          "Label invented facts.",
+          "Set accountable risk triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-22",
+      "examId": "c22-v98-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 110,
+      "afterDefinition": {
+        "id": "c22-v98-exam",
+        "title": "Aster Global integrated decision assessment: Funding and alternatives",
+        "minutes": 135,
+        "questions": [
+          {
+            "id": "c22-v98-q1",
+            "prompt": "What is the most important cross-functional safeguard in this case?",
+            "options": [
+              "Treat every synergy projection as realized cash",
+              "Avoid double counting, verify financing headroom and test sensitivities",
+              "Ignore reserve requirements if the headline acquisition seems attractive",
+              "Treat expected loss as the worst possible outcome"
+            ],
+            "correct": 1,
+            "explanation": "Cash feasibility, independent validation and risk constraints must be reconciled across divisions."
+          },
+          {
+            "id": "c22-v98-q2",
+            "prompt": "How should a board communicate the numerical case?",
+            "options": [
+              "As hypothetical inputs requiring independent evidence",
+              "As audited corporate historical performance",
+              "As guaranteed investor returns",
+              "As an accredited degree assessment"
+            ],
+            "correct": 0,
+            "explanation": "These are invented teaching numbers; a source and model register supports independent decision quality."
+          },
+          {
+            "id": "c22-v98-exam-v104-q1",
+            "prompt": "An investment requires $30m now and yields discounted cash inflows of $39m. NPV?",
+            "options": [
+              "$69m",
+              "−$9m",
+              "+$9m",
+              "$39m"
+            ],
+            "correct": 2,
+            "explanation": "39−30=9.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c22-v98-exam-v104-q2",
+            "prompt": "A sunk feasibility study was completed last year. Should it enter new project NPV?",
+            "options": [
+              "Always",
+              "Only when the CFO prefers",
+              "As an added recurring charge",
+              "No, unless it changes future cash flows"
+            ],
+            "correct": 3,
+            "explanation": "Already-incurred sunk expenditures do not vary with the current choice.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Produce original calculations, a downside assessment, and a reconciled Aster Global board recommendation.",
+        "rubric": [
+          "Reproduce all incremental cash flows and capacity assumptions.",
+          "Compare feasible constrained alternatives and a downside scenario.",
+          "Document evidence quality and avoid confusing fictional values with observed facts.",
+          "Assign oversight, stakeholders and measurable reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-23",
+      "examId": "c23-v95-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 75,
+      "afterDefinition": {
+        "id": "c23-v95-exam",
+        "title": "Level 4 executive studio assessment: Risk appetite, controls and expected exposure",
+        "minutes": 100,
+        "questions": [
+          {
+            "id": "c23-v95-q1",
+            "prompt": "An enterprise faces an 8% annual incident probability with a $12m loss. A $300k annual control program reduces the incident probability to 3%, not severity. What is the annual expected net gain? Which modeled result follows?",
+            "options": [
+              "$300,000",
+              "No economic effect",
+              "Every proposed initiative must be accepted",
+              "The model proves the decision is risk-free"
+            ],
+            "correct": 0,
+            "explanation": "(.08-.03)*12000000-300000 = $300,000. Expected value is not a tail-risk guarantee. Review insurance, recovery, privacy, incentives and second-line assurance."
+          },
+          {
+            "id": "c23-v95-q2",
+            "prompt": "Which action is most defensible before recommending implementation?",
+            "options": [
+              "Treat all scenario inputs as observed facts",
+              "Verify assumptions, constraints and adverse outcomes with accountable oversight",
+              "Use only a headline valuation multiple",
+              "Ignore compliance and affected stakeholders"
+            ],
+            "correct": 1,
+            "explanation": "Board recommendations require independent calculations and risk-aware evidence."
+          },
+          {
+            "id": "c23-v95-exam-v104-q1",
+            "prompt": "A $100k annual control reduces incident probability by 4 percentage points on $4m loss exposure. Expected annual net gain?",
+            "options": [
+              "$60k",
+              "$160k",
+              "$100k",
+              "$260k"
+            ],
+            "correct": 0,
+            "explanation": ".04×4m−.1m=.06m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c23-v95-exam-v104-q2",
+            "prompt": "Which role provides independent third-line assurance?",
+            "options": [
+              "Procurement lead",
+              "Internal audit",
+              "First-line product manager",
+              "Vendor account representative"
+            ],
+            "correct": 1,
+            "explanation": "Internal audit is the independent third line.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare an independent decision memo and sensitivity model before accepting management claims.",
+        "rubric": [
+          "Reproduce numerical conclusions and dimensional units independently.",
+          "Compare a feasible alternative and a specified adverse scenario.",
+          "Separate hypothetical case assumptions from verifiable corporate evidence.",
+          "Assign governance owners and quantitative reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-23",
+      "examId": "c23-v96-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 105,
+      "afterDefinition": {
+        "id": "c23-v96-exam",
+        "title": "Advanced Level 4 executive seminar examination",
+        "minutes": 130,
+        "questions": [
+          {
+            "id": "c23-v96-q1",
+            "prompt": "Which executive practice is justified by this seminar?",
+            "options": [
+              "Present modeled scenarios as audited realized results",
+              "Verify causal assumptions, governance constraints and adverse sensitivities",
+              "Assume higher revenue guarantees superior NPV",
+              "Ignore liquidity when NPV is positive"
+            ],
+            "correct": 1,
+            "explanation": "Decision-making must distinguish hypothetical models from verified facts and respect funding constraints."
+          },
+          {
+            "id": "c23-v96-q2",
+            "prompt": "When comparing alternative investments, which is appropriate?",
+            "options": [
+              "Use nominal revenue alone",
+              "Ignore competing capital uses",
+              "Use incremental value, feasible funding and stress-tested alternatives",
+              "Treat a projected benefit as guaranteed"
+            ],
+            "correct": 2,
+            "explanation": "A constrained, incremental, risk-aware comparison is essential."
+          },
+          {
+            "id": "c23-v96-exam-v104-q1",
+            "prompt": "A $100k annual control reduces incident probability by 4 percentage points on $4m loss exposure. Expected annual net gain?",
+            "options": [
+              "$60k",
+              "$160k",
+              "$100k",
+              "$260k"
+            ],
+            "correct": 0,
+            "explanation": ".04×4m−.1m=.06m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c23-v96-exam-v104-q2",
+            "prompt": "Which role provides independent third-line assurance?",
+            "options": [
+              "Procurement lead",
+              "Internal audit",
+              "First-line product manager",
+              "Vendor account representative"
+            ],
+            "correct": 1,
+            "explanation": "Internal audit is the independent third line.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Independently reproduce both numerical or governance cases with citations for all external facts; propose two options, downside, governance and a board recommendation.",
+        "rubric": [
+          "Validate all formulas and distinguish observed data from fictional assumptions.",
+          "Compare strategic alternatives under cash, risk, and legal constraints.",
+          "Quantify downside, sensitivity and opportunity cost.",
+          "Supply accountable executive decision owners and measurable stop conditions."
+        ]
+      }
+    },
+    {
+      "courseId": "course-23",
+      "examId": "c23-v97-exam",
+      "beforeQuestions": 1,
+      "beforeMinutes": 65,
+      "afterDefinition": {
+        "id": "c23-v97-exam",
+        "title": "Executive challenge: Enterprise risk",
+        "minutes": 90,
+        "questions": [
+          {
+            "id": "c23-v97-q",
+            "prompt": "Avoided loss: six percentage points of an $8m event, less $220k annual control cost. What result follows?",
+            "options": [
+              "260000",
+              "0",
+              "Not estimable",
+              "Guaranteed value regardless of assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Reconstruct the value 260000 and identify why the result is conditional."
+          },
+          {
+            "id": "c23-v97-exam-v104-q1",
+            "prompt": "A $100k annual control reduces incident probability by 4 percentage points on $4m loss exposure. Expected annual net gain?",
+            "options": [
+              "$60k",
+              "$160k",
+              "$100k",
+              "$260k"
+            ],
+            "correct": 0,
+            "explanation": ".04×4m−.1m=.06m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c23-v97-exam-v104-q2",
+            "prompt": "Which role provides independent third-line assurance?",
+            "options": [
+              "Procurement lead",
+              "Internal audit",
+              "First-line product manager",
+              "Vendor account representative"
+            ],
+            "correct": 1,
+            "explanation": "Internal audit is the independent third line.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare a board recommendation and adverse-scenario calculation.",
+        "rubric": [
+          "Compute correct assumptions and units.",
+          "Compare feasible alternatives.",
+          "Label invented facts.",
+          "Set accountable risk triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-23",
+      "examId": "c23-v98-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 110,
+      "afterDefinition": {
+        "id": "c23-v98-exam",
+        "title": "Aster Global integrated decision assessment: Acquisition cyber due diligence",
+        "minutes": 135,
+        "questions": [
+          {
+            "id": "c23-v98-q1",
+            "prompt": "What is the most important cross-functional safeguard in this case?",
+            "options": [
+              "Treat every synergy projection as realized cash",
+              "Avoid double counting, verify financing headroom and test sensitivities",
+              "Ignore reserve requirements if the headline acquisition seems attractive",
+              "Treat expected loss as the worst possible outcome"
+            ],
+            "correct": 1,
+            "explanation": "Cash feasibility, independent validation and risk constraints must be reconciled across divisions."
+          },
+          {
+            "id": "c23-v98-q2",
+            "prompt": "How should a board communicate the numerical case?",
+            "options": [
+              "As hypothetical inputs requiring independent evidence",
+              "As audited corporate historical performance",
+              "As guaranteed investor returns",
+              "As an accredited degree assessment"
+            ],
+            "correct": 0,
+            "explanation": "These are invented teaching numbers; a source and model register supports independent decision quality."
+          },
+          {
+            "id": "c23-v98-exam-v104-q1",
+            "prompt": "A $100k annual control reduces incident probability by 4 percentage points on $4m loss exposure. Expected annual net gain?",
+            "options": [
+              "$60k",
+              "$160k",
+              "$100k",
+              "$260k"
+            ],
+            "correct": 0,
+            "explanation": ".04×4m−.1m=.06m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c23-v98-exam-v104-q2",
+            "prompt": "Which role provides independent third-line assurance?",
+            "options": [
+              "Procurement lead",
+              "Internal audit",
+              "First-line product manager",
+              "Vendor account representative"
+            ],
+            "correct": 1,
+            "explanation": "Internal audit is the independent third line.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Produce original calculations, a downside assessment, and a reconciled Aster Global board recommendation.",
+        "rubric": [
+          "Reproduce all incremental cash flows and capacity assumptions.",
+          "Compare feasible constrained alternatives and a downside scenario.",
+          "Document evidence quality and avoid confusing fictional values with observed facts.",
+          "Assign oversight, stakeholders and measurable reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-24",
+      "examId": "c24-v95-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 75,
+      "afterDefinition": {
+        "id": "c24-v95-exam",
+        "title": "Level 4 executive studio assessment: Transformation measurement and counterfactuals",
+        "minutes": 100,
+        "questions": [
+          {
+            "id": "c24-v95-q1",
+            "prompt": "A new operations design saves 10 minutes per transaction for 60,000 transactions. Fully loaded labor cost is $36 per hour, with $210k implementation spending. What is first-year net benefit if all time savings convert to avoided cost? Which modeled result follows?",
+            "options": [
+              "$150,000",
+              "No economic effect",
+              "Every proposed initiative must be accepted",
+              "The model proves the decision is risk-free"
+            ],
+            "correct": 0,
+            "explanation": "60000*(10/60)*36-210000 = $150,000. Challenge realizability of saved minutes, transition errors, demand rebound, and employee impacts."
+          },
+          {
+            "id": "c24-v95-q2",
+            "prompt": "Which action is most defensible before recommending implementation?",
+            "options": [
+              "Treat all scenario inputs as observed facts",
+              "Verify assumptions, constraints and adverse outcomes with accountable oversight",
+              "Use only a headline valuation multiple",
+              "Ignore compliance and affected stakeholders"
+            ],
+            "correct": 1,
+            "explanation": "Board recommendations require independent calculations and risk-aware evidence."
+          },
+          {
+            "id": "c24-v95-exam-v104-q1",
+            "prompt": "20,000 tasks save 15 minutes each at $28/hour. Cash realization is 50%, annual software cost $30k. Net benefit?",
+            "options": [
+              "$140k",
+              "$70k",
+              "$40k",
+              "$110k"
+            ],
+            "correct": 2,
+            "explanation": "20000×15/60×28×.5−30000=40000.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c24-v95-exam-v104-q2",
+            "prompt": "Which measurement most directly guards against a false transformation success?",
+            "options": [
+              "Presentation slide count",
+              "Employee headcount alone",
+              "Gross minutes saved alone",
+              "Pilot quality and fully realized costs against a control"
+            ],
+            "correct": 3,
+            "explanation": "A credible evaluation measures quality and actual economic impact.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare an independent decision memo and sensitivity model before accepting management claims.",
+        "rubric": [
+          "Reproduce numerical conclusions and dimensional units independently.",
+          "Compare a feasible alternative and a specified adverse scenario.",
+          "Separate hypothetical case assumptions from verifiable corporate evidence.",
+          "Assign governance owners and quantitative reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-24",
+      "examId": "c24-v96-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 105,
+      "afterDefinition": {
+        "id": "c24-v96-exam",
+        "title": "Advanced Level 4 executive seminar examination",
+        "minutes": 130,
+        "questions": [
+          {
+            "id": "c24-v96-q1",
+            "prompt": "Which executive practice is justified by this seminar?",
+            "options": [
+              "Present modeled scenarios as audited realized results",
+              "Verify causal assumptions, governance constraints and adverse sensitivities",
+              "Assume higher revenue guarantees superior NPV",
+              "Ignore liquidity when NPV is positive"
+            ],
+            "correct": 1,
+            "explanation": "Decision-making must distinguish hypothetical models from verified facts and respect funding constraints."
+          },
+          {
+            "id": "c24-v96-q2",
+            "prompt": "When comparing alternative investments, which is appropriate?",
+            "options": [
+              "Use nominal revenue alone",
+              "Ignore competing capital uses",
+              "Use incremental value, feasible funding and stress-tested alternatives",
+              "Treat a projected benefit as guaranteed"
+            ],
+            "correct": 2,
+            "explanation": "A constrained, incremental, risk-aware comparison is essential."
+          },
+          {
+            "id": "c24-v96-exam-v104-q1",
+            "prompt": "20,000 tasks save 15 minutes each at $28/hour. Cash realization is 50%, annual software cost $30k. Net benefit?",
+            "options": [
+              "$140k",
+              "$70k",
+              "$40k",
+              "$110k"
+            ],
+            "correct": 2,
+            "explanation": "20000×15/60×28×.5−30000=40000.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c24-v96-exam-v104-q2",
+            "prompt": "Which measurement most directly guards against a false transformation success?",
+            "options": [
+              "Presentation slide count",
+              "Employee headcount alone",
+              "Gross minutes saved alone",
+              "Pilot quality and fully realized costs against a control"
+            ],
+            "correct": 3,
+            "explanation": "A credible evaluation measures quality and actual economic impact.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Independently reproduce both numerical or governance cases with citations for all external facts; propose two options, downside, governance and a board recommendation.",
+        "rubric": [
+          "Validate all formulas and distinguish observed data from fictional assumptions.",
+          "Compare strategic alternatives under cash, risk, and legal constraints.",
+          "Quantify downside, sensitivity and opportunity cost.",
+          "Supply accountable executive decision owners and measurable stop conditions."
+        ]
+      }
+    },
+    {
+      "courseId": "course-24",
+      "examId": "c24-v97-exam",
+      "beforeQuestions": 1,
+      "beforeMinutes": 65,
+      "afterDefinition": {
+        "id": "c24-v97-exam",
+        "title": "Executive challenge: Operations change",
+        "minutes": 90,
+        "questions": [
+          {
+            "id": "c24-v97-q",
+            "prompt": "90,000 transactions save 8 minutes at $30/hour; half is cash-realizable; subtract $100k annual support. What result follows?",
+            "options": [
+              "80000",
+              "0",
+              "Not estimable",
+              "Guaranteed value regardless of assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Reconstruct the value 80000 and identify why the result is conditional."
+          },
+          {
+            "id": "c24-v97-exam-v104-q1",
+            "prompt": "20,000 tasks save 15 minutes each at $28/hour. Cash realization is 50%, annual software cost $30k. Net benefit?",
+            "options": [
+              "$140k",
+              "$70k",
+              "$40k",
+              "$110k"
+            ],
+            "correct": 2,
+            "explanation": "20000×15/60×28×.5−30000=40000.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c24-v97-exam-v104-q2",
+            "prompt": "Which measurement most directly guards against a false transformation success?",
+            "options": [
+              "Presentation slide count",
+              "Employee headcount alone",
+              "Gross minutes saved alone",
+              "Pilot quality and fully realized costs against a control"
+            ],
+            "correct": 3,
+            "explanation": "A credible evaluation measures quality and actual economic impact.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare a board recommendation and adverse-scenario calculation.",
+        "rubric": [
+          "Compute correct assumptions and units.",
+          "Compare feasible alternatives.",
+          "Label invented facts.",
+          "Set accountable risk triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-24",
+      "examId": "c24-v98-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 110,
+      "afterDefinition": {
+        "id": "c24-v98-exam",
+        "title": "Aster Global integrated decision assessment: Integration and staff capacity",
+        "minutes": 135,
+        "questions": [
+          {
+            "id": "c24-v98-q1",
+            "prompt": "What is the most important cross-functional safeguard in this case?",
+            "options": [
+              "Treat every synergy projection as realized cash",
+              "Avoid double counting, verify financing headroom and test sensitivities",
+              "Ignore reserve requirements if the headline acquisition seems attractive",
+              "Treat expected loss as the worst possible outcome"
+            ],
+            "correct": 1,
+            "explanation": "Cash feasibility, independent validation and risk constraints must be reconciled across divisions."
+          },
+          {
+            "id": "c24-v98-q2",
+            "prompt": "How should a board communicate the numerical case?",
+            "options": [
+              "As hypothetical inputs requiring independent evidence",
+              "As audited corporate historical performance",
+              "As guaranteed investor returns",
+              "As an accredited degree assessment"
+            ],
+            "correct": 0,
+            "explanation": "These are invented teaching numbers; a source and model register supports independent decision quality."
+          },
+          {
+            "id": "c24-v98-exam-v104-q1",
+            "prompt": "20,000 tasks save 15 minutes each at $28/hour. Cash realization is 50%, annual software cost $30k. Net benefit?",
+            "options": [
+              "$140k",
+              "$70k",
+              "$40k",
+              "$110k"
+            ],
+            "correct": 2,
+            "explanation": "20000×15/60×28×.5−30000=40000.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c24-v98-exam-v104-q2",
+            "prompt": "Which measurement most directly guards against a false transformation success?",
+            "options": [
+              "Presentation slide count",
+              "Employee headcount alone",
+              "Gross minutes saved alone",
+              "Pilot quality and fully realized costs against a control"
+            ],
+            "correct": 3,
+            "explanation": "A credible evaluation measures quality and actual economic impact.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Produce original calculations, a downside assessment, and a reconciled Aster Global board recommendation.",
+        "rubric": [
+          "Reproduce all incremental cash flows and capacity assumptions.",
+          "Compare feasible constrained alternatives and a downside scenario.",
+          "Document evidence quality and avoid confusing fictional values with observed facts.",
+          "Assign oversight, stakeholders and measurable reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-25",
+      "examId": "c25-v95-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 75,
+      "afterDefinition": {
+        "id": "c25-v95-exam",
+        "title": "Level 4 executive studio assessment: Board portfolio allocation and liquidity",
+        "minutes": 100,
+        "questions": [
+          {
+            "id": "c25-v95-q1",
+            "prompt": "Two fictional initiatives have NPVs of $15m and $11m and require $40m and $35m cash today. A board requires $25m of the current $90m cash reserve to remain untouched. Which set is feasible and delivers the highest NPV? Which modeled result follows?",
+            "options": [
+              "Initiative A alone: $15m",
+              "No economic effect",
+              "Every proposed initiative must be accepted",
+              "The model proves the decision is risk-free"
+            ],
+            "correct": 0,
+            "explanation": "15 = Initiative A alone: $15m. The spendable cash is $65m, so both initiatives cannot proceed. Compare A and B, and consider staged financing or option value."
+          },
+          {
+            "id": "c25-v95-q2",
+            "prompt": "Which action is most defensible before recommending implementation?",
+            "options": [
+              "Treat all scenario inputs as observed facts",
+              "Verify assumptions, constraints and adverse outcomes with accountable oversight",
+              "Use only a headline valuation multiple",
+              "Ignore compliance and affected stakeholders"
+            ],
+            "correct": 1,
+            "explanation": "Board recommendations require independent calculations and risk-aware evidence."
+          },
+          {
+            "id": "c25-v95-exam-v104-q1",
+            "prompt": "The firm has $80m cash and a $30m reserve. A decision requires $60m cash. Shortfall?",
+            "options": [
+              "$10m",
+              "$20m",
+              "$30m",
+              "None"
+            ],
+            "correct": 0,
+            "explanation": "Deployable cash is 50m; shortage 10m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c25-v95-exam-v104-q2",
+            "prompt": "A projected investment has attractive expected NPV but violates a debt covenant. Board action?",
+            "options": [
+              "Ignore the covenant",
+              "Arrange compliant funding, resize or decline",
+              "Recognize future synergy as cash",
+              "Approve unconditionally"
+            ],
+            "correct": 1,
+            "explanation": "Economic attractiveness does not override enforceable financing limits.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare an independent decision memo and sensitivity model before accepting management claims.",
+        "rubric": [
+          "Reproduce numerical conclusions and dimensional units independently.",
+          "Compare a feasible alternative and a specified adverse scenario.",
+          "Separate hypothetical case assumptions from verifiable corporate evidence.",
+          "Assign governance owners and quantitative reversal triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-25",
+      "examId": "c25-v96-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 105,
+      "afterDefinition": {
+        "id": "c25-v96-exam",
+        "title": "Advanced Level 4 executive seminar examination",
+        "minutes": 130,
+        "questions": [
+          {
+            "id": "c25-v96-q1",
+            "prompt": "Which executive practice is justified by this seminar?",
+            "options": [
+              "Present modeled scenarios as audited realized results",
+              "Verify causal assumptions, governance constraints and adverse sensitivities",
+              "Assume higher revenue guarantees superior NPV",
+              "Ignore liquidity when NPV is positive"
+            ],
+            "correct": 1,
+            "explanation": "Decision-making must distinguish hypothetical models from verified facts and respect funding constraints."
+          },
+          {
+            "id": "c25-v96-q2",
+            "prompt": "When comparing alternative investments, which is appropriate?",
+            "options": [
+              "Use nominal revenue alone",
+              "Ignore competing capital uses",
+              "Use incremental value, feasible funding and stress-tested alternatives",
+              "Treat a projected benefit as guaranteed"
+            ],
+            "correct": 2,
+            "explanation": "A constrained, incremental, risk-aware comparison is essential."
+          },
+          {
+            "id": "c25-v96-exam-v104-q1",
+            "prompt": "The firm has $80m cash and a $30m reserve. A decision requires $60m cash. Shortfall?",
+            "options": [
+              "$10m",
+              "$20m",
+              "$30m",
+              "None"
+            ],
+            "correct": 0,
+            "explanation": "Deployable cash is 50m; shortage 10m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c25-v96-exam-v104-q2",
+            "prompt": "A projected investment has attractive expected NPV but violates a debt covenant. Board action?",
+            "options": [
+              "Ignore the covenant",
+              "Arrange compliant funding, resize or decline",
+              "Recognize future synergy as cash",
+              "Approve unconditionally"
+            ],
+            "correct": 1,
+            "explanation": "Economic attractiveness does not override enforceable financing limits.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Independently reproduce both numerical or governance cases with citations for all external facts; propose two options, downside, governance and a board recommendation.",
+        "rubric": [
+          "Validate all formulas and distinguish observed data from fictional assumptions.",
+          "Compare strategic alternatives under cash, risk, and legal constraints.",
+          "Quantify downside, sensitivity and opportunity cost.",
+          "Supply accountable executive decision owners and measurable stop conditions."
+        ]
+      }
+    },
+    {
+      "courseId": "course-25",
+      "examId": "c25-v97-exam",
+      "beforeQuestions": 1,
+      "beforeMinutes": 65,
+      "afterDefinition": {
+        "id": "c25-v97-exam",
+        "title": "Executive challenge: Investment uncertainty",
+        "minutes": 90,
+        "questions": [
+          {
+            "id": "c25-v97-q",
+            "prompt": "Project PV is $90m with 70% chance or $25m with 30% chance; initial investment is $50m. What result follows?",
+            "options": [
+              "20.5",
+              "0",
+              "Not estimable",
+              "Guaranteed value regardless of assumptions"
+            ],
+            "correct": 0,
+            "explanation": "Reconstruct the value 20.5 and identify why the result is conditional."
+          },
+          {
+            "id": "c25-v97-exam-v104-q1",
+            "prompt": "The firm has $80m cash and a $30m reserve. A decision requires $60m cash. Shortfall?",
+            "options": [
+              "$10m",
+              "$20m",
+              "$30m",
+              "None"
+            ],
+            "correct": 0,
+            "explanation": "Deployable cash is 50m; shortage 10m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c25-v97-exam-v104-q2",
+            "prompt": "A projected investment has attractive expected NPV but violates a debt covenant. Board action?",
+            "options": [
+              "Ignore the covenant",
+              "Arrange compliant funding, resize or decline",
+              "Recognize future synergy as cash",
+              "Approve unconditionally"
+            ],
+            "correct": 1,
+            "explanation": "Economic attractiveness does not override enforceable financing limits.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Prepare a board recommendation and adverse-scenario calculation.",
+        "rubric": [
+          "Compute correct assumptions and units.",
+          "Compare feasible alternatives.",
+          "Label invented facts.",
+          "Set accountable risk triggers."
+        ]
+      }
+    },
+    {
+      "courseId": "course-25",
+      "examId": "c25-v98-exam",
+      "beforeQuestions": 2,
+      "beforeMinutes": 110,
+      "afterDefinition": {
+        "id": "c25-v98-exam",
+        "title": "Aster Global integrated decision assessment: Board resolution under capital constraints",
+        "minutes": 135,
+        "questions": [
+          {
+            "id": "c25-v98-q1",
+            "prompt": "What is the most important cross-functional safeguard in this case?",
+            "options": [
+              "Treat every synergy projection as realized cash",
+              "Avoid double counting, verify financing headroom and test sensitivities",
+              "Ignore reserve requirements if the headline acquisition seems attractive",
+              "Treat expected loss as the worst possible outcome"
+            ],
+            "correct": 1,
+            "explanation": "Cash feasibility, independent validation and risk constraints must be reconciled across divisions."
+          },
+          {
+            "id": "c25-v98-q2",
+            "prompt": "How should a board communicate the numerical case?",
+            "options": [
+              "As hypothetical inputs requiring independent evidence",
+              "As audited corporate historical performance",
+              "As guaranteed investor returns",
+              "As an accredited degree assessment"
+            ],
+            "correct": 0,
+            "explanation": "These are invented teaching numbers; a source and model register supports independent decision quality."
+          },
+          {
+            "id": "c25-v98-exam-v104-q1",
+            "prompt": "The firm has $80m cash and a $30m reserve. A decision requires $60m cash. Shortfall?",
+            "options": [
+              "$10m",
+              "$20m",
+              "$30m",
+              "None"
+            ],
+            "correct": 0,
+            "explanation": "Deployable cash is 50m; shortage 10m.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          },
+          {
+            "id": "c25-v98-exam-v104-q2",
+            "prompt": "A projected investment has attractive expected NPV but violates a debt covenant. Board action?",
+            "options": [
+              "Ignore the covenant",
+              "Arrange compliant funding, resize or decline",
+              "Recognize future synergy as cash",
+              "Approve unconditionally"
+            ],
+            "correct": 1,
+            "explanation": "Economic attractiveness does not override enforceable financing limits.",
+            "remediation": "Rework the scenario with units and an independently calculated alternative."
+          }
+        ],
+        "written": "Produce original calculations, a downside assessment, and a reconciled Aster Global board recommendation.",
+        "rubric": [
+          "Reproduce all incremental cash flows and capacity assumptions.",
+          "Compare feasible constrained alternatives and a downside scenario.",
+          "Document evidence quality and avoid confusing fictional values with observed facts.",
+          "Assign oversight, stakeholders and measurable reversal triggers."
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "exams": 20,
+    "totalArchivedQuestions": 75,
+    "v104Appended": 40
+  }
+}
