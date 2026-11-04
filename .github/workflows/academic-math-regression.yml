@@ -3,6 +3,7 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'learning/core-v110.js'
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
       - 'learning/level2-numeric-v64.js'
@@ -19,6 +20,7 @@ on:
       - 'learning/level3-integrated-final-v87.js'
       - 'learning/level5-numeric-v125.js'
       - 'audits/scripts/level1-final-regression-v142.cjs'
+      - 'audits/scripts/assessment-history-regression-v145.cjs'
       - 'audits/scripts/level2-level4-math-regression-v141.cjs'
       - 'audits/scripts/level4-executive-final-regression-v143.cjs'
       - 'audits/scripts/level2-numeric-multistep-regression-v144.cjs'
@@ -28,6 +30,7 @@ on:
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'learning/core-v110.js'
       - 'learning/level1-final-v39.js'
       - 'learning/level2-independent-exams-v63.js'
       - 'learning/level2-numeric-v64.js'
@@ -59,6 +62,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Verify historical grades and new assessment fingerprints
+        run: node audits/scripts/assessment-history-regression-v145.cjs
       - name: Verify 12 Level 1 integrated final answers
         run: node audits/scripts/level1-final-regression-v142.cjs
       - name: Verify Level 2 and 4 quantitative assessments
