@@ -3,6 +3,8 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'audits/scripts/required-exam-candidates-regression-v149.cjs'
+      - 'audits/data/2026-11-04-required-exam-candidates-v148.json'
       - 'audits/scripts/assessment-transition-preflight-v147.cjs'
       - 'learning/level4-level5-independent-exams-v129.js'
       - 'learning/level2-independent-exams-v128.js'
@@ -41,6 +43,7 @@ on:
       - '.github/workflows/academic-math-regression.yml'
   pull_request:
     paths:
+      - 'audits/data/2026-11-04-required-exam-candidates-v148.json'
       - 'audits/scripts/assessment-transition-preflight-v147.cjs'
       - 'learning/level4-level5-independent-exams-v129.js'
       - 'learning/level2-independent-exams-v128.js'
@@ -83,6 +86,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate 96 staged versioned required-exam candidates
+        run: node audits/scripts/required-exam-candidates-regression-v149.cjs
       - name: Block unsafe optional-to-required exam transitions
         run: node audits/scripts/assessment-transition-preflight-v147.cjs
       - name: Verify immutable legacy required-exam archive definitions
