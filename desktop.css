@@ -1,0 +1,33 @@
+/* Desktop-only Academy workspace. Mobile presentation is intentionally untouched. */
+@media (min-width: 960px) {
+  body{background:radial-gradient(circle at 78% 0%,#35312e 0%,#202020 47%,#191919 100%)}
+  #app{max-width:1320px;width:calc(100% - 288px);min-height:100vh;margin:0 32px 0 256px;padding:30px clamp(24px,3vw,54px) 72px}
+  #app>header{padding:12px 0 26px;margin-bottom:24px;border-bottom:1px solid #605449}
+  #app>header strong{font-size:23px;letter-spacing:1.2px}
+  nav{position:fixed;left:0;top:0;bottom:0;transform:none;width:232px;height:100vh;padding:110px 15px 24px;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:10px;border-top:0;border-right:1px solid #51473d;background:linear-gradient(180deg,#282625,#1b1b1b)}
+  nav:before{content:"STUDENT WORKSPACE";position:absolute;top:48px;left:24px;font-size:10px;letter-spacing:2px;color:#c29a68;font-weight:750}
+  nav button{display:flex;align-items:center;gap:15px;width:100%;min-height:54px;border-radius:11px;padding:12px 15px;text-align:left;font-size:14px;color:#e8ddd0}
+  nav button b{font-size:23px;min-width:30px}
+  nav button.on{background:#493d31;color:#f2cd91}
+  #app .home-welcome{padding:28px 34px;border-radius:18px}
+  #app .home-welcome h2{font-size:clamp(27px,3vw,38px)}
+  #app .home-welcome p{font-size:15px}
+  #app .home-metrics{margin:24px 0;padding:20px 6px}
+  #app .home-metrics b{font-size:26px}
+  #app .home-metrics small{font-size:12px}
+  #app .progress-ring{height:98px;width:98px}
+  #app .progress-ring strong{font-size:23px}
+  #app .card{padding:25px;border-radius:16px;margin:18px 0}
+  #app .card h2{font-size:24px}
+  #app .card p{font-size:15px;line-height:1.55}
+  #app h1{font-size:clamp(28px,2.5vw,39px)}
+  #app h2{font-size:24px}
+  #app .continue-tile{padding:18px;grid-template-columns:74px minmax(0,1fr) 20px;gap:20px}
+  #app .continue-tile b{font-size:19px}
+  #app .item,#app .course-row{padding:18px;font-size:15px}
+  #app .curriculum-group,#app .unit-panel,#app .university-card,#app .university-entry{padding:26px}
+  #app .lesson-panel .lesson,#app .reading{font-size:17px;line-height:1.85;max-width:90ch}
+  #app button{transition:background-color .18s,border-color .18s,transform .18s}
+  #app button:hover{border-color:#c29a68}
+}
+@media (min-width: 1600px){#app{margin-left:max(256px,calc((100vw - 1550px)/2 + 232px));width:min(calc(100% - 300px),1250px)}}
