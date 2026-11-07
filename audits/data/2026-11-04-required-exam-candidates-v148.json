@@ -394,7 +394,7 @@
             }
           ],
           "scenarioBrief": "Quantify avoided turnover and equity dilution with the correct denominators and avoid assuming released staff time is cash. Baseline construction: identify each input, unit and business decision it governs.",
-          "caseFile": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth.",
+          "caseFile": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth. Its directors have asked for separate financial and employee-wellbeing evidence before accepting management's projected reductions in turnover.",
           "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Distinguish expected avoided exits from measured causal program effects, and reconcile fully diluted share ownership with economic employee incentives.",
           "performanceRubric": [
             {
@@ -427,7 +427,7 @@
           "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
       ],
-      "caseBackground": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth.",
+      "caseBackground": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth. Its directors have asked for separate financial and employee-wellbeing evidence before accepting management's projected reductions in turnover.",
       "caseAssurance": "Distinguish expected avoided exits from measured causal program effects, and reconcile fully diluted share ownership with economic employee incentives.",
       "requiredCandidateApproval": {
         "independentFacultyReview": false,
