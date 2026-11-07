@@ -10,7 +10,7 @@
       "groups": [
         {
           "id": "c10-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 10",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 10 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A risk-neutral expected value does not ensure that the downside is affordable.",
           "rubric": [
@@ -105,9 +105,48 @@
               }
             }
           ],
-          "scenarioBrief": "Separate incremental delivery contribution, penalty probabilities, and contractually unavoidable costs before approval. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Separate incremental delivery contribution, penalty probabilities, and contractually unavoidable costs before approval. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A multinational supplier must choose whether to accept a discounted long-term service contract with performance penalties and capacity commitments.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Separate forecast contract revenue from collected cash, identify the source and probability of breach penalties and state the contract provisions requiring counsel.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A multinational supplier must choose whether to accept a discounted long-term service contract with performance penalties and capacity commitments.",
+      "caseAssurance": "Separate forecast contract revenue from collected cash, identify the source and probability of breach penalties and state the contract provisions requiring counsel.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-11",
@@ -115,7 +154,7 @@
       "groups": [
         {
           "id": "c11-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 11",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 11 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Stockout probabilities and routing restrictions require evidence beyond a one-line reorder formula.",
           "rubric": [
@@ -210,9 +249,48 @@
               }
             }
           ],
-          "scenarioBrief": "Compute replenishment or routing costs using the actual capacity and lead-time assumptions, then test service level. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Compute replenishment or routing costs using the actual capacity and lead-time assumptions, then test service level. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A national distribution operator faces volatile lead times, regional warehouse limits and service-level penalties.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Model reorder-point assumptions and freight allocation separately; test a disruption day while preserving customer service and stating which routes are capacity-limited.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A national distribution operator faces volatile lead times, regional warehouse limits and service-level penalties.",
+      "caseAssurance": "Model reorder-point assumptions and freight allocation separately; test a disruption day while preserving customer service and stating which routes are capacity-limited.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-12",
@@ -220,7 +298,7 @@
       "groups": [
         {
           "id": "c12-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 12",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 12 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Check labor law, employee outcomes, and actual churn attribution before treating a modeled return as achieved.",
           "rubric": [
@@ -315,9 +393,48 @@
               }
             }
           ],
-          "scenarioBrief": "Quantify avoided turnover and equity dilution with the correct denominators and avoid assuming released staff time is cash. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Quantify avoided turnover and equity dilution with the correct denominators and avoid assuming released staff time is cash. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Distinguish expected avoided exits from measured causal program effects, and reconcile fully diluted share ownership with economic employee incentives.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A corporate HR committee must defend a retention investment and a separate equity issuance to finance growth.",
+      "caseAssurance": "Distinguish expected avoided exits from measured causal program effects, and reconcile fully diluted share ownership with economic employee incentives.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-13",
@@ -325,7 +442,7 @@
       "groups": [
         {
           "id": "c13-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 13",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 13 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Expected loss reduction does not overrule mandatory compliance duties.",
           "rubric": [
@@ -420,9 +537,48 @@
               }
             }
           ],
-          "scenarioBrief": "Apply the explicitly hypothetical tax assumptions consistently; real jurisdiction tax treatment requires current legal advice. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Apply the explicitly hypothetical tax assumptions consistently; real jurisdiction tax treatment requires current legal advice. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A group with subsidiaries in two invented jurisdictions must quantify illustrative current tax and the value of an operational compliance program.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Do not assume fictional rates are actual law. A written recommendation must identify uncertain tax attributes, regulatory duties and nonfinancial risk appetite.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A group with subsidiaries in two invented jurisdictions must quantify illustrative current tax and the value of an operational compliance program.",
+      "caseAssurance": "Do not assume fictional rates are actual law. A written recommendation must identify uncertain tax attributes, regulatory duties and nonfinancial risk appetite.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-07",
@@ -430,7 +586,7 @@
       "groups": [
         {
           "id": "c07-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 07",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 07 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A reported balance is not automatically a cash receipt or payment.",
           "rubric": [
@@ -525,9 +681,48 @@
               }
             }
           ],
-          "scenarioBrief": "Treat purchase accounting and operating cash as different statement bridges; identify the control assessment and any deferred tax assumptions. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Treat purchase accounting and operating cash as different statement bridges; identify the control assessment and any deferred tax assumptions. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A fictional reporting group acquires 80% of a regional subsidiary. Its CFO must reconcile identifiable assets, purchase consideration, noncontrolling interests and near-term cash collection before a lender review.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Account for control-based consolidation separately from investor ownership percentages; specify whether the contractual debt covenant uses EBITDA, operating cash flow or both.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A fictional reporting group acquires 80% of a regional subsidiary. Its CFO must reconcile identifiable assets, purchase consideration, noncontrolling interests and near-term cash collection before a lender review.",
+      "caseAssurance": "Account for control-based consolidation separately from investor ownership percentages; specify whether the contractual debt covenant uses EBITDA, operating cash flow or both.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-08",
@@ -535,7 +730,7 @@
       "groups": [
         {
           "id": "c08-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 08",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 08 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A higher unit contribution is not enough if constrained throughput or demand makes the proposed plan infeasible.",
           "rubric": [
@@ -630,9 +825,48 @@
               }
             }
           ],
-          "scenarioBrief": "Use a flexible budget at actual output and distinguish unit price variance from quantity or mix effects. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Use a flexible budget at actual output and distinguish unit price variance from quantity or mix effects. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A capital-constrained manufacturing group is reviewing prices, cost variances and constrained machine hours after a supplier contract changes.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Produce a flexible budget at actual production, a resource-constrained alternative and a credible sourcing response; distinguish controllable input cost from inefficient volume allocation.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A capital-constrained manufacturing group is reviewing prices, cost variances and constrained machine hours after a supplier contract changes.",
+      "caseAssurance": "Produce a flexible budget at actual production, a resource-constrained alternative and a credible sourcing response; distinguish controllable input cost from inefficient volume allocation.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-09",
@@ -640,7 +874,7 @@
       "groups": [
         {
           "id": "c09-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 09",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 09 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. The experiment's observed conversion rate may not generalize to new customers or future periods.",
           "rubric": [
@@ -735,9 +969,48 @@
               }
             }
           ],
-          "scenarioBrief": "Compare randomized exposures on the same denominator and distinguish absolute percentage-point differences from relative growth. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Compare randomized exposures on the same denominator and distinguish absolute percentage-point differences from relative growth. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "An e-commerce corporation plans to expand a new customer offer after a randomized pilot shows different conversion rates across two regions.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Preserve randomization denominator and retention follow-up; calculate net contribution only after incremental campaign expense and discuss heterogeneity across customer cohorts.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "An e-commerce corporation plans to expand a new customer offer after a randomized pilot shows different conversion rates across two regions.",
+      "caseAssurance": "Preserve randomization denominator and retention follow-up; calculate net contribution only after incremental campaign expense and discuss heterogeneity across customer cohorts.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-21",
@@ -745,7 +1018,7 @@
       "groups": [
         {
           "id": "c21-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 21",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 21 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A synergy valuation needs documented timing and double-count prevention.",
           "rubric": [
@@ -868,11 +1141,42 @@
               }
             }
           ],
-          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A proposed multinational acquisition requires review of operating cash generation, adjusted EBITDA, equity consideration and integration economics.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Show a reconciled EV-to-equity bridge, source/uses, purchase-price sensitivity, synergy overlap controls and a retention-risk mitigation owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c21-v148-candidate-2",
-          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "title": "Reverse stress and alternatives — Course 21",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 21 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A synergy valuation needs documented timing and double-count prevention.",
           "rubric": [
@@ -995,11 +1299,42 @@
               }
             }
           ],
-          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver."
+          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver.",
+          "caseFile": "A proposed multinational acquisition requires review of operating cash generation, adjusted EBITDA, equity consideration and integration economics.",
+          "analyticalAssignment": "Perturb two economically connected assumptions simultaneously, derive the decision-reversal threshold where feasible, and compare an option to delay or stage the investment. Show why a single-factor sensitivity may understate correlated downside. Show a reconciled EV-to-equity bridge, source/uses, purchase-price sensitivity, synergy overlap controls and a retention-risk mitigation owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Coherent joint-downside mechanics",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated coherent joint-downside mechanics with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified reversal or constraint threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified reversal or constraint threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Alternative and opportunity-cost comparison",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated alternative and opportunity-cost comparison with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Uncertainty and risk ownership",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated uncertainty and risk ownership with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c21-v148-candidate-3",
-          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "title": "Governance and causal assurance — Course 21",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 21 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A synergy valuation needs documented timing and double-count prevention.",
           "rubric": [
@@ -1122,11 +1457,42 @@
               }
             }
           ],
-          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected."
+          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected.",
+          "caseFile": "A proposed multinational acquisition requires review of operating cash generation, adjusted EBITDA, equity consideration and integration economics.",
+          "analyticalAssignment": "Distinguish an observed business measure from a scenario assumption. Specify a verifiable operational data source, a control group or independent audit when appropriate, and an accountable owner with a numerical stopping rule. Show a reconciled EV-to-equity bridge, source/uses, purchase-price sensitivity, synergy overlap controls and a retention-risk mitigation owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Source-to-claim traceability",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated source-to-claim traceability with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Causal or assurance limitations",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated causal or assurance limitations with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Measurable escalation/stop threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated measurable escalation/stop threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Legal and stakeholder consequences",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated legal and stakeholder consequences with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c21-v148-candidate-4",
-          "title": "Versioned required-exam candidate 4: Board defense",
+          "title": "Integrated executive defense — Course 21",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 21 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A synergy valuation needs documented timing and double-count prevention.",
           "rubric": [
@@ -1221,9 +1587,48 @@
               }
             }
           ],
-          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Reconcile enterprise and equity values, sustainable earnings, contingent consideration and one-time integration expense. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A proposed multinational acquisition requires review of operating cash generation, adjusted EBITDA, equity consideration and integration economics.",
+          "analyticalAssignment": "Write a board resolution recommending approval, revision or rejection, including a liquidity constraint, a quantified downside, a credible rival proposal and a 90-day measurement plan. Present the strongest dissenting argument without relying on the keyed answers. Show a reconciled EV-to-equity bridge, source/uses, purchase-price sensitivity, synergy overlap controls and a retention-risk mitigation owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Internally reconciled board model",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated internally reconciled board model with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Capital and policy feasibility",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated capital and policy feasibility with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Strong independent competing option",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated strong independent competing option with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified monitoring and dissent defense",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified monitoring and dissent defense with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A proposed multinational acquisition requires review of operating cash generation, adjusted EBITDA, equity consideration and integration economics.",
+      "caseAssurance": "Show a reconciled EV-to-equity bridge, source/uses, purchase-price sensitivity, synergy overlap controls and a retention-risk mitigation owner.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-22",
@@ -1231,7 +1636,7 @@
       "groups": [
         {
           "id": "c22-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 22",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 22 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Do not treat payback or IRR spreads as substitutes for risk-adjusted NPV.",
           "rubric": [
@@ -1354,11 +1759,42 @@
               }
             }
           ],
-          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A portfolio investment committee must rank projects under a protected cash reserve and uncertain development outcomes.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Compare mutually constrained capital choices, discounted life-cycle returns and staging rights. Distinguish non-discounted payback from NPV and avoid counting uncommitted financing.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c22-v148-candidate-2",
-          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "title": "Reverse stress and alternatives — Course 22",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 22 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Do not treat payback or IRR spreads as substitutes for risk-adjusted NPV.",
           "rubric": [
@@ -1481,11 +1917,42 @@
               }
             }
           ],
-          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver."
+          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver.",
+          "caseFile": "A portfolio investment committee must rank projects under a protected cash reserve and uncertain development outcomes.",
+          "analyticalAssignment": "Perturb two economically connected assumptions simultaneously, derive the decision-reversal threshold where feasible, and compare an option to delay or stage the investment. Show why a single-factor sensitivity may understate correlated downside. Compare mutually constrained capital choices, discounted life-cycle returns and staging rights. Distinguish non-discounted payback from NPV and avoid counting uncommitted financing.",
+          "performanceRubric": [
+            {
+              "criterion": "Coherent joint-downside mechanics",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated coherent joint-downside mechanics with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified reversal or constraint threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified reversal or constraint threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Alternative and opportunity-cost comparison",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated alternative and opportunity-cost comparison with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Uncertainty and risk ownership",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated uncertainty and risk ownership with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c22-v148-candidate-3",
-          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "title": "Governance and causal assurance — Course 22",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 22 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Do not treat payback or IRR spreads as substitutes for risk-adjusted NPV.",
           "rubric": [
@@ -1608,11 +2075,42 @@
               }
             }
           ],
-          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected."
+          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected.",
+          "caseFile": "A portfolio investment committee must rank projects under a protected cash reserve and uncertain development outcomes.",
+          "analyticalAssignment": "Distinguish an observed business measure from a scenario assumption. Specify a verifiable operational data source, a control group or independent audit when appropriate, and an accountable owner with a numerical stopping rule. Compare mutually constrained capital choices, discounted life-cycle returns and staging rights. Distinguish non-discounted payback from NPV and avoid counting uncommitted financing.",
+          "performanceRubric": [
+            {
+              "criterion": "Source-to-claim traceability",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated source-to-claim traceability with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Causal or assurance limitations",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated causal or assurance limitations with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Measurable escalation/stop threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated measurable escalation/stop threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Legal and stakeholder consequences",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated legal and stakeholder consequences with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c22-v148-candidate-4",
-          "title": "Versioned required-exam candidate 4: Board defense",
+          "title": "Integrated executive defense — Course 22",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 22 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Do not treat payback or IRR spreads as substitutes for risk-adjusted NPV.",
           "rubric": [
@@ -1707,9 +2205,48 @@
               }
             }
           ],
-          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Check feasible capital allocation before ranking individual project returns, and discount dated cash rather than annual totals. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A portfolio investment committee must rank projects under a protected cash reserve and uncertain development outcomes.",
+          "analyticalAssignment": "Write a board resolution recommending approval, revision or rejection, including a liquidity constraint, a quantified downside, a credible rival proposal and a 90-day measurement plan. Present the strongest dissenting argument without relying on the keyed answers. Compare mutually constrained capital choices, discounted life-cycle returns and staging rights. Distinguish non-discounted payback from NPV and avoid counting uncommitted financing.",
+          "performanceRubric": [
+            {
+              "criterion": "Internally reconciled board model",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated internally reconciled board model with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Capital and policy feasibility",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated capital and policy feasibility with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Strong independent competing option",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated strong independent competing option with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified monitoring and dissent defense",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified monitoring and dissent defense with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A portfolio investment committee must rank projects under a protected cash reserve and uncertain development outcomes.",
+      "caseAssurance": "Compare mutually constrained capital choices, discounted life-cycle returns and staging rights. Distinguish non-discounted payback from NPV and avoid counting uncommitted financing.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-23",
@@ -1717,7 +2254,7 @@
       "groups": [
         {
           "id": "c23-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 23",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 23 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Insurance recoveries depend on exclusions, deductibles, claims timing and actual available liquidity.",
           "rubric": [
@@ -1840,11 +2377,42 @@
               }
             }
           ],
-          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A regulated corporate group must choose among resilience controls after its severe-incident exposure and liquidity floor change.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Separate frequency and severity assumptions, insured and uninsured layers, a vendor interruption, a regulatory escalation and an incident response funding plan.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c23-v148-candidate-2",
-          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "title": "Reverse stress and alternatives — Course 23",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 23 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Insurance recoveries depend on exclusions, deductibles, claims timing and actual available liquidity.",
           "rubric": [
@@ -1967,11 +2535,42 @@
               }
             }
           ],
-          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver."
+          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver.",
+          "caseFile": "A regulated corporate group must choose among resilience controls after its severe-incident exposure and liquidity floor change.",
+          "analyticalAssignment": "Perturb two economically connected assumptions simultaneously, derive the decision-reversal threshold where feasible, and compare an option to delay or stage the investment. Show why a single-factor sensitivity may understate correlated downside. Separate frequency and severity assumptions, insured and uninsured layers, a vendor interruption, a regulatory escalation and an incident response funding plan.",
+          "performanceRubric": [
+            {
+              "criterion": "Coherent joint-downside mechanics",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated coherent joint-downside mechanics with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified reversal or constraint threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified reversal or constraint threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Alternative and opportunity-cost comparison",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated alternative and opportunity-cost comparison with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Uncertainty and risk ownership",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated uncertainty and risk ownership with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c23-v148-candidate-3",
-          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "title": "Governance and causal assurance — Course 23",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 23 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Insurance recoveries depend on exclusions, deductibles, claims timing and actual available liquidity.",
           "rubric": [
@@ -2094,11 +2693,42 @@
               }
             }
           ],
-          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected."
+          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected.",
+          "caseFile": "A regulated corporate group must choose among resilience controls after its severe-incident exposure and liquidity floor change.",
+          "analyticalAssignment": "Distinguish an observed business measure from a scenario assumption. Specify a verifiable operational data source, a control group or independent audit when appropriate, and an accountable owner with a numerical stopping rule. Separate frequency and severity assumptions, insured and uninsured layers, a vendor interruption, a regulatory escalation and an incident response funding plan.",
+          "performanceRubric": [
+            {
+              "criterion": "Source-to-claim traceability",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated source-to-claim traceability with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Causal or assurance limitations",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated causal or assurance limitations with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Measurable escalation/stop threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated measurable escalation/stop threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Legal and stakeholder consequences",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated legal and stakeholder consequences with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c23-v148-candidate-4",
-          "title": "Versioned required-exam candidate 4: Board defense",
+          "title": "Integrated executive defense — Course 23",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 23 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Insurance recoveries depend on exclusions, deductibles, claims timing and actual available liquidity.",
           "rubric": [
@@ -2193,9 +2823,48 @@
               }
             }
           ],
-          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Distinguish changes in incident probability from loss severity and test residual tail exposure and hard liquidity floors. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A regulated corporate group must choose among resilience controls after its severe-incident exposure and liquidity floor change.",
+          "analyticalAssignment": "Write a board resolution recommending approval, revision or rejection, including a liquidity constraint, a quantified downside, a credible rival proposal and a 90-day measurement plan. Present the strongest dissenting argument without relying on the keyed answers. Separate frequency and severity assumptions, insured and uninsured layers, a vendor interruption, a regulatory escalation and an incident response funding plan.",
+          "performanceRubric": [
+            {
+              "criterion": "Internally reconciled board model",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated internally reconciled board model with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Capital and policy feasibility",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated capital and policy feasibility with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Strong independent competing option",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated strong independent competing option with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified monitoring and dissent defense",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified monitoring and dissent defense with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A regulated corporate group must choose among resilience controls after its severe-incident exposure and liquidity floor change.",
+      "caseAssurance": "Separate frequency and severity assumptions, insured and uninsured layers, a vendor interruption, a regulatory escalation and an incident response funding plan.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-24",
@@ -2203,7 +2872,7 @@
       "groups": [
         {
           "id": "c24-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 24",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 24 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Evaluate quality, customer harm and workforce effects with a control group before scaling.",
           "rubric": [
@@ -2326,11 +2995,42 @@
               }
             }
           ],
-          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A shared-services transformation promises shorter processing time but requires human appeal and data-quality controls.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Calculate cash-realizable savings, not theoretical hour value alone; use a predeclared quality threshold, subgroup evaluation and a rollback owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c24-v148-candidate-2",
-          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "title": "Reverse stress and alternatives — Course 24",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 24 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Evaluate quality, customer harm and workforce effects with a control group before scaling.",
           "rubric": [
@@ -2453,11 +3153,42 @@
               }
             }
           ],
-          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver."
+          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver.",
+          "caseFile": "A shared-services transformation promises shorter processing time but requires human appeal and data-quality controls.",
+          "analyticalAssignment": "Perturb two economically connected assumptions simultaneously, derive the decision-reversal threshold where feasible, and compare an option to delay or stage the investment. Show why a single-factor sensitivity may understate correlated downside. Calculate cash-realizable savings, not theoretical hour value alone; use a predeclared quality threshold, subgroup evaluation and a rollback owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Coherent joint-downside mechanics",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated coherent joint-downside mechanics with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified reversal or constraint threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified reversal or constraint threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Alternative and opportunity-cost comparison",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated alternative and opportunity-cost comparison with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Uncertainty and risk ownership",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated uncertainty and risk ownership with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c24-v148-candidate-3",
-          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "title": "Governance and causal assurance — Course 24",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 24 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Evaluate quality, customer harm and workforce effects with a control group before scaling.",
           "rubric": [
@@ -2580,11 +3311,42 @@
               }
             }
           ],
-          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected."
+          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected.",
+          "caseFile": "A shared-services transformation promises shorter processing time but requires human appeal and data-quality controls.",
+          "analyticalAssignment": "Distinguish an observed business measure from a scenario assumption. Specify a verifiable operational data source, a control group or independent audit when appropriate, and an accountable owner with a numerical stopping rule. Calculate cash-realizable savings, not theoretical hour value alone; use a predeclared quality threshold, subgroup evaluation and a rollback owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Source-to-claim traceability",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated source-to-claim traceability with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Causal or assurance limitations",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated causal or assurance limitations with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Measurable escalation/stop threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated measurable escalation/stop threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Legal and stakeholder consequences",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated legal and stakeholder consequences with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c24-v148-candidate-4",
-          "title": "Versioned required-exam candidate 4: Board defense",
+          "title": "Integrated executive defense — Course 24",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 24 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. Evaluate quality, customer harm and workforce effects with a control group before scaling.",
           "rubric": [
@@ -2679,9 +3441,48 @@
               }
             }
           ],
-          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Separate theoretical hours or avoided defects from independently evidenced, cash-realized savings. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "A shared-services transformation promises shorter processing time but requires human appeal and data-quality controls.",
+          "analyticalAssignment": "Write a board resolution recommending approval, revision or rejection, including a liquidity constraint, a quantified downside, a credible rival proposal and a 90-day measurement plan. Present the strongest dissenting argument without relying on the keyed answers. Calculate cash-realizable savings, not theoretical hour value alone; use a predeclared quality threshold, subgroup evaluation and a rollback owner.",
+          "performanceRubric": [
+            {
+              "criterion": "Internally reconciled board model",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated internally reconciled board model with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Capital and policy feasibility",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated capital and policy feasibility with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Strong independent competing option",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated strong independent competing option with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified monitoring and dissent defense",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified monitoring and dissent defense with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "A shared-services transformation promises shorter processing time but requires human appeal and data-quality controls.",
+      "caseAssurance": "Calculate cash-realizable savings, not theoretical hour value alone; use a predeclared quality threshold, subgroup evaluation and a rollback owner.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     },
     {
       "courseId": "course-25",
@@ -2689,7 +3490,7 @@
       "groups": [
         {
           "id": "c25-v148-candidate-1",
-          "title": "Versioned required-exam candidate 1: Foundational calculation",
+          "title": "Base-case reconstruction — Course 25",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 25 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A feasible decision requires execution owners, a credible contingency and an observable stop condition.",
           "rubric": [
@@ -2812,11 +3613,42 @@
               }
             }
           ],
-          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "The holding company's board must reconcile acquisition funding, project opportunity cost, operational incident exposure and capital preservation in one allocation.",
+          "analyticalAssignment": "Build a dated input register, show the primary independent computation in full, and identify which of the answer choices reflects a common denominator, sign or timing error. Produce a one-paragraph board recommendation conditional on the model assumptions. Develop an enterprise cash bridge and linked downside combining at least two divisions. The chosen option must be financeable and survive covenant and governance gates.",
+          "performanceRubric": [
+            {
+              "criterion": "Accurate independent computation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated accurate independent computation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Correct unit, date and denominator",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated correct unit, date and denominator with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Explicit misconception diagnosis",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated explicit misconception diagnosis with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Evidence-based executive recommendation",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated evidence-based executive recommendation with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c25-v148-candidate-2",
-          "title": "Versioned required-exam candidate 2: Independent stress test",
+          "title": "Reverse stress and alternatives — Course 25",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 25 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A feasible decision requires execution owners, a credible contingency and an observable stop condition.",
           "rubric": [
@@ -2939,11 +3771,42 @@
               }
             }
           ],
-          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver."
+          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Independent review: reconcile which numbers would change under a 10% adverse movement in the primary driver.",
+          "caseFile": "The holding company's board must reconcile acquisition funding, project opportunity cost, operational incident exposure and capital preservation in one allocation.",
+          "analyticalAssignment": "Perturb two economically connected assumptions simultaneously, derive the decision-reversal threshold where feasible, and compare an option to delay or stage the investment. Show why a single-factor sensitivity may understate correlated downside. Develop an enterprise cash bridge and linked downside combining at least two divisions. The chosen option must be financeable and survive covenant and governance gates.",
+          "performanceRubric": [
+            {
+              "criterion": "Coherent joint-downside mechanics",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated coherent joint-downside mechanics with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified reversal or constraint threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified reversal or constraint threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Alternative and opportunity-cost comparison",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated alternative and opportunity-cost comparison with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Uncertainty and risk ownership",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated uncertainty and risk ownership with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c25-v148-candidate-3",
-          "title": "Versioned required-exam candidate 3: Decision constraints",
+          "title": "Governance and causal assurance — Course 25",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 25 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A feasible decision requires execution owners, a credible contingency and an observable stop condition.",
           "rubric": [
@@ -3066,11 +3929,42 @@
               }
             }
           ],
-          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected."
+          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Board challenge: distinguish the arithmetic result from whether the action should be approved, delayed or rejected.",
+          "caseFile": "The holding company's board must reconcile acquisition funding, project opportunity cost, operational incident exposure and capital preservation in one allocation.",
+          "analyticalAssignment": "Distinguish an observed business measure from a scenario assumption. Specify a verifiable operational data source, a control group or independent audit when appropriate, and an accountable owner with a numerical stopping rule. Develop an enterprise cash bridge and linked downside combining at least two divisions. The chosen option must be financeable and survive covenant and governance gates.",
+          "performanceRubric": [
+            {
+              "criterion": "Source-to-claim traceability",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated source-to-claim traceability with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Causal or assurance limitations",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated causal or assurance limitations with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Measurable escalation/stop threshold",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated measurable escalation/stop threshold with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Legal and stakeholder consequences",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated legal and stakeholder consequences with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         },
         {
           "id": "c25-v148-candidate-4",
-          "title": "Versioned required-exam candidate 4: Board defense",
+          "title": "Integrated executive defense — Course 25",
           "minutes": 100,
           "written": "In addition to the calculations, submit a source-and-assumption ledger for this 25 decision, independently model an adverse cash case, explain the strongest competing alternative, and defend the governance choice. A feasible decision requires execution owners, a credible contingency and an observable stop condition.",
           "rubric": [
@@ -3165,15 +4059,56 @@
               }
             }
           ],
-          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Baseline construction: identify each input, unit and business decision it governs."
+          "scenarioBrief": "Integrate across corporate divisions, capital availability, covenants and downside exposure rather than choosing on expected value alone. Baseline construction: identify each input, unit and business decision it governs.",
+          "caseFile": "The holding company's board must reconcile acquisition funding, project opportunity cost, operational incident exposure and capital preservation in one allocation.",
+          "analyticalAssignment": "Write a board resolution recommending approval, revision or rejection, including a liquidity constraint, a quantified downside, a credible rival proposal and a 90-day measurement plan. Present the strongest dissenting argument without relying on the keyed answers. Develop an enterprise cash bridge and linked downside combining at least two divisions. The chosen option must be financeable and survive covenant and governance gates.",
+          "performanceRubric": [
+            {
+              "criterion": "Internally reconciled board model",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated internally reconciled board model with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Capital and policy feasibility",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated capital and policy feasibility with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Strong independent competing option",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated strong independent competing option with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            },
+            {
+              "criterion": "Quantified monitoring and dissent defense",
+              "maxPoints": 25,
+              "scoringAnchor": "Give full 25 points for substantiated quantified monitoring and dissent defense with independently reproducible evidence; award partial marks proportionally to accuracy, completeness and clarity. Do not award full points for an unverified assertion."
+            }
+          ],
+          "minimumRequiredEvidence": [
+            "Original worked model or source-linked computation",
+            "A second scenario with an adverse assumption",
+            "Decision memo with alternative and accountable control owner",
+            "Explicit note distinguishing classroom numbers from documented historical facts"
+          ],
+          "assessmentDesignStatus": "DRAFT_REVIEW_ONLY"
         }
-      ]
+      ],
+      "caseBackground": "The holding company's board must reconcile acquisition funding, project opportunity cost, operational incident exposure and capital preservation in one allocation.",
+      "caseAssurance": "Develop an enterprise cash bridge and linked downside combining at least two divisions. The chosen option must be financeable and survive covenant and governance gates.",
+      "requiredCandidateApproval": {
+        "independentFacultyReview": false,
+        "quantitativeReview": false,
+        "assessmentPsychometrics": false,
+        "cloudAcceptance": false
+      }
     }
   ],
   "refinement": {
     "version": "v151",
     "method": "misconception-based distractors, per-course analytical interpretation and original transfer tasks",
     "reviewStatus": "draft awaiting academic review",
-    "questionCount": 96
+    "questionCount": 96,
+    "writtenCases": 27,
+    "examUnitRubrics": 27
   }
 }
