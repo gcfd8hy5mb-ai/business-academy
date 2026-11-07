@@ -31,3 +31,5 @@
   #app button:hover{border-color:#c29a68}
 }
 @media (min-width: 1600px){#app{margin-left:max(256px,calc((100vw - 1550px)/2 + 232px));width:min(calc(100% - 300px),1250px)}}
+
+@media(min-width:960px){nav button .ui-icon,nav button svg{width:23px;height:23px;flex:0 0 23px}nav button span{font-size:15px}#app .quick-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
