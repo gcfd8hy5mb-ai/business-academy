@@ -3,6 +3,7 @@ name: Academic mathematics regression
 on:
   push:
     paths:
+      - 'audits/scripts/required-exam-design-quality-v151.cjs'
       - 'audits/data/2026-11-04-assessment-transition-policy-v150.json'
       - 'audits/scripts/required-exam-candidates-regression-v149.cjs'
       - 'audits/data/2026-11-04-required-exam-candidates-v148.json'
@@ -88,6 +89,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Screen candidate-exam distractors and executive written cases
+        run: node audits/scripts/required-exam-design-quality-v151.cjs
       - name: Validate 96 staged versioned required-exam candidates
         run: node audits/scripts/required-exam-candidates-regression-v149.cjs
       - name: Block unsafe optional-to-required exam transitions
