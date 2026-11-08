@@ -954,3 +954,34 @@
  #app .ba-record-meter span {display:block;background:#e5b66c;height:100%}
  #app .ba-record-disclaimer {font-size:11px;line-height:1.5}
 }
+
+/* Phase 17 — prominent, neutral-slate academy completion on desktop home. */
+@media (min-width:960px) {
+ #app .ba-executive-portal .ba-home-progress {margin:0 0 17px;padding:19px 23px 16px;background:linear-gradient(108deg,#252f39,#1b242e);border:1px solid #536473;border-left:3px solid #e8b76c;border-radius:11px;box-shadow:0 9px 26px #080d143b}
+ #app .ba-executive-portal .ba-home-progress-main {display:flex;justify-content:space-between;align-items:center;gap:16px}
+ #app .ba-executive-portal .ba-home-progress-main h2 {font:normal clamp(21px,2.1vw,29px)/1.2 Georgia,serif;color:#f6ead9;margin:6px 0}
+ #app .ba-executive-portal .ba-home-progress-main p {color:#ccd5de;font-size:12px;line-height:1.5;margin:0}
+ #app .ba-executive-portal .ba-home-progress-value {color:#f1c98b;font:normal clamp(34px,4vw,48px)/1 Georgia,serif;white-space:nowrap}
+ #app .ba-executive-portal .ba-home-progress-track {height:8px;margin:14px 0 10px;overflow:hidden;border-radius:12px;background:#4b5965}
+ #app .ba-executive-portal .ba-home-progress-track>span {display:block;height:100%;border-radius:12px;background:linear-gradient(90deg,#b98842,#f4ce8e)}
+ #app .ba-executive-portal .ba-home-progress-foot {display:flex;justify-content:space-between;align-items:center;gap:13px}
+ #app .ba-executive-portal .ba-home-progress-foot>span {font-size:10px;line-height:1.5;color:#c1ccd5}
+ #app .ba-executive-portal .ba-home-progress-foot .ba-text-link {font-size:11px;flex-shrink:0}
+ #app .ba-records-overview .ba-progress-overall {margin-bottom:16px;padding:20px 22px;background:#26313b;border:1px solid #576778;border-left:3px solid #e8b76c;border-radius:11px;display:grid;grid-template-columns:1fr auto;gap:10px 16px}
+ #app .ba-records-overview .ba-progress-overall h2 {font:normal 25px Georgia,serif;color:#f6e7d2;margin:7px 0}
+ #app .ba-records-overview .ba-progress-overall p,#app .ba-records-overview .ba-progress-overall small {font-size:11px;line-height:1.6;color:#cbd6dd}
+ #app .ba-records-overview .ba-progress-overall strong {font:normal 39px Georgia,serif;color:#f1c888}
+ #app .ba-records-overview .ba-overall-meter {grid-column:1/-1;height:8px;overflow:hidden;border-radius:9px;background:#495966}
+ #app .ba-records-overview .ba-overall-meter>span {display:block;background:linear-gradient(90deg,#b98842,#efc985);height:100%}
+ #app .ba-records-overview .ba-progress-overall small {grid-column:1/-1}
+ #app .ba-records-overview .ba-record-level .ba-progress-label {font-size:13px;color:#efc785}
+ #app .ba-catalog-page .ba-course-completion {display:flex;flex-direction:column;gap:5px;margin:4px 0 1px}
+ #app .ba-catalog-page .ba-course-completion-title {display:flex;justify-content:space-between;gap:9px;color:#becbd5;font-size:10px}
+ #app .ba-catalog-page .ba-course-completion-title b {color:#f2c987}
+ #app .ba-catalog-page .ba-course-completion-bar {display:block;height:5px;background:#4d5b67;border-radius:7px;overflow:hidden}
+ #app .ba-catalog-page .ba-course-completion-bar>span {display:block;height:100%;background:#e6b775;border-radius:7px}
+}
+@media (min-width:960px) and (max-width:1140px) {
+ #app .ba-executive-portal .ba-home-progress {padding:17px}
+ #app .ba-executive-portal .ba-home-progress-foot {align-items:flex-start;flex-direction:column;gap:6px}
+}
