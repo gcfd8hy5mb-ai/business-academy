@@ -61,8 +61,9 @@ test('Walmart US FY2026 segment income, gross denominators and basis-point chang
  close(prior,5.165,.001);
  close((curr-prior)*100,4.43,.01);
  close((25158/23882-1)*100,5.34,.01);
- assert.equal(706413,706413); // consolidated net sales, not Walmart US net sales
- assert.equal(29825,29825); // consolidated operating income, not Walmart US operating income
+ const consolidatedSales=706413,consolidatedOperatingIncome=29825;
+ assert.ok(consolidatedSales>482975,'Consolidated sales include other businesses');
+ assert.ok(consolidatedOperatingIncome>25158,'Consolidated income includes other segments and adjustments');
  assert.notEqual(curr,29825/706413*100,'A segment margin is not the consolidated margin');
  const q=part(c08,'-v57-exam');
  assert.ok(q);
