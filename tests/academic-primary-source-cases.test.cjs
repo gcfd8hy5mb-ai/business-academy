@@ -7,9 +7,14 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const ctx={BAContent:{}};
-for(const path of ['learning/level1.js','learning/level2.js','learning/level2-filings-v57.js']) {
+for(const path of ['learning/level1.js','learning/level2.js']) {
  new Function('window',fs.readFileSync(path,'utf8'))(ctx);
 }
+// v57 normally runs after earlier Level 2 extensions initialize these collections.
+for(const id of ['course-07','course-08']){
+ const c=ctx.BAContent[id];c.applications ||= [];c.sectionExams ||= [];c.portfolioSections ||= [];
+}
+new Function('window',fs.readFileSync('learning/level2-filings-v57.js','utf8'))(ctx);
 const c07=ctx.BAContent['course-07'],c08=ctx.BAContent['course-08'];
 function part(c,suffix){return (c.sectionExams||[]).find(x=>x.id.endsWith(suffix));}
 function filingLesson(c){return c.modules.flatMap(x=>x.lessons||[]).find(l=>l.id.endsWith('-v57-lesson'));}
