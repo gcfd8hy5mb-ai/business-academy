@@ -1134,8 +1134,29 @@
  #app .learning-workspace .learning-tabs:has(.ba-learning-nav-tile:nth-child(7)) {grid-template-columns:repeat(3,minmax(0,1fr))!important}
  #app .learning-workspace .learning-rubric {grid-template-columns:minmax(0,1fr) 168px!important}
 }
-@media(min-width:960px) and (max-width:700px){#app .learning-workspace .learning-rubric {grid-template-columns:1fr!important}}
 @media(max-width:959px){
  #app .learning-workspace textarea {background:#242c34!important;color:#f3f5f5!important;border-color:#657482!important}
  #app .learning-workspace select {background:#252e37;color:#f5f5f5;border:1px solid #6c7c8a;color-scheme:dark;border-radius:7px}
+}
+
+/* Phase 22 — executive simulator section quick links. */
+@media(min-width:960px) {
+ #app .ba-simulator .ba-sim-shortcuts {grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 13px}
+ #app .ba-simulator .ba-sim-shortcuts button {display:flex;flex-direction:column;gap:4px;align-items:flex-start;text-align:left;min-height:91px;padding:12px 15px;background:linear-gradient(145deg,#2b3742,#202b35);border:1px solid #526371;border-radius:9px;cursor:pointer;color:#f4eadb;transition:transform .18s ease,border-color .18s ease}
+ #app .ba-simulator .ba-sim-shortcuts button:hover {transform:translateY(-2px);border-color:#efbd74;background:#344451}
+ #app .ba-simulator .ba-sim-shortcuts button:focus-visible {outline:3px solid #efc683;outline-offset:3px}
+ #app .ba-simulator .ba-sim-shortcuts button span {font:normal 20px Georgia,serif;color:#e9be81}
+ #app .ba-simulator .ba-sim-shortcuts button strong {font:normal 17px Georgia,serif;color:#f9ead5}
+ #app .ba-simulator .ba-sim-shortcuts button small {font-size:10px;color:#c3d1d9}
+ #app .ba-simulator #ba-sim-overview,#app .ba-simulator #ba-sim-performance,#app .ba-simulator #ba-sim-decisions,#app .ba-simulator #ba-sim-history {scroll-margin-top:18px}
+}
+@media(max-width:959px) {
+ #app .ba-simulator .ba-sim-shortcuts {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+ #app .ba-simulator .ba-sim-shortcuts button {padding:11px;background:#29333c;border:1px solid #63707d;border-radius:8px;text-align:left;color:#f4e9db}
+ #app .ba-simulator .ba-sim-shortcuts button span {display:block;font-size:11px;color:#e7bf85}
+ #app .ba-simulator .ba-sim-shortcuts button strong {display:block;font-size:13px}
+ #app .ba-simulator .ba-sim-shortcuts button small {font-size:10px}
+}
+@media(prefers-reduced-motion:reduce) {
+ #app .ba-simulator .ba-sim-shortcuts button {transition:none}
 }
