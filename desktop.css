@@ -65,3 +65,173 @@
  #app .learning-single{padding:26px}
  #app .learning-workspace .learning-tabs button{min-width:0}
 }
+
+/* Desktop curriculum readability: preserve the charcoal/gold academy palette.
+   v20261107-phase3. Scoped to the course curriculum only. */
+@media (min-width:960px) {
+  #app .curriculum-level-card {
+    background:#292827;
+    border:1px solid #61564b;
+    box-shadow:0 10px 28px rgba(0,0,0,.16);
+  }
+  #app .curriculum-level-card > summary {
+    padding:21px 26px;
+    min-height:90px;
+    border-bottom:1px solid transparent;
+  }
+  #app .curriculum-level-card[open] > summary {
+    border-bottom-color:#51473d;
+  }
+  #app .curriculum-level-card > .curriculum-level-body {
+    padding:12px 26px 30px;
+  }
+  #app .curriculum-level-body > p {
+    max-width:88ch;
+    font-size:15px;
+    line-height:1.65;
+    color:#cfc3b7;
+  }
+  #app .curriculum-optional {
+    border:1px solid #5c5145;
+    border-radius:13px;
+    background:#242424;
+    overflow:hidden;
+    margin:18px 0;
+  }
+  #app .curriculum-optional > summary {
+    padding:17px 20px;
+    color:#ddc29a;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  #app .curriculum-optional[open] > summary {
+    background:#302d29;
+    border-bottom:1px solid #66543f;
+  }
+  #app .curriculum-optional .unit-launch {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    padding:24px;
+    margin:16px 18px 20px;
+    border-color:#675849;
+    background:#2c2b2a;
+    box-shadow:none;
+    min-width:0;
+  }
+  #app .curriculum-optional .unit-launch > h3,
+  #app .curriculum-optional .unit-launch > p {
+    grid-column:1 / -1;
+    min-width:0;
+    margin:0;
+  }
+  #app .curriculum-optional .unit-launch > h3 {
+    font:normal 25px/1.25 Georgia,serif;
+    color:#f1e4d1;
+  }
+  #app .curriculum-optional .unit-launch > p {
+    margin:0 0 6px;
+    color:#c6b9ab;
+    font-size:14px;
+  }
+  #app .curriculum-optional .unit-launch > button.lesson-back {
+    display:flex;
+    width:100%;
+    margin:0;
+    padding:13px 15px;
+    min-height:52px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font:600 13px/1.4 system-ui,sans-serif;
+    color:#e6cfac;
+    background:#38322c;
+    border:1px solid #796447;
+    border-radius:10px;
+    white-space:normal;
+  }
+  #app .curriculum-optional .unit-launch > button.btn.full {
+    display:flex;
+    grid-column:1 / -1;
+    width:100%;
+    min-height:54px;
+    margin:0;
+    padding:14px 20px;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    font:600 14px/1.4 system-ui,sans-serif;
+    color:#f2ddba;
+    background:#40382e;
+    border:1px solid #96764c;
+    border-radius:10px;
+    box-shadow:none;
+  }
+  #app .curriculum-optional .unit-launch > button:hover,
+  #app .curriculum-optional .unit-launch > button:focus-visible {
+    background:#504334;
+    border-color:#d7ab69;
+    color:#fff0d6;
+  }
+  #app .curriculum-level-body > .curriculum-inner {
+    margin:28px 0 10px;
+  }
+  #app .curriculum-level-body > .curriculum-inner > h3 {
+    margin:0 0 16px;
+    padding-bottom:13px;
+    font-size:14px;
+    color:#e0b477;
+    letter-spacing:.6px;
+  }
+  #app .curriculum-inner > button.course-row,
+  #app .curriculum-inner .course-row {
+    display:flex;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    min-height:86px;
+    margin:0 0 10px;
+    padding:17px 22px;
+    color:#f0e4d4;
+    background:linear-gradient(115deg,#363331,#2a2928);
+    border:1px solid #5e544a;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+    text-align:left;
+  }
+  #app .curriculum-inner .course-row:hover {
+    background:linear-gradient(115deg,#433a32,#32302d);
+    border-color:#b58b55;
+    transform:translateY(-1px);
+  }
+  #app .curriculum-inner .course-row .course-number {
+    color:#d1a365;
+    min-width:36px;
+    font-size:23px;
+  }
+  #app .curriculum-inner .course-row .course-copy b {
+    color:#f0e4d4;
+    font-size:17px;
+    line-height:1.35;
+  }
+  #app .curriculum-inner .course-row .course-copy small {
+    color:#bbb0a4;
+    font-size:12px;
+    line-height:1.4;
+  }
+  #app .curriculum-inner .course-row.locked {
+    opacity:.74;
+    background:#242323;
+    border-color:#504a44;
+  }
+}
+@media (min-width:960px) and (max-width:1199px) {
+  #app .curriculum-optional .unit-launch {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    padding:18px;
+  }
+  #app .curriculum-level-card > .curriculum-level-body {
+    padding:12px 18px 24px;
+  }
+}
