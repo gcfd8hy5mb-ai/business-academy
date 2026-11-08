@@ -77,7 +77,7 @@ test('weekly simulator rotates scenarios rather than repeating the week-one ques
  assert.match(source,/currentSimulatorScenario\(\)\.prompt/);
 });
 test('secondary desktop pages have executive layouts without changing existing actions',()=>{
- assert.match(source,/class="ba-catalog-page"/);
+ assert.match(source,/class="academy-subpage ba-catalog-page"/);
  assert.match(source,/class="ba-case-library"/);
  assert.match(source,/class="ba-student-records"/);
  assert.match(source,/data-cloud-settings-open="1"/);
