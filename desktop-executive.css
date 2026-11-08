@@ -900,3 +900,57 @@
  #app .ba-simulator .ba-impact-grid span {display:block;font-size:10px}
  #app .ba-simulator .ba-impact-grid strong {display:block;font-size:14px}
 }
+
+/* Phase 16 — student records and exam results as an executive academic portal.
+   Separate actual authored progress, self-reported mastery and starter-module data. */
+@media (min-width:960px) {
+ #app .ba-student-records .ba-record-layout {display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,27%);gap:19px;align-items:start}
+ #app .ba-student-records .ba-records-overview {grid-column:1;grid-row:1/4;min-width:0}
+ #app .ba-student-records .ba-settings {grid-column:2;grid-row:1}
+ #app .ba-student-records .ba-starter-progress {grid-column:2;grid-row:2}
+ #app .ba-record-metrics {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-bottom:18px}
+ #app .ba-record-metrics>div {min-width:0;min-height:108px;padding:17px 14px;background:linear-gradient(145deg,#2d3945,#222b34);border:1px solid #556571;border-top:2px solid #d8a661;border-radius:10px}
+ #app .ba-record-metrics strong {display:block;font:normal 30px/1.2 Georgia,serif;color:#f9ead1;margin:10px 0 5px}
+ #app .ba-record-metrics small {color:#c6d2da;font-size:11px;line-height:1.45}
+ #app .ba-record-details {display:grid;grid-template-columns:minmax(0,1.18fr) minmax(260px,.82fr);gap:15px}
+ #app .ba-record-panel {min-width:0;border-radius:11px;border:1px solid #52636f;background:#222d38;padding:22px 20px}
+ #app .ba-record-panel>h2 {font:normal 24px/1.25 Georgia,serif;color:#fff0dc;margin:7px 0 15px}
+ #app .ba-record-level {display:grid;grid-template-columns:55px minmax(0,1fr);gap:10px 14px;padding:14px 0;border-bottom:1px solid #445562;align-items:start}
+ #app .ba-record-level:last-child {border-bottom:0}
+ #app .ba-record-level-id {font-size:10px;color:#e8b872;letter-spacing:.1em;font-weight:750;margin-top:3px}
+ #app .ba-record-level strong,#app .ba-record-exam strong {display:block;color:#f3e8da;font-size:13px;line-height:1.4}
+ #app .ba-record-level small,#app .ba-record-exam small {display:block;color:#c0ced8;font-size:11px;line-height:1.55;margin-top:5px}
+ #app .ba-record-meter {grid-column:2;display:block;height:6px;background:#455361;border-radius:8px;overflow:hidden}
+ #app .ba-record-meter span {display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#bb8c46,#f0ca84)}
+ #app .ba-record-exam {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #465663}
+ #app .ba-record-exam>span {flex-shrink:0;font:normal 23px Georgia,serif;color:#f0c78b}
+ #app .ba-record-empty {font-size:13px;color:#c5d0d8;line-height:1.6}
+ #app .ba-record-disclaimer {font-size:11px;color:#b8c6d0;line-height:1.7;margin:13px 2px 0}
+ #app .ba-student-records .ba-settings,#app .ba-student-records .ba-starter-progress {background:#25313c;border-color:#536575;min-width:0;padding:21px}
+ #app .ba-student-records .ba-settings h2,#app .ba-student-records .ba-starter-progress h2 {font:normal 23px Georgia,serif;color:#f4e3c8;margin:0 0 12px}
+ #app .ba-student-records .ba-starter-progress .stats {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ #app .ba-student-records .ba-starter-progress .stat {min-width:0;padding:14px 8px}
+ #app .ba-student-records .ba-starter-progress .stat strong {font-size:23px}
+}
+@media (min-width:960px) and (max-width:1399px) {
+ #app .ba-record-details {grid-template-columns:minmax(0,1fr)}
+ #app .ba-record-metrics {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:960px) and (max-width:1120px) {
+ #app .ba-student-records .ba-record-layout {grid-template-columns:minmax(0,1fr)}
+ #app .ba-student-records .ba-records-overview,#app .ba-student-records .ba-settings,#app .ba-student-records .ba-starter-progress {grid-column:1;grid-row:auto}
+}
+@media (max-width:959px) {
+ #app .ba-record-metrics {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ #app .ba-record-metrics>div {padding:13px;border:1px solid #5e5d59;border-radius:9px}
+ #app .ba-record-metrics strong {display:block;font-size:25px;color:#efc681}
+ #app .ba-record-metrics small {font-size:11px}
+ #app .ba-record-panel {padding:16px 12px;margin:12px 0;border:1px solid #585c60;border-radius:10px}
+ #app .ba-record-level,#app .ba-record-exam {padding:12px 0;border-bottom:1px solid #555}
+ #app .ba-record-level-id {color:#edc17c;font-size:10px}
+ #app .ba-record-level strong,#app .ba-record-exam strong {display:block;font-size:14px}
+ #app .ba-record-level small,#app .ba-record-exam small {display:block;color:#bfc3c6;font-size:11px}
+ #app .ba-record-meter {height:5px;background:#484a4c;overflow:hidden}
+ #app .ba-record-meter span {display:block;background:#e5b66c;height:100%}
+ #app .ba-record-disclaimer {font-size:11px;line-height:1.5}
+}
