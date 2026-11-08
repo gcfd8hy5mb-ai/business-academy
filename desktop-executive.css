@@ -1071,3 +1071,35 @@
  #app .ba-catalog-page .ba-level-focus {animation:none}
  #app .ba-catalog-page .ba-level-tile {transition:none}
 }
+
+/* Phase 20 — quick-navigation tiles across lesson, resources, practice, exams, tutor, portfolio.
+   Retains existing course state and grading; no page data reset. */
+@media (min-width:960px) {
+ #app .learning-workspace .learning-tabs {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:14px 0 15px;padding:0;border:0;background:transparent;overflow:visible}
+ #app .learning-workspace .learning-tabs:has(.ba-learning-nav-tile:nth-child(7)) {grid-template-columns:repeat(7,minmax(0,1fr))}
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile {display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:0;min-height:114px;margin:0;padding:14px 13px;text-align:left;border-radius:10px;border:1px solid #526371;background:linear-gradient(145deg,#293641,#1f2933);color:#f1ebdf;cursor:pointer;box-shadow:0 5px 16px #09131c2d;transition:transform .18s ease,border-color .18s ease,background-color .18s ease,box-shadow .18s ease}
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile:hover {transform:translateY(-2px);border-color:#e4b977;background:#344451;box-shadow:0 11px 22px #09131c44}
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile[aria-current="page"] {background:linear-gradient(145deg,#3a4650,#2d3944);color:#fff0d7;border:2px solid #edbe78;box-shadow:inset 0 0 0 1px #edbe7822}
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile:focus-visible {outline:3px solid #efc583;outline-offset:3px}
+ #app .learning-workspace .ba-learning-nav-number {font:normal 22px Georgia,serif;color:#edc487;opacity:.88}
+ #app .learning-workspace .ba-learning-nav-tile strong {font:normal 16px/1.2 Georgia,serif;color:#fff1dd}
+ #app .learning-workspace .ba-learning-nav-sub {font-size:10px;line-height:1.35;color:#c8d4dc}
+ #app .learning-workspace .learning-flow-hint {margin:8px 0 13px;padding:9px 12px;background:#23303a;border-left:2px solid #d8aa6a;border-radius:4px;color:#cbd6df;font-size:11px}
+ #app .learning-workspace .ba-learning-active-panel {min-width:0;animation:ba-learning-pane-enter .22s ease both}
+}
+@media (min-width:960px) and (max-width:1450px) {
+ #app .learning-workspace .learning-tabs,#app .learning-workspace .learning-tabs:has(.ba-learning-nav-tile:nth-child(7)) {grid-template-columns:repeat(4,minmax(0,1fr))}
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile {min-height:96px;padding:12px}
+}
+@media (min-width:960px) and (max-width:1100px) {
+ #app .learning-workspace .learning-tabs,#app .learning-workspace .learning-tabs:has(.ba-learning-nav-tile:nth-child(7)) {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:959px) {
+ #app .learning-workspace .ba-learning-nav-number,#app .learning-workspace .ba-learning-nav-sub {display:none}
+ #app .learning-workspace .ba-learning-nav-tile strong {font-size:inherit}
+}
+@keyframes ba-learning-pane-enter {from{opacity:.38;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce) {
+ #app .learning-workspace .learning-tabs .ba-learning-nav-tile {transition:none}
+ #app .learning-workspace .ba-learning-active-panel {animation:none}
+}
