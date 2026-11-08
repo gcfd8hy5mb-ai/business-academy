@@ -191,3 +191,19 @@ test('academy progress counts required course activity and exposes its percentag
  assert.match(lesson,/class="ba-progress-overall"/);
  assert.match(css,/\.ba-hero-progress-track/);
 });
+
+test('curriculum level selector renders five compact cards and one selected panel',()=>{
+ assert.match(source,/activeCatalogLevel=1/);
+ assert.match(source,/class="ba-level-picker"/);
+ assert.match(source,/data-level-select/);
+ assert.match(source,/aria-pressed/);
+ assert.match(source,/groups\.filter\(g=>g\.level===activeCatalogLevel\)/);
+ assert.match(source,/class="ba-level-focus"/);
+ assert.match(source,/if\(b\.dataset\.levelSelect\)/);
+ assert.match(source,/scrollIntoView\(\{behavior:window\.matchMedia/);
+ assert.match(source,/class="ba-level-selected-head"/);
+ assert.match(css,/\.ba-level-tile\.is-active/);
+ assert.match(css,/@keyframes ba-level-reveal/);
+ assert.match(css,/prefers-reduced-motion:reduce/);
+ assert.match(css,/\.ba-level-selected \.curriculum-inner \.ba-course-card/);
+});
