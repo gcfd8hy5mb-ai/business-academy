@@ -29,3 +29,21 @@ This first reproducible test suite inspects the **original eight course definiti
 ## Safety / compatibility
 
 Changes in this batch are educational text and offline test files only. They do not change Firebase settings, local storage keys, existing progress, answer IDs, correct indices, or grading algorithms. Merge only after review of the draft pull request.
+
+## Batch 2 — Level 1 extended source and Level 2 integration (2026-11-08)
+
+### Expanded evidence
+
+- Loaded the first **15 Level 1 scripts in production order**, through `level1-final-v39.js`. Their resulting six courses contained **86 lessons** (13, 17, 13, 13, 16, 14), with **237 assessment questions** (35, 45, 35, 35, 40, 47). No duplicate lesson IDs or invalid answer-option indices were found in that intermediate snapshot.
+- Independently loaded the **first eight Level 2 scripts** from `level2.js` through `level2-commercial-people-v54.js`, producing all seven original Level 2 courses (07–13) with **57 lessons**, **120 examined questions**, at least three applications and three section examinations per course.
+- In that Level 2 snapshot, no duplicate lesson IDs, duplicate question IDs, or out-of-range answer indices were found.
+- Found **24 Level 2 question explanations shorter than 16 characters** in the integrated snapshot (despite mathematically correct answer keys). Expanded those explanations in `level2-accounting-v42.js`, `level2-reporting-control-v50.js`, `level2-enterprise-v51.js`, `level2-integrated-v52.js`, `level2-quantitative-v53.js`, and `level2-commercial-people-v54.js`.
+- Independently checked arithmetic and units for selected Level 2 questions on receivables, PPE, allowance balances, consolidated revenue, EBIT, residual income, contribution, weighted sales-pipeline bookings, expected savings and contract profitability.
+- New `tests/academic-level2-integration.test.cjs` passed **4 tests and 554 assertions** on this intermediate Level 2 snapshot. Earlier starter-course test suite passed **4 tests and 752 assertions**. This is **8 tests and 1,306 assertions** across the two academic suites, not a claim of full-course review.
+- The Level 2 changes are text-only improvements to rationales: no question text, identifiers, correct-answer indices, grading thresholds, required minutes or cloud persistence keys changed.
+
+### Remaining coverage limitations
+
+The production page loads many later extensions beyond this snapshot, including Level 2 versions 55–72 and 128, shared Levels 1–3 exam and calculation addenda, and Level 1–2 long-form teaching depth version 137. A full integrated runtime inventory must load these in production order alongside all dependencies before making any curriculum-completion claim. The present test suites verify selected authored material and catch structural defects; they do not independently validate every numerical result or factual claim.
+
+Continue with full extension loading, cross-file duplicate detection, advanced-case numerical checking, source-citation verification and independent subject-matter review. These are still open.
