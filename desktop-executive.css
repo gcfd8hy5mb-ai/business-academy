@@ -1160,3 +1160,21 @@
 @media(prefers-reduced-motion:reduce) {
  #app .ba-simulator .ba-sim-shortcuts button {transition:none}
 }
+
+/* Phase 23 — stop course navigation tiles floating over written assignments.
+   desktop.css makes .learning-tabs sticky; this is unsuitable for multi-row cards. */
+@media (min-width:960px) {
+ #app .learning-workspace .learning-tabs {
+   position:relative!important;
+   top:auto!important;
+   z-index:auto!important;
+   margin-top:13px;
+   margin-bottom:15px;
+   background:transparent!important;
+   border-bottom:0!important;
+ }
+ #app .learning-workspace .ba-learning-active-panel {
+   position:relative;
+   z-index:auto;
+ }
+}
