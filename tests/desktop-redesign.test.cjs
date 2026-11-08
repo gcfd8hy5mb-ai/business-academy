@@ -259,3 +259,13 @@ test('desktop style cascade keeps approved design and prevents sticky lesson nav
  assert.match(css,/background:#1c2731!important;color:#f3f5f5!important/);
  assert.match(css,/\.learning-rubric select/);
 });
+
+test('compact desktop hero retains CTA and completion display',()=>{
+ assert.match(source,/class="ba-portal-hero"/);
+ assert.match(source,/Continue Learning/);
+ assert.match(source,/class="ba-hero-progress"/);
+ assert.match(source,/aria-label="Overall Academy completion"/);
+ assert.match(css,/Phase 24 — compact Continue Learning hero/);
+ assert.match(css,/\.ba-executive-portal \.ba-portal-hero \{min-height:278px\}/);
+ assert.match(css,/\.ba-executive-portal \.ba-portal-hero \{min-height:270px\}/);
+});
