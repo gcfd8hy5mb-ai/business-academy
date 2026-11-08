@@ -219,3 +219,24 @@ test('course workspace uses quick navigation tiles while preserving existing cou
  assert.match(css,/@keyframes ba-learning-pane-enter/);
  assert.match(css,/prefers-reduced-motion:reduce/);
 });
+
+test('written coursework uses readable dark controls and structured self-review',()=>{
+ assert.match(css,/\.learning-workspace textarea,/);
+ assert.match(css,/background:#1c2731!important;color:#f3f5f5!important/);
+ assert.match(css,/\.learning-rubric select/);
+ assert.match(css,/color-scheme:dark/);
+ assert.match(css,/\.learning-rubric:focus-within/);
+ assert.match(lesson,/data-learn-review/);
+ assert.match(lesson,/data-learn-draft/);
+});
+test('simulator section shortcuts navigate the existing dashboard without altering decisions',()=>{
+ assert.match(source,/class="ba-sim-shortcuts"/);
+ assert.match(source,/data-sim-jump="ba-sim-overview"/);
+ assert.match(source,/data-sim-jump="ba-sim-performance"/);
+ assert.match(source,/data-sim-jump="ba-sim-decisions"/);
+ assert.match(source,/data-sim-jump="ba-sim-history"/);
+ assert.match(source,/if\(b\.dataset\.simJump\)/);
+ assert.match(source,/scrollIntoView\(\{behavior:window\.matchMedia/);
+ assert.match(source,/data-apply="1"/);
+ assert.match(css,/\.ba-sim-shortcuts/);
+});
