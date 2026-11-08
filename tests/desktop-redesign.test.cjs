@@ -44,3 +44,18 @@ test('mobile lesson rails are hidden, desktop layout is responsive',()=>{
   assert.match(css,/\.ba-simulator-metrics/);
   assert.match(css,/@media\s*\(min-width:1200px\)\s*and\s*\(max-width:1399px\)/);
 });
+
+test('new executive portal is a distinct desktop page with functional routing',()=>{
+  assert.match(source,/function desktopExecutiveHome\(pct\)/);
+  assert.match(source,/desktopExecutiveHome\(pct\)/);
+  assert.match(source,/class="academy-home ba-mobile-home"/);
+  for(const label of ['Executive Dashboard','Current Studies','Explore Your Learning Path','Corporate Decision Lab','Academy at a Glance']){
+    assert.ok(source.includes(label),label);
+  }
+  assert.match(source,/class="ba-executive-portal"/);
+  assert.match(source,/class="ba-current-course" data-go="courses"/);
+  assert.match(source,/class="ba-corporate-feature"/);
+  assert.match(source,/data-go="company"/);
+  assert.match(css,/\.academy-home\.ba-mobile-home\s*\{display:none!important\}/);
+  assert.match(css,/@media \(max-width:959px\)/);
+});
