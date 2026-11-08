@@ -269,3 +269,52 @@ test('compact desktop hero retains CTA and completion display',()=>{
  assert.match(css,/\.ba-executive-portal \.ba-portal-hero \{min-height:278px\}/);
  assert.match(css,/\.ba-executive-portal \.ba-portal-hero \{min-height:270px\}/);
 });
+
+/* Executable acceptance checks for the real learning model, not only markup. */
+const L=require('../learning/core-v110.js');
+function sampleCourse(){
+ const question={id:'q1',prompt:'Choose the correct answer',options:['Correct','Wrong'],correct:0};
+ return {id:'course-acceptance',modules:[{lessons:[{id:'lesson-1',minutes:20}]}],
+ practice:{minutes:10,questions:[question]},exam:{minutes:20,questions:[question],rubric:['Evidence','Reasoning']},
+ portfolio:{minutes:20,rubric:['Practical recommendation']}};
+}
+test('learning model safely loads local saved progress and rejects malformed records',()=>{
+ const empty=L.load({getItem:()=>null});
+ assert.equal(empty.schema,1);
+ assert.equal(Object.keys(empty.courses).length,0);
+ const saved={schema:1,courses:{'course-acceptance':{lessons:['lesson-1'],answers:{},attempts:[],drafts:{},reviews:{}}}};
+ assert.equal(L.load({getItem:()=>JSON.stringify(saved)}).courses['course-acceptance'].lessons[0],'lesson-1');
+ assert.equal(Object.keys(L.load({getItem:()=>'{broken'}).courses).length,0);
+});
+test('real exam grading retains submitted evidence and does not overwrite earlier attempts',()=>{
+ const course=sampleCourse(),store=L.empty(),st=L.state(store,course.id);
+ assert.equal(L.grade(store,course,'exam'),false);
+ st.answers.exam.q1=0;
+ const first=L.grade(store,course,'exam');
+ assert.equal(first.score,100);
+ assert.equal(first.assessmentSnapshot.questionCount,1);
+ assert.match(first.assessmentSnapshot.keyFingerprint,/^fnv1a32-/);
+ st.answers.exam.q1=1;
+ const second=L.grade(store,course,'exam');
+ assert.equal(second.score,0);
+ assert.equal(st.attempts.length,2);
+ assert.equal(first.answers.q1,0);
+ assert.equal(L.latest(st,'exam').score,0);
+});
+test('mastery requires lessons, passing exams and completed self-reviewed written evidence',()=>{
+ const course=sampleCourse(),store=L.empty(),st=L.state(store,course.id);
+ assert.equal(L.mastery(store,course).mastered,false);
+ st.lessons=['lesson-1'];
+ st.answers.practice={q1:0};
+ st.answers.exam={q1:0};
+ L.grade(store,course,'practice');
+ L.grade(store,course,'exam');
+ assert.equal(L.mastery(store,course).mastered,false);
+ st.drafts.exam='Financial evidence and evaluation';
+ st.reviews.exam={0:3,1:4};
+ assert.equal(L.mastery(store,course).mastered,false);
+ st.drafts.portfolio='Recommendation with clear assumptions';
+ st.reviews.portfolio={0:3};
+ assert.equal(L.mastery(store,course).mastered,true);
+ assert.equal(L.reviewed(st,'portfolio',course.portfolio.rubric),true);
+});
