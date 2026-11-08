@@ -117,3 +117,16 @@ test('course catalog renders executive cards with real authored status and exist
  assert.match(css,/\.ba-course-card/);
  assert.match(css,/@media \(max-width:959px\)/);
 });
+
+test('study notes use the existing learning-draft persistence path',()=>{
+ assert.match(lesson,/noteKey='study-note:'\+selected\.id/);
+ assert.match(lesson,/data-learn-draft/);
+ assert.match(lesson,/s\.drafts\?\.\[noteKey\]/);
+ assert.match(lesson,/s\.drafts\[key\]=el\.value;persist\(\)/);
+ assert.match(lesson,/ba-mobile-study-tools/);
+ assert.match(lesson,/ba-classroom-tools/);
+ assert.match(lesson,/noteField\.replace\('for="ba-note-'/);
+ assert.match(css,/\.ba-course-breadcrumb/);
+ assert.match(css,/\.learning-question/);
+ assert.match(css,/@media \(min-width:1500px\)/);
+});
