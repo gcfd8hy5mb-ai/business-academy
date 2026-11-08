@@ -674,3 +674,48 @@
 @media(max-width:959px) {
  #app .ba-simulator .ba-sim-analytics {display:none}
 }
+
+/* Phase 11 — university catalog: sophisticated two-column academic cards.
+   Retains real curriculum, real completion states, and mobile flow. */
+@media (min-width:960px) {
+ #app .ba-catalog-page .subpage-title {margin-bottom:18px;padding-bottom:16px}
+ #app .ba-catalog-page .subpage-title h1 {font-size:clamp(33px,3vw,44px);margin:5px 0 9px}
+ #app .ba-catalog-page .subpage-title p {max-width:68ch;font-size:14px;line-height:1.5}
+ #app .ba-catalog-page .university-notice {padding:14px 19px;margin:12px 0 18px;background:#232d37;border:1px solid #526171;border-left:3px solid #d8aa65}
+ #app .ba-catalog-page .university-notice b {font-size:18px}
+ #app .ba-catalog-page .university-notice p {font-size:12px;line-height:1.6;margin:6px 0 0}
+ #app .ba-catalog-page>.curriculum-optional {background:#202832;border:1px solid #475968}
+ #app .ba-catalog-page>.curriculum-optional>summary {background:#26313d;color:#e9d0a7}
+ #app .ba-catalog-page .curriculum-level-card>summary {background:linear-gradient(105deg,#293540,#1c2630);border-bottom:1px solid #455666}
+ #app .ba-catalog-page .curriculum-level-card>summary:hover {background:linear-gradient(105deg,#354454,#232e38)}
+ #app .ba-catalog-page .curriculum-level-card>summary strong {font-size:clamp(20px,2vw,26px)}
+ #app .ba-catalog-page .curriculum-level-card>.curriculum-level-body {background:#1e2731}
+ #app .ba-catalog-page .curriculum-level-body>p {margin:0 0 12px;color:#d0dae2}
+ #app .ba-catalog-page .curriculum-level-body>.curriculum-inner {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:13px;row-gap:13px;align-items:stretch;margin:18px 0}
+ #app .ba-catalog-page .curriculum-level-body>.curriculum-inner>h3 {grid-column:1/-1;position:relative;padding:0 0 11px;margin:0 0 1px;font:normal 22px Georgia,serif;letter-spacing:0;color:#f7eadd;border-bottom:1px solid #445563}
+ #app .ba-catalog-page .curriculum-inner .ba-course-card {display:grid;grid-template-columns:88px minmax(0,1fr) 13px;align-items:stretch;gap:0;min-height:146px;width:100%;padding:0;margin:0;overflow:hidden;border:1px solid #4e5d6c;border-radius:11px;background:linear-gradient(145deg,#2b3743,#202b35);color:#edf1f3;text-align:left;box-shadow:0 10px 24px #0a10172f;transition:transform .15s,border-color .15s,background-color .15s}
+ #app .ba-catalog-page .curriculum-inner .ba-course-card:hover {background:linear-gradient(145deg,#364553,#26333f);border-color:#e4b674;transform:translateY(-2px)}
+ #app .ba-catalog-page .curriculum-inner .ba-course-card:focus-visible {outline:3px solid #f1c883;outline-offset:3px}
+ #app .ba-catalog-page .ba-course-card .ba-course-art {display:flex;align-items:center;justify-content:center;position:relative;min-height:146px;overflow:hidden;border-right:1px solid #586777;background:linear-gradient(150deg,rgba(13,20,27,.12),rgba(13,20,27,.8)),url('./assets/academy-columns.svg') 42% center/auto 100% no-repeat}
+ #app .ba-catalog-page .ba-course-card:nth-of-type(3n+2) .ba-course-art {background:linear-gradient(145deg,rgba(23,34,43,.06),rgba(16,26,36,.84)),url('./assets/academy-art.svg') center/cover no-repeat}
+ #app .ba-catalog-page .ba-course-card:nth-of-type(3n+3) .ba-course-art {background:linear-gradient(140deg,#3b4b5a,#192631)}
+ #app .ba-catalog-page .ba-course-card .course-number {font:normal 33px Georgia,serif;color:#f3d6a7;min-width:0;text-shadow:0 2px 9px #081018}
+ #app .ba-catalog-page .ba-course-card .course-copy {display:flex;flex-direction:column;justify-content:center;min-width:0;gap:6px;padding:15px 13px}
+ #app .ba-catalog-page .ba-course-card .ba-course-status {font-size:8.5px;line-height:1.3;letter-spacing:.09em;font-weight:750;color:#e9bf82}
+ #app .ba-catalog-page .ba-course-card .course-copy b {font:normal clamp(16px,1.5vw,21px)/1.26 Georgia,serif;color:#fff0dc;margin:0}
+ #app .ba-catalog-page .ba-course-card .course-copy small {font-size:11px;line-height:1.45;color:#c8d4dd}
+ #app .ba-catalog-page .ba-course-card .ba-course-open {display:flex;gap:9px;align-items:center;margin-top:5px;font-size:10px;font-weight:650;color:#f0ca90}
+ #app .ba-catalog-page .ba-course-card .ba-course-open>span {font-size:15px}
+ #app .ba-catalog-page .ba-course-card .course-arrow {display:none}
+ #app .ba-catalog-page .curriculum-optional>summary {border-color:#526070}
+ #app .ba-catalog-page .curriculum-group.curriculum-level-card {background:#212b35;border-color:#4d5d6b}
+}
+@media (min-width:960px) and (max-width:1179px) {
+ #app .ba-catalog-page .curriculum-level-body>.curriculum-inner {grid-template-columns:1fr;gap:10px}
+ #app .ba-catalog-page .curriculum-inner .ba-course-card {grid-template-columns:82px minmax(0,1fr) 11px;min-height:115px}
+ #app .ba-catalog-page .ba-course-card .ba-course-art {min-height:115px}
+}
+@media (max-width:959px) {
+ #app .ba-course-status,#app .ba-course-open {display:none}
+ #app .ba-course-art {display:contents}
+}
