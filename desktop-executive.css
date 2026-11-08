@@ -719,3 +719,12 @@
  #app .ba-course-status,#app .ba-course-open {display:none}
  #app .ba-course-art {display:contents}
 }
+
+/* Phase 12 — minimal curriculum overview, following approved clean layout. */
+@media (min-width:960px) {
+ #app .ba-catalog-page .subpage-title {margin:0 0 14px;padding:0 0 13px}
+ #app .ba-catalog-page .subpage-title p {margin:7px 0 0}
+ #app .ba-catalog-page>.curriculum-group.curriculum-level-card:first-of-type {margin-top:0}
+ #app .ba-catalog-page>.curriculum-group.curriculum-level-card {margin:10px 0 14px}
+ #app .ba-catalog-page .curriculum-level-card>summary {min-height:69px;padding:14px 20px}
+}
