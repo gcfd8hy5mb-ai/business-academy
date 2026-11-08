@@ -37,11 +37,11 @@
 'Base PV≈6.461m; discount-only PV≈5.466m below BATNA5.8m. Conditional bonus .5×.8=.4m/year restores annual contribution3.0m and PV≈6.461m. Reliability program bonus gain .075m/year vs cost .3m/year.',
 'Set bonus probability .5 and onboarding1.4m; compute package PV and compare BATNA, then add a nonprice concession with a measurable cost.'],
 ],q:[
-['Revenue100, variable65, fixed20. EBIT?', ['35','15','−1','20'],1,'100−65−20=15.','concentration'],
-['Apex contribution16; lost with fixed costs unchanged. EBIT after loss?', ['−1','16','1','15'],0,'15−16=−1.','concentration'],
+['Revenue100, variable65, fixed20. EBIT?', ['35','15','−1','20'],1,'Subtract variable cost 65 and fixed operating cost 20 from revenue of 100 to obtain simplified EBIT of 15.','concentration'],
+['Apex contribution16; lost with fixed costs unchanged. EBIT after loss?', ['−1','16','1','15'],0,'With fixed costs unchanged, subtract the lost product contribution of 16 from baseline EBIT of 15. The result is a loss of 1, not a saving of shared overhead.','concentration'],
 ['Renewal .75 gives EBIT15; if lost, replacement .5 gives EBIT6 else−1. Expected EBIT?', ['15','6','11.875','9'],2,'.75×15+.25×(.5×6+.5×−1)=11.875.','concentration'],
 ['Three year-end contributions2.6, 10% annuity factor2.48685, onboarding1. PV?', ['6.461','5.8','7.8','≈5.466'],3,'2.6×2.48685−1≈5.466, below BATNA5.8.','terms'],
-['Bonus .5/year at .8 probability. Expected annual bonus?', ['.4','.5','.3','.8'],0,'.5×.8=.4.','terms'] ],reading:{title:'Microsoft fiscal 2026 Form 10-K, risk factors and segment reporting',url:'https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm',task:'Read disclosed customer concentration and segment information. Compare reporting threshold language to the explicitly fictional Vela 40% exposure; do not attribute Vela numbers to Microsoft.',minutes:90}},
+['Bonus .5/year at .8 probability. Expected annual bonus?', ['.4','.5','.3','.8'],0,'Multiply the possible annual bonus of 0.5 by the 80% probability of earning it. Expected bonus is 0.4 in the same units.','terms'] ],reading:{title:'Microsoft fiscal 2026 Form 10-K, risk factors and segment reporting',url:'https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm',task:'Read disclosed customer concentration and segment information. Compare reporting threshold language to the explicitly fictional Vela 40% exposure; do not attribute Vela numbers to Microsoft.',minutes:90}},
 {n:'12',title:'Executive pay, succession and restructuring evidence',lessons:[
 ['succession','Succession risk and organizational capacity',[
 'Succession planning identifies critical roles, ready-now coverage, development pathways and correlated departures. A nominal replacement chart is insufficient if one executive is listed for multiple critical roles or the same event removes several candidates. Assess decision rights and continuity of internal controls alongside cash cost.',
