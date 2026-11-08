@@ -33,3 +33,35 @@
 @media (min-width: 1600px){#app{margin-left:max(256px,calc((100vw - 1550px)/2 + 232px));width:min(calc(100% - 300px),1250px)}}
 
 @media(min-width:960px){nav button .ui-icon,nav button svg{width:23px;height:23px;flex:0 0 23px}nav button span{font-size:15px}#app .quick-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Phase 2 — spacious reading / assessment workspace */
+@media(min-width:960px){
+  #app .academy-subpage{max-width:1160px;margin:0 auto}
+  #app .subpage-title{margin:0 0 24px;padding:5px 0 18px;border-bottom:1px solid #62554a}
+  #app .subpage-title p{font-size:15px;color:#c5b8ac;line-height:1.6}
+  #app .learning-workspace .learning-tabs{position:sticky;top:0;z-index:4;display:flex;flex-wrap:wrap;gap:8px;padding:14px 0;background:#202020;border-bottom:1px solid #594d42;overflow-x:visible}
+  #app .learning-workspace .learning-tabs button{flex:0 0 auto!important;min-width:100px;font-size:14px!important;padding:12px 17px!important;border-radius:10px}
+  #app .learning-flow-hint{font-size:14px;line-height:1.7;color:#d2c6b8;max-width:90ch}
+  #app .learning-single{padding:36px 44px;border-radius:18px;max-width:1050px}
+  #app .learning-single h2{font:normal 31px/1.25 Georgia,serif;margin:18px 0 22px;color:#231d18}
+  #app .learning-single>p{max-width:80ch;font-size:17px;line-height:1.85}
+  #app .learning-single details{max-width:85ch;padding:18px;border-radius:12px;margin:22px 0}
+  #app .single-lesson-head{font-size:14px}
+  #app .single-lesson-progress{height:8px;margin:18px 0 30px}
+  #app .single-lesson-check{margin:28px 0 8px;padding:18px 20px;border:1px solid #b89d79;border-radius:12px;font-size:15px}
+  #app .single-lesson-check input{width:19px;height:19px;accent-color:#a7793f}
+  #app .single-lesson-nav{gap:18px;max-width:680px;margin:24px auto}
+  #app .single-lesson-nav button{min-height:50px;font-size:15px}
+  #app .learning-workspace .unit-panel{padding:30px 36px;margin:20px 0}
+  #app .learning-workspace textarea,#app .unit-panel textarea{width:100%;min-height:220px;font-size:16px;line-height:1.75}
+  #app .learning-workspace input[type="text"],#app .learning-workspace input[type="number"]{min-height:46px;font-size:16px}
+  #app .learning-workspace .answer-choice,#app .learning-workspace .unit-choice{min-height:54px;font-size:15px;line-height:1.5}
+  #app .learning-workspace .learning-tutor{padding:22px}
+  #app .learning-workspace .learning-tutor>summary{font-size:17px}
+  #app button:focus-visible,#app a:focus-visible,#app input:focus-visible,#app textarea:focus-visible{outline:3px solid #deb67a;outline-offset:3px}
+}
+@media(min-width:960px) and (max-width:1199px){
+ #app .learning-single{padding:26px}
+ #app .learning-workspace .learning-tabs button{min-width:0}
+}
