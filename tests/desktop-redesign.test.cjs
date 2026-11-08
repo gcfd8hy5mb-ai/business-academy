@@ -85,3 +85,13 @@ test('secondary desktop pages have executive layouts without changing existing a
  assert.match(css,/\.ba-case-grid/);
  assert.match(css,/\.ba-record-layout/);
 });
+
+test('approved desktop layout uses slim navigation and a reader-first laptop layout',()=>{
+ assert.match(css,/nav\s*\{width:176px/);
+ assert.match(css,/#app\s*\{width:calc\(100% - 176px\)/);
+ assert.match(css,/@media\(min-width:1200px\) and \(max-width:1499px\)/);
+ assert.match(css,/\.ba-desktop-classroom\s*\{display:grid;grid-template-columns:180px minmax\(0,1fr\)/);
+ assert.match(css,/\.ba-classroom-tools\s*\{display:none\}/);
+ assert.match(css,/\.learning-flow-hint\s*\{display:none\}/);
+ assert.match(css,/@media\(min-width:1500px\)/);
+});
