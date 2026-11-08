@@ -798,3 +798,60 @@
   }
   #app .ba-catalog-page .curriculum-plan-item .plan-disclaimer {color:#adb8c2}
 }
+
+/* Phase 14 — approved academic classroom with real lesson-specific saved notes.
+   Wide screens: independent right rail. Laptops: collapsible notes under the lesson.
+   Preserves existing progress and assessment controls. */
+@media (min-width:960px) {
+ #app .ba-course-breadcrumb {margin:1px 0 10px;padding:0 0 11px;border-bottom:1px solid #43525f;color:#cbd6df;font-size:12px;line-height:1.55}
+ #app .ba-course-breadcrumb span {color:#e8b66e;padding:0 8px}
+ #app .ba-course-progress-line {height:5px;margin:13px 0 7px;background:#465360;border-radius:10px;overflow:hidden}
+ #app .ba-course-progress-line span {display:block;height:100%;background:linear-gradient(90deg,#d69c4f,#f5cc87);border-radius:10px}
+ #app .ba-classroom-outline .ba-rail-heading small {font-size:10px;line-height:1.5;color:#c6d0d8}
+ #app .ba-classroom-reader .learning-single .single-lesson-head {padding-bottom:7px;color:#cbd5dc}
+ #app .ba-classroom-reader .learning-single h2 {margin:16px 0 12px;color:#fff0db;letter-spacing:-.02em}
+ #app .ba-classroom-reader .learning-single>p {line-height:1.78;color:#e5eaed}
+ #app .ba-classroom-reader .learning-single .single-lesson-nav {margin:22px 0 9px;padding-top:13px;border-top:1px solid #4f5c68}
+ #app .ba-classroom-reader .learning-single .single-lesson-check {padding:12px 14px;border:1px solid #62717e;border-radius:8px;background:#283440}
+ #app .ba-classroom-reader .learning-single details {background:#28333e;border-color:#536473}
+ #app .ba-classroom-reader .learning-single details summary {font-weight:650;color:#f0c685}
+ #app .ba-tool-card .ba-note-label,#app .ba-mobile-study-tools .ba-note-label {display:block;margin:8px 0 8px;color:#ead9bf;font-size:12px;font-weight:650}
+ #app .ba-tool-card textarea[data-learn-draft^="study-note:"],
+ #app .ba-mobile-study-tools textarea[data-learn-draft^="study-note:"] {
+    width:100%;min-height:110px;resize:vertical;background:#19232c;color:#f1f4f6;
+    border:1px solid #657585;border-radius:8px;padding:12px;font:13px/1.65 inherit;box-sizing:border-box;
+ }
+ #app .ba-tool-card textarea:focus,#app .ba-mobile-study-tools textarea:focus {outline:2px solid #f0c47e;outline-offset:2px}
+ #app .ba-note-help {display:block;margin-top:8px;font-size:10px;line-height:1.5;color:#afbdc7}
+ #app .ba-study-links {display:grid;grid-template-columns:1fr;gap:7px;margin-top:12px}
+ #app .ba-study-links button {min-height:38px;margin:0;padding:9px 10px;background:#303e4b;border:1px solid #596c7b;border-radius:7px;color:#f0e4d3;text-align:left;font-size:12px}
+ #app .ba-study-links button:hover {background:#3e4b58;border-color:#efbc72}
+ #app .ba-mobile-study-tools {margin:14px 0;background:#222d37;border:1px solid #4e6070;border-radius:9px}
+ #app .ba-mobile-study-tools>summary {padding:13px 16px;color:#f0ce97;cursor:pointer;font-size:13px;font-weight:700}
+ #app .ba-mobile-study-tools .ba-note-mobile {padding:1px 16px 10px}
+ #app .ba-mobile-study-tools .ba-study-links {padding:0 16px 16px;margin:0;grid-template-columns:repeat(2,minmax(0,1fr))}
+ /* Exam pages should read as a university assessment rather than a stack of app controls. */
+ #app .learning-workspace .learning-question {background:#202b35;border:1px solid #506474;border-radius:11px;padding:21px 23px;margin:15px 0}
+ #app .learning-workspace .learning-question legend {color:#f3e5d2;font:normal 18px/1.45 Georgia,serif;padding:0 8px}
+ #app .learning-workspace .learning-question label {display:block;margin:8px 0;padding:12px 13px;border:1px solid #566976;border-radius:8px;background:#2c3944;color:#eaf0f2;line-height:1.5;cursor:pointer}
+ #app .learning-workspace .learning-question label:hover {border-color:#e0b36e;background:#33424f}
+ #app .learning-workspace .learning-question label:has(input:checked) {border-color:#ecbc72;background:#41443e;color:#fff2dd}
+ #app .learning-workspace .learning-question input[type=radio] {accent-color:#e8b66e;margin-right:8px}
+}
+@media (min-width:960px) and (max-width:1499px) {
+ #app .ba-classroom-reader .ba-mobile-study-tools {display:block}
+ #app .ba-classroom-tools {display:none}
+}
+@media (min-width:1500px) {
+ #app .ba-classroom-reader .ba-mobile-study-tools {display:none}
+ #app .ba-classroom-tools {display:flex}
+ #app .ba-classroom-tools .ba-tool-card {background:#222d37;border-color:#53616e;border-radius:10px}
+ #app .ba-classroom-tools .ba-tool-card h2 {font-size:19px;color:#f2e5d3}
+}
+@media (max-width:959px) {
+ #app .ba-mobile-study-tools {margin:14px 0;padding:5px 12px;border:1px solid #665641;border-radius:10px}
+ #app .ba-mobile-study-tools summary {padding:11px 0;color:#eed1a2;font-weight:700}
+ #app .ba-mobile-study-tools textarea {display:block;width:100%;min-height:100px;padding:10px;box-sizing:border-box;background:#222;color:#eee;border:1px solid #776650;border-radius:8px}
+ #app .ba-mobile-study-tools .ba-study-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px 0}
+ #app .ba-mobile-study-tools .ba-study-links button {min-height:40px;border-radius:7px}
+}
