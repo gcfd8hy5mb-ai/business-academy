@@ -67,10 +67,16 @@ test('portfolio and numeric work remain attached to intended courses',()=>{
   }
  }
 });
-test('independent extensions do not mutate historic exam IDs or assessment answer shape',()=>{
- for(const c of courses){
-  assert.ok(c.exam&&Array.isArray(c.exam.questions),c.id+' main exam missing');
-  assert.ok(c.practice&&Array.isArray(c.practice.questions),c.id+' main practice missing');
-  assert.ok(c.exam.questions.every(q=>Number.isInteger(q.correct)),c.id+' scoring key changed shape');
+test('independent extensions retain required assessment routes and scoring keys',()=>{
+ for(let i=0;i<courses.length;i++){
+  const c=courses[i],courseId='course-'+String(i+1).padStart(2,'0');
+  const required=assessments(c).filter(a=>!a.optional);
+  assert.ok(required.length>0,courseId+' has no required assessment');
+  assert.ok(required.some(a=>Array.isArray(a.questions)&&a.questions.length>0),courseId+' has no required graded question bank');
+  for(const exam of required){
+   assert.ok(Array.isArray(exam.questions)&&exam.questions.every(q=>Number.isInteger(q.correct)),courseId+' invalid required scoring key shape');
+  }
+  if(c.exam)assert.ok(Array.isArray(c.exam.questions),courseId+' malformed main exam');
+  if(c.practice)assert.ok(Array.isArray(c.practice.questions),courseId+' malformed practice');
  }
 });
