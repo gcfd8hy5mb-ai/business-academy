@@ -575,3 +575,39 @@
  #app .ba-simulator .ba-decision-panel .item.active {background:#55462f;border-color:#e9b866}
  #app .ba-simulator .ba-history-panel p {border-bottom-color:#505f6c;color:#dce3e8}
 }
+
+/* Phase 9 — honor approved home structure while removing sepia / brown surfaces. 
+   Use charcoal + dark slate as surfaces; gold is an accent, never the base fill. */
+@media (min-width:960px) {
+ #app .ba-executive-portal {color:#f5f0e8}
+ #app .ba-executive-portal .ba-portal-hero {background:#1b2229;border-color:#687480;box-shadow:0 18px 36px rgba(0,0,0,.2)}
+ #app .ba-executive-portal .ba-hero-art {
+    background:linear-gradient(90deg,#171e25 0%,rgba(23,30,37,.96) 27%,rgba(23,30,37,.72) 58%,rgba(20,26,32,.19) 100%),url("./assets/academy-columns.svg") 100% 45%/auto 140% no-repeat;
+    background-color:#252e37;
+ }
+ #app .ba-executive-portal .ba-portal-hero:before {background:#edbd70}
+ #app .ba-executive-portal .ba-portal-outline {border-color:#606e7c;background:#27313b;color:#f3cc88}
+ #app .ba-executive-portal .ba-portal-section-title {border-color:#4b5662}
+ #app .ba-executive-portal .ba-current-course {background:#28323c;border-color:#52616e;color:#f4eee8}
+ #app .ba-executive-portal .ba-current-course:hover {background:#323e49;border-color:#ebba70}
+ #app .ba-executive-portal .ba-current-art {border-color:#556471}
+ #app .ba-executive-portal .ba-chip {background:#3b4350;border-color:#786849;color:#f4ce92}
+ #app .ba-executive-portal .ba-current-meter {background:#48535c}
+ #app .ba-executive-portal .ba-current-subtitle,
+ #app .ba-executive-portal .ba-current-foot {color:#cbd5dc}
+ #app .ba-executive-portal .ba-pathway {background:linear-gradient(145deg,#2c3640,#222a33);border-color:#515f6c}
+ #app .ba-executive-portal .ba-pathway:hover {background:#35414e;border-color:#ecb96a}
+ #app .ba-executive-portal .ba-pathway-top b {color:#9eacb9}
+ #app .ba-executive-portal .ba-pathway-desc {color:#cbd5dc}
+ #app .ba-executive-portal .ba-pathway-bottom {border-color:#505e6a}
+ #app .ba-executive-portal .ba-corporate-feature {background:linear-gradient(110deg,#2c3640,#202830);border-color:#626f79}
+ #app .ba-executive-portal .ba-corporate-feature:hover {border-color:#edbf7a}
+ #app .ba-executive-portal .ba-corporate-emblem {background:#38434c;border-color:#ad8752}
+ #app .ba-executive-portal .ba-corporate-feature small {color:#d2dce1}
+ #app .ba-executive-portal .ba-aside-card {background:#26313a;border-color:#535f69}
+ #app .ba-executive-portal .ba-snapshot-grid>div {background:#1f272e;border-color:#4d5b65}
+ #app .ba-executive-portal .ba-snapshot-grid span,
+ #app .ba-executive-portal .ba-academic-snapshot>p {color:#cbd4db}
+ #app .ba-executive-portal .ba-aside-actions button {border-bottom-color:#4b5965;color:#ebf0f2}
+ #app .ba-executive-portal .ba-aside-quote {background:radial-gradient(ellipse at 90% 10%,rgba(212,164,94,.12),transparent 65%),#222b34;border-color:#6d675d}
+}
