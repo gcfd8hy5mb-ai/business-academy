@@ -855,3 +855,48 @@
  #app .ba-mobile-study-tools .ba-study-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:10px 0}
  #app .ba-mobile-study-tools .ba-study-links button {min-height:40px;border-radius:7px}
 }
+
+/* Phase 15: university exam interface + explicit simulator decision analysis.
+   Neutral charcoal/slate; gold reserved for selected states and progress. */
+@media (min-width:960px) {
+ #app .learning-workspace:has(.ba-exam-status) {max-width:1320px}
+ #app .learning-workspace .ba-exam-status {margin:0 0 19px;padding:20px 22px;border-radius:11px;background:linear-gradient(120deg,#273440,#202a34);border:1px solid #566775;border-left:3px solid #e7b96f}
+ #app .learning-workspace .ba-exam-status-head {display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:12px}
+ #app .learning-workspace .ba-exam-status-head strong {color:#fff0da;font:normal 20px Georgia,serif}
+ #app .learning-workspace .ba-exam-meter {height:7px;border-radius:8px;background:#46535f;overflow:hidden}
+ #app .learning-workspace .ba-exam-meter span {display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,#c68f46,#f0c984)}
+ #app .learning-workspace .ba-exam-status-meta {display:flex;flex-wrap:wrap;gap:9px 22px;margin-top:12px;color:#cdd7dc;font-size:11px}
+ #app .learning-workspace .learning-assessment-fold {background:#1f2933;border:1px solid #526372;border-radius:11px;overflow:hidden;margin:14px 0}
+ #app .learning-workspace .learning-assessment-fold>summary {padding:17px 22px;font:normal 20px Georgia,serif;color:#f0e4d0;background:#293440}
+ #app .learning-workspace .learning-assessment-fold[open]>summary {border-bottom:1px solid #50616e}
+ #app .learning-workspace .learning-assessment-fold>.unit-panel {border:0;border-radius:0;margin:0;padding:20px}
+ #app .ba-simulator .ba-decision-impact {margin:16px 0 8px;border-radius:10px;padding:18px 20px;background:#202b35;border:1px solid #536779}
+ #app .ba-simulator .ba-decision-impact .ba-sim-panel-head {margin-bottom:12px}
+ #app .ba-simulator .ba-decision-impact h3 {font:normal 20px Georgia,serif;color:#f1e4d0;margin:4px 0 0}
+ #app .ba-simulator .ba-decision-impact .ba-impact-choice {font-size:15px;font-weight:650;color:#f0ce96}
+ #app .ba-simulator .ba-impact-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+ #app .ba-simulator .ba-impact-grid div {padding:13px 12px;background:#2d3944;border:1px solid #556978;border-radius:8px;min-width:0}
+ #app .ba-simulator .ba-impact-grid span {display:block;font-size:10px;line-height:1.4;color:#ced8de}
+ #app .ba-simulator .ba-impact-grid strong {display:block;margin-top:6px;color:#f6e7cf;font-size:17px;overflow-wrap:anywhere}
+ #app .ba-simulator .ba-decision-impact small {color:#b7c6d0;font-size:11px;line-height:1.5}
+ #app .ba-simulator .ba-decision-empty p {font-size:13px;color:#c9d5dd}
+ #app .ba-simulator .ba-history-panel p {display:flex;flex-direction:column;gap:5px;margin:0;padding:13px 0}
+ #app .ba-simulator .ba-history-panel p b {color:#f0c88b}
+ #app .ba-simulator .ba-history-panel p small {display:block;color:#c9d4dc;font-size:11px}
+ #app .ba-simulator .ba-history-panel p strong {font-size:15px;color:#fff0d8}
+}
+@media (min-width:960px) and (max-width:1199px) {
+ #app .ba-simulator .ba-impact-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:959px) {
+ #app .learning-workspace .ba-exam-status {margin:0 0 14px;padding:13px;border:1px solid #716049;border-radius:9px;background:#282a2b}
+ #app .learning-workspace .ba-exam-status-head {display:flex;justify-content:space-between;gap:10px}
+ #app .learning-workspace .ba-exam-meter {height:6px;background:#4a4b4d;border-radius:6px;overflow:hidden;margin:10px 0}
+ #app .learning-workspace .ba-exam-meter span {display:block;height:100%;background:#e9b86d}
+ #app .learning-workspace .ba-exam-status-meta {display:flex;flex-wrap:wrap;gap:8px;font-size:11px}
+ #app .ba-simulator .ba-decision-impact {padding:14px;border:1px solid #685744;border-radius:9px}
+ #app .ba-simulator .ba-impact-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ #app .ba-simulator .ba-impact-grid div {padding:9px 6px;background:#292929;border-radius:7px}
+ #app .ba-simulator .ba-impact-grid span {display:block;font-size:10px}
+ #app .ba-simulator .ba-impact-grid strong {display:block;font-size:14px}
+}
