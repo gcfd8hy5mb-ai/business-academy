@@ -72,7 +72,8 @@ test('weekly simulator rotates scenarios rather than repeating the week-one ques
  assert.ok(scenarios.every(x=>x.options.every(o=>Number.isFinite(o.cost)&&Number.isFinite(o.customers)&&Number.isFinite(o.reputation))));
  assert.match(source,/function currentSimulatorScenario\(\)/);
  assert.match(source,/data\.week\+\+/);
- assert.match(source,/decision=-1;save\(\)/);
+ assert.match(source,/if\(!save\(\)\)/);
+ assert.match(source,/decision=-1;alert\(/);
  assert.match(source,/scenario:scenario\.title/);
  assert.match(source,/currentSimulatorScenario\(\)\.prompt/);
 });
@@ -162,4 +163,13 @@ test('student portal reports actual authored progress and recorded exams',()=>{
  assert.match(source,/data-cloud-settings-open="1"/);
  assert.match(css,/\.ba-record-metrics/);
  assert.match(css,/\.ba-record-exam/);
+});
+
+test('simulator does not claim a saved week when local storage fails',()=>{
+ assert.match(source,/function save\(\)\{try\{localStorage\.setItem/);
+ assert.match(source,/catch\(e\)\{console\.error\("Business Academy local save failed"/);
+ assert.match(source,/const beforeDecision=\{cash:data\.cash,customers:data\.customers,rep:data\.rep,week:data\.week,history:\[\.\.\.data\.history\]\}/);
+ assert.match(source,/if\(!save\(\)\)\{Object\.assign\(data,beforeDecision\)/);
+ assert.match(source,/Your decision was NOT saved/);
+ assert.match(source,/cross-device saving requires connecting Cloud Saving/);
 });
