@@ -60,3 +60,24 @@ Continue with full extension loading, cross-file duplicate detection, advanced-c
 ### Outstanding
 
 This audit is structural and selectively numerical, not a complete verification of every authored answer, teaching claim, source link or real corporate filing. Check the latest CI status, extend the audit to shared Level 1–3 modules in whole-catalog load order, and complete independent academic review before any claim of accreditation or MBA equivalency. No student data, progress flags, or grading algorithms were modified.
+
+## Batch 4 — Shared Level 1–3 independent assessments and quantitative validation (2026-11-08)
+
+### Verified scope
+
+The three shared files `level1-level3-independent-numeric-v126.js`, `level1-level3-independent-exams-v127.js`, and `level2-independent-exams-v128.js` were loaded in their relative production order using fixtures containing 20 pre-existing Level 1–3 course records. They registered **40 numeric-transfer questions and 40 independent optional exam questions**, covering courses 01–20. Historical assessment and numeric-drill fixtures were retained; repeated loading produced no extra assessments. This isolated check verifies cross-extension compatibility; it does not simulate the entire 26-course production application or independently verify all content claims.
+
+Selected independent numerical answers were recalculated (operating EBIT, capital-allocation selection, combined EBIT margin, discounted project NPV, FCFF, share dilution, and capacity valuation).
+
+### Corrections
+
+- `level2-independent-exams-v128.js`, course 08, optional NPV question: the wording requested **two-decimal rounding** but its options contained five-decimal values. Aligned all four answer choices to two decimals, including the correct answer **2.76**. Question ID and correct-answer index remain unchanged. The answer-choice change may alter the recorded exam snapshot fingerprint on a future attempt; historic submissions are not rewritten.
+- `level1-level3-independent-exams-v127.js`, course 14, adjusted present value question: expanded a formula-only explanation to distinguish unlevered NPV, financing tax-shield benefit, and expected distress cost. Correct-answer index and question ID remain unchanged.
+
+### Verification
+
+Added `tests/academic-shared-independent-assessments.test.cjs` to the academic workflow, covering original assessment preservation, new ID uniqueness, optional exam semantics, reload idempotency, and sample numerical recalculation. Initial CI runs found a two-option test-fixture error and a short real APV rationale; the fixture and explanation were corrected. The final CI status must be checked before treating this batch as passing.
+
+### Remaining work
+
+The audit has not yet verified all quantitative questions and financial assumptions, checked live external reading links and original corporate filings against their dates, or obtained independent expert evaluation. The shared 1–3 extension compatibility test uses realistic course fixtures rather than every late production module; full-catalog runtime end-to-end assessment and regression checks remain necessary.
