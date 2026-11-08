@@ -44,7 +44,7 @@
   #app .learning-workspace .learning-tabs button{flex:0 0 auto!important;min-width:100px;font-size:14px!important;padding:12px 17px!important;border-radius:10px}
   #app .learning-flow-hint{font-size:14px;line-height:1.7;color:#d2c6b8;max-width:90ch}
   #app .learning-single{padding:36px 44px;border-radius:18px;max-width:1050px}
-  #app .learning-single h2{font:normal 31px/1.25 Georgia,serif;margin:18px 0 22px;color:#231d18}
+  #app .learning-single h2{font:normal 31px/1.25 Georgia,serif;margin:18px 0 22px;color:#f3e6d5}
   #app .learning-single>p{max-width:80ch;font-size:17px;line-height:1.85}
   #app .learning-single details{max-width:85ch;padding:18px;border-radius:12px;margin:22px 0}
   #app .single-lesson-head{font-size:14px}
