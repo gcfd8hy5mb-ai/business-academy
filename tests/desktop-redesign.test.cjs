@@ -149,3 +149,17 @@ test('simulation shows only predefined scenario effects, retaining original subm
  assert.match(source,/scenario:scenario\.title/);
  assert.match(css,/\.ba-decision-impact/);
 });
+
+test('student portal reports actual authored progress and recorded exams',()=>{
+ assert.match(lesson,/function records\(\)/);
+ assert.match(lesson,/const rows=courses\(\),authored=rows\.filter/);
+ assert.match(lesson,/L\.mastery\(store,c\)\.mastered/);
+ assert.match(lesson,/L\.latest\(L\.state\(store,c\.id\),kind\)/);
+ assert.match(lesson,/Submitted exam results/);
+ assert.match(lesson,/not university credits, independently reviewed grades/);
+ assert.match(lesson,/window\.BAWorkspace=\{render,button,summary,records\}/);
+ assert.match(source,/BAWorkspace\.records\(\)/);
+ assert.match(source,/data-cloud-settings-open="1"/);
+ assert.match(css,/\.ba-record-metrics/);
+ assert.match(css,/\.ba-record-exam/);
+});
