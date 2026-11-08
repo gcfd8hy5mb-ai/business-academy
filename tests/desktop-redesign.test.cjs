@@ -184,9 +184,10 @@ test('academy progress counts required course activity and exposes its percentag
  assert.match(lesson,/function overallProgress\(\)/);
  assert.match(lesson,/Math\.round\(done\/Math\.max\(1,all\.length\)\)/);
  assert.match(source,/const academyProgress=BAWorkspace\.overallProgress\(\)/);
- assert.match(source,/class="ba-home-progress"/);
+ assert.match(source,/class="ba-hero-progress"/);
+ assert.doesNotThrow(()=>{if(source.includes('class="ba-home-progress"'))throw Error('standalone home progress remains')});
  assert.match(source,/View detailed progress/);
  assert.match(lesson,/class="ba-course-completion"/);
  assert.match(lesson,/class="ba-progress-overall"/);
- assert.match(css,/\.ba-home-progress-track/);
+ assert.match(css,/\.ba-hero-progress-track/);
 });
