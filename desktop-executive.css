@@ -251,3 +251,27 @@
   #app .ba-desktop-classroom {grid-template-columns:minmax(205px,22%) minmax(0,1fr) minmax(200px,20%);gap:20px}
   #app .ba-classroom-reader .learning-single {padding:clamp(28px,2.5vw,44px)}
 }
+
+/* Phase 4: clear, separated live simulator metrics / decisions / history. */
+@media (min-width:960px) {
+ #app .ba-simulator .ba-simulator-metrics {margin:0;padding:24px 27px;background:linear-gradient(140deg,#302b26,#262522);border:1px solid #8c6f49}
+ #app .ba-simulator .ba-simulator-metrics h3 {font:500 23px/1.3 Georgia,serif;color:#f4d49e;margin:0 0 18px}
+ #app .ba-simulator .ba-simulator-metrics .stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+ #app .ba-simulator .ba-simulator-metrics .stat {text-align:left;background:#221f1d;border:1px solid #756047;border-radius:13px;padding:20px 22px}
+ #app .ba-simulator .ba-simulator-metrics .stat strong {display:block;color:#f2ce8d;font-size:clamp(23px,2.1vw,34px);overflow-wrap:anywhere}
+ #app .ba-simulator .ba-simulator-metrics .stat small {display:block;color:#e1d6c7;font-size:13px;margin-top:4px}
+ #app .ba-simulator .ba-decision-panel,#app .ba-simulator .ba-history-panel {min-width:0;padding:26px}
+ #app .ba-simulator .ba-decision-panel h3,#app .ba-simulator .ba-history-panel h3 {font:500 24px/1.25 Georgia,serif;margin:0 0 18px;color:#f2d6a6}
+ #app .ba-simulator .ba-decision-panel>p {font-size:15px;line-height:1.7;color:#e8dfd3}
+ #app .ba-simulator .ba-decision-panel .item {width:100%;text-align:left;padding:16px 18px;white-space:normal}
+ #app .ba-simulator .ba-history-panel p {font-size:14px;line-height:1.65}
+}
+@media (min-width:960px) and (max-width:1199px) {
+ #app .ba-simulator {display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+ #app .ba-simulator>.card {margin:0}
+ #app .ba-simulator .ba-simulator-metrics .stat {padding:14px}
+}
+@media (max-width:959px) {
+ #app .ba-simulator .ba-simulator-metrics {margin:12px 0}
+ #app .ba-simulator .ba-simulator-metrics .stats {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
