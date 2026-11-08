@@ -207,3 +207,15 @@ test('curriculum level selector renders five compact cards and one selected pane
  assert.match(css,/prefers-reduced-motion:reduce/);
  assert.match(css,/\.ba-level-selected \.curriculum-inner \.ba-course-card/);
 });
+
+test('course workspace uses quick navigation tiles while preserving existing course tabs',()=>{
+ assert.match(lesson,/class="ba-learning-nav-tile"/);
+ assert.match(lesson,/data-learn-tab/);
+ assert.match(lesson,/aria-current/);
+ assert.match(lesson,/ba-learning-nav-sub/);
+ assert.match(lesson,/ba-learning-active-panel/);
+ assert.match(lesson,/if\(b\.dataset\.learnTab\)\{tab=b\.dataset\.learnTab;draw\(\)/);
+ assert.match(css,/\.learning-tabs \.ba-learning-nav-tile/);
+ assert.match(css,/@keyframes ba-learning-pane-enter/);
+ assert.match(css,/prefers-reduced-motion:reduce/);
+});
