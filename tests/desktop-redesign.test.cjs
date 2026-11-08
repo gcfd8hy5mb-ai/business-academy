@@ -59,3 +59,29 @@ test('new executive portal is a distinct desktop page with functional routing',(
   assert.match(css,/\.academy-home\.ba-mobile-home\s*\{display:none!important\}/);
   assert.match(css,/@media \(max-width:959px\)/);
 });
+
+test('weekly simulator rotates scenarios rather than repeating the week-one question',()=>{
+ const start=source.indexOf('const simulatorScenarios=[');
+ const end=source.indexOf('let activeHistoricalCase=',start);
+ assert.ok(start>0&&end>start,'scenario catalog exists');
+ const scenarios=new Function(source.slice(start,end)+';return simulatorScenarios')();
+ assert.ok(scenarios.length>=8);
+ assert.equal(new Set(scenarios.map(x=>x.title)).size,scenarios.length);
+ assert.ok(scenarios.every(x=>x.options.length===4));
+ assert.ok(scenarios.every(x=>x.options.some(o=>o.cost===0)));
+ assert.ok(scenarios.every(x=>x.options.every(o=>Number.isFinite(o.cost)&&Number.isFinite(o.customers)&&Number.isFinite(o.reputation))));
+ assert.match(source,/function currentSimulatorScenario\(\)/);
+ assert.match(source,/data\.week\+\+/);
+ assert.match(source,/decision=-1;save\(\)/);
+ assert.match(source,/scenario:scenario\.title/);
+ assert.match(source,/currentSimulatorScenario\(\)\.prompt/);
+});
+test('secondary desktop pages have executive layouts without changing existing actions',()=>{
+ assert.match(source,/class="ba-catalog-page"/);
+ assert.match(source,/class="ba-case-library"/);
+ assert.match(source,/class="ba-student-records"/);
+ assert.match(source,/data-cloud-settings-open="1"/);
+ assert.match(source,/data-historical-open/);
+ assert.match(css,/\.ba-case-grid/);
+ assert.match(css,/\.ba-record-layout/);
+});
