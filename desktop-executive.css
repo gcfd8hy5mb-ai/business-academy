@@ -165,3 +165,89 @@
   #app .ba-simulator .ba-decision-panel .item.active {outline:3px solid #dbab60;background:#f8dfb4}
   #app .ba-simulator .ba-history-panel p {padding:12px 0;border-bottom:1px solid #d8cab9}
 }
+
+/* Phase 3 — visual refinement following laptop review.
+   Palette: neutral graphite, readable ivory text, vibrant champagne gold.
+   All changes are desktop-only and do not affect application state. */
+@media (min-width:960px) {
+  :root {
+    --ba-bg:#171717; --ba-surface:#272727; --ba-surface-2:#303030;
+    --ba-border:#655a4c; --ba-gold:#e3ad54; --ba-gold-light:#f3cc87;
+    --ba-text:#f6f1e9; --ba-muted:#d6ccc0;
+  }
+  body {background:radial-gradient(ellipse at 78% -12%,#33302b 0%,#222120 38%,#181818 85%);color:var(--ba-text)}
+  #app>header {background:rgba(27,26,25,.97);border-bottom-color:#5a4e40}
+  #app>header strong {color:var(--ba-gold-light)}
+  #app>header .head-bell {background:#302c28;border-color:#6e5840}
+  nav {background:linear-gradient(180deg,#2a2928,#1e1e1e 75%);border-right-color:#554d43}
+  nav button {color:#f0e9df}
+  nav button:hover {background:#3a342e;border-color:#847052}
+  nav button.on {background:linear-gradient(110deg,#644a2d,#42372b);border-color:#d1a05b;color:#ffe5b7}
+  #app .home-welcome {
+    background:linear-gradient(108deg,#302b27,#222121 62%,#382b1f);
+    border-color:#b1844c;
+  }
+  #app .home-metrics>div {background:#282522;border-color:#71604c}
+  #app .home-content,#app .academy-subpage {min-width:0}
+  #app .card.dark,#app .unit-panel,#app .learning-single,
+  #app .curriculum-level-card {background:linear-gradient(155deg,#302e2b,#252525);border-color:#645748;color:var(--ba-text)}
+  #app .learning-workspace .learning-tabs {background:#272523;border-color:#695944}
+  #app .learning-workspace .learning-tabs button {color:#efe2cd}
+  #app .curriculum-inner .course-row {background:linear-gradient(115deg,#37332e,#292827);border-color:#6b5a49}
+  #app .curriculum-inner .course-row:hover {background:linear-gradient(115deg,#483d31,#35302c);border-color:#daa762}
+  #app .curriculum-inner .course-row .course-copy small {color:#d1c3b2}
+  #app .curriculum-level-card {background:#2b2927}
+  #app .continue-tile {background:linear-gradient(110deg,#38332d,#292725);border-color:#786145}
+  #app .continue-tile b {color:#f8eee0}
+  #app .card:not(.dark) {background:#332e29;color:#f2e7d6;border:1px solid #806c53}
+  #app .card:not(.dark) h2,#app .card:not(.dark) h3,
+  #app .card:not(.dark) strong,#app .card:not(.dark) b {color:#f8ecda}
+  #app .card:not(.dark) p,#app .card:not(.dark) .small {color:#d8cdbf}
+  #app .card:not(.dark) .item {background:#292827;color:#f3e9dc;border:1px solid #7c6850}
+  #app .card:not(.dark) .item:hover {background:#41362b;border-color:#d6a566}
+  #app .card:not(.dark) .item.active {background:#55412b;border-color:#f0bc72;outline:2px solid #d8a457}
+  #app .card:not(.dark) .stat {border-color:#82715e;background:#292725}
+  #app .card:not(.dark) .stat strong {color:#f0c782}
+  #app .card:not(.dark) .stat small {color:#dfd0bd}
+  #app .learning-single>p,
+  #app .learning-single li {font-size:17px;line-height:1.82;color:#f0e8de}
+  #app .learning-single details {border:1px solid #7a654a;background:#302a25;padding:18px}
+  #app .learning-single summary {color:#f1cb91}
+  #app .learning-single .single-lesson-check {background:#3b332a;border-color:#b88a4d;color:#f5e9d7}
+  #app .ba-classroom-outline {background:#282624;border-color:#6c5b49}
+  #app .ba-classroom-outline .ba-rail-heading {border-color:#6a5847}
+  #app .ba-module-group {border-color:#554c42}
+  #app .ba-outline-lesson {font-size:13px;line-height:1.45;color:#e2d7ca}
+  #app .ba-outline-lesson:hover {background:#39312a;border-color:#8f7556}
+  #app .ba-outline-lesson.is-current {background:#654b2e;border-color:#dfa95f;color:#fff1d9}
+  #app .ba-classroom-tools .ba-tool-card {background:linear-gradient(140deg,#332e28,#272525);border-color:#6c5b49}
+  #app .ba-tool-card button {background:#3b3229;border-color:#806747;color:#f5d7a4;font-size:13px}
+  #app .ba-tool-card button:hover {background:#4a3c2b;border-color:#efba72}
+  #app .ba-tool-card .track {background:#594e41}
+  #app .btn:not(.secondary) {background:linear-gradient(112deg,#f2cf8d,#d6a251);color:#21190f}
+  #app .btn.secondary {background:#38312b;color:#f4e8d4;border:1px solid #978066}
+  #app .ba-simulator {min-width:0}
+  #app .ba-simulator .ba-simulator-heading {background:linear-gradient(112deg,#372d24,#282625);border-color:#ad854f}
+  #app .ba-simulator .ba-decision-panel {background:#302c28;border-color:#826747}
+  #app .ba-simulator .ba-history-panel {background:#2b2927;border-color:#746049}
+  #app .ba-simulator .ba-decision-panel .item {background:#3b342d;color:#f4e4cc;border-color:#97754e;min-height:54px;font-size:15px}
+  #app .ba-simulator .ba-decision-panel .item.active {background:#644a2c;color:#fff1d9;border-color:#e5b16a;outline:2px solid #e5b16a}
+  #app .ba-simulator .ba-history-panel p {border-bottom:1px solid #645344;color:#ede0cf;font-size:14px}
+  #app .quick-grid button {border-color:#75614a}
+  #app a {text-underline-offset:3px}
+}
+@media (min-width:1200px) {
+  #app .ba-simulator {grid-template-columns:minmax(0,1.5fr) minmax(280px,.85fr)}
+  #app .ba-simulator .ba-decision-panel .stats {grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 24px}
+  #app .ba-classroom-reader .learning-single {padding:clamp(24px,2.4vw,40px)}
+}
+@media (min-width:1200px) and (max-width:1399px) {
+  #app .ba-desktop-classroom {grid-template-columns:minmax(185px,24%) minmax(0,1fr);gap:16px}
+  #app .ba-classroom-tools {position:static;grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-height:none}
+  #app .ba-classroom-outline {top:168px}
+  #app .ba-classroom-reader .learning-single {padding:24px}
+}
+@media (min-width:1400px) {
+  #app .ba-desktop-classroom {grid-template-columns:minmax(205px,22%) minmax(0,1fr) minmax(200px,20%);gap:20px}
+  #app .ba-classroom-reader .learning-single {padding:clamp(28px,2.5vw,44px)}
+}
