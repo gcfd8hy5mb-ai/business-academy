@@ -16,7 +16,7 @@ const sections=[
 ['With consideration 120, proportional NCI 26 and identifiable net assets 130, goodwill?', ['16','22','26','120'],0,'120+26−130=16; fair-value NCI would require another valuation.','consolidation'],
 ['Parent sells goods costing 24 to subsidiary for 30; one-third remains. Unsold group profit?', ['6','10','2','0'],2,'(30−24)/3=2 is eliminated from ending inventory and group profit.','consolidation'],
 ['NI 52.5, depreciation 20, AR +35, inventory +12, AP +8, accruals +4. CFO?', ['52.5','37.5','82.5','−7.5'],1,'52.5+20−35−12+8+4=37.5.','quality'],
-['Opening PPE 180, capex 45, depreciation 20, no disposals. Closing PPE?', ['205','245','160','225'],0,'180+45−20=205.','quality'],
+['Opening PPE 180, capex 45, depreciation 20, no disposals. Closing PPE?', ['205','245','160','225'],0,'Property, plant and equipment starts at 180, increases by 45 of capital expenditure, and decreases by 20 of depreciation. With no disposals, closing carrying amount is 205.','quality'],
 ['With CFO 37.5, capex 45, net financing +15, cash change?', ['−7.5','15','22.5','7.5'],3,'37.5−45+15=7.5; do not equate free cash flow with cash change.','quality'] ],
 case:'Meridian has a controlled acquisition, inventory transfers and slowing collections. Prepare a consolidated purchase bridge, three-statement reconstruction and audit committee memo. Distinguish a suspicious pattern from proven misstatement.',portfolio:'Meridian acquisition and cash-quality audit dossier'},
 {id:'08',title:'Activity-based costing, flexible budgets and divisional incentives',lessons:[
