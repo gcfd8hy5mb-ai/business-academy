@@ -1,0 +1,27 @@
+name: Academic Level 1-2 Audit
+
+on:
+  push:
+    branches: [audit/levels-1-2-academic-review]
+  pull_request:
+    paths:
+      - 'learning/**'
+      - 'tests/academic-*.test.cjs'
+      - 'index.html'
+      - '.github/workflows/academic-levels-1-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source integrity, exam keys and composed curriculum tests
+        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs
