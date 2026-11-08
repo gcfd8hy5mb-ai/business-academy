@@ -130,3 +130,22 @@ test('study notes use the existing learning-draft persistence path',()=>{
  assert.match(css,/\.learning-question/);
  assert.match(css,/@media \(min-width:1500px\)/);
 });
+
+test('exam shows answered count without changing legacy score or question ordering',()=>{
+ assert.match(lesson,/const count=a\.questions\.length,answered=a\.questions\.filter/);
+ assert.match(lesson,/class="ba-exam-status"/);
+ assert.match(lesson,/role="progressbar"/);
+ assert.match(lesson,/Last score /);
+ assert.match(lesson,/data-learn-grade/);
+ assert.match(css,/\.ba-exam-status/);
+});
+test('simulation shows only predefined scenario effects, retaining original submit flow',()=>{
+ assert.match(source,/function simulatorDecisionImpact\(\)/);
+ assert.match(source,/chosen\.cost/);
+ assert.match(source,/chosen\.customers/);
+ assert.match(source,/chosen\.reputation/);
+ assert.match(source,/simulatorDecisionImpact\(\)/);
+ assert.match(source,/data-apply="1"/);
+ assert.match(source,/scenario:scenario\.title/);
+ assert.match(css,/\.ba-decision-impact/);
+});
