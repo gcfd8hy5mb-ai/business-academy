@@ -106,3 +106,24 @@ The supporting online checks corroborated the stated issuer quantities and calcu
 ### Still outstanding
 
 Review a wider sample of dated source-linked corporate cases, check each external document link over time, audit more numerical distractors and uncertainty assumptions, evaluate the actual quality/difficulty of exams through independent academic subject experts, and obtain written academic sign-off. No credit, degree, or MBA equivalence is established by these source checks.
+
+## Batch 6 — Executive case rigor and optional assessment difficulty (2026-11-08)
+
+### Evidence and findings
+
+- Reviewed the source structure of Level 2 independent optional examinations (v128): each course 07–13 contains **two auto-graded multiple-choice questions** and a separately self-reviewed written board-decision prompt. These optional items are **not** an independent, sufficient measure of MBA-level mastery; their `optional:true` status and `minutes:0` remain unchanged.
+- Strengthened the course-specific *written* independent examiner challenge in v128 for all seven Level 2 courses. New challenges cover: receivables plus acquisition accounting; NPV under simultaneous rate and cash-flow stress; operating costs plus demand under constrained production; liquidity and collection delays; forecast quality plus causal impact; retention benefit plus execution cost; price, variable cost and capacity scarcity. Each requires a reproducible sensitivity, a competing action, source/fiction distinction and explicitly notes the need for external review of written performance.
+- The exam enhancements did **not** change multiple-choice questions, options, correct indices, question/assessment IDs, optional status, allocated minutes, mastery thresholds, or historical results.
+- Added `tests/academic-level2-exam-rigor.test.cjs` to verify the seven distinct domain challenges and independently recompute selected multi-step corporate case results. Peregrine: consolidated EBIT, cash flow and two investment NPVs; Astra: randomized conversion uplift, capacity and warehouse tradeoff, pricing competitor downside; Helix: liquidity-floor, maturity extension, staged restructuring and enterprise NPV.
+- The written case instructions and portfolios already require alternatives, linked downsides, governance criteria and scenario testing. This verifies the presence of requirements **not** whether actual student submissions satisfy them. Such work remains self-assessed; expert grading, defensible rubrics calibrated to academic standards, blind marking and examiner moderation are outstanding.
+
+### Verification
+
+GitHub Actions academic audit passed **31 of 31 tests** on the updated audit branch. The separate academic mathematics regression workflow passed. This is an internal code-and-curriculum integrity check, not independent accreditation or endorsement.
+
+### Next highest-priority work
+
+1. Design independent blind-marking and moderated written exam rubrics; validate assessment difficulty with qualified educators using anonymized sample responses.
+2. Inventory all cases for factual provenance and link stability, and verify public-company disclosures against original dated filings.
+3. Recalculate a broader stratified sample of corporate model assumptions and incorrect-choice distractors; document error confidence and severity.
+4. Prepare an academic evidence package (learning outcomes, assessed work, student workload evidence and review logs) for external reviewers.
