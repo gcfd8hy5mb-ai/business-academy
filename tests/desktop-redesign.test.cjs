@@ -158,7 +158,7 @@ test('student portal reports actual authored progress and recorded exams',()=>{
  assert.match(lesson,/L\.latest\(L\.state\(store,c\.id\),kind\)/);
  assert.match(lesson,/Submitted exam results/);
  assert.match(lesson,/not university credits, independently reviewed grades/);
- assert.match(lesson,/window\.BAWorkspace=\{render,button,summary,records\}/);
+ assert.match(lesson,/window\.BAWorkspace=\{render,button,summary,records,overallProgress,progressFor\}/);
  assert.match(source,/BAWorkspace\.records\(\)/);
  assert.match(source,/data-cloud-settings-open="1"/);
  assert.match(css,/\.ba-record-metrics/);
@@ -172,4 +172,21 @@ test('simulator does not claim a saved week when local storage fails',()=>{
  assert.match(source,/if\(!save\(\)\)\{Object\.assign\(data,beforeDecision\)/);
  assert.match(source,/Your decision was NOT saved/);
  assert.match(source,/cross-device saving requires connecting Cloud Saving/);
+});
+
+test('academy progress counts required course activity and exposes its percentage on the homepage',()=>{
+ assert.match(lesson,/function progressFor\(course\)/);
+ assert.match(lesson,/for\(const l of all\)required\.push/);
+ assert.match(lesson,/course\.practice/);
+ assert.match(lesson,/course\.sectionExams/);
+ assert.match(lesson,/course\.portfolioSections/);
+ assert.match(lesson,/all\.length\?Math\.round\(100\*done\/Math\.max\(total,1\)\):0/);
+ assert.match(lesson,/function overallProgress\(\)/);
+ assert.match(lesson,/Math\.round\(done\/Math\.max\(1,all\.length\)\)/);
+ assert.match(source,/const academyProgress=BAWorkspace\.overallProgress\(\)/);
+ assert.match(source,/class="ba-home-progress"/);
+ assert.match(source,/View detailed progress/);
+ assert.match(lesson,/class="ba-course-completion"/);
+ assert.match(lesson,/class="ba-progress-overall"/);
+ assert.match(css,/\.ba-home-progress-track/);
 });
