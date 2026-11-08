@@ -95,3 +95,14 @@ test('approved desktop layout uses slim navigation and a reader-first laptop lay
  assert.match(css,/\.learning-flow-hint\s*\{display:none\}/);
  assert.match(css,/@media\(min-width:1500px\)/);
 });
+
+test('executive simulator uses recorded business data instead of invented financial statements',()=>{
+ assert.match(source,/function simulatorTrend\(\)/);
+ assert.match(source,/function simulatorBoardReview\(\)/);
+ assert.match(source,/class="ba-sim-analytics"/);
+ assert.match(source,/simulatorTrend\(\) \+ simulatorBoardReview\(\)/);
+ assert.match(source,/The chart shows saved cash balances, not revenue or profit forecasts/);
+ assert.match(source,/Cash Performance Trend/);
+ assert.match(source,/Management Review/);
+ assert.match(css,/\.ba-sim-analytics/);
+});
