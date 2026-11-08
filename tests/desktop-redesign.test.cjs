@@ -240,3 +240,11 @@ test('simulator section shortcuts navigate the existing dashboard without alteri
  assert.match(source,/data-apply="1"/);
  assert.match(css,/\.ba-sim-shortcuts/);
 });
+
+test('desktop course navigation scrolls normally instead of floating over written work',()=>{
+ assert.match(css,/stop course navigation tiles floating over written assignments/i);
+ assert.match(css,/\.learning-workspace \.learning-tabs\s*\{\s*position:relative!important;/);
+ assert.match(css,/top:auto!important/);
+ assert.match(css,/z-index:auto!important/);
+ assert.match(css,/\.ba-learning-active-panel\s*\{\s*position:relative/);
+});
