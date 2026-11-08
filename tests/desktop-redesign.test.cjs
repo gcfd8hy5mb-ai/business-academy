@@ -13,6 +13,8 @@ test('academy loads desktop overrides after existing desktop stylesheet',()=>{
   const original=html.indexOf('desktop.css?');
   const executive=html.indexOf('desktop-executive.css?');
   assert.ok(original>0&&executive>original);
+  const workspace=html.indexOf('learning/workspace.css?');
+  assert.ok(workspace>original&&executive>workspace,'Desktop executive rules must load after the course workspace CSS');
   assert.match(css,/@media\s*\(min-width:\s*960px\)/);
 });
 test('lesson outline retains working lesson focus and study tabs',()=>{
@@ -247,4 +249,13 @@ test('desktop course navigation scrolls normally instead of floating over writte
  assert.match(css,/top:auto!important/);
  assert.match(css,/z-index:auto!important/);
  assert.match(css,/\.ba-learning-active-panel\s*\{\s*position:relative/);
+});
+
+test('desktop style cascade keeps approved design and prevents sticky lesson navigation',()=>{
+ const base=html.indexOf('style.css?v='),desktop=html.indexOf('desktop.css?v=');
+ const workspace=html.indexOf('learning/workspace.css?v='),executive=html.indexOf('desktop-executive.css?v=');
+ assert.ok(base>=0&&base<desktop&&desktop<workspace&&workspace<executive);
+ assert.match(css,/\.learning-workspace \.learning-tabs\s*\{\s*position:relative!important;/);
+ assert.match(css,/background:#1c2731!important;color:#f3f5f5!important/);
+ assert.match(css,/\.learning-rubric select/);
 });
