@@ -1,0 +1,46 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const source=fs.readFileSync('app-v28.js','utf8');
+const lesson=fs.readFileSync('learning/workspace-v46.js','utf8');
+const css=fs.readFileSync('desktop-executive.css','utf8');
+const html=fs.readFileSync('index.html','utf8');
+test('desktop app and lesson scripts still parse',()=>{
+  assert.doesNotThrow(()=>new Function(source));
+  assert.doesNotThrow(()=>new Function(lesson));
+});
+test('academy loads desktop overrides after existing desktop stylesheet',()=>{
+  const original=html.indexOf('desktop.css?');
+  const executive=html.indexOf('desktop-executive.css?');
+  assert.ok(original>0&&executive>original);
+  assert.match(css,/@media\s*\(min-width:\s*960px\)/);
+});
+test('lesson outline retains working lesson focus and study tabs',()=>{
+  assert.match(lesson,/function desktopLessonLayout\(/);
+  assert.match(lesson,/ba-classroom-outline/);
+  assert.match(lesson,/data-learn-focus/);
+  assert.match(lesson,/data-learn-tab="practice"/);
+  assert.match(lesson,/data-learn-tab="exam"/);
+  assert.match(lesson,/desktopLessonLayout\(c,s,body\)/);
+});
+test('simulator metrics, decisions and history have separate panels',()=>{
+  const start=source.indexOf('else if(page==="company")');
+  const end=source.indexOf('else if(page==="historical-case")',start);
+  assert.ok(start>=0&&end>start);
+  const company=source.slice(start,end);
+  const metrics=company.indexOf('class="card dark ba-simulator-metrics"');
+  const decision=company.indexOf('class="card ba-decision-panel"');
+  const history=company.indexOf('class="card dark ba-history-panel"');
+  assert.ok(metrics>=0&&metrics<decision&&decision<history);
+  assert.match(company,/data-apply="1"/);
+  assert.match(company,/data-decision=/);
+  assert.match(company,/data\.history/);
+  assert.match(company,/money\(data\.cash\)/);
+  assert.match(company,/data\.customers/);
+});
+test('mobile lesson rails are hidden, desktop layout is responsive',()=>{
+  assert.match(css,/@media\s*\(max-width:\s*959px\)/);
+  assert.match(css,/\.ba-classroom-outline,#app \.ba-classroom-tools\s*\{display:none\}/);
+  assert.match(css,/\.ba-simulator-metrics/);
+  assert.match(css,/@media\s*\(min-width:1200px\)\s*and\s*\(max-width:1399px\)/);
+});
