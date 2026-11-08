@@ -13,7 +13,7 @@ const names=[
 const context={BAContent:{}};
 for(let i=1;i<=20;i++){
  const id='course-'+String(i).padStart(2,'0');
- context.BAContent[id]={id,modules:[],numericDrills:[{id:id+'-previous-drill',questions:[{id:id+'-previous-q',p:'Existing numerical work',v:1,e:'Existing solution'}]}],sectionExams:[{id:id+'-previous-exam',questions:[{id:id+'-previous-exam-q',prompt:'Existing case',options:['Yes','No'],correct:0,explanation:'Previously graded work'}]}]};
+ context.BAContent[id]={id,modules:[],numericDrills:[{id:id+'-previous-drill',questions:[{id:id+'-previous-q',p:'Existing numerical work',v:1,e:'Existing solution'}]}],sectionExams:[{id:id+'-previous-exam',questions:[{id:id+'-previous-exam-q',prompt:'Existing case',options:['Yes','No','Undetermined'],correct:0,explanation:'Previously graded work'}]}]};
 }
 const saved=JSON.stringify(context.BAContent);
 for(const name of names)new Function('window',fs.readFileSync(name,'utf8'))(context);
