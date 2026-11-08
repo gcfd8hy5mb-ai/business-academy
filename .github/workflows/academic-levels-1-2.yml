@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: '22'
       - name: Source integrity, exam keys and composed curriculum tests
-        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs
+        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs tests/academic-shared-independent-assessments.test.cjs
