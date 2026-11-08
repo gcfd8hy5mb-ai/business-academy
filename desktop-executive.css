@@ -442,3 +442,70 @@
  #app .ba-student-records .ba-record-layout {display:block}
  #app .ba-page-heading {padding:0 0 10px}
 }
+
+/* Phase 7 — approved reference fidelity: compact application rail + reader-first workspace.
+   Desktop only; keep the accepted executive homepage appearance and mobile experience. */
+@media(min-width:960px){
+  nav {width:176px;padding:112px 10px 18px;gap:5px}
+  nav:before {left:13px;top:41px;font-size:12px;letter-spacing:.035em}
+  nav:after {left:13px;top:69px;font-size:9px;letter-spacing:.12em}
+  nav button {flex-direction:row;align-items:center;justify-content:flex-start;gap:10px;min-height:43px;width:100%;padding:8px 10px;border-radius:8px;text-align:left}
+  nav button .ui-icon,nav button svg {width:19px;height:19px;flex:0 0 19px}
+  nav button span {font-size:12px;line-height:1.3}
+  #app {width:calc(100% - 176px);margin:0 0 0 176px;max-width:none;padding:22px clamp(18px,2.1vw,38px) 58px}
+  #app>header {min-height:60px;margin:-22px calc(-1 * clamp(18px,2.1vw,38px)) 22px;padding:9px clamp(18px,2.1vw,38px)}
+  #app>header strong {font-size:19px}
+  #app .academy-subpage {max-width:none}
+  #app .learning-workspace:has(.ba-desktop-classroom) {max-width:none}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.lesson-back {margin:0 0 5px;min-height:33px;padding:7px 11px;font-size:12px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.subpage-title {padding:0 0 8px;margin:0 0 8px;border-bottom-color:#584a3a}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.subpage-title .overline {font-size:9px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.subpage-title h1 {font-size:clamp(24px,2.1vw,33px);margin:3px 0 4px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.subpage-title p {font-size:12px;line-height:1.4;margin:0}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.learning-tabs {position:sticky;top:60px;z-index:8;gap:5px;margin:7px 0 5px;padding:6px;border-radius:9px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.learning-tabs button {min-width:0;min-height:35px;font-size:12px!important;padding:7px 10px!important;border-radius:6px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.learning-flow-hint {display:none}
+  #app .learning-workspace:has(.ba-desktop-classroom)>#learning-save-status {min-height:0;margin:0;font-size:12px}
+  #app .learning-workspace:has(.ba-desktop-classroom)>#learning-save-status:empty {display:none}
+  #app .learning-workspace:has(.ba-desktop-classroom)>.ba-desktop-classroom {margin-top:8px;gap:12px}
+  #app .ba-classroom-reader .learning-single {padding:20px 24px}
+  #app .ba-classroom-reader .single-lesson-head {font-size:12px}
+  #app .ba-classroom-reader .single-lesson-progress {margin:10px 0 16px}
+  #app .ba-classroom-reader .learning-single h2 {font-size:clamp(25px,2.1vw,34px);margin:10px 0 13px}
+  #app .ba-classroom-reader .learning-single>p {font-size:16px;line-height:1.72}
+  #app .ba-classroom-reader .learning-single details {padding:13px;margin:14px 0}
+  #app .ba-classroom-outline {padding:13px 9px}
+  #app .ba-classroom-outline .ba-rail-heading {padding:0 6px 9px}
+  #app .ba-classroom-outline .ba-rail-heading h2 {font-size:17px}
+  #app .ba-module-group {padding:7px 0}
+  #app .ba-module-group h3 {font-size:11px;padding:4px 5px}
+  #app .ba-outline-lesson {gap:7px;padding:8px 6px;font-size:11px}
+  #app .ba-outline-number {width:21px;height:21px;flex-basis:21px}
+  #app .ba-classroom-tools .ba-tool-card {padding:13px}
+  #app .ba-tool-card h2 {font-size:18px}
+  #app .ba-tool-card p {font-size:12px;line-height:1.5}
+  #app .ba-tool-card button {min-height:34px;padding:6px 9px}
+  #app .ba-catalog-page .curriculum-level-card>summary {min-height:73px;padding:16px 20px}
+  #app .ba-catalog-page .curriculum-level-card>.curriculum-level-body {padding:14px 20px 22px}
+  #app .ba-catalog-page .curriculum-inner .course-row {min-height:70px;padding:12px 16px;margin-bottom:8px}
+  #app .ba-catalog-page .curriculum-inner .course-row .course-copy b {font-size:18px}
+  #app .ba-catalog-page .curriculum-group.curriculum-level-card {margin:12px 0 18px}
+  #app .ba-case-grid>.card {padding:19px}
+  #app .ba-case-grid>.card h2 {font-size:20px}
+}
+@media(min-width:960px) and (max-width:1199px){
+  nav {width:164px}
+  #app {margin-left:164px;width:calc(100% - 164px);padding:18px}
+  #app>header {margin:-18px -18px 18px;padding:9px 18px}
+}
+@media(min-width:1200px) and (max-width:1499px){
+  #app .ba-desktop-classroom {display:grid;grid-template-columns:180px minmax(0,1fr);gap:12px}
+  #app .ba-classroom-outline {position:sticky;top:124px;max-height:calc(100vh - 136px);overflow:auto}
+  /* Resources are already available in the main course tabs. Avoid a third, stacked rail on laptop widths. */
+  #app .ba-classroom-tools {display:none}
+  #app .ba-classroom-reader {grid-column:2}
+}
+@media(min-width:1500px){
+  #app .ba-desktop-classroom {grid-template-columns:185px minmax(0,1fr) 190px;gap:14px}
+  #app .ba-classroom-outline,#app .ba-classroom-tools {top:124px;max-height:calc(100vh - 138px)}
+}
