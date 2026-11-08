@@ -106,3 +106,14 @@ test('executive simulator uses recorded business data instead of invented financ
  assert.match(source,/Management Review/);
  assert.match(css,/\.ba-sim-analytics/);
 });
+
+test('course catalog renders executive cards with real authored status and existing navigation',()=>{
+ assert.match(lesson,/class="course-row ba-course-card"/);
+ assert.match(lesson,/data-learn-course/);
+ assert.match(lesson,/COURSEWORK AVAILABLE/);
+ assert.match(lesson,/SELF-ASSESSED MASTERY/);
+ assert.match(lesson,/Coursework pending/);
+ assert.match(css,/\.curriculum-level-body>\.curriculum-inner\s*\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+ assert.match(css,/\.ba-course-card/);
+ assert.match(css,/@media \(max-width:959px\)/);
+});
