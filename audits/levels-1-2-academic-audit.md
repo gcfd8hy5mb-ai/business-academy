@@ -81,3 +81,28 @@ Added `tests/academic-shared-independent-assessments.test.cjs` to the academic w
 ### Remaining work
 
 The audit has not yet verified all quantitative questions and financial assumptions, checked live external reading links and original corporate filings against their dates, or obtained independent expert evaluation. The shared 1–3 extension compatibility test uses realistic course fixtures rather than every late production module; full-catalog runtime end-to-end assessment and regression checks remain necessary.
+
+## Batch 5 — Primary-source filing and board-decision case audit (2026-11-08)
+
+### Verification scope and provenance
+
+Reviewed `learning/level2-filings-v57.js`, which adds primary-filing case laboratories for Level 2 courses 07 (Costco/Microsoft and an **explicitly fictional** IAS 36 scenario) and 08 (Walmart segment reporting and an **explicitly fictional** Atlas make-or-buy scenario).
+
+The following primary documents were checked online against the case's factual inputs:
+
+- Costco Wholesale Corporation, FY2025 Form 10-K (fiscal year ended August 31, 2025): https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm . Figures in USD millions: FY2025 net income 8,099, cash provided by operating activities 13,335, property and equipment additions 5,498, depreciation and amortization 2,426; FY2024 net income 7,367, CFO 11,339 and capex 4,710. Derived FY2025 CFO minus capex 7,837; FY2024 6,629; change 1,208. The CFO minus NI and D&A residual is 2,810, **not solely a working-capital figure**.
+- Microsoft, Form 10-Q for period ended March 31, 2025: https://www.sec.gov/Archives/edgar/data/789019/000095017025061046/msft-20250331.htm . Three-month revenue USD millions: 70,066 vs 61,858 (13.27% annual growth); nine-month revenue: 205,283 vs 180,395 (13.80%). The two period definitions must not be mixed.
+- Walmart, FY2026 Form 10-K (fiscal year ended January 31, 2026): https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm . Walmart U.S. segment net sales USD millions 482,975 vs 462,415; segment operating income 25,158 vs 23,882. Derived segment operating-income/net-sales ratios 5.209% vs 5.165%, rising approximately 4.43 basis points. Consolidated net sales of 706,413 and consolidated operating income of 29,825 are **not** segment figures.
+- IFRS Foundation, IAS 36 overview: https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/ . Recoverable amount is the **higher** of value in use and fair value less disposal costs; the case's imaginary example has carrying value 140, recoverable value 120, and simplified impairment 20. This is not a reported impairment by either issuer.
+
+The supporting online checks corroborated the stated issuer quantities and calculation conventions. They are a targeted check of these specific references and figures, not a full filing-level legal/accounting review, and do not confirm every linked source used in other courses.
+
+### Financial model challenge and exam rigor
+
+- Fictional Atlas sourcing case independently recomputed: fully outsourcing 50,000 units at 58/unit costs 2.90 million; producing 20,000 internally at 35 and purchasing 30,000 costs 2.44 million without displaced external contribution; producing 40,000 internally displaces 20,000 external contribution of 30 per unit and costs 2.58 million in total. Original modeled optimal mix: make 20,000 and buy 30,000. With external market demand down to 10,000, make 30,000 and buy 20,000 costs 2.21 million versus 2.28 million for displacing external sales.
+- The cases distinguish **reported issuer facts**, **analyst-derived numbers**, and **fictional teaching assumptions**. Auto-graded items are primarily numerical or disclosure interpretation; required long-form written casework, primary-source extraction, alternative analysis and stress testing add higher-order reasoning. The presence of these requirements is verified, **but quality of submitted work is self-assessed and not independently marked**.
+- Added `tests/academic-primary-source-cases.test.cjs` to cross-check fixed published values, financial derivations, source URLs, reporting-period separation, opportunity costs, case answer keys, and written-work requirements. Results depend on the associated GitHub Actions run.
+
+### Still outstanding
+
+Review a wider sample of dated source-linked corporate cases, check each external document link over time, audit more numerical distractors and uncertainty assumptions, evaluate the actual quality/difficulty of exams through independent academic subject experts, and obtain written academic sign-off. No credit, degree, or MBA equivalence is established by these source checks.
