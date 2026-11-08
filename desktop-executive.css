@@ -509,3 +509,69 @@
   #app .ba-desktop-classroom {grid-template-columns:185px minmax(0,1fr) 190px;gap:14px}
   #app .ba-classroom-outline,#app .ba-classroom-tools {top:124px;max-height:calc(100vh - 138px)}
 }
+
+/* Phase 8: restore approved neutral charcoal/slate palette.
+   Previous warm-brown surface rules caused the curriculum to look sepia.
+   The approved executive homepage is intentionally untouched. */
+@media (min-width:960px) {
+ :root {
+   --ba-bg:#171a1e;
+   --ba-surface:#242930;
+   --ba-surface-2:#2d343c;
+   --ba-border:#48515c;
+   --ba-gold:#e9b866;
+   --ba-gold-light:#f5d491;
+   --ba-text:#f3eee8;
+   --ba-muted:#c2cbd1;
+ }
+ body {background:radial-gradient(ellipse at 80% -15%,#303741 0%,#1c2127 44%,#15191e 90%);}
+ nav {background:linear-gradient(180deg,#252b32,#1b2026 76%);border-right-color:#414b56;}
+ nav button {color:#e8ebed}
+ nav button:hover {background:#353c44;border-color:#596473}
+ nav button.on {background:#514332;border-color:#e1ad5e;color:#ffe4ad}
+ #app>header {background:rgba(25,29,35,.98);border-bottom-color:#46505b}
+ /* Catalog */
+ #app .ba-catalog-page .subpage-title {border-bottom-color:#505a64}
+ #app .ba-catalog-page .university-notice {background:#252d35;border-color:#7a694f;color:#e8edf0}
+ #app .ba-catalog-page .university-notice p {color:#cad2d8}
+ #app .ba-catalog-page .curriculum-group.curriculum-level-card {background:#242b32;border-color:#515d68;box-shadow:0 12px 30px #0d111530}
+ #app .ba-catalog-page .curriculum-level-card>summary {background:linear-gradient(110deg,#343c45,#252c34)}
+ #app .ba-catalog-page .curriculum-level-card>summary:hover {background:linear-gradient(110deg,#3c4650,#2d3640)}
+ #app .ba-catalog-page .curriculum-level-card>.curriculum-level-body {background:#242b32}
+ #app .ba-catalog-page .curriculum-level-body>p {color:#ccd4d9}
+ #app .ba-catalog-page .curriculum-inner .course-row {background:#303943;border-color:#53616b}
+ #app .ba-catalog-page .curriculum-inner .course-row:hover {background:#3b4650;border-color:#e3b06e}
+ #app .ba-catalog-page .curriculum-inner .course-row .course-copy small {color:#c7d0d6}
+ #app .ba-catalog-page .curriculum-optional {background:#242c34;border-color:#515f6b}
+ #app .ba-catalog-page .curriculum-optional>summary {background:#303944;color:#eaca94}
+ /* Lessons */
+ #app .learning-workspace .learning-tabs {background:#242b33;border-color:#515c68}
+ #app .learning-workspace .learning-tabs button {color:#ece8e2;background:#303943;border-color:#526170}
+ #app .learning-workspace .learning-tabs button[aria-current="page"] {background:#dfb978;color:#1c2228}
+ #app .ba-classroom-outline {background:#252d35;border-color:#525e68}
+ #app .ba-classroom-outline .ba-rail-heading {border-bottom-color:#53616b}
+ #app .ba-classroom-outline .ba-module-group {border-color:#46515d}
+ #app .ba-outline-lesson {color:#e0e6e9}
+ #app .ba-outline-lesson:hover {background:#35414b;border-color:#6b7883}
+ #app .ba-outline-lesson.is-current {background:#55452f;border-color:#e8b566;color:#fff0d4}
+ #app .ba-classroom-reader .learning-single,#app .learning-workspace .unit-panel {background:#252c34;border-color:#52606b;color:#f2eee9}
+ #app .ba-classroom-reader .learning-single>p {color:#e1e7ea}
+ #app .learning-workspace .learning-single details {background:#2c3540;border-color:#687681}
+ #app .learning-workspace .learning-single .single-lesson-check {background:#2c343d;border-color:#687681}
+ #app .ba-classroom-tools .ba-tool-card {background:#29323a;border-color:#56636c}
+ #app .ba-tool-card button {background:#35414b;border-color:#657380}
+ /* Cases and records */
+ #app .ba-case-grid>.card {background:linear-gradient(145deg,#2d353d,#232a31);border-color:#55616b;color:#eef0f2}
+ #app .ba-case-grid>.card p {color:#d5dce0}
+ #app .ba-student-records .card,#app .ba-student-records .unit-panel {background:#29323a;border-color:#55636e;color:#edf0f2}
+ #app .ba-student-records .stat {background:#222a32;border-color:#58636e}
+ #app .ba-student-records .card p,#app .ba-student-records .unit-panel p {color:#d2dae0}
+ /* Simulator */
+ #app .ba-simulator .ba-simulator-heading {background:linear-gradient(110deg,#303a43,#242b32);border-color:#856c48}
+ #app .ba-simulator .ba-simulator-metrics {background:#29313a;border-color:#53636f}
+ #app .ba-simulator .ba-simulator-metrics .stat {background:#202932;border-color:#53616d}
+ #app .ba-simulator .ba-decision-panel,#app .ba-simulator .ba-history-panel {background:#29313a;border-color:#586773}
+ #app .ba-simulator .ba-decision-panel .item {background:#303a44;color:#f0eee9;border-color:#667483}
+ #app .ba-simulator .ba-decision-panel .item.active {background:#55462f;border-color:#e9b866}
+ #app .ba-simulator .ba-history-panel p {border-bottom-color:#505f6c;color:#dce3e8}
+}
