@@ -127,3 +127,20 @@ GitHub Actions academic audit passed **31 of 31 tests** on the updated audit bra
 2. Inventory all cases for factual provenance and link stability, and verify public-company disclosures against original dated filings.
 3. Recalculate a broader stratified sample of corporate model assumptions and incorrect-choice distractors; document error confidence and severity.
 4. Prepare an academic evidence package (learning outcomes, assessed work, student workload evidence and review logs) for external reviewers.
+
+## Batch 7 — Independent written-examiner framework and calibration (November 8, 2026)
+
+### New offline examiner materials
+
+- `audits/independent-written-examiner-protocol.md` is a proposed 100-point analytic written-assessment rubric with dimensions weighted **30 quantitative, 25 adverse scenario/alternatives, 20 source evidence, 15 governance, 10 synthesis**. It specifies two qualified blind human reviewers, documented criterion evidence, third-party moderation for score disagreements above ten points or material disputes, resubmission versioning and evidence retention outside the application.
+- `audits/level2-independent-exam-marking-guide.cjs` contains seven course-specific case requirements and **14 independent numeric answer anchors** for courses 07–13, with subject-specific misconceptions, sensitivity problems, primary evidence requirements and examiner challenges. It also contains three **synthetic** Course 08 calibration samples (illustrative proposed marks 88, 60 and 22), with explanations for strong, borderline and insufficient reasoning.
+- `tests/academic-examiner-calibration.test.cjs` validates the rubric sums to 100, the guide aligns with unchanged exam IDs and answer indices, benchmark calculations reconcile, sample records are marked synthetic, malformed mark records are rejected and **the examiner guide is not loaded by `index.html`**.
+- Academic GitHub Actions verification passed **36/36 tests** including the new examiner suite. The separate academic mathematics regression passed.
+
+### Hard limitations and approval boundary
+
+This is **NOT independent grading** of a learner. No human examiner has been engaged, qualified, or signed off. Synthetic examples are not student submissions. Proposed bands, passing criteria and disagreement thresholds are internal calibration proposals, not externally approved academic standards. All existing optional exams, application runtime, self-review logic, graduation thresholds, persistence keys and historic scores remain unchanged. An external examiner must score actual anonymized work and provide documented moderation before any student could be described as independently assessed.
+
+### Subsequent steps
+
+Recruit and vet external business/accounting/finance faculty or qualified assessors; agree on privacy/conflicts and sample-selection procedures; obtain permission to examine de-identified work; run an independently marked calibration pilot and measure examiner agreement; revise rubrics to reflect the pilot findings; and request explicit written, scope-limited academic evaluation. No university endorsement, academic credit, degree status or MBA-equivalence claim is justified by this internal protocol.
