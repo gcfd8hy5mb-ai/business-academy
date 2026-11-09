@@ -144,3 +144,17 @@ This is **NOT independent grading** of a learner. No human examiner has been eng
 ### Subsequent steps
 
 Recruit and vet external business/accounting/finance faculty or qualified assessors; agree on privacy/conflicts and sample-selection procedures; obtain permission to examine de-identified work; run an independently marked calibration pilot and measure examiner agreement; revise rubrics to reflect the pilot findings; and request explicit written, scope-limited academic evaluation. No university endorsement, academic credit, degree status or MBA-equivalence claim is justified by this internal protocol.
+
+## Batch 8 — External evaluator evidence package and outcomes mapping (2026-11-08)
+
+### New reviewer packet
+
+- Created `audits/independent-academic-evaluation-dossier.md`, describing Levels 1–2 instructional goals, evidence locations, academic scope, direct/indirect achievement limitations, objective-to-assessment review method, planned double marking, reviewer qualifications and a signed scope-limited evaluation request.
+- Created `audits/build-reviewer-evidence.cjs`, a **read-only** reproducible source inventory loading Level 1–2 modules and extensions in production index order. It maps each declared objective to **candidate** course exam/portfolio evidence and explicitly flags all such links `NEEDS_EXPERT_ALIGNMENT_REVIEW`. Its assigned-minute ledger uses the existing `BAWorkloadAudit` logic, excludes optional examination minutes and makes no claim of observed study duration, earned credit, learner performance or outcomes achieved. Shared Level 1–3 addenda requiring Level 3 remain excluded.
+- Created `tests/academic-reviewer-evidence.test.cjs` to test 13 course records, stable course levels, workload component reconciliation, provisional objective links and separation of examiner materials from the student application.
+- Updated `.github/workflows/academic-levels-1-2.yml` to generate `course-evidence.md` and `course-evidence.json`, collect the dossier, examiner protocol and audit report, and upload a **30-day GitHub Actions artifact** suitable for handoff to a qualified reviewer.
+- GitHub Actions execution for commit `5ba3312750cd2bf311ce9957902591e057cf9e1e` passed **40/40 academic tests**, and the independent mathematics regression also passed. The artifact `business-academy-levels1-2-reviewer-evidence` was successfully created on run `42548364917`: https://github.com/gcfd8hy5mb-ai/business-academy/actions/runs/42548364917/artifacts/13644361935 .
+
+### Qualification
+
+This packet improves **auditability**, not accreditation. Course-level outcome pointers are not definitive task-level alignment; no actual learner responses have been evaluated by qualified external examiners; external reviewer approval, measured time-on-task, and a complete primary-source audit remain outstanding. No user-facing application, student results, Firebase settings or persistent identifiers were changed.
