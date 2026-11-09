@@ -70,6 +70,13 @@ function analyze(){
    issues
   });
  }
+ const app=fs.readFileSync(path.join(root,'app-v28.js'),'utf8');
+ const planStart=app.indexOf('const coursePlans='),planEnd=app.indexOf(';\\nlet planHoursPerWeek',planStart);
+ const authoredPlans=planStart>=0&&planEnd>planStart?JSON.parse(app.slice(planStart+'const coursePlans='.length,planEnd)):[];
+ const expectedPlanLengths=[6,7,7,5,1];
+ const plannedHours=[];
+ let cursor=0;
+ for(const count of expectedPlanLengths){plannedHours.push(sum(authoredPlans.slice(cursor,cursor+count).map(p=>p.hours||0)));cursor+=count;}
  const totals={};
  for(const lv of [1,2,3,4,5]){
   const subset=courses.filter(x=>x.level===lv);
@@ -80,7 +87,9 @@ function analyze(){
    issues:sum(subset.map(x=>x.issues.length)),
    missingCourses:subset.filter(c=>c.missing).length,
    longLessonsWithShortBody:sum(subset.map(x=>x.longLessonsWithShortBody||0)),
-   repeatedPrompts:sum(subset.map(x=>x.exactRepeatedQuestionPrompts||0))};
+   repeatedPrompts:sum(subset.map(x=>x.exactRepeatedQuestionPrompts||0)),
+   plannedHours:plannedHours[lv-1],
+   assignedMinusPlannedHours:Math.round((sum(subset.map(x=>x.assignedMinutes||0))/60-plannedHours[lv-1])*10)/10};
  }
  return {snapshotDate:'2026-11-09',scope:'All 26 authored courses; content scripts in production order; no real learner data',
   scriptsExecuted:scripts.length,sourceFailures:failures,courses,totals,
@@ -98,12 +107,14 @@ if(require.main===module){
  if(process.argv.includes('--json'))process.stdout.write(JSON.stringify(result,null,2)+'\n');
  else{
   const lines=['# Full five-level curriculum audit — internal snapshot','','**Scope:** 26 courses, five levels; metadata and authored assessment integrity only. Not a degree or accreditation finding.','',
-  '| Level | Courses | Lessons | Objective questions | Numeric questions | Assigned hours* | Integrity flags | Short-body long lessons | Repeated prompts |',
-  '|---|---:|---:|---:|---:|---:|---:|---:|---:|'];
-  for(let lv=1;lv<=5;lv++){const d=result.totals['level'+lv];lines.push('| '+lv+' | '+d.courses+' | '+d.lessons+' | '+d.assessedQuestions+' | '+d.numericQuestions+' | '+d.assignedHours+' | '+d.issues+' | '+d.longLessonsWithShortBody+' | '+d.repeatedPrompts+' |');}
+  '| Level | Courses | Lessons | Objective questions | Numeric questions | Planned hours | Assigned hours* | Variance | Integrity flags | Short-body long lessons | Repeated prompts |',
+  '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|'];
+  for(let lv=1;lv<=5;lv++){const d=result.totals['level'+lv];lines.push('| '+lv+' | '+d.courses+' | '+d.lessons+' | '+d.assessedQuestions+' | '+d.numericQuestions+' | '+d.plannedHours+' | '+d.assignedHours+' | '+d.assignedMinusPlannedHours+' | '+d.issues+' | '+d.longLessonsWithShortBody+' | '+d.repeatedPrompts+' |');}
   lines.push('','*Assigned study time: sum of authored metadata minutes, not observed study, credit or independently reviewed teaching duration.*','','## Open issue register','');
   if(result.sourceFailures.length)for(const x of result.sourceFailures)lines.push('- **Source load failure:** '+x.file+' — '+x.message);
   for(const c of result.courses)for(const issue of c.issues)lines.push('- **'+c.id+' / '+issue.severity+' / '+issue.type+'** '+(issue.id||''));
+  lines.push('','## Editorial review flags','');
+  for(const c of result.courses){if(c.longLessonsWithShortBody)lines.push('- **'+c.id+'** has '+c.longLessonsWithShortBody+' lessons allocated >=90 minutes with <200 words of body text; inspect assignments/readings before treating as insufficient instruction. Examples: '+c.examplesOfShortLongLessons.map(x=>x.id).join(', '));if(c.exactRepeatedQuestionPrompts)lines.push('- **'+c.id+'** has '+c.exactRepeatedQuestionPrompts+' exact repeated question prompts across assessment sets; verify deliberate reinforcement versus exam leakage. Examples: '+c.examplesOfRepeatedPrompts.map(x=>x.prompt).join(' | '));}
   lines.push('','## Academic judgment required','');
   for(const note of result.notes)lines.push('- '+note);
   process.stdout.write(lines.join('\n')+'\n');
