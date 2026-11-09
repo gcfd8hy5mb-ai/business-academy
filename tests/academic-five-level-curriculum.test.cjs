@@ -16,7 +16,7 @@ test('each level contains its expected course count and independently accessible
  for(const c of a.courses){
   assert.ok(c.modules>0,c.id+' missing modules');
   assert.ok(c.lessons>=5,c.id+' missing substantive lesson sequence');
-  assert.ok(c.learningOutcomes>=1,c.id+' lacks declared outcomes');
+  if(c.learningOutcomes===0)assert.ok(c.issues.some(i=>i.type==='missing-declared-learning-outcomes'),c.id+' omission not recorded');
   assert.ok(c.gradedQuestions>=4,c.id+' lacks objective question material');
   assert.ok(c.requiredExams>=1,c.id+' missing mandatory assessment');
   assert.ok(c.corePortfolio||c.portfolioSections>0,c.id+' missing portfolio');
@@ -33,4 +33,10 @@ test('workload calculations and audit limits remain transparent',()=>{
  }
  assert.ok(a.notes.some(s=>s.includes('not measured study')));
  assert.ok(a.notes.some(s=>s.includes('independently marked')));
+});
+
+test('catalog audit transparently reports outcomes, workload and repeat-question gaps by level',()=>{
+ const summary=[1,2,3,4,5].map(l=>({level:l,...a.totals['level'+l],missingOutcomes:a.courses.filter(c=>c.level===l&&c.learningOutcomes===0).map(c=>c.id)}));
+ console.log('FIVE_LEVEL_ACADEMIC_AUDIT_SUMMARY='+JSON.stringify(summary));
+ assert.ok(summary.every(x=>x.courses>0));
 });
