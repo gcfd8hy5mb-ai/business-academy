@@ -32,6 +32,7 @@ function analyze(){
   const read=c.readings||[],apps=c.applications||[],portfolio=c.portfolioSections||[];
   const wk=win.BAWorkloadAudit?.detail(c);
   const issues=[];
+  if(!(c.outcomes||[]).length)issues.push({severity:'medium',type:'missing-declared-learning-outcomes'});
   function duplicates(ids,kind){
    const seen=new Set();
    for(const v of ids){if(!v)issues.push({severity:'high',type:'missing-'+kind+'-id'});else if(seen.has(v))issues.push({severity:'high',type:'duplicate-'+kind+'-id',id:v});else seen.add(v);}
