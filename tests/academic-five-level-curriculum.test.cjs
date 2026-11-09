@@ -1,0 +1,36 @@
+/* Full five-level authored curriculum integrity tests.
+ * Code-level review only, not independent assessment validation.
+ */
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {analyze}=require('../audits/build-full-curriculum-audit.cjs');
+const a=analyze();
+test('all authored five-level content scripts compose in live HTML order without exceptions',()=>{
+ assert.ok(a.scriptsExecuted>=80,'Missing expected source scripts');
+ assert.deepEqual(a.sourceFailures,[],'Full curriculum source loader failures');
+ assert.equal(a.courses.length,26);
+ assert.equal(a.courses.filter(c=>c.missing).length,0);
+});
+test('each level contains its expected course count and independently accessible teaching material',()=>{
+ assert.deepEqual([1,2,3,4,5].map(n=>a.totals['level'+n].courses),[6,7,7,5,1]);
+ for(const c of a.courses){
+  assert.ok(c.modules>0,c.id+' missing modules');
+  assert.ok(c.lessons>=5,c.id+' missing substantive lesson sequence');
+  assert.ok(c.learningOutcomes>=1,c.id+' lacks declared outcomes');
+  assert.ok(c.gradedQuestions>=4,c.id+' lacks objective question material');
+  assert.ok(c.requiredExams>=1,c.id+' missing mandatory assessment');
+  assert.ok(c.corePortfolio||c.portfolioSections>0,c.id+' missing portfolio');
+ }
+});
+test('no high-impact defects in assessment keys, numerical targets, lesson IDs or source loading',()=>{
+ const severe=a.courses.flatMap(c=>c.issues.filter(x=>['critical','high'].includes(x.severity)).map(x=>({...x,course:c.id})));
+ assert.deepEqual(severe,[],'High-impact authored-source findings must be resolved');
+});
+test('workload calculations and audit limits remain transparent',()=>{
+ for(const c of a.courses){
+  assert.ok(c.assignedMinutes>0,c.id+' no assigned minutes');
+  assert.ok(Math.abs(c.assignedHours-Math.round(c.assignedMinutes/60*10)/10)<.00001);
+ }
+ assert.ok(a.notes.some(s=>s.includes('not measured study')));
+ assert.ok(a.notes.some(s=>s.includes('independently marked')));
+});
