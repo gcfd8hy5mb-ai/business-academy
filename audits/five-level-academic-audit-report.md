@@ -74,3 +74,12 @@ node audits/build-full-curriculum-audit.cjs --json
 The GitHub Actions workflow `.github/workflows/academic-levels-1-2.yml` runs the full academic test group alongside earlier scope-specific tests. On successful runs, its generated reviewer evidence artifact includes `five-level-curriculum-audit.md` and `five-level-curriculum-audit.json`. The workflow name retains its earlier Level 1–2 label; its coverage now includes all five levels. No student progress, local storage key, Firebase setting, original grades or graduation flag is changed by this audit.
 
 **Conclusion:** The five-level curriculum has an extensive authored foundation and passes automated **structural** tests across all 26 courses. Substantive independent academic completion, assessment reliability and workload validation remain open. No university endorsement, accreditation, degree or transferable credit is asserted.
+
+## Follow-up remediation of Findings 1–3 (November 9, 2026)
+
+See `audits/findings-1-3-remediation.md` for the detailed change and verification register.
+
+- **Workload mismatch:** Original level/course targets (2,305 hours total) now appear alongside contemporary assigned course minutes (3,076.8 hours total) on the curriculum workload screen. No targets were silently rewritten; the +771.8 hour difference remains open for independent time-on-task validation. The user-facing ambiguity of displaying obsolete target hours as current assigned hours is addressed.
+- **Level 4 repeats:** Existing repeated questions are preserved for historical grade compatibility. New `level4-independent-transfer-v138.js` contains five distinct versioned optional independent exams with 20 newly constructed questions, avoiding repeated legacy prompts in those assessments. The archived required exams still contain repeated items; a safe, approved future graduation-rule migration is needed to stop counting them for new summative mastery.
+- **Level 1 instructional depth:** Six `v72` seminars now include extensive independently reproducible scenario analysis, executive alternatives and evidence/governance checks. The original six short-body warning flags have cleared without changing lesson time allocations or stored progress.
+- **Quality gates:** The updated CI passes 55 internal academic tests and the separate archived-exam mathematics regression. Passing tests do not establish instructional effectiveness or accreditation.
