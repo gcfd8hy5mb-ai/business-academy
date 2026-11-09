@@ -10,7 +10,7 @@
 
 Business Academy is an independent, self-directed online business education application with authored conceptual lessons, worked financial models, primary-source reading links, objective questions, numerical exercises, portfolio work, corporate decision cases and business simulations. The intended emphasis is large-company corporate decision-making and executive-level reasoning. **It is not a university program**, and claims of university-level standards, completion, equivalence or learning effectiveness require review of the evidence—not stated aspirations.
 
-The target of this dossier is the **first 13 courses (Levels 1 and 2)**. The entire program has five planned levels, but the present assurance-of-learning review cannot certify Levels 3–5. Versioned extensions are composed in the order declared by `index.html`. See the companion evidence generator rather than relying on manually copied historical progress claims.
+The target of this dossier is the **first 13 courses (Levels 1 and 2)**. The entire program has five planned levels, but the present assurance-of-learning review cannot certify Levels 3–5. The curriculum has **not been independently reviewed in full**, and no real student work has received the qualified external grading envisioned here. Versioned extensions are composed in the order declared by `index.html`. See the companion evidence generator rather than relying on manually copied historical progress claims.
 
 ## 2. Reproducible evidence index
 
