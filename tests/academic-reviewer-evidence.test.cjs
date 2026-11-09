@@ -48,7 +48,7 @@ test('examiner dossier requests human marking and rejects accreditation/credit i
  assert.match(dossier,/university credits/i);
  assert.match(dossier,/blinded scoring pilot/i);
  assert.match(dossier,/NEEDS_EXPERT_ALIGNMENT_REVIEW/);
- assert.match(dossier,/not independently reviewed/i);
+ assert.match(dossier,/not (?:been )?independently reviewed/i);
  const index=fs.readFileSync('index.html','utf8');
  assert.ok(!index.includes('build-reviewer-evidence.cjs'));
  assert.ok(!index.includes('independent-academic-evaluation-dossier.md'));
