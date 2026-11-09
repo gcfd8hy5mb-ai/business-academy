@@ -39,4 +39,7 @@ test('catalog audit transparently reports outcomes, workload and repeat-question
  const summary=[1,2,3,4,5].map(l=>({level:l,...a.totals['level'+l],missingOutcomes:a.courses.filter(c=>c.level===l&&c.learningOutcomes===0).map(c=>c.id)}));
  console.log('FIVE_LEVEL_ACADEMIC_AUDIT_SUMMARY='+JSON.stringify(summary));
  assert.ok(summary.every(x=>x.courses>0));
+ assert.deepEqual(summary.map(x=>x.plannedHours),[365,590,690,480,180]);
+ assert.ok(summary.every(x=>Number.isFinite(x.assignedMinusPlannedHours)));
+ assert.ok(summary.some(x=>x.assignedMinusPlannedHours>0),'Published plans and assigned minutes should be reconciled');
 });
