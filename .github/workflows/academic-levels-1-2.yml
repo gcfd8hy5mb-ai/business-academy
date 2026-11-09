@@ -26,3 +26,18 @@ jobs:
           node-version: '22'
       - name: Source integrity, exam keys and composed curriculum tests
         run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs tests/academic-shared-independent-assessments.test.cjs tests/academic-primary-source-cases.test.cjs tests/academic-level2-exam-rigor.test.cjs tests/academic-examiner-calibration.test.cjs tests/academic-reviewer-evidence.test.cjs
+
+      - name: Assemble reproducible external reviewer evidence files
+        run: |
+          mkdir -p reviewer-evidence
+          node audits/build-reviewer-evidence.cjs > reviewer-evidence/course-evidence.md
+          node audits/build-reviewer-evidence.cjs --json > reviewer-evidence/course-evidence.json
+          cp audits/independent-academic-evaluation-dossier.md reviewer-evidence/
+          cp audits/independent-written-examiner-protocol.md reviewer-evidence/
+          cp audits/levels-1-2-academic-audit.md reviewer-evidence/
+      - name: Upload reviewer evidence packet
+        uses: actions/upload-artifact@v4
+        with:
+          name: business-academy-levels1-2-reviewer-evidence
+          path: reviewer-evidence/
+          retention-days: 30
