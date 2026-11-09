@@ -43,3 +43,10 @@ test('catalog audit transparently reports outcomes, workload and repeat-question
  assert.ok(summary.every(x=>Number.isFinite(x.assignedMinusPlannedHours)));
  assert.ok(summary.some(x=>x.assignedMinusPlannedHours>0),'Published plans and assigned minutes should be reconciled');
 });
+
+// Temporary diagnostic evidence for exact learner-facing editorial gaps (included in CI log).
+test('enumerate unresolved editorial flags with stable lesson and question identifiers',()=>{
+ const flags=a.courses.filter(c=>c.longLessonsWithShortBody||c.exactRepeatedQuestionPrompts).map(c=>({course:c.id,short:c.examplesOfShortLongLessons,repeated:c.examplesOfRepeatedPrompts}));
+ console.log('ACADEMIC_EDITORIAL_FLAGS='+JSON.stringify(flags));
+ assert.ok(flags.length>0);
+});
