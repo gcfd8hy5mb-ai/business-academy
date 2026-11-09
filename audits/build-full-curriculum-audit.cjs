@@ -71,7 +71,7 @@ function analyze(){
   });
  }
  const app=fs.readFileSync(path.join(root,'app-v28.js'),'utf8');
- const planStart=app.indexOf('const coursePlans='),planEnd=app.indexOf(';\\nlet planHoursPerWeek',planStart);
+ const planStart=app.indexOf('const coursePlans='),planEnd=app.indexOf(';'+String.fromCharCode(10)+'let planHoursPerWeek',planStart);
  const authoredPlans=planStart>=0&&planEnd>planStart?JSON.parse(app.slice(planStart+'const coursePlans='.length,planEnd)):[];
  const expectedPlanLengths=[6,7,7,5,1];
  const plannedHours=[];
