@@ -4,6 +4,25 @@
  */
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
+function validateReplacementBank(legacy,replacement,id){
+ const normalize=s=>String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+ if(!replacement||!replacement.optional)throw Error('No optional replacement for '+id);
+ const questions=replacement.questions;
+ if(!Array.isArray(questions)||!questions.length)throw Error('Missing replacement questions in '+id);
+ const legacyIDs=new Set(legacy.map(e=>String(e.id)));
+ const legacyQuestionIDs=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>String(q.id))));
+ const legacyPrompts=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>normalize(q.prompt))));
+ const introducedQuestionIds=questions.map(q=>String(q.id||''));
+ const introducedPrompts=questions.map(q=>normalize(q.prompt));
+ if(!replacement.id||legacyIDs.has(String(replacement.id)))throw Error('Replacement exam ID collides with required exam in '+id);
+ if(introducedQuestionIds.some(qid=>!qid||legacyQuestionIDs.has(qid)) ||
+    new Set(introducedQuestionIds).size!==introducedQuestionIds.length)
+  throw Error('Unsafe replacement question ID in '+id);
+ if(introducedPrompts.some(prompt=>!prompt||legacyPrompts.has(prompt)) ||
+    new Set(introducedPrompts).size!==introducedPrompts.length)
+  throw Error('Reused or blank replacement question prompt in '+id);
+ return {introducedQuestionIds,legacyIDs};
+}
 function plan(root=path.resolve(__dirname,'..')){
  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
  const scripts=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(x=>x[1].split('?')[0]).filter(p=>/^learning\/(?:level\d|level1-level2|level1-level3|level4-level5)/.test(p));
@@ -16,25 +35,14 @@ function plan(root=path.resolve(__dirname,'..')){
   if(!c)throw Error('Missing '+id);
   const legacy=(c.sectionExams||[]).filter(e=>!e.optional);
   const replacement=(c.sectionExams||[]).find(e=>e.id==='c'+n+'-v138-independent-transfer');
-  if(!replacement||!replacement.optional)throw Error('No optional replacement for '+id);
+  const validated=validateReplacementBank(legacy,replacement,id);
   const seen=new Map(),duplicate=[];
   for(const exam of legacy)for(const q of exam.questions||[]){
    const p=normalize(q.prompt);
    if(seen.has(p))duplicate.push({questionId:q.id,examId:exam.id,matchedExamId:seen.get(p).examId,matchedQuestionId:seen.get(p).id});
    else seen.set(p,{id:q.id,examId:exam.id});
   }
-  const legacyIDs=new Set(legacy.map(e=>e.id));
-  const legacyQuestionIDs=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>String(q.id))));
-  const introducedQuestionIds=replacement.questions.map(q=>String(q.id));
-  const introducedPrompts=replacement.questions.map(q=>normalize(q.prompt));
-  if(!replacement.questions.length)throw Error('Missing replacement questions in '+id);
-  if(introducedQuestionIds.some(qid=>!qid||legacyQuestionIDs.has(qid)) ||
-     new Set(introducedQuestionIds).size!==introducedQuestionIds.length)
-   throw Error('Unsafe replacement question ID in '+id);
-  if(introducedPrompts.some(prompt=>!prompt||seen.has(prompt)) ||
-     new Set(introducedPrompts).size!==introducedPrompts.length)
-   throw Error('Reused or blank replacement question prompt in '+id);
-  if(legacyIDs.has(replacement.id))throw Error('Replacement exam ID collides with required exam in '+id);
+  const {introducedQuestionIds,legacyIDs}=validated;
   const proposal={
    course:id,legacyRequiredExamCount:legacy.length,
    repeatedLegacyPromptOccurrences:duplicate.length,
@@ -77,4 +85,4 @@ if(require.main===module){
   for(const b of result.blockers)console.log('- '+b);
  }
 }
-module.exports={plan};
+module.exports={plan,validateReplacementBank};
