@@ -51,6 +51,7 @@ test('batch 4: unanswered and intentionally incorrect objective exams do not pro
   const s=L.state(store,id),required=[c.exam,c.advancedExam,...(c.sectionExams||[]).filter(x=>!x.optional)].filter(x=>x?.questions?.length);
   for(const a of required){
    const kind=a===c.exam?'exam':a===c.advancedExam?'advancedExam':'sectionExam-'+a.id;
+   s.answers[kind]={}; // Isolate each incomplete attempt from any prior synthetic assessment answer record.
    const no=L.grade(store,c,kind);
    assert.equal(no,false,id+' incomplete '+kind+' incorrectly graded');
    const scored=answerAndGrade(store,c,kind,a,true);
