@@ -38,6 +38,29 @@ def main():
                 assert marker in raw, "%s missing expected content" % route
                 assert len(raw) > 100, route
             print("PASS route", route, len(raw))
+        # Exhaustively request each local script / stylesheet declared by the
+        # real index, not just a curated subset. A missing asset can otherwise
+        # make the installed Home Screen app appear blank.
+        import re
+        html = (ROOT / "index.html").read_text()
+        linked_assets = re.findall(r'<script[^>]+src="([^"]+)"', html)
+        linked_assets += re.findall(r'<link[^>]+href="([^"]+)"', html)
+        checked = set(route for route, _ in paths)
+        for raw_asset in linked_assets:
+            asset = raw_asset.split("?", 1)[0]
+            if asset.startswith(("https://", "http://", "//", "data:")) or asset in checked:
+                continue
+            if not asset.endswith((".js", ".css", ".webmanifest", ".json")):
+                continue
+            assert ".." not in asset.split("/"), asset
+            url = "http://127.0.0.1:%d/%s" % (server.server_address[1], asset.lstrip("./"))
+            with urllib.request.urlopen(url, timeout=5) as response:
+                raw = response.read()
+                assert response.status == 200, asset
+                assert len(raw) > 20, asset
+            checked.add(asset)
+        assert len(checked) >= 90, "Unexpectedly few index-linked assets verified"
+        print("PASS all referenced static routes:", len(checked))
         html = (ROOT / "index.html").read_text()
         assert "name=\"viewport\"" in html
         assert "desktop-executive.css" in html
