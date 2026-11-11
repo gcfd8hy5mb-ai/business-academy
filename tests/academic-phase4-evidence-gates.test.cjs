@@ -36,6 +36,7 @@ test('evidence generators are detached from public teaching and grade storage',(
 });
 test('risk register publishes reproducible candidate-level coverage without inferring academic approval',()=>{
  console.log('PHASE4_OUTCOME_MAPPING='+JSON.stringify(outcomes.summary));
+ console.log('PHASE4_OUTCOME_REVIEW_QUEUE='+JSON.stringify(outcomes.outcomes.filter(x=>x.status==='MANUAL_ALIGNMENT_REQUIRED').map(x=>({code:x.code,statement:x.outcome,lessons:x.candidateLessons.map(y=>y.id),requiredQuestions:x.candidateRequiredQuestions.map(y=>y.id),written:x.candidateWrittenTasks.map(y=>y.id)}))));
  console.log('PHASE4_REFERENCES='+JSON.stringify(sources.levels));
  assert.ok(outcomes.summary.requiresManual>=0);
  assert.ok(sources.levels.every(l=>l.readingRecords>=l.directLinks));
