@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: Source integrity, exam keys and composed curriculum tests
-        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs tests/academic-shared-independent-assessments.test.cjs tests/academic-primary-source-cases.test.cjs tests/academic-level2-exam-rigor.test.cjs tests/academic-examiner-calibration.test.cjs tests/academic-reviewer-evidence.test.cjs tests/academic-five-level-curriculum.test.cjs tests/academic-level3-level5-review.test.cjs tests/academic-issues-1-3-closeout.test.cjs tests/academic-phase4-acceptance.test.cjs tests/academic-phase4-quality.test.cjs
+        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs tests/academic-shared-independent-assessments.test.cjs tests/academic-primary-source-cases.test.cjs tests/academic-level2-exam-rigor.test.cjs tests/academic-examiner-calibration.test.cjs tests/academic-reviewer-evidence.test.cjs tests/academic-five-level-curriculum.test.cjs tests/academic-level3-level5-review.test.cjs tests/academic-issues-1-3-closeout.test.cjs tests/academic-phase4-acceptance.test.cjs tests/academic-phase4-quality.test.cjs tests/academic-phase4-evidence-gates.test.cjs
 
       - name: Verify local static-host routes and responsive entrypoint
         run: python3 audits/phase4-http-smoke.py
@@ -39,6 +39,10 @@ jobs:
           node audits/build-full-curriculum-audit.cjs --json > reviewer-evidence/five-level-curriculum-audit.json
           node audits/phase4-quality-review.cjs > reviewer-evidence/phase4-quality-review.md
           node audits/phase4-quality-review.cjs --json > reviewer-evidence/phase4-quality-review.json
+          node audits/phase4-source-register.cjs > reviewer-evidence/phase4-source-register.md
+          node audits/phase4-source-register.cjs --json > reviewer-evidence/phase4-source-register.json
+          node audits/phase4-outcome-mapping.cjs > reviewer-evidence/phase4-outcome-mapping.md
+          node audits/phase4-outcome-mapping.cjs --json > reviewer-evidence/phase4-outcome-mapping.json
           cp audits/independent-academic-evaluation-dossier.md reviewer-evidence/
           cp audits/independent-written-examiner-protocol.md reviewer-evidence/
           cp audits/levels-1-2-academic-audit.md reviewer-evidence/
