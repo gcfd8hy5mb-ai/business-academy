@@ -13,6 +13,13 @@ test('authored primary-source register covers all levels without claiming link v
  assert.ok(sources.sourceRows.every(s=>s.factCheck==='NOT_CHECKED'&&s.licenseCheck==='NOT_CHECKED'&&s.linkCheck==='NOT_CHECKED'));
  assert.ok(sources.sourceRows.every(s=>!s.linked||/^https:\/\//.test(s.url)),JSON.stringify(sources.issues));
 });
+test('Level 3 historical-case sources appear as direct optional research links, not buried only in text',()=>{
+ const l3=sources.levels.find(x=>x.level===3);
+ assert.ok(l3.directLinks>=8,'Seven historical case source URLs should be directly accessible in readings');
+ const history=sources.sourceRows.filter(x=>Number(x.course.slice(-2))>=14&&Number(x.course.slice(-2))<=20&&x.id?.endsWith('-reading')&&x.title.startsWith('Dated company and regulator'));
+ assert.equal(history.length,7);
+ for(const r of history)assert.ok(/^https:\/\//.test(r.url)&&r.linkCheck==='NOT_CHECKED','Source still requires document-level validation');
+});
 test('every declared learning outcome has an individual independently reviewable record',()=>{
  assert.equal(outcomes.courses,26);
  assert.ok(outcomes.summary.total>=70);
