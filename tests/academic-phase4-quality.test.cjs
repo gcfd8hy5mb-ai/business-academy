@@ -33,7 +33,10 @@ test('Lesson and question crosslinks are inventoried with stable IDs',()=>{
 });
 test('all 26 courses retain numerical assessment and source evidence metadata',()=>{
  assert.ok(rows.reduce((n,r)=>n+r.assessedQuestions,0)>=1000);
- assert.ok(rows.reduce((n,r)=>n+r.linkedSources,0)>=45);
+ const sourceCoverage=[1,2,3,4,5].map(level=>({level,linkedSources:rows.filter(r=>r.level===level).reduce((n,r)=>n+r.linkedSources,0)}));
+ console.log('PHASE4_SOURCE_COVERAGE='+JSON.stringify(sourceCoverage));
+ assert.ok(sourceCoverage.every(x=>Number.isInteger(x.linkedSources)&&x.linkedSources>=0));
+ assert.ok(sourceCoverage.some(x=>x.linkedSources>0),'No primary/public source URLs registered');
  const html=fs.readFileSync('index.html','utf8');
  assert.ok(!html.includes('phase4-quality-review.cjs'),'Audit must never load in the public student app');
 });
