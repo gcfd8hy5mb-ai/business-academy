@@ -17,6 +17,8 @@ test('Level 4 shadow report identifies all five affected courses and future inde
   assert.equal(c.transitionDecision,'NOT_APPROVED_NOT_APPLIED');
   assert.ok(c.compatibleWithExistingAttempts);
   assert.equal(c.replacementQuestionIds.length,new Set(c.replacementQuestionIds).size);
+  assert.equal(c.replacementIdsDisjointFromLegacy,true);
+  assert.equal(c.replacementPromptsDisjointFromLegacy,true);
  }
 });
 test('transition plan retains archived scores and requires cohort-pinning before a new mandatory version',()=>{
