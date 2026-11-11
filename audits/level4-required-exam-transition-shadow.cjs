@@ -24,14 +24,25 @@ function plan(root=path.resolve(__dirname,'..')){
    else seen.set(p,{id:q.id,examId:exam.id});
   }
   const legacyIDs=new Set(legacy.map(e=>e.id));
-  const introducedQuestionIds=replacement.questions.map(q=>q.id);
-  if(introducedQuestionIds.some(id=>seen.has(normalize(id))))throw Error('Unsafe new ID');
+  const legacyQuestionIDs=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>String(q.id))));
+  const introducedQuestionIds=replacement.questions.map(q=>String(q.id));
+  const introducedPrompts=replacement.questions.map(q=>normalize(q.prompt));
+  if(!replacement.questions.length)throw Error('Missing replacement questions in '+id);
+  if(introducedQuestionIds.some(qid=>!qid||legacyQuestionIDs.has(qid)) ||
+     new Set(introducedQuestionIds).size!==introducedQuestionIds.length)
+   throw Error('Unsafe replacement question ID in '+id);
+  if(introducedPrompts.some(prompt=>!prompt||seen.has(prompt)) ||
+     new Set(introducedPrompts).size!==introducedPrompts.length)
+   throw Error('Reused or blank replacement question prompt in '+id);
+  if(legacyIDs.has(replacement.id))throw Error('Replacement exam ID collides with required exam in '+id);
   const proposal={
    course:id,legacyRequiredExamCount:legacy.length,
    repeatedLegacyPromptOccurrences:duplicate.length,
    duplicateExamples:duplicate.slice(0,5),
    replacementExamId:replacement.id,
    replacementQuestionIds:introducedQuestionIds,
+   replacementIdsDisjointFromLegacy:true,
+   replacementPromptsDisjointFromLegacy:true,
    newExamQuestionCount:replacement.questions.length,
    compatibleWithExistingAttempts:legacy.every(e=>e.questions.every(q=>q.id&&Number.isInteger(q.correct))),
    transitionDecision:'NOT_APPROVED_NOT_APPLIED',
