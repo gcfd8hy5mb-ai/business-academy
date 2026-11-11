@@ -63,6 +63,7 @@ jobs:
           cp audits/phase4-selected-source-verification.md reviewer-evidence/
           cp audits/five-level-external-signoff-handoff.md reviewer-evidence/
           cp audits/final-internal-curriculum-readiness.md reviewer-evidence/
+          cp audits/four-batch-test-results.md reviewer-evidence/
           cp audits/final-real-device-acceptance-script.md reviewer-evidence/
       - name: Upload reviewer evidence packet
         uses: actions/upload-artifact@v4
