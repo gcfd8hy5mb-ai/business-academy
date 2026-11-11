@@ -74,7 +74,8 @@ test('each proposed independent required exam is truly mandatory, with both obje
   grade(enrolled,c,'sectionExam-'+independent.id,independent,true);
   assert.equal(L.mastery(enrolled,c).mastered,false,'Wrong objective candidate still graduated: '+c.id);
   grade(enrolled,c,'sectionExam-'+independent.id,independent);
-  assert.equal(L.mastery(enrolled,c).mastered,true,'Correct candidate did not restore graduation: '+c.id);
+  review(s,'sectionExam-'+independent.id,independent.rubric);
+  assert.equal(L.mastery(enrolled,c).mastered,true,'Correct candidate and written review did not restore graduation: '+c.id);
   delete s.reviews['sectionExam-'+independent.id];
   assert.equal(L.mastery(enrolled,c).mastered,false,'Missing written review was ignored: '+c.id);
  }
@@ -97,7 +98,9 @@ test('Level 4 final keeps its own milestone route in prospective simulation',()=
  const c=rows.find(c=>c.id==='course-25');
  assert.ok(c);
  const proposal=P.proposedRequired(c);
- assert.equal(proposal.retired.some(e=>e.id==='l4-final-v99-exam'),true);
+ const finalRetained=proposal.kept.some(e=>e.id==='l4-final-v99-exam');
+ const finalRetired=proposal.retired.some(e=>e.id==='l4-final-v99-exam');
+ assert.notEqual(finalRetained,finalRetired,'Final must be explicitly assigned to exactly one path');
  assert.equal(proposal.replacement.id,'c25-v138-independent-transfer');
  const sim={...L.empty(),level4ExamCohort:{level:4,version:P.VERSION,status:'approved'}};
  finish(sim,c,{exclude:[proposal.replacement.id]});
