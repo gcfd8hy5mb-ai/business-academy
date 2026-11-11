@@ -81,3 +81,44 @@ test('Firebase restore and upload must reject mismatched or corrupt cohort pins'
  assert.match(cloud,/Cohort pin mismatch; automatic cloud overwrite stopped/);
  assert.match(cloud,/if\(snap\.exists\(\)\&\&!cohortCompatible/);
 });
+
+test('release-disabled exam presentation, milestone and workload leave historical student state unchanged',()=>{
+ const old={id:'l4-final-v99-exam',optional:false,minutes:60,questions:[{id:'old',prompt:'Historic'}]};
+ const fresh={id:'c25-v138-independent-transfer',optional:true,minutes:0,suggestedMinutes:90,questions:[1,2,3,4].map(i=>({id:'fresh-'+i,prompt:'New '+i}))};
+ const course={id:'course-25',sectionExams:[old,fresh]};
+ const store={schema:1,courses:{'course-25':{lessons:['completed'],attempts:[{kind:'sectionExam-l4-final-v99-exam',score:90,assessmentSnapshot:{keyFingerprint:'fnv1a32-archive'}}]}}};
+ const before=JSON.stringify(store),catalog=JSON.stringify(course);
+ assert.strictEqual(P.effectiveCourse(store,course),course);
+ assert.strictEqual(P.displayExams(store,course),course.sectionExams);
+ assert.strictEqual(P.milestoneExam(store,course),old);
+ assert.deepEqual(P.required(store,course),[old]);
+ assert.equal(JSON.stringify(store),before);
+ assert.equal(JSON.stringify(course),catalog);
+});
+test('workspace milestone, exam display, progress and workload all delegate to the cohort policy',()=>{
+ const ws=fs.readFileSync('learning/workspace-v46.js','utf8');
+ assert.match(ws,/BAL4CohortPolicy\.required\(store,c\)/);
+ assert.match(ws,/BAL4CohortPolicy\.displayExams\(store,c\)/);
+ assert.match(ws,/BAL4CohortPolicy\.milestoneExam\(store,finalCourse\)/);
+ assert.match(ws,/L\.workload\(assignedCourse\(c\)\)/);
+ assert.match(ws,/BAWorkloadAudit\.detail\(assignedCourse\(c\)\)/);
+ assert.match(ws,/for\(const a of requiredExams\(course\)\)/);
+ assert.match(ws,/visibleExams\(c\)\.slice\(\)\.sort/);
+});
+test('candidate Level 4 final fallback and exam labels do not mutate archived definitions',()=>{
+ const old={id:'l4-final-v99-exam',title:'Legacy final',minutes:90,questions:[{id:'old',prompt:'Repeat'}]};
+ const second={id:'another-exam',title:'Repeat again',questions:[{id:'old2',prompt:' repeat '}]};
+ const replacement={id:'c25-v138-independent-transfer',optional:true,title:'Independent final',suggestedMinutes:90,
+   instructions:'Optional independent assessment (suggested 90 minutes, excluded from required graduation hours). The numerical checks are auto-scored.',
+   questions:[1,2,3,4].map(i=>({id:'new-'+i,prompt:'New '+i}))};
+ const course={id:'course-25',sectionExams:[old,second,replacement]};
+ const before=JSON.stringify(course),p=P.proposedRequired(course);
+ assert.equal(p.retired.some(e=>e.id===old.id),true);
+ assert.equal(p.replacement.id,replacement.id);
+ assert.equal(p.replacement.optional,false);
+ // Actual rollout is off: even a forged pin cannot change the student-visible list.
+ const forged={schema:1,courses:{},level4ExamCohort:{level:4,version:P.VERSION,status:'approved'}};
+ assert.equal(P.milestoneExam(forged,course).id,old.id);
+ assert.equal(P.displayExams(forged,course)[2].optional,true);
+ assert.equal(JSON.stringify(course),before);
+});
