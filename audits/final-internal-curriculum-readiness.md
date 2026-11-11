@@ -55,3 +55,15 @@ The artifact archive in GitHub Actions includes this report, source register, ou
 - Distinguish internal authoring completeness from independent academic sign-off in all public labels.
 
 **Final conclusion:** The authored five-level curriculum is ready as a **review candidate**, with internal QA evidence prepared. The user can now share it with qualified external evaluators, but no independent endorsement or complete real-device certification is claimed.
+
+## Follow-up internal audit: optional Level 4 exam UX and migration safeguards (2026-11-10)
+
+The existing five Level 4 optional independent transfer exams had `minutes:0` to avoid inflating required course hours, but the learner-facing interface incorrectly rendered **“0 minutes suggested”** and displayed the usual 80% required threshold. The audit branch now adds separate `suggestedMinutes:90` to each optional exam, and `learning/workspace-v46.js` explicitly labels these assessments **optional** and **not required for mastery**, distinguishes required exam 80% expectations, and displays a suggested practice duration without counting it as required assigned time. The delivery cache-query versions for the changed scripts were incremented; this does not deploy to live.
+
+New `tests/academic-optional-exam-ux-regression.test.cjs` verifies the actual learning model preserves existing required mastery and historical attempt storage while optional written and objective assessments do not change graduation gates.
+
+New `audits/level4-required-exam-transition-shadow.cjs` inventories repeated historical required assessment prompts and maps the current five independent optional replacement banks. This is **SHADOW_REPORT_ONLY**; it does not enable cohort/version pinning, retire legacy required exam questions, change learner grade history or promote unreviewed optional exams to required. Enabling a new required-bank version for future learners would require an approved policy, backward-compatible version and cloud persistence scheme, human academic verification, and live-device regression. Its test `tests/academic-level4-transition-shadow.test.cjs` is included in CI.
+
+Created `audits/final-real-device-acceptance-script.md`, a structured iPhone Safari/Home Screen, desktop, Firebase cloud sync, simulator, history and optional examination acceptance script. **All scenarios are marked NOT RUN** pending observation in a suitable preview environment and authorized test account. This is not a record of passing physical-device tests.
+
+**Outstanding:** no independent academic sign-off, no physical iPhone/desktop acceptance certification, no complete source-claim verification, no measured workload equivalency, and no approved retirement of the archived repeated required Level 4 exams. The draft branch must remain unmerged until release authorization.
