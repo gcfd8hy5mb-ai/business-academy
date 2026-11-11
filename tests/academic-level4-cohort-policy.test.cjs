@@ -64,3 +64,20 @@ test('all five actual Level 4 exam banks can be inventoried without touching lea
   assert.equal(JSON.stringify(c),before,'Candidate calculation must not alter existing course data');
  }
 });
+
+test('Firebase restore and upload must reject mismatched or corrupt cohort pins',()=>{
+ const encode=p=>({'business-academy-learning-v1':JSON.stringify(p)});
+ const old=encode(L.empty());
+ const newer=encode({...L.empty(),level4ExamCohort:{level:4,version:P.VERSION,status:'approved'}});
+ const bad=encode({...L.empty(),level4ExamCohort:{level:4,version:'unknown',status:'approved'}});
+ assert.equal(P.compatibleRecords(old,old),true);
+ assert.equal(P.compatibleRecords(newer,newer),true);
+ assert.equal(P.compatibleRecords(old,newer),false);
+ assert.equal(P.compatibleRecords(newer,old),false);
+ assert.equal(P.compatibleRecords(old,bad),false);
+ assert.equal(P.compatibleRecords(old,{'business-academy-learning-v1':'{malformed'}),false);
+ const cloud=fs.readFileSync('learning/firebase-cloud-v158.js','utf8');
+ assert.match(cloud,/Cohort version mismatch or invalid pin/);
+ assert.match(cloud,/Cohort pin mismatch; automatic cloud overwrite stopped/);
+ assert.match(cloud,/if\(snap\.exists\(\)\&\&!cohortCompatible/);
+});
