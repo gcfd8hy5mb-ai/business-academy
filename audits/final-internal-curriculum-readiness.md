@@ -67,3 +67,11 @@ New `audits/level4-required-exam-transition-shadow.cjs` inventories repeated his
 Created `audits/final-real-device-acceptance-script.md`, a structured iPhone Safari/Home Screen, desktop, Firebase cloud sync, simulator, history and optional examination acceptance script. **All scenarios are marked NOT RUN** pending observation in a suitable preview environment and authorized test account. This is not a record of passing physical-device tests.
 
 **Outstanding:** no independent academic sign-off, no physical iPhone/desktop acceptance certification, no complete source-claim verification, no measured workload equivalency, and no approved retirement of the archived repeated required Level 4 exams. The draft branch must remain unmerged until release authorization.
+
+## Final workload parity and non-sign-off readiness update — November 10, 2026
+
+Added `tests/academic-workload-parity.test.cjs`, which loads the real 26-course curriculum in the same source order as the public app and independently computes assigned minutes through both `BALearning.workload` (student-facing) and `BAWorkloadAudit.detail` (reviewer-facing). All course totals must match exactly, and suggested 90-minute optional independent Level 4 sessions must not affect assigned required hours. The CI run including this test succeeded alongside the historical mathematics regression.
+
+**Non-sign-off gates still open:** (1) authorize and implement a historically safe, versioned replacement of repeated Level 4 required exams for *future* learners; (2) execute the `final-real-device-acceptance-script.md` against an isolated deployment with a consented test account, including iPhone Safari, PWA, desktop and actual Firebase cloud synchronization; (3) independently substantiate the full set of real-world case claims and numerical exam answers beyond the audited samples, and calibrate claimed study hours. Even excluding the formal independent academic sign-off itself, those activities are necessary for an unqualified production-ready designation. Their omission cannot be concealed by software-test success.
+
+No live deployment, historical-grade migration or unauthorized alteration to stored learner progress is made by this update.
