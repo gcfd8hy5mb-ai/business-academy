@@ -18,7 +18,7 @@ function scan(root=path.resolve(__dirname,'..')){
    totals.questions++;
    const correct=q.options?.[q.correct];
    const duplicateOptions=q.options?.length!==new Set((q.options||[]).map(x=>String(x).trim().toLowerCase())).size;
-   const expectedPrecision=/round(?:ed|ing)?\s+to\s+(?:2|two)\s+decimal\s+places?/i.test(q.prompt||'');
+   const expectedPrecision=/round(?:ed|ing)?\s+to\s+(?:2|two)\s+decimals?(?:\s+places?)?/i.test(q.prompt||'');
    if(expectedPrecision)totals.explicitTwoDecimal++;
    const normalizedCorrect=String(correct??'').replace(/[$,%\s]/g,'').replace(/,/g,'').replace(/[−]/g,'-');
    const decimalLike=/^-?\d+\.\d+$/.test(normalizedCorrect);
