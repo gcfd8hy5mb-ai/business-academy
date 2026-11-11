@@ -11,7 +11,7 @@ const expected={
  21:[String(610-170+25-15),(11*annuity(.1,3)-15).toFixed(2),String(32-8),String(80-(90-35))],
  22:[(25*annuity(.1,3)-55).toFixed(2),'Recompute NPV; the joint downside can make the investment value destroying',String(84-(105-40)),'Exclude it as a sunk cost'],
  23:[String((.05*5e6-130000)/1000),String((.03*5e6-130000)/1000),((560-110)/150).toFixed(2)+'×','Independent internal audit'],
- 24:[String(50000*8/60*30*.7-100000),String(50000*8/60*30*.7-120000),String(100*(1400/10000-1200/10000)),'Quality-adjusted cash results versus a credible control'],
+ 24:[String(50000*8/60*30*.7-100000),String(50000*8/60*30*.7-120000),String(Math.round(100*(1400/10000-1200/10000))),'Quality-adjusted cash results versus a credible control'],
  25:[String(110-(145-60)),String(12),String(.06*8e6-150000),'Secure permitted financing, resize or defer, or decline']
 };
 test('all 20 independent Level 4 answer keys reconcile to external formula/test assertions',()=>{
