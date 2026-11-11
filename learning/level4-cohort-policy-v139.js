@@ -61,7 +61,31 @@ function required(store,course){
  const proposed=proposedRequired(course);
  return [...proposed.kept,proposed.replacement];
 }
-const api={VERSION,LEGACY,RELEASE_APPROVED,pinned,pinNew,hasWork,required,proposedRequired,cohortFromRecords,compatibleRecords};
+function displayExams(store,course){
+ const all=course.sectionExams||[];
+ if(!RELEASE_APPROVED||pinned(store)!==VERSION||!ids.includes(course.id))return all;
+ const requiredIDs=new Set(required(store,course).map(e=>e.id));
+ return all.map(e=>{
+  if(requiredIDs.has(e.id)){
+   return {...e,optional:false,minutes:e.minutes||e.suggestedMinutes||90,
+    instructions:String(e.instructions||'').replace(/^Optional independent assessment[^.]*\./,'Required versioned independent assessment.')};
+  }
+  return {...e,optional:true,suggestedMinutes:e.suggestedMinutes||e.minutes||0,minutes:0,
+   title:'Archived exam — '+e.title,
+   instructions:'Historical examination retained for review and previous grade compatibility. Not required for this cohort. '+(e.instructions||'')};
+ });
+}
+function milestoneExam(store,course){
+ const original=(course.sectionExams||[]).find(e=>e.id==='l4-final-v99-exam');
+ if(!course||course.id!=='course-25'||!RELEASE_APPROVED||pinned(store)!==VERSION)return original;
+ const list=required(store,course);
+ return list.find(e=>e.id==='l4-final-v99-exam')||list.find(e=>e.id==='c25-v138-independent-transfer')||null;
+}
+function effectiveCourse(store,course){
+ if(!RELEASE_APPROVED||pinned(store)!==VERSION||!ids.includes(course.id))return course;
+ return {...course,sectionExams:displayExams(store,course)};
+}
+const api={VERSION,LEGACY,RELEASE_APPROVED,pinned,pinNew,hasWork,required,proposedRequired,cohortFromRecords,compatibleRecords,displayExams,milestoneExam,effectiveCourse};
 root.BAL4CohortPolicy=api;
 if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
