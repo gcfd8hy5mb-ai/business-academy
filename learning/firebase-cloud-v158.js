@@ -52,6 +52,7 @@ function cloudPayload(docData){try{const p=JSON.parse(docData.raw||'null');retur
 function canonical(value){if(Array.isArray(value))return value.map(canonical);if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().map(k=>[k,canonical(value[k])]));return value}
 function canonicalJSON(value){try{return JSON.stringify(canonical(JSON.parse(value)))}catch{return value}}
 function sameRecords(a,b){return keys.every(k=>canonicalJSON(a[k])===canonicalJSON(b[k]))}
+function cohortCompatible(a,b){return !!window.BAL4CohortPolicy?.compatibleRecords(a,b)}
 function saveBackupFile(filename,records){const blob=new Blob([JSON.stringify({savedAt:new Date().toISOString(),records},null,2)],{type:'application/json'}),a=document.createElement('a'),url=URL.createObjectURL(blob);a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000)}
 async function resumeLink(account,generation){
  if(!account.emailVerified||!localStorage.getItem(linkKey(account.uid)))return;
@@ -123,6 +124,7 @@ async function reviewVersions(){
      status('Backup downloads requested. Verify they appear in Files/Downloads before choosing a version.');
    }));
    box.append(button('Keep iPhone version',async()=>{
+     if(!cohortCompatible(local,remote)){status('Cohort version mismatch or invalid pin. Cloud replacement blocked; retain both backups and obtain manual migration review.');return;}
      if(!confirm('This will replace the current CLOUD progress with the copy on this iPhone. Download BOTH backups first. Continue?'))return;
      if(!confirm('Confirm again: keep this iPhone progress and REPLACE the existing cloud copy?'))return;
      try{
@@ -140,6 +142,7 @@ async function reviewVersions(){
      }catch(e){status('Cloud not changed: '+(e.code||e.message))}
    }));
    box.append(button('Restore cloud to iPhone',()=>{
+     if(!cohortCompatible(local,remote)){status('Cohort version mismatch or invalid pin. Device replacement blocked; retain both backups and obtain manual migration review.');return;}
      if(!confirm('This will REPLACE this iPhone’s progress with the cloud version. Download BOTH backups first. Continue?'))return;
      if(!confirm('Confirm again: replace iPhone progress with the cloud version and reload?'))return;
      if(auth.currentUser?.uid!==owner)return;
@@ -184,6 +187,7 @@ async function sync(){
    const next=await runTransaction(db,async tx=>{
       const snap=await tx.get(ref),latest=snap.exists()?Number(snap.data().revision)||0:0;
       if(latest!==expect)throw Error('Cloud changed on another device. Automatic overwrite stopped.');
+      if(snap.exists()&&!cohortCompatible(readLocal(),cloudPayload(snap.data())))throw Error('Cohort pin mismatch; automatic cloud overwrite stopped.');
       if(auth.currentUser?.uid!==owner)throw Error('Account changed');
       tx.set(ref,{academy:'business',schemaVersion:1,revision:latest+1,raw:copy,updatedAt:serverTimestamp()});
       return latest+1;
