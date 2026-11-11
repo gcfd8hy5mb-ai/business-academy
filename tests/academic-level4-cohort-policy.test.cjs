@@ -45,3 +45,22 @@ test('schema, local storage key, archive, and Firebase synchronization keys rema
  assert.match(bridge,/Cloud changed on another device/);
  assert.ok(!core.includes('level4ExamCohort='));
 });
+
+test('all five actual Level 4 exam banks can be inventoried without touching learner data',()=>{
+ const html=fs.readFileSync('index.html','utf8');
+ const paths=[...html.matchAll(/<script\\b[^>]*\\bsrc="([^"]+)"/g)]
+  .map(x=>x[1].split('?')[0])
+  .filter(path=>/^learning\\/(?:level\\d|level1-level2|level1-level3|level4-level5)/.test(path));
+ const win={BAContent:{}};
+ for(const path of paths)new Function('window',fs.readFileSync(path,'utf8'))(win);
+ for(let n=21;n<=25;n++){
+  const id='course-'+n,c=win.BAContent[id];
+  assert.ok(c,'Missing '+id);c.id=id;
+  const before=JSON.stringify(c),result=P.proposedRequired(c);
+  assert.ok(result.retired.length>0,'No legacy repeated bank identified in '+id);
+  assert.ok(result.kept.length+result.retired.length>0);
+  assert.equal(result.replacement.id,'c'+n+'-v138-independent-transfer');
+  assert.equal(result.replacement.optional,false);
+  assert.equal(JSON.stringify(c),before,'Candidate calculation must not alter existing course data');
+ }
+});
