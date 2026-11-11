@@ -6,7 +6,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),fs=requir
 const {catalog}=require('../audits/four-batch-curriculum-stress.cjs');
 const ctx={window:{},Date,Math,JSON};
 vm.runInNewContext(fs.readFileSync('learning/core-v110.js','utf8'),ctx);
-const L=ctx.window.BALearning,rows=catalog();
+const L=ctx.window.BALearning,rows=catalog().map(x=>({...x,c:{...x.c,id:x.id}})); // Match live BALearning.catalog, which assigns each course its stable ID.
 function review(s,key,rubric){
  const list=rubric||[];
  if(!Array.isArray(list)||!list.length)return;
