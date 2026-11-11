@@ -49,7 +49,7 @@ for(const item of problemSets){
  const id='c'+item.n+'-v138-independent-transfer';
  if(c.sectionExams.some(e=>e.id===id))continue;
  c.sectionExams.push({
-  id,title:'Independent executive transfer — '+item.name,optional:true,minutes:0,
+  id,title:'Independent executive transfer — '+item.name,optional:true,minutes:0,suggestedMinutes:90,
   instructions:'Optional independent assessment (suggested 90 minutes, excluded from required graduation hours). The numerical checks are auto-scored; the written decision case is self-assessed pending qualified external review.',
   questions:item.questions.map((q,i)=>({id:id+'-q'+(i+1),prompt:q[0],options:q[1],correct:q[2],explanation:q[3],remediation:'Independently reconstruct the fictional inputs, computation, timing, decision constraint and alternate action.'})),
   written:item.written+' Give a worked joint two-variable stress, a quantitatively feasible counterproposal, a cash-floor test, actual-versus-fictional source separation and a board reversal threshold. External human grading has not occurred.',
