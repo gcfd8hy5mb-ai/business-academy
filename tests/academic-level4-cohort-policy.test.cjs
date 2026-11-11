@@ -48,9 +48,9 @@ test('schema, local storage key, archive, and Firebase synchronization keys rema
 
 test('all five actual Level 4 exam banks can be inventoried without touching learner data',()=>{
  const html=fs.readFileSync('index.html','utf8');
- const paths=[...html.matchAll(/<script\\b[^>]*\\bsrc="([^"]+)"/g)]
+ const paths=[...html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)]
   .map(x=>x[1].split('?')[0])
-  .filter(path=>/^learning\\/(?:level\\d|level1-level2|level1-level3|level4-level5)/.test(path));
+  .filter(path=>/^learning\/(?:level\d|level1-level2|level1-level3|level4-level5)/.test(path));
  const win={BAContent:{}};
  for(const path of paths)new Function('window',fs.readFileSync(path,'utf8'))(win);
  for(let n=21;n<=25;n++){
