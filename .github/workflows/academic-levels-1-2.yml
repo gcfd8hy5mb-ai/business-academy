@@ -44,6 +44,7 @@ jobs:
           cp audits/levels-1-2-academic-audit.md reviewer-evidence/
           cp audits/five-level-academic-audit-report.md reviewer-evidence/
           cp audits/findings-1-3-remediation.md reviewer-evidence/
+          cp audits/phase4-areas1-3-acceptance.md reviewer-evidence/
       - name: Upload reviewer evidence packet
         uses: actions/upload-artifact@v4
         with:
