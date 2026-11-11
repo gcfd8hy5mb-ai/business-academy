@@ -27,6 +27,20 @@ function pinNew(store,{approved=false}={}){
  store.level4ExamCohort={level:4,version:VERSION,status:'approved'};
  return store.level4ExamCohort;
 }
+function cohortFromRecords(records){
+ try{
+  const raw=records&&records['business-academy-learning-v1'];
+  if(raw===null||raw===undefined)return LEGACY;
+  const parsed=JSON.parse(raw);
+  if(!parsed||parsed.schema!==1||!parsed.courses||typeof parsed.courses!=='object')return 'INVALID';
+  if(parsed.level4ExamCohort&&pinned(parsed)!==VERSION)return 'INVALID';
+  return pinned(parsed);
+ }catch{return 'INVALID'}
+}
+function compatibleRecords(local,remote){
+ const a=cohortFromRecords(local),b=cohortFromRecords(remote);
+ return a!=='INVALID'&&b!=='INVALID'&&a===b;
+}
 function proposedRequired(course){
  if(!course||!ids.includes(course.id))return (course?.sectionExams||[]).filter(x=>!x.optional);
  const all=course.sectionExams||[],legacy=all.filter(x=>!x.optional);
@@ -47,7 +61,7 @@ function required(store,course){
  const proposed=proposedRequired(course);
  return [...proposed.kept,proposed.replacement];
 }
-const api={VERSION,LEGACY,RELEASE_APPROVED,pinned,pinNew,hasWork,required,proposedRequired};
+const api={VERSION,LEGACY,RELEASE_APPROVED,pinned,pinNew,hasWork,required,proposedRequired,cohortFromRecords,compatibleRecords};
 root.BAL4CohortPolicy=api;
 if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
