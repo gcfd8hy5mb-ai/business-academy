@@ -9,7 +9,7 @@ test('Level 4 release gate fails closed, including forged version pins',()=>{
  assert.equal(JSON.stringify(empty),before);
  const forged={...empty,level4ExamCohort:{level:4,version:P.VERSION,status:'approved'}};
  assert.equal(P.pinned(forged),P.VERSION);
- const sample={id:'course-21',sectionExams:[{id:'legacy',optional:false,questions:[{id:'old',prompt:'A'}]},{id:'c21-v138-independent-transfer',optional:true,suggestedMinutes:90,questions:[1,2,3,4].map(i=>({id:'new'+i,prompt:'Fresh '+i}))}]};
+ const sample={id:'course-21',sectionExams:[{id:'legacy',optional:false,questions:[{id:'old',prompt:'A'}]},{id:'c21-v138-independent-transfer',optional:true,suggestedMinutes:90,questions:[1,2,3,4].map(i=>({id:'new'+i,prompt:'Fresh '+i,options:['A','B'],correct:0}))}]};
  assert.deepEqual(P.required(forged,sample).map(x=>x.id),['legacy']);
  assert.equal(sample.sectionExams[1].optional,true);
 });
@@ -27,7 +27,7 @@ test('proposed Level 4 rules retain only nonduplicated legacy required exams and
   {id:'a',questions:[{prompt:'Repeated'}]},
   {id:'b',questions:[{prompt:' repeated '}]},
   {id:'c',questions:[{prompt:'Unique'}]},
-  {id:'c21-v138-independent-transfer',optional:true,suggestedMinutes:90,questions:[1,2,3,4].map(i=>({id:'ind-'+i,prompt:'New '+i}))}
+  {id:'c21-v138-independent-transfer',optional:true,suggestedMinutes:90,questions:[1,2,3,4].map(i=>({id:'ind-'+i,prompt:'New '+i,options:['A','B'],correct:0}))}
  ]};
  const before=JSON.stringify(c),p=P.proposedRequired(c);
  assert.deepEqual(p.kept.map(x=>x.id),['c']);
@@ -110,7 +110,7 @@ test('candidate Level 4 final fallback and exam labels do not mutate archived de
  const second={id:'another-exam',title:'Repeat again',questions:[{id:'old2',prompt:' repeat '}]};
  const replacement={id:'c25-v138-independent-transfer',optional:true,title:'Independent final',suggestedMinutes:90,
    instructions:'Optional independent assessment (suggested 90 minutes, excluded from required graduation hours). The numerical checks are auto-scored.',
-   questions:[1,2,3,4].map(i=>({id:'new-'+i,prompt:'New '+i}))};
+   questions:[1,2,3,4].map(i=>({id:'new-'+i,prompt:'New '+i,options:['A','B'],correct:0}))};
  const course={id:'course-25',sectionExams:[old,second,replacement]};
  const before=JSON.stringify(course),p=P.proposedRequired(course);
  assert.equal(p.retired.some(e=>e.id===old.id),true);
