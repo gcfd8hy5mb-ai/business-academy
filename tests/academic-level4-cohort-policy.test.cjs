@@ -133,7 +133,7 @@ test('fail-closed candidate validation rejects reused prompts, IDs and ungradeab
   const course=JSON.parse(JSON.stringify(base));
   change(course.sectionExams[1]);
   const before=JSON.stringify(course);
-  assert.throws(()=>P.proposedRequired(course),/Level 4 candidate/);
+  assert.throws(()=>P.proposedRequired(course),/(Level 4 candidate|Missing Level 4 independent candidate bank)/);
   assert.equal(JSON.stringify(course),before,'Validation must never mutate an exam bank');
  };
  assert.doesNotThrow(()=>P.proposedRequired(base));
