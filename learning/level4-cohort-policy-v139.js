@@ -48,6 +48,19 @@ function proposedRequired(course){
  if(!replacement||!replacement.optional||!Array.isArray(replacement.questions)||replacement.questions.length<4)
   throw Error('Missing Level 4 independent candidate bank');
  const norm=s=>String(s||'').trim().toLowerCase().replace(/\s+/g,' ');
+ const priorIds=new Set(legacy.map(e=>String(e.id)));
+ const priorQuestionIds=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>String(q.id))));
+ const priorPrompts=new Set(legacy.flatMap(e=>(e.questions||[]).map(q=>norm(q.prompt))));
+ const idsSeen=new Set(),promptsSeen=new Set();
+ if(priorIds.has(String(replacement.id)))throw Error('Level 4 candidate exam ID collides with legacy');
+ for(const q of replacement.questions){
+  const id=String(q.id||''),prompt=norm(q.prompt);
+  if(!id||idsSeen.has(id)||priorQuestionIds.has(id))throw Error('Level 4 candidate question ID is not independent');
+  if(!prompt||promptsSeen.has(prompt)||priorPrompts.has(prompt))throw Error('Level 4 candidate prompt repeats a previous question');
+  if(!Array.isArray(q.options)||q.options.length<2||!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.options.length)
+   throw Error('Level 4 candidate question has invalid grading');
+  idsSeen.add(id);promptsSeen.add(prompt);
+ }
  const counts=new Map();
  for(const exam of legacy)for(const q of exam.questions||[]){const p=norm(q.prompt);counts.set(p,(counts.get(p)||0)+1)}
  const kept=legacy.filter(exam=>(exam.questions||[]).every(q=>counts.get(norm(q.prompt))===1));
