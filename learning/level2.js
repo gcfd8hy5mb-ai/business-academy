@@ -141,7 +141,7 @@ Object.assign(window.BAContent,{
             "10"
           ],
           "correct": 0,
-          "explanation": "(60−0)/5 = 12."
+          "explanation": "Under straight-line depreciation, subtract the zero residual value from cost 60 and divide by five useful years: annual depreciation is 12."
         },
         {
           "id": "p5",
@@ -195,7 +195,7 @@ Object.assign(window.BAContent,{
             "10"
           ],
           "correct": 0,
-          "explanation": "(100−10)/5=18."
+          "explanation": "Straight-line depreciation allocates depreciable cost of 100 − 10 = 90 over five years, giving annual expense of 18, ignoring partial-year conventions."
         },
         {
           "id": "e3",

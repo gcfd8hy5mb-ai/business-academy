@@ -19,9 +19,9 @@ const data=[
 ],q:[
 ['Book pretax120, book depreciation12, tax depreciation32, rate25%. Current tax?', ['25','30','20','5'],0,'Taxable=120−20=100; current tax=25.','policy'],
 ['Under that case, deferred tax expense?', ['30','5','25','−5'],1,'Book expense30 less current25=5.','policy'],
-['Opening allowance4, provision6, write-offs3. Closing allowance?', ['13','4','7','3'],2,'4+6−3=7.','policy'],
-['Segment revenues300+220 include intersegment20. External group revenue?', ['520','480','300','500'],3,'520−20=500.','segments'],
-['Segment profit60+35, corporate expense18, unrealized profit2. Consolidated EBIT?', ['75','95','77','57'],0,'60+35−18−2=75.','segments'] ],source:{title:'Costco fiscal 2025 Form 10-K, year ended August 31, 2025',url:'https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm',task:'Extract income, balance sheet, CFO, capex, receivables/inventory and the relevant notes. Reconcile 2025 cash flows, cite Item/Note, and compare the fictional Selene methods without attributing Selene numbers to Costco.',minutes:120}},
+['Opening allowance4, provision6, write-offs3. Closing allowance?', ['13','4','7','3'],2,'Add a provision of 6 to the opening allowance of 4 and subtract 3 of write-offs. The closing allowance is 7.','policy'],
+['Segment revenues300+220 include intersegment20. External group revenue?', ['520','480','300','500'],3,'Combined segment revenue of 300 plus 220 equals 520. Remove intersegment revenue of 20 to obtain external group revenue of 500.','segments'],
+['Segment profit60+35, corporate expense18, unrealized profit2. Consolidated EBIT?', ['75','95','77','57'],0,'Segment profits of 60 and 35 sum to 95. Subtract corporate expense of 18 and unrealized intercompany profit of 2 for consolidated EBIT of 75.','segments'] ],source:{title:'Costco fiscal 2025 Form 10-K, year ended August 31, 2025',url:'https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm',task:'Extract income, balance sheet, CFO, capex, receivables/inventory and the relevant notes. Reconcile 2025 cash flows, cite Item/Note, and compare the fictional Selene methods without attributing Selene numbers to Costco.',minutes:120}},
 {n:'08',title:'Division economics, transfer pricing and control design',lessons:[
 ['transfer','Two-division transfer-price decision with constrained capacity',[
 'Internal transfer prices alter divisional reported profits, not consolidated cash by themselves. Establish the supplying division’s incremental cost, available capacity and best alternative use. A minimum economically acceptable transfer price can be incremental cost plus opportunity cost of external contribution forgone; taxes and arm’s-length rules are separate questions requiring specialist review.',
@@ -38,11 +38,11 @@ const data=[
 'Static120k; flexible144k; actual163.8k. Activity24k U; price12.6k U; usage7.2k U. ROI20%→18.42%; residual income15→16.',
 'If output12,000 but material use24,600 kg at 6.20, calculate price, usage, flexible and static differences; evaluate a quality tradeoff.'],
 ],q:[
-['Full capacity: variable30 plus displaced outside contribution20. Minimum relevant internal cost?', ['30','48','50','55'],2,'30+20=50.','transfer'],
+['Full capacity: variable30 plus displaced outside contribution20. Minimum relevant internal cost?', ['30','48','50','55'],2,'With capacity fully used, variable cost of 30 is not the full relevant transfer cost. Add displaced external contribution of 20 to obtain 50.','transfer'],
 ['With only8,000 outside sales displaced at20 and20,000 transfers costing30, total relevant internal cost?', ['600k','760k','1m','960k'],1,'20,000×30+8,000×20=760,000.','transfer'],
 ['12,000 units×2kg×6 standard; actual25,200kg×6.50. Flexible standard cost?', ['144k','120k','163.8k','19.8k'],0,'24,000×6=144,000.','control'],
 ['Actual25,200 kg at6.50 versus6 standard. Price variance on usage?', ['7.2k U','19.8k U','12.6k U','12.6k F'],2,'25,200×.5=12,600 U.','control'],
-['Profit30/capital150; add5/40, charge10%. New residual income?', ['15','16','18.42','35'],1,'35−.10×190=16.','control'] ],source:{title:'MIT Sloan Management Accounting and Control, open course description',url:'https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/',task:'Read the published course aims and compare its control and performance topics with this original Atlas case; list two unanswered management-control questions. No MIT case text is reproduced.',minutes:60}},
+['Profit30/capital150; add5/40, charge10%. New residual income?', ['15','16','18.42','35'],1,'New profit is 30 plus 5, or 35; capital employed is 150 plus 40, or 190. A 10% capital charge is 19, leaving residual income of 16.','control'] ],source:{title:'MIT Sloan Management Accounting and Control, open course description',url:'https://ocw.mit.edu/courses/15-963-management-accounting-and-control-spring-2007/',task:'Read the published course aims and compare its control and performance topics with this original Atlas case; list two unanswered management-control questions. No MIT case text is reproduced.',minutes:60}},
 {n:'11',title:'Two-echelon inventory and correlated disruption',lessons:[
 ['network','Network flow and capacity choice under service commitments',[
 'A network optimization first defines nodes, arcs, capacities, demand and per-unit landed costs. A linear model minimizes ∑cost(i,j)×flow(i,j), subject to each plant’s output limit and every market’s demand. Do not optimize one route in isolation when the same scarce capacity serves multiple markets. Fixed site costs or all-or-nothing openings require integer variables.',
@@ -59,7 +59,7 @@ const data=[
 'Independent safety stock330; pooled atρ0≈233, atρ.8≈313. Quality: (.02−.005)×100000×80−90000=30,000 net.',
 'Set demand correlation to1 and defect cost50; recompute pooling and quality economics, then identify a nonnumeric constraint.'],
 ],q:[
-['Normal East70→North at4 and West50→South at3; cost in thousands?', ['430','120','460','350'],0,'70×4+50×3=430.','network'],
+['Normal East70→North at4 and West50→South at3; cost in thousands?', ['430','120','460','350'],0,'Transport 70 units from East to North at 4 each and 50 from West to South at 3 each. Total cost is 280 plus 150, or 430 thousand.','network'],
 ['West capacity falls to30, East cap80, demand120. Supply shortfall without third source?', ['0','10k','30k','20k'],1,'Capacity110 versus demand120 leaves10k.','network'],
 ['Two independent SD100 pools at z1.65. Central safety stock approximately?', ['330','165','233','313'],2,'1.65√(100²+100²)≈233.','quality'],
 ['At correlation.8, central safety stock approximately?', ['233','330','17','313'],3,'1.65√(20000+16000)≈313.','quality'],
@@ -81,7 +81,7 @@ const data=[
 'If deductions cannot be used in year1 until year2, shift the first tax benefit one year and recalculate PV under a clearly stated carryforward assumption.'],
 ],q:[
 ['Expected valid service credit with probability8% and severity2m?', ['.08m','.16m','2m','.3m'],1,'.08×2=.16m, conditional on terms.','governance'],
-['Credit probability falls8%→2% on severity2m. Expected credit reduction?', ['.12m','.06m','.18m','.3m'],0,'.06×2=.12m.','governance'],
+['Credit probability falls8%→2% on severity2m. Expected credit reduction?', ['.12m','.06m','.18m','.3m'],0,'Credit-loss probability falls by six percentage points from 8% to 2%. At 2 million severity, expected loss falls 0.06 times 2, or 0.12 million.','governance'],
 ['Tax depreciation20 vs book10 in year1, rate25%. Incremental current tax saving?', ['.5m','10m','2.5m','−2.5m'],2,'(20−10)×.25=2.5m.','tax'],
 ['Tax timing savings2.5,.5,−1.25,−1.75 across four years sum?', ['2.5m','.55m','−.55m','0'],3,'2.5+.5−1.25−1.75=0 before discounting.','tax'],
 ['At10% discount, approximate PV of those timing savings?', ['.550m','0','2.5m','−.550m'],0,'Discount each annual amount by 1.1^t; ≈.550m.','tax'] ],source:{title:'SEC investor guide to Form 10-K',url:'https://www.sec.gov/investor/pubs/reada10k.pdf',task:'Use the SEC guide to locate risk, MD&A, audit and footnote sections in a dated public issuer filing. Separate disclosed governance facts from Cygnus hypothetical contract and tax assumptions.',minutes:60}}];

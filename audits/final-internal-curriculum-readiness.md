@@ -1,0 +1,77 @@
+# Business Academy — Final Internal Curriculum Readiness Decision
+
+**Prepared:** 2026-11-10  
+**Scope:** Levels 1–5, 26 authored courses  
+**Audit branch:** `audit/levels-1-2-academic-review` (draft pull request #3; not merged into production)  
+**Decision:** **AUTHORING COMPLETE FOR REVIEW / INTERNAL AUTOMATED QA PASSED / FORMAL ACADEMIC SIGN-OFF NOT OBTAINED.**
+
+This is a defensible internal handoff status, **not** an academic award, independent university equivalence finding, official accreditation, graduation qualification, or approval to overwrite legacy student assessments.
+
+## Completion evidence
+
+| Category | Evidence | Internal disposition |
+|---|---|---|
+| Five-level course inventory | 26 courses, 549 lessons and full source-composition audit | Authored, source-level structural test passed |
+| Stated outcomes | 84 declared outcomes, each with provisional evidence pointers | Authored; external assurance of learning NOT done |
+| Previously flagged outcome gaps | 22 had no lexical multiple-choice match; all 22 have candidate authored lesson and required written-case/portfolio matches | Candidate written assessment route exists; actual educational alignment NOT independently confirmed |
+| Exam inventory | 1,031 current multiple-choice questions; no duplicates/blank explanations under automated formatting checks | Format checked, not all independently recalculated |
+| Additional numerical independent audit | 20 new Level 4 transfer questions and 18 Level 4–5 optional exam questions recomputed independently | All 38 of these question keys matched separately encoded quantitative or governance assertions |
+| Legacy Level 4 required exam repetition | Historical repeated stems preserved for archive fingerprint compatibility; five new optional independent exam sets exist | **Not cured within old required banks.** Approved versioned future graduation migration remains necessary to remove their summative reliance |
+| Deep teaching and casework | Six earlier short Level 1 two-hour lessons expanded; application/portfolio records across all courses | Automated teaching-depth flags cleared; expert pedagogy not certified |
+| Published workload | Original course plan 2,305h vs assigned metadata 3,076.8h | Display clearly differentiates; *actual* time-on-task and credits remain unverified |
+| Source provenance | 41 directly linked reading records across all five levels; 7 Level 3 historical-case links surfaced as clickable references | Six unique research entry points independently visited; **complete document/page fact and license verification still outstanding** |
+| Grading and saved attempts | Stable storage key, objective grading, retry, required mastery checks, optional exam isolation; history regression | Automated unit/integration tests passed; actual Firebase cross-device persistence not verified |
+| Static site readiness | Entire index-linked static asset inventory requested through local HTTP: 104 routes | Routes served; physical iPhone/PWA and desktop interaction not yet tested |
+
+## Quality evidence
+
+Verified GitHub CI snapshot at commit `4bae284157767a45896b5589f3643e409880dd18`:
+
+- **84 / 84** five-level academic tests passed.
+- **27 / 27** desktop layout and navigation source tests passed.
+- **104** referenced local static asset routes served in HTTP smoke test.
+- Separate mathematics and historic required-exam archive regression passed.
+
+These are repeatable software checks, *not exhaustive proof of factual truth, exam validity, actual student learning or academic equivalence*.
+
+## Explicitly open release/approval gates
+
+1. **External academic evaluation:** Qualified independently engaged subject-matter reviewers must examine complete teaching, factual assumptions, every disputed/direct-assessment outcome, and their own sample of calculations. Written report/signature absent.
+2. **Learning outcome achievement:** The 84 outcomes have **candidate** content/assessment references, not independently measured competency. Qualified reviewers need to match exact task/rubric criteria and evaluate actual anonymized student submissions. The 22 MCQ lexical mismatches are not automatically missing teaching, but the written evidence must be graded independently.
+3. **Full claim/source audit:** Only selected public research entry URLs have been opened. Every referenced real corporate fact needs source/period checks, and licensed-use/copyright checks are not completed.
+4. **Historical Level 4 examination bank:** Repeated *required* questions remain in old versions. New optional independent assessments do not remove these old required completion checks. A versioned, historical-attempt-preserving migration is required if new learners must use a repetition-free required bank.
+5. **Device acceptance and cloud:** Physical iPhone Safari, installed iOS Home Screen PWA, desktop browser, Firebase sign-in/out, cross-device progress, reconnect/conflict management, grading and simulator interactions require owner-observed acceptance evidence. HTTP routes and memory-store tests alone cannot certify them.
+6. **Workload:** The 771.8h planned-versus-assigned gap needs observed student time calibration, not an unsupported claim of additional academic credits.
+
+## External evaluator handoff instructions
+
+The artifact archive in GitHub Actions includes this report, source register, outcome-to-lesson/assessment matrix, manual alignment triage for 22 cases, individual answer-format checks, historical cases, examiner rubric and an external sign-off cover letter. Reviewer should use a pinned commit SHA, sample anonymized original work with consent, log findings by course ID, complete the blinded marking and recheck procedure, and issue **their own signed scope-limited assessment**.
+
+### Safe production decision
+
+- **Do not merge** this large audit branch until production regressions and physical-device acceptance are signed off by the owner.
+- Do not silently reset, rewrite, or abandon existing attempts/grades or change Firebase schema.
+- Keep reviewer-access credentials, student work and identifying data out of public GitHub.
+- Distinguish internal authoring completeness from independent academic sign-off in all public labels.
+
+**Final conclusion:** The authored five-level curriculum is ready as a **review candidate**, with internal QA evidence prepared. The user can now share it with qualified external evaluators, but no independent endorsement or complete real-device certification is claimed.
+
+## Follow-up internal audit: optional Level 4 exam UX and migration safeguards (2026-11-10)
+
+The existing five Level 4 optional independent transfer exams had `minutes:0` to avoid inflating required course hours, but the learner-facing interface incorrectly rendered **“0 minutes suggested”** and displayed the usual 80% required threshold. The audit branch now adds separate `suggestedMinutes:90` to each optional exam, and `learning/workspace-v46.js` explicitly labels these assessments **optional** and **not required for mastery**, distinguishes required exam 80% expectations, and displays a suggested practice duration without counting it as required assigned time. The delivery cache-query versions for the changed scripts were incremented; this does not deploy to live.
+
+New `tests/academic-optional-exam-ux-regression.test.cjs` verifies the actual learning model preserves existing required mastery and historical attempt storage while optional written and objective assessments do not change graduation gates.
+
+New `audits/level4-required-exam-transition-shadow.cjs` inventories repeated historical required assessment prompts and maps the current five independent optional replacement banks. This is **SHADOW_REPORT_ONLY**; it does not enable cohort/version pinning, retire legacy required exam questions, change learner grade history or promote unreviewed optional exams to required. Enabling a new required-bank version for future learners would require an approved policy, backward-compatible version and cloud persistence scheme, human academic verification, and live-device regression. Its test `tests/academic-level4-transition-shadow.test.cjs` is included in CI.
+
+Created `audits/final-real-device-acceptance-script.md`, a structured iPhone Safari/Home Screen, desktop, Firebase cloud sync, simulator, history and optional examination acceptance script. **All scenarios are marked NOT RUN** pending observation in a suitable preview environment and authorized test account. This is not a record of passing physical-device tests.
+
+**Outstanding:** no independent academic sign-off, no physical iPhone/desktop acceptance certification, no complete source-claim verification, no measured workload equivalency, and no approved retirement of the archived repeated required Level 4 exams. The draft branch must remain unmerged until release authorization.
+
+## Final workload parity and non-sign-off readiness update — November 10, 2026
+
+Added `tests/academic-workload-parity.test.cjs`, which loads the real 26-course curriculum in the same source order as the public app and independently computes assigned minutes through both `BALearning.workload` (student-facing) and `BAWorkloadAudit.detail` (reviewer-facing). All course totals must match exactly, and suggested 90-minute optional independent Level 4 sessions must not affect assigned required hours. The CI run including this test succeeded alongside the historical mathematics regression.
+
+**Non-sign-off gates still open:** (1) authorize and implement a historically safe, versioned replacement of repeated Level 4 required exams for *future* learners; (2) execute the `final-real-device-acceptance-script.md` against an isolated deployment with a consented test account, including iPhone Safari, PWA, desktop and actual Firebase cloud synchronization; (3) independently substantiate the full set of real-world case claims and numerical exam answers beyond the audited samples, and calibrate claimed study hours. Even excluding the formal independent academic sign-off itself, those activities are necessary for an unqualified production-ready designation. Their omission cannot be concealed by software-test success.
+
+No live deployment, historical-grade migration or unauthorized alteration to stored learner progress is made by this update.

@@ -180,7 +180,7 @@ test('academy progress counts required course activity and exposes its percentag
  assert.match(lesson,/function progressFor\(course\)/);
  assert.match(lesson,/for\(const l of all\)required\.push/);
  assert.match(lesson,/course\.practice/);
- assert.match(lesson,/course\.sectionExams/);
+ assert.match(lesson,/for\(const a of requiredExams\(course\)\)/);
  assert.match(lesson,/course\.portfolioSections/);
  assert.match(lesson,/all\.length\?Math\.round\(100\*done\/Math\.max\(total,1\)\):0/);
  assert.match(lesson,/function overallProgress\(\)/);

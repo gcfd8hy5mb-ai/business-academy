@@ -1,0 +1,73 @@
+name: Business Academy Five-Level Academic Audit
+
+on:
+  push:
+    branches: [audit/levels-1-2-academic-review]
+  pull_request:
+    paths:
+      - 'learning/**'
+      - 'tests/academic-*.test.cjs'
+      - 'index.html'
+      - 'audits/**'
+      - '.github/workflows/academic-levels-1-2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source integrity, exam keys and composed curriculum tests
+        run: node --test tests/academic-level1-level2-baseline.test.cjs tests/academic-level2-integration.test.cjs tests/academic-level1-level2-composition.test.cjs tests/academic-level2-extension-integrity.test.cjs tests/academic-shared-independent-assessments.test.cjs tests/academic-primary-source-cases.test.cjs tests/academic-level2-exam-rigor.test.cjs tests/academic-examiner-calibration.test.cjs tests/academic-reviewer-evidence.test.cjs tests/academic-five-level-curriculum.test.cjs tests/academic-level3-level5-review.test.cjs tests/academic-issues-1-3-closeout.test.cjs tests/academic-phase4-acceptance.test.cjs tests/academic-phase4-quality.test.cjs tests/academic-phase4-evidence-gates.test.cjs tests/academic-phase4-assessment-format.test.cjs tests/academic-external-signoff-preflight.test.cjs tests/academic-level4-full-answer-audit.test.cjs tests/academic-outcome-written-evidence.test.cjs tests/academic-level4-level5-exam-recalculation.test.cjs tests/academic-optional-exam-ux-regression.test.cjs tests/academic-level4-transition-shadow.test.cjs tests/academic-level4-cohort-policy.test.cjs tests/academic-level4-graduation-dryrun.test.cjs tests/academic-workload-parity.test.cjs tests/academic-batch1-numeric-exam.test.cjs tests/academic-batch2-depth-progression.test.cjs tests/academic-batch3-cases-capstone.test.cjs tests/academic-batch4-student-stress.test.cjs
+
+      - name: Verify desktop layout and lesson navigation source regressions
+        run: node --test tests/desktop-redesign.test.cjs
+
+      - name: Verify local static-host routes and responsive entrypoint
+        run: python3 audits/phase4-http-smoke.py
+
+      - name: Assemble reproducible external reviewer evidence files
+        run: |
+          mkdir -p reviewer-evidence
+          node audits/build-reviewer-evidence.cjs > reviewer-evidence/course-evidence.md
+          node audits/build-reviewer-evidence.cjs --json > reviewer-evidence/course-evidence.json
+          node audits/build-full-curriculum-audit.cjs > reviewer-evidence/five-level-curriculum-audit.md
+          node audits/build-full-curriculum-audit.cjs --json > reviewer-evidence/five-level-curriculum-audit.json
+          node audits/phase4-quality-review.cjs > reviewer-evidence/phase4-quality-review.md
+          node audits/phase4-quality-review.cjs --json > reviewer-evidence/phase4-quality-review.json
+          node audits/phase4-source-register.cjs > reviewer-evidence/phase4-source-register.md
+          node audits/phase4-source-register.cjs --json > reviewer-evidence/phase4-source-register.json
+          node audits/phase4-outcome-mapping.cjs > reviewer-evidence/phase4-outcome-mapping.md
+          node audits/phase4-outcome-mapping.cjs --json > reviewer-evidence/phase4-outcome-mapping.json
+          node audits/phase4-alignment-triage.cjs > reviewer-evidence/phase4-alignment-triage.md
+          node audits/phase4-alignment-triage.cjs --json > reviewer-evidence/phase4-alignment-triage.json
+          node audits/level4-required-exam-transition-shadow.cjs > reviewer-evidence/level4-required-exam-transition-shadow.md
+          node audits/level4-required-exam-transition-shadow.cjs --json > reviewer-evidence/level4-required-exam-transition-shadow.json
+          node audits/phase4-assessment-format-audit.cjs > reviewer-evidence/phase4-assessment-format.md
+          node audits/phase4-assessment-format-audit.cjs --json > reviewer-evidence/phase4-assessment-format.json
+          node audits/four-batch-curriculum-stress.cjs > reviewer-evidence/four-batch-curriculum-stress.md
+          node audits/four-batch-curriculum-stress.cjs --json > reviewer-evidence/four-batch-curriculum-stress.json
+          cp audits/independent-academic-evaluation-dossier.md reviewer-evidence/
+          cp audits/independent-written-examiner-protocol.md reviewer-evidence/
+          cp audits/levels-1-2-academic-audit.md reviewer-evidence/
+          cp audits/five-level-academic-audit-report.md reviewer-evidence/
+          cp audits/findings-1-3-remediation.md reviewer-evidence/
+          cp audits/phase4-areas1-3-acceptance.md reviewer-evidence/
+          cp audits/phase4-selected-source-verification.md reviewer-evidence/
+          cp audits/five-level-external-signoff-handoff.md reviewer-evidence/
+          cp audits/final-internal-curriculum-readiness.md reviewer-evidence/
+          cp audits/four-batch-test-results.md reviewer-evidence/
+          cp audits/final-real-device-acceptance-script.md reviewer-evidence/
+      - name: Upload reviewer evidence packet
+        uses: actions/upload-artifact@v4
+        with:
+          name: business-academy-five-level-reviewer-evidence
+          path: reviewer-evidence/
+          retention-days: 30

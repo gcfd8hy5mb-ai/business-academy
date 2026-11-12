@@ -411,7 +411,7 @@ Object.assign(window.BAContent,{
             "146.41"
           ],
           "correct": 0,
-          "explanation": "121/1.1² = 100."
+          "explanation": "Discount each year-end cash flow over two periods: present value = 121 ÷ (1.10 × 1.10) = 100 in the same currency units."
         },
         {
           "id": "p5",
@@ -477,7 +477,7 @@ Object.assign(window.BAContent,{
             "0"
           ],
           "correct": 3,
-          "explanation": "121/1.21−100=0."
+          "explanation": "At a 10% annual rate, the year-two receipt has present value 121 ÷ (1.10²) = 100; subtracting the initial 100 investment gives zero NPV."
         },
         {
           "id": "e4",
@@ -644,7 +644,7 @@ Object.assign(window.BAContent,{
             "40"
           ],
           "correct": 1,
-          "explanation": "200−120=80."
+          "explanation": "Contribution per unit subtracts variable cost from selling price: 200 − 120 = 80. Fixed operating costs are covered from this contribution."
         },
         {
           "id": "p2",
@@ -680,7 +680,7 @@ Object.assign(window.BAContent,{
             "14.29%"
           ],
           "correct": 3,
-          "explanation": "80/70−1=14.29%."
+          "explanation": "To preserve the original total contribution with 70 per unit instead of 80, volume must rise by 80 ÷ 70 − 1 = 14.29%; compare contribution, not revenue."
         },
         {
           "id": "p5",
@@ -692,7 +692,7 @@ Object.assign(window.BAContent,{
             "45 days"
           ],
           "correct": 1,
-          "explanation": "45+50−35=60."
+          "explanation": "The cash conversion cycle adds receivable days and inventory days, then subtracts payable days: 45 + 50 − 35 = 60 days."
         },
         {
           "id": "p6",
@@ -758,7 +758,7 @@ Object.assign(window.BAContent,{
             "30"
           ],
           "correct": 3,
-          "explanation": "95−65=30."
+          "explanation": "Simplified free cash flow is operating cash flow less capital expenditure: 95 − 65 = 30, assuming the figures cover the same period and use consistent units."
         },
         {
           "id": "e5",
@@ -925,7 +925,7 @@ Object.assign(window.BAContent,{
             "80%"
           ],
           "correct": 2,
-          "explanation": "3/(12+3)=20%."
+          "explanation": "Post-money value equals pre-money 12 plus new capital 3, or 15. The investor owns 3 ÷ 15 = 20% before any further dilution."
         },
         {
           "id": "p3",
@@ -949,7 +949,7 @@ Object.assign(window.BAContent,{
             "10 months"
           ],
           "correct": 0,
-          "explanation": "(3−.6−.3)/.3=7."
+          "explanation": "Subtract the setup cost and required reserve from available cash: 3 − 0.6 − 0.3 = 2.1 million; divide by 0.3 million monthly burn for seven months."
         },
         {
           "id": "p5",
@@ -991,7 +991,7 @@ Object.assign(window.BAContent,{
             "6%"
           ],
           "correct": 1,
-          "explanation": "6/24=25%."
+          "explanation": "The new investor contributes 6 to a business valued at 18 pre-money, making post-money value 24. Ownership is 6 ÷ 24 = 25%."
         },
         {
           "id": "e2",
@@ -1003,7 +1003,7 @@ Object.assign(window.BAContent,{
             "4 months"
           ],
           "correct": 2,
-          "explanation": "(2.4−.6)/.3=6."
+          "explanation": "Only cash above the reserve is available for spending: (2.4 − 0.6) million ÷ 0.3 million per month = six months before reaching the reserve."
         },
         {
           "id": "e3",
@@ -1284,7 +1284,7 @@ Object.assign(window.BAContent,{
             "−10%"
           ],
           "correct": 2,
-          "explanation": "1.10/1.10−1=0."
+          "explanation": "Real growth adjusts nominal growth for the price change: 1.10 ÷ 1.10 − 1 = 0%. The nominal gain is fully explained by prices."
         },
         {
           "id": "e4",
@@ -1296,7 +1296,7 @@ Object.assign(window.BAContent,{
             "10 million dollars"
           ],
           "correct": 0,
-          "explanation": "100×1.10=110."
+          "explanation": "Translate foreign-currency revenue at the stated exchange rate: 100 million foreign units × $1.10 per foreign unit = $110 million, before conversion costs."
         },
         {
           "id": "e5",
@@ -1475,7 +1475,7 @@ Object.assign(window.BAContent,{
             ".4×"
           ],
           "correct": 0,
-          "explanation": "(40+60)/100=1."
+          "explanation": "Using cash and receivables only, quick assets are 40 + 60 = 100. Divide by current liabilities of 100 for a 1.0 quick ratio, subject to asset collectability."
         },
         {
           "id": "p4",
@@ -1499,7 +1499,7 @@ Object.assign(window.BAContent,{
             "10×"
           ],
           "correct": 1,
-          "explanation": "30/20=1.5."
+          "explanation": "Interest coverage compares operating profit before interest and taxes with interest expense: EBIT 30 ÷ interest 20 = 1.5 times."
         },
         {
           "id": "p6",
@@ -1511,7 +1511,7 @@ Object.assign(window.BAContent,{
             "20"
           ],
           "correct": 2,
-          "explanation": "20−35=−15."
+          "explanation": "Simplified free cash flow deducts capital spending 35 from operating cash flow 20: the result is negative 15; funding is needed if the gap persists."
         }
       ]
     },
@@ -1553,7 +1553,7 @@ Object.assign(window.BAContent,{
             "120×"
           ],
           "correct": 0,
-          "explanation": "90/30=3."
+          "explanation": "Interest coverage uses EBIT divided by interest expense: 90 ÷ 30 = 3 times, before considering debt maturities or other cash obligations."
         },
         {
           "id": "e4",
