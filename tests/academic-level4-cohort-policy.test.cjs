@@ -122,3 +122,27 @@ test('candidate Level 4 final fallback and exam labels do not mutate archived de
  assert.equal(P.displayExams(forged,course)[2].optional,true);
  assert.equal(JSON.stringify(course),before);
 });
+
+test('fail-closed candidate validation rejects reused prompts, IDs and ungradeable required items',()=>{
+ const base={id:'course-21',sectionExams:[
+  {id:'legacy-exam',questions:[{id:'legacy-question',prompt:'Original required calculation',options:['A','B'],correct:0}]},
+  {id:'c21-v138-independent-transfer',optional:true,suggestedMinutes:90,
+   questions:[1,2,3,4].map(i=>({id:'new-'+i,prompt:'Independent application '+i,options:['A','B'],correct:1}))}
+ ]};
+ const check=change=>{
+  const course=JSON.parse(JSON.stringify(base));
+  change(course.sectionExams[1]);
+  const before=JSON.stringify(course);
+  assert.throws(()=>P.proposedRequired(course),/Level 4 candidate/);
+  assert.equal(JSON.stringify(course),before,'Validation must never mutate an exam bank');
+ };
+ assert.doesNotThrow(()=>P.proposedRequired(base));
+ check(e=>e.questions[0].id='legacy-question');
+ check(e=>e.questions[0].id=e.questions[1].id);
+ check(e=>e.questions[0].prompt='  original REQUIRED calculation ');
+ check(e=>e.questions[0].prompt=e.questions[1].prompt);
+ check(e=>e.questions[0].correct=99);
+ check(e=>e.questions[0].options=[]);
+ check(e=>e.id='legacy-exam');
+ assert.equal(P.RELEASE_APPROVED,false,'The candidate guard must not authorize rollout');
+});
