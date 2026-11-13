@@ -27,7 +27,7 @@ test('Level 1 independent formulas: contribution, margin, enterprise economics',
  check(answer(c['course-06'],'c06-v126-independent-q1'),(35+45)/(250+300)*100);
 });
 test('Level 2 independent cash, variance, capacity and compliance formulas',()=>{
- const c=setup(),a=(n,i)=>answer(c['course-'+n],'c'+n+'-v64-numeric-n'+i);
+ const c=setup(),a=(n,i)=>answer(c['course-'+n],'c'+n+'-v64-n'+i);
  check(a('07',0),260-(340-115));check(a('07',1),85+14-19-6+11);
  check(a('08',0),7500*(25.6-24));
  check(a('09',0),(210/1500-150/1500)*100);
