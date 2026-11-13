@@ -7,7 +7,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..');
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const files=[...html.matchAll(/<script\s+src="(learning\/level[^"?]+\.js)(?:\?[^"]*)?"\s+defer><\/script>/g)].map(x=>x[1]);
+const files=[...html.matchAll(/<script\s+src="(learning\/(?:level[^"?]+|five-level[^"?]+)\.js)(?:\?[^"]*)?"\s+defer><\/script>/g)].map(x=>x[1]);
 const ctx={window:{BAContent:{}},console};
 vm.createContext(ctx);
 const failures=[];
