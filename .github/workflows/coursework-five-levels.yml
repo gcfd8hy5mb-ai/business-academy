@@ -3,6 +3,14 @@ on:
   push:
     branches:
       - audit/coursework-five-levels-20261113
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tests/coursework-coverage-audit.cjs'
+      - '.github/workflows/coursework-five-levels.yml'
+      - 'learning/**'
+      - 'index.html'
   workflow_dispatch:
 jobs:
   coursework-audit:
