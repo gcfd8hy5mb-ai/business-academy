@@ -17,7 +17,7 @@ test('v138 supplies 26 uniquely keyed original executive seminars',()=>{
   assert.equal(c.modules[0].lessons[0].body[0],'Preserved');
   const mod=c.modules[1],l=mod.lessons[0],app=c.applications[0];
   for(const item of [mod,l,app]){assert.ok(item.id);assert.ok(!seen.has(item.id));seen.add(item.id);}
-  assert.equal(l.body.length,4);assert.ok(l.body.every(x=>x.length>180));
+  assert.equal(l.body.length,5);assert.ok(l.body.every(x=>x.length>180));
   assert.ok(l.example.length>70);assert.ok(l.transfer.length>50);
   assert.equal(l.minutes,120);assert.equal(app.minutes,180);
   assert.equal(app.rubric.length,4);
