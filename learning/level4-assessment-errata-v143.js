@@ -8,7 +8,7 @@
  if(!old)throw Error('Expected legacy independent examination');
  const legacyQuestion=old.questions.find(q=>q.id==='c21-v105-independent-q3');
  if(!legacyQuestion||!legacyQuestion.prompt.includes('$9m of annual operational savings'))throw Error('Historical question changed: re-audit before applying erratum');
- if(legacyQuestion.correct!==2)throw Error('Historical answer key changed: re-audit');
+ if(legacyQuestion.options[legacyQuestion.correct]!=='$6m')throw Error('Historical keyed answer changed: re-audit');
  const note='ACADEMIC ERRATUM v143: Historical question 3 has a flawed answer key. If $9m of operational savings ALREADY INCLUDES the $3m also listed in IT, the unique consolidated benefit is $9m (not $6m). Historic scores remain unchanged. Use the optional corrected assessment (v143) for valid independent practice.';
  if(!String(old.instructions||'').includes('ACADEMIC ERRATUM v143'))old.instructions=[old.instructions||'',note].filter(Boolean).join(' ');
  const id='c21-v143-corrected-evidence';
