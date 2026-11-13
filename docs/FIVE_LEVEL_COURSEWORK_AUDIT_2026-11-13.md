@@ -36,3 +36,11 @@ The latest GitHub Actions job for commit `188dd8e23c6be33cc69f69641bbcb524a7e32d
 5. Keep independent university or professional evaluation separate from internal verification, and do not claim accredited MBA equivalence.
 
 **Disposition:** Structural coverage and automated regression tests pass; **independent substantive coursework completeness is not certified**. Remain draft until editorial review and acceptance.
+
+## November 13 follow-up — alternative Level 4 assessment forms (v140)
+
+- Added **five independent, optional Level 4 alternative examination forms**, one each for courses 21–25, totaling **35 new distinct question prompts**, all with unique IDs, options, answer explanations, remediation, written case and rubric.
+- Historical v104 examinations and all previously submitted responses, grade snapshots and lesson identifiers remain unchanged. The 35 repeated historical prompts remain present and are still counted by the audit; this addition provides a non-repeating alternative rather than silently modifying existing records.
+- New forms are optional, do not change required mastery or automatically award progress, and add no required hours to the 3,218-hour curriculum estimate.
+- The latest GitHub Actions workflow for commit `b620378ab9de66a44a395341096f38a06154a8d7` passed **109 tests, 0 failures** (run `43484141461`), and the coursework coverage audit passed with no structural errors.
+- Assessment psychometrics, professional subject review, and an editorial decision on whether to retire the historical repetition remain outstanding. Never change a submitted assessment's meaning without a versioned migration.
