@@ -27,11 +27,15 @@ for(let i=1;i<=26;i++){
  const exams=[c.practice,c.exam,c.advancedExam,...safeArray(c.sectionExams)].filter(Boolean);
  const required=exams.filter(e=>!e.optional);
  const assessmentQs=required.flatMap(e=>safeArray(e.questions));
- const ids=new Set(),duplicateIds=[];
- for(const x of [...lessons,...safeArray(c.applications),...safeArray(c.portfolioSections),...required]){
+ const ids=new Map(),duplicateIds=[],crossTypeIds=[];
+ for(const [kind,items] of [['lesson',lessons],['application',safeArray(c.applications)],['portfolio',safeArray(c.portfolioSections)],['assessment',required]]){
+  for(const x of items){
    if(!x?.id)continue;
-   if(ids.has(x.id))duplicateIds.push(x.id);
-   ids.add(x.id);
+   if(ids.has(x.id)){
+    const first=ids.get(x.id);
+    (first===kind?duplicateIds:crossTypeIds).push({id:x.id,first,second:kind});
+   } else ids.set(x.id,kind);
+  }
  }
  const longBrief=lessons.filter(l=>l.minutes>=90 && wordCount(safeArray(l.body).join(' '))<200);
  const emptyLessons=lessons.filter(l=>!safeArray(l.body).length || !l.example || !l.transfer);
@@ -42,9 +46,9 @@ for(let i=1;i<=26;i++){
    if(key&&seen.has(key))repeats.push(q.id);else seen.add(key);
  }
  const minutes=lessons.reduce((n,x)=>n+(Number(x.minutes)||0),0)+safeArray(c.readings).reduce((n,x)=>n+(Number(x.minutes)||0),0)+safeArray(c.applications).reduce((n,x)=>n+(Number(x.minutes)||0),0)+safeArray(c.portfolioSections).reduce((n,x)=>n+(Number(x.minutes)||0),0)+[c.practice,c.exam,c.advancedExam,c.portfolio,c.portfolioExtension,...safeArray(c.sectionExams)].filter(Boolean).reduce((n,x)=>n+(Number(x.minutes)||0),0);
- rows.push({id,level,missing:false,modules:safeArray(c.modules).length,lessons:lessons.length,words:lessons.reduce((n,l)=>n+wordCount(safeArray(l.body).join(' ')),0),assessedQuestions:assessmentQs.length,requiredExams:required.length,applications:safeArray(c.applications).length,portfolioSections:safeArray(c.portfolioSections).length,hasPortfolio:!!c.portfolio||!!c.portfolioExtension||!!safeArray(c.portfolioSections).length,assignedHours:Math.round(minutes/6)/10,longBrief:longBrief.map(x=>x.id),emptyLessons:emptyLessons.map(x=>x.id),invalidQuestions:invalidQuestions.map(x=>x.id||'<missing>'),duplicateIds,repeatedPrompts:repeats});
+ rows.push({id,level,missing:false,modules:safeArray(c.modules).length,lessons:lessons.length,words:lessons.reduce((n,l)=>n+wordCount(safeArray(l.body).join(' ')),0),assessedQuestions:assessmentQs.length,requiredExams:required.length,applications:safeArray(c.applications).length,portfolioSections:safeArray(c.portfolioSections).length,hasPortfolio:!!c.portfolio||!!c.portfolioExtension||!!safeArray(c.portfolioSections).length,assignedHours:Math.round(minutes/6)/10,longBrief:longBrief.map(x=>x.id),emptyLessons:emptyLessons.map(x=>x.id),invalidQuestions:invalidQuestions.map(x=>x.id||'<missing>'),duplicateIds,crossTypeIds,repeatedPrompts:repeats});
 }
-const summary={checkedOn:'Repository working tree at audit execution; not an academic certification',loadedContentFiles:files.length,loadErrors:failures,courses:rows.length,missingCourses:rows.filter(r=>r.missing).map(r=>r.id),totalLessons:rows.reduce((n,r)=>n+(r.lessons||0),0),totalRequiredExamQuestions:rows.reduce((n,r)=>n+(r.assessedQuestions||0),0),totalAssignedHours:Math.round(rows.reduce((n,r)=>n+(r.assignedHours||0),0)*10)/10,missingAssessments:rows.filter(r=>!r.missing&&r.requiredExams<1).map(r=>r.id),missingPortfolio:rows.filter(r=>!r.missing&&!r.hasPortfolio).map(r=>r.id),longBriefLessons:rows.reduce((n,r)=>n+(r.longBrief?.length||0),0),invalidQuestions:rows.reduce((n,r)=>n+(r.invalidQuestions?.length||0),0),duplicateIds:rows.reduce((n,r)=>n+(r.duplicateIds?.length||0),0),repeatedPrompts:rows.reduce((n,r)=>n+(r.repeatedPrompts?.length||0),0)};
+const summary={checkedOn:'Repository working tree at audit execution; not an academic certification',loadedContentFiles:files.length,loadErrors:failures,courses:rows.length,missingCourses:rows.filter(r=>r.missing).map(r=>r.id),totalLessons:rows.reduce((n,r)=>n+(r.lessons||0),0),totalRequiredExamQuestions:rows.reduce((n,r)=>n+(r.assessedQuestions||0),0),totalAssignedHours:Math.round(rows.reduce((n,r)=>n+(r.assignedHours||0),0)*10)/10,missingAssessments:rows.filter(r=>!r.missing&&r.requiredExams<1).map(r=>r.id),missingPortfolio:rows.filter(r=>!r.missing&&!r.hasPortfolio).map(r=>r.id),longBriefLessons:rows.reduce((n,r)=>n+(r.longBrief?.length||0),0),invalidQuestions:rows.reduce((n,r)=>n+(r.invalidQuestions?.length||0),0),duplicateIds:rows.reduce((n,r)=>n+(r.duplicateIds?.length||0),0),crossTypeIds:rows.reduce((n,r)=>n+(r.crossTypeIds?.length||0),0),repeatedPrompts:rows.reduce((n,r)=>n+(r.repeatedPrompts?.length||0),0)};
 const report={summary,rows};
 if(process.argv.includes('--json'))console.log(JSON.stringify(report,null,2));
 else {
