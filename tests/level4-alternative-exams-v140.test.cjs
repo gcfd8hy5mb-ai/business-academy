@@ -28,5 +28,5 @@ test('independently reconciles numerical alternatives',()=>{
  assert.ok(Math.abs(6*(1-1/1.1**5)/.1-20-2.7447)<.01);
  assert.ok(Math.abs(((.14-.06)*3e6-150000)-90000)<1e-6);
  assert.equal(36000*(10/60)*30*.4-45000,27000);
- assert.equal(.7*14+.3*(-8),7.4);
+ assert.ok(Math.abs((.7*14+.3*(-8))-7.4)<1e-9);
 });
