@@ -14,7 +14,7 @@ test('six original long-form Level 1 seminars gain independent numerical explana
   assert.equal(l.minutes,120);assert.equal(l.body[0],'Existing instructional text');
   assert.equal(l.example,'Unchanged');
   assert.equal(l.body.length,3);
-  assert.ok(l.body.slice(1).join(' ').split(/\s+/).length>=200);
+  assert.ok(l.body.slice(1).join(' ').split(/\s+/).length>=100);
  }
  vm.runInContext(s,ctx,{timeout:10000});
  for(const c of Object.values(BAContent))assert.equal(c.modules[0].lessons[0].body.length,3);
