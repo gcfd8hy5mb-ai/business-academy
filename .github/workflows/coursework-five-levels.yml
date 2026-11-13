@@ -27,8 +27,9 @@ jobs:
       - name: Run five-level coursework audit
         if: always()
         run: |
-          node tests/coursework-coverage-audit.cjs --json > coursework-coverage-results.json
+          node tests/coursework-coverage-audit.cjs --json > coursework-coverage-results.json || audit_status=$?
           cat coursework-coverage-results.json
+          exit ${audit_status:-0}
       - name: Upload audit results
         if: always()
         uses: actions/upload-artifact@v4
