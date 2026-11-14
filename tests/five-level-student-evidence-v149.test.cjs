@@ -8,14 +8,16 @@ function boot(){
  const html=read('index.html'),files=[...html.matchAll(/<script\s+src="(learning\/(?:level[^"?]+|five-level[^"?]+)\.js)(?:\?[^"]*)?"\s+defer><\/script>/g)].map(m=>m[1]);
  const ctx={window:{BAContent:{}},console};vm.createContext(ctx);
  for(const file of files)vm.runInContext(read(file),ctx,{filename:file,timeout:10000});
+ vm.runInContext(read('learning/assessment-fairness-v148.js'),ctx,{filename:'assessment-fairness-v148.js',timeout:10000});
  vm.runInContext(read('learning/core-v110.js'),ctx,{filename:'core-v110.js',timeout:10000});
  return {L:ctx.window.BALearning,content:ctx.window.BAContent,ctx,files};
 }
+function htmlScriptIncludesFairness(){return read('index.html').includes('src="learning/assessment-fairness-v148.js?v=148"')}
 const courseId=i=>'course-'+String(i).padStart(2,'0');
 function student(L){const backing=new Map();return {backing,storage:{getItem:k=>backing.get(k)||null,setItem:(k,v)=>backing.set(k,v),removeItem:k=>backing.delete(k)}};}
 function correctAnswers(exam){return Object.fromEntries((exam.questions||[]).map(q=>[q.id,q.correct]));}
 test('every level has real production-loaded courses and no blank initial student mastery',()=>{
- const {L,content,files}=boot();assert.ok(files.includes('learning/level4-assessment-errata-v143.js'));assert.ok(files.includes('learning/assessment-fairness-v148.js'));
+ const {L,content,files}=boot();assert.ok(files.includes('learning/level4-assessment-errata-v143.js'));assert.ok(htmlScriptIncludesFairness(),'fairness module must be loaded by the production page');
  const store=L.empty();for(let n=1;n<=26;n++){const id=courseId(n),c=content[id];assert.ok(c,'missing '+id);assert.ok(c.modules.flatMap(m=>m.lessons||[]).length>0);assert.equal(L.mastery(store,{id,...c}).mastered,false,id+' must not auto-complete');}
 });
 test('original Level 4 exam attempt, answers, key snapshot, and progress survive local storage reload',()=>{
