@@ -142,3 +142,17 @@ The previous 32-question numerical spot sample was superseded by `tests/all-leve
 **GitHub Actions:** commit `ed18ac76ce42771c3baa9b73a048921b1ad18251`, run `43649678746`: **157/157 tests passed**, zero failures; structural audit: 575 lessons, 193,425 instructional lesson-body words, no structurally invalid required questions, and the same 35 historical repeated Level 4 exam prompts.
 
 **Unresolved before merge:** Full qualitative editorial/subject-matter review of remaining case and theory content, explicit human grading fairness policy for historically mis-keyed M&A attempts, and real iPhone/desktop/PWA acceptance. A passing model check does not establish academic equivalence, independent accreditation, or production usability.
+
+## v153 — Adobe–Figma source correction and retrospective disclosure chronology (November 14, 2026)
+
+The Level 3 course-16 historical evidence lesson previously treated the **date of actual $1 billion termination-fee cash settlement as unconfirmed**, because it relied only on Adobe's original December 18, 2023 Form 8-K. That filing's **Item 1.02**, incorporating Item 1.01 by reference, disclosed the December 17 mutual termination and a $1 billion contractual payment due within three business days, but not contemporaneous settlement. An additional official public record, Figma's subsequent **2025 Form 10-K** (filed in 2026), states that Figma actually **received $1 billion from Adobe on December 20, 2023**. The lesson now explicitly contrasts the dated initial obligation, later independently reported receipt and counterfactual synergy estimates rather than leaving the actual settlement event unresolved.
+
+Primary records:
+- Adobe December 18, 2023 Form 8-K, **Item 1.02 and Exhibit 10.1**, https://www.sec.gov/Archives/edgar/data/796343/000079634323000254/adbe-20231217.htm
+- Figma 2025 Form 10-K, *Abandoned merger with Adobe*, https://www.sec.gov/Archives/edgar/data/1579878/000162828026009228/fig-20251231.htm
+
+**New verification:** `tests/level3-source-evidence-v153.test.cjs` verifies the distinct event dates and filing references, seven historical evidence labs' source links and unchanged assessment keys, and idempotence of source enrichment on synthetic student records. The amended v145 material adds facts only to the existing course-16 evidence body. No historical answer keys, lesson IDs, submitted grades or stored progress were modified.
+
+**GitHub CI:** commit `5b6b444bd5b0c2e0e449d8908a2c7f6733a266a1`; run `43655599795`: **160/160 tests passed**, zero failed. Structural audit: 575 lessons, 193,471 lesson-body words, zero invalid required examination questions, 35 unchanged repeated historical Level 4 prompts.
+
+**Still open for release:** complete editorial fact-check of unreviewed curriculum, approval of a historical-grade fairness policy, and real iPhone/desktop/PWA acceptance. A green CI run does not establish independent academic accreditation or MBA equivalence; PR #4 remains draft/unmerged and production is unchanged.
