@@ -85,7 +85,7 @@ const l5=[
  (100000-60000)/(100000+300000)*100
 ];
 function check(actual,expected,id){const max= Math.max(.0005,Math.abs(expected)*.0000001);assert.ok(Number.isFinite(actual)&&Math.abs(actual-expected)<max,id+' stored '+actual+' independently calculated '+expected);}
-function drill(course,ids){const all=course.numericDrills.flatMap(x=>x.questions);for(const [i,id] of ids.entries())assert.equal(all[i].id,id);return all;}
+function drill(course,ids){const all=course.numericDrills.flatMap(x=>x.questions);return ids.map(id=>{const q=all.find(x=>x.id===id);assert.ok(q,'missing drill question '+id);return q;});}
 test('all 40 independent Level 1–3 numeric answers agree with separate calculations',()=>{
  const c=boot();let total=0;
  for(let n=1;n<=20;n++){const k=String(n).padStart(2,'0'),qs=drill(c['course-'+k],[1,2].map(i=>'c'+k+'-v126-independent-q'+i));for(let i=0;i<qs.length;i++){check(qs[i].v,l13[n][i],qs[i].id);total++;}}
