@@ -12,7 +12,7 @@ test('all 26 course exam forms, including optional forms, have valid distinct an
   const formsForCourse=forms(c);assert.ok(formsForCourse.length,'no exams '+cid);
   for(const exam of formsForCourse){if(exam.optional)optional++;else required++;
    const local=new Set();
-   for(const q of exam.questions||[]){const key=cid+' '+exam.id+' '+q.id;count++;assert.ok(q.id,'missing id '+key);assert.ok(!local.has(q.id),'reused question ID in same exam '+key);local.add(q.id);assert.ok(String(q.prompt||'').trim().length>=12,'brief prompt '+key);assert.ok(Array.isArray(q.options)&&q.options.length>=2,'missing options '+key);assert.equal(new Set(q.options.map(v=>String(v).trim().toLowerCase())).size,q.options.length,'duplicate choices '+key);assert.ok(Number.isInteger(q.correct)&&q.correct>=0&&q.correct<q.options.length,'invalid keyed choice '+key);assert.ok(String(q.explanation||'').trim().length>0,'missing explanation '+key);}
+   for(const q of exam.questions||[]){const key=cid+' '+exam.id+' '+q.id;count++;assert.ok(q.id,'missing id '+key);assert.ok(!local.has(q.id),'reused question ID in same exam '+key);local.add(q.id);assert.ok(String(q.prompt||'').trim().length>0,'missing prompt '+key);assert.ok(Array.isArray(q.options)&&q.options.length>=2,'missing options '+key);assert.equal(new Set(q.options.map(v=>String(v).trim().toLowerCase())).size,q.options.length,'duplicate choices '+key);assert.ok(Number.isInteger(q.correct)&&q.correct>=0&&q.correct<q.options.length,'invalid keyed choice '+key);assert.ok(String(q.explanation||'').trim().length>0,'missing explanation '+key);}
   }
  }
  assert.ok(count>=929,'suspiciously few assessed questions '+count);assert.ok(optional>5,'expected optional forms');assert.ok(required>=26,'expected required forms');
