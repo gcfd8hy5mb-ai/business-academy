@@ -33,6 +33,10 @@ const models=[
  {q:'$100m cash',parts:[100-20-40,100-20-30],words:['$40m','$50m']},
  {q:'$130m cash',parts:[130-50,95-(130-50),42+33,14+12,130-50-(42+33)],words:['$80m','$15m','$75m','$26m','$5m']}
 ];
+const expectedModels=[
+ [54,18,14.4],[-.263],[29,2.32,.72,55173],[15,20],[700,783,83],[67,27],[36,9],[3000,300,108000],[265680,25680],[1.2,.2,1,16.7],[11220],[3000,96000,33600],[10,30],[112.61],[4.5,4.464,-36000],[600000,16529,578512],[15,15],[25,20],[10.8,9.5,1.3],[1144000,-56000],[10,28.84,10.84],[.23,4.44],[48,7],[4,.679],[40,50],[80,15,75,26,5]
+];
+const precision={2:.002,3:1,10:.06,14:.02,16:1,20:1000,21:.02,22:.02,24:.002};
 function load(){
  const c=Object.fromEntries(Array.from({length:26},(_,i)=>['course-'+String(i+1).padStart(2,'0'),{modules:[],sectionExams:[],readings:[],applications:[]}]));
  const ctx={window:{BAContent:c}};vm.createContext(ctx);vm.runInContext(script,ctx,{filename:'five-level-executive-seminars-v138.js',timeout:10000});return c;
@@ -47,7 +51,7 @@ test('26 executive seminar scenarios reconcile their explicit fictional model ou
  for(let n=1;n<=26;n++){const model=models[n-1],l=c['course-'+String(n).padStart(2,'0')].modules[0].lessons[0],prose=[...l.body,l.example,l.transfer,l.solution].filter(Boolean).join(' ');
   assert.ok(prose.includes(model.q),'course '+n+' scenario absent');
   for(const expected of model.words)assert.ok(prose.includes(expected),'course '+n+' worked outcome '+expected+' absent');
-  for(const value of model.parts)assert.ok(Number.isFinite(value),'course '+n+' nonfinite independent computation');
+  assert.equal(model.parts.length,expectedModels[n-1].length,'course '+n+' model dimension');for(let i=0;i<model.parts.length;i++){const value=model.parts[i],expected=expectedModels[n-1][i];assert.ok(Number.isFinite(value)&&Math.abs(value-expected)<(precision[n]??.00001),'course '+n+' result '+i+' independently recalculates '+value+' versus displayed '+expected);}
  }
  assert.ok(Math.abs(models[1].parts[0]+.263)<.002);
  assert.ok(Math.abs(models[13].parts[0]-112.61)<.02);
