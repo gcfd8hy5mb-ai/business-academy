@@ -1,0 +1,39 @@
+name: Coursework five-level audit
+on:
+  push:
+    branches:
+      - audit/coursework-five-levels-20261113
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tests/coursework-coverage-audit.cjs'
+      - '.github/workflows/coursework-five-levels.yml'
+      - 'learning/**'
+      - 'index.html'
+  workflow_dispatch:
+jobs:
+  coursework-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run all existing Node tests
+        run: node --test tests/*.test.cjs
+      - name: Run five-level coursework audit
+        if: always()
+        run: |
+          node tests/coursework-coverage-audit.cjs --json > coursework-coverage-results.json || audit_status=$?
+          cat coursework-coverage-results.json
+          exit ${audit_status:-0}
+      - name: Upload audit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-level-coursework-audit
+          path: coursework-coverage-results.json
+          if-no-files-found: warn
